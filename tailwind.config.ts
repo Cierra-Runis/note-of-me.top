@@ -1,6 +1,7 @@
 import { nextui } from '@nextui-org/theme';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
+import type { PluginUtils } from "tailwindcss/types/config";
 
 export default {
   content: [
@@ -11,7 +12,7 @@ export default {
   ],
   theme: {
     extend: {
-      typography: ({ theme }) => ({
+      typography: ({ theme }: PluginUtils) => ({
         pink: {
           css: {
             '--tw-prose-links': '#FF8000',
