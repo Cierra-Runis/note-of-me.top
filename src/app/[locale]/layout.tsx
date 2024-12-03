@@ -1,15 +1,13 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
-import { routing } from '@/i18n/routing';
-import { redirect } from 'next/navigation';
+import { Link } from '@/i18n/routing';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { fontMono, fontSans } from '@/config/fonts';
 import clsx from 'clsx';
-import { Providers } from '@/_components/providers';
-import { Link } from '@nextui-org/react';
-import { Navbar } from '@/_components/nav_bar';
-import { WebVitals } from '@/_components/web-vitals';
+import { Providers } from '@/components/providers';
+import { Navbar } from '@/components/nav_bar';
+import { WebVitals } from '@/components/web-vitals';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -41,10 +39,10 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const locale = (await params).locale;
-  // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as never)) {
-    redirect('/');
-  }
+  // // Ensure that the incoming `locale` is valid
+  // if (!routing.locales.includes(locale as never)) {
+  //   redirect({ href: '/', locale: routing.defaultLocale });
+  // }
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -69,7 +67,6 @@ export default async function RootLayout({
               </main>
               <footer className='w-full flex items-center justify-center py-3'>
                 <Link
-                  isExternal
                   className='flex items-center gap-1 text-current'
                   href='https://nextui-docs-v2.vercel.app?utm_source=next-app-template'
                   title=''

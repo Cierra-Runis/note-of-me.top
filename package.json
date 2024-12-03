@@ -11,7 +11,11 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@icons-pack/react-simple-icons": "^10.2.0",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.0.3",
     "@nextui-org/react": "2.4.8",
+    "@types/mdx": "^2.0.13",
     "framer-motion": "^11.12.0",
     "next": "15.0.3",
     "next-intl": "^3.25.3",
@@ -20,6 +24,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

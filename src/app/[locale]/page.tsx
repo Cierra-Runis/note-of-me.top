@@ -1,8 +1,9 @@
-import { subtitle, title } from '@/_components/primitives';
+import { subtitle, title } from '@/components/primitives';
 import { button as buttonStyles } from '@nextui-org/theme';
 import { siteConfig } from '@/config/site';
-import { Code, Link, Snippet } from '@nextui-org/react';
+import { Code, Snippet } from '@nextui-org/react';
 import { SiGithub } from '@icons-pack/react-simple-icons';
+import { Link } from '@/i18n/routing';
 
 export default function Home() {
   return (
@@ -21,7 +22,6 @@ export default function Home() {
 
       <div className='flex gap-3'>
         <Link
-          isExternal
           className={buttonStyles({
             color: 'primary',
             radius: 'full',
@@ -32,7 +32,6 @@ export default function Home() {
           Documentation
         </Link>
         <Link
-          isExternal
           className={buttonStyles({ variant: 'bordered', radius: 'full' })}
           href={siteConfig.author.url}
         >

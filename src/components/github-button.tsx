@@ -1,0 +1,22 @@
+'use client';
+
+import { siteConfig } from '@/config/site';
+import { Link } from '@/i18n/routing';
+import { SiGithub } from '@icons-pack/react-simple-icons';
+import { Button } from '@nextui-org/react';
+
+export default function GitHubButton() {
+  return (
+    <Button
+      aria-label='Github'
+      as={Link}
+      href={siteConfig.author.url}
+      size='sm'
+      variant='light'
+      target='_blank'
+      isIconOnly
+    >
+      <SiGithub className='text-default-500 w-5' />
+    </Button>
+  );
+}

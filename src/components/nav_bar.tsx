@@ -6,16 +6,16 @@ import {
   NavbarItem,
 } from '@nextui-org/navbar';
 import { Kbd } from '@nextui-org/kbd';
-import { Link } from '@nextui-org/link';
 import { Input } from '@nextui-org/input';
-import NextLink from 'next/link';
+import { Link } from '@/i18n/routing';
 
 import { siteConfig } from '@/config/site';
-import { ThemeSwitch } from '@/_components/theme-switch';
+import { ThemeSwitch } from '@/components/theme-switch';
 import LocaleSwitcher from './language-switch';
 import { useTranslations } from 'next-intl';
 import { Avatar } from '@nextui-org/react';
-import { SiGithub } from '@icons-pack/react-simple-icons';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import GitHubButton from './github-button';
 
 export const Navbar = () => {
   const t = useTranslations();
@@ -34,12 +34,9 @@ export const Navbar = () => {
       }
       labelPlacement='outside'
       placeholder='Search...'
-      // startContent={
-      // <MagnifyingGlassIcon
-      //   className='text-base text-default-400 pointer-events-none flex-shrink-0 '
-      //   width={22}
-      // />
-      // }
+      startContent={
+        <MagnifyingGlassIcon className='text-base text-default-400 pointer-events-none flex-shrink-0 w-6' />
+      }
       type='search'
     />
   );
@@ -47,30 +44,25 @@ export const Navbar = () => {
   return (
     <NextUINavbar maxWidth='xl' position='sticky'>
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
-        <NavbarBrand as='li' className='gap-3 max-w-fit'>
-          <NextLink className='flex justify-start items-center gap-1' href='/'>
+        <NavbarBrand className='gap-3 max-w-fit'>
+          <Link className='flex justify-start items-center gap-1' href='/'>
             <Avatar
               src={siteConfig.links.githubAvatar}
               name={siteConfig.author.name}
             />
             <p className='font-bold text-inherit'>{t('site.name')}</p>
-          </NextLink>
+          </Link>
         </NavbarBrand>
         <ul className='hidden lg:flex gap-4 justify-start ml-2'>
-          {/* {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium'
-                )}
-                color='foreground'
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))} */}
+          <NavbarItem key='/'>
+            <Link href='/'>{t('home')}</Link>
+          </NavbarItem>
+          <NavbarItem key='/blog'>
+            <Link href='/blog'>{t('blog')}</Link>
+          </NavbarItem>
+          <NavbarItem key='/about'>
+            <Link href='/about'>{t('about')}</Link>
+          </NavbarItem>
         </ul>
       </NavbarContent>
 
@@ -79,19 +71,15 @@ export const Navbar = () => {
         justify='end'
       >
         <NavbarItem className='hidden sm:flex gap-2'>
-          <Link isExternal aria-label='Github' href={siteConfig.author.url}>
-            <SiGithub className='text-default-500' size={24} />
-          </Link>
           <LocaleSwitcher />
+          <GitHubButton />
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className='hidden lg:flex'>{searchInput}</NavbarItem>
       </NavbarContent>
 
       <NavbarContent className='sm:hidden basis-1 pl-4' justify='end'>
-        <Link isExternal aria-label='Github' href={siteConfig.author.url}>
-          <SiGithub className='text-default-500' />
-        </Link>
+        <GitHubButton />
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
