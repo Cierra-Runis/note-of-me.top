@@ -1,0 +1,16 @@
+{
+  "site": {
+    "name": "ノート of 我",
+    "description": "A Simple Note"
+  },
+  "locales": {
+    "lang": "English",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "ja": "日本語"
+  },
+  "home": "Home",
+  "blog": "Blog",
+  "about": "About",
+  "languages": "Languages"
+}
