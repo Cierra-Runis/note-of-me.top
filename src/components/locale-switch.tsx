@@ -34,9 +34,8 @@ export default function LocaleSwitch() {
         size='sm'
         variant='light'
         startContent={<LanguageIcon className='text-default-500 w-5' />}
-      >
-        {t('locales.lang')}
-      </Button>
+        isIconOnly
+      />
     </Tooltip>
   );
 }

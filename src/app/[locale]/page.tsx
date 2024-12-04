@@ -7,7 +7,7 @@ import { Link } from '@/i18n/routing';
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
+    <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10 h-full'>
       <div className='inline-block max-w-xl text-center justify-center'>
         <span className={title()}>Make&nbsp;</span>
         <span className={title({ color: 'violet' })}>beautiful&nbsp;</span>
@@ -25,7 +25,6 @@ export default function Home() {
           className={buttonStyles({
             color: 'primary',
             radius: 'full',
-            variant: 'shadow',
           })}
           href={siteConfig.links.docs}
         >

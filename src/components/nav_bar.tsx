@@ -9,7 +9,7 @@ import {
 } from '@nextui-org/navbar';
 import { Link } from '@/i18n/routing';
 
-import { ThemeSwitch } from '@/components/theme-switch';
+import { ThemeButton } from '@/components/theme-button';
 import LocaleSwitch from './locale-switch';
 import { useTranslations } from 'next-intl';
 import GitHubButton from './github-button';
@@ -50,14 +50,16 @@ export const Navbar = () => {
         <NavbarItem className='hidden sm:flex gap-2'>
           <LocaleSwitch />
           <GitHubButton />
-          <ThemeSwitch />
+          <ThemeButton />
           <SearchButton />
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className='sm:hidden basis-1 pl-4' justify='end'>
+        <LocaleSwitch />
         <GitHubButton />
-        <ThemeSwitch />
+        <ThemeButton />
+        <SearchButton />
         <NavbarMenuToggle />
       </NavbarContent>
 
