@@ -30,7 +30,7 @@ export async function generateMetadata({
     applicationName: t('site.name'),
     description: t('site.description'),
     authors: siteConfig.author,
-    icons: './icon.svg',
+    icons: '/icon.svg',
   };
 }
 
