@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 

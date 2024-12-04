@@ -5,7 +5,7 @@ import { LanguageIcon } from '@heroicons/react/24/outline';
 import { Button, Listbox, ListboxItem, Tooltip } from '@nextui-org/react';
 import { useLocale, useTranslations } from 'next-intl';
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitch() {
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations();
@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
       <Button
         size='sm'
         variant='light'
-        startContent={<LanguageIcon className='w-5' />}
+        startContent={<LanguageIcon className='text-default-500 w-5' />}
       >
         {t('locales.lang')}
       </Button>

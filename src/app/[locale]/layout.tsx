@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import { Providers } from '@/components/providers';
 import { Navbar } from '@/components/nav_bar';
 import { WebVitals } from '@/components/web-vitals';
+import { siteConfig } from '@/config/site';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -22,12 +23,14 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const locale = (await params).locale;
-  const t = await getTranslations({ locale, namespace: 'site' });
+  const t = await getTranslations({ locale });
 
   return {
-    title: t('name'),
-    description: t('description'),
-    authors: {},
+    title: t('site.name'),
+    applicationName: t('site.name'),
+    description: t('site.description'),
+    authors: siteConfig.author,
+    icons: './icon.svg',
   };
 }
 
@@ -49,7 +52,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html suppressHydrationWarning lang={locale}>
+    <html suppressHydrationWarning lang={locale} className=''>
       <body
         className={clsx(
           'min-h-screen bg-background font-sans antialiased',
