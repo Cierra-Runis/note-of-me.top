@@ -12,6 +12,7 @@ import { siteConfig } from '@/config/site';
 import GitHubButton from './../../components/github-button';
 import NextTopLoader from 'nextjs-toploader';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -81,6 +82,7 @@ export default async function RootLayout({
           </Providers>
         </NextIntlClientProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
