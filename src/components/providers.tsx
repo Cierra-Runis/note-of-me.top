@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { NextUIProvider } from '@nextui-org/system';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 import {
   ThemeProvider as NextThemesProvider,
   ThemeProviderProps,
