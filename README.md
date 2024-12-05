@@ -2,6 +2,8 @@
 
 [Next.js](https://nextjs.org/docs)
 
+[Vercel](https://vercel.com/)
+
 [NextUI](https://nextui.org/docs/guide/introduction)
 
 [Tailwind CSS](https://tailwindcss.com/docs/installation)
