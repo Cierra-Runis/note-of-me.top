@@ -22,7 +22,7 @@ export default function LocaleSwitch() {
         <Button
           size='sm'
           variant='light'
-          startContent={<LanguageIcon className='text-default-500 w-5' />}
+          startContent={<LanguageIcon className='w-5 text-default-500' />}
           isIconOnly
         />
       </DropdownTrigger>

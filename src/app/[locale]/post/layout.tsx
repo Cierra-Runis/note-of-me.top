@@ -1,7 +1,7 @@
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
   // Create any shared layout or styles here
   return (
-    <div className='prose dark:prose-invert md:prose-lg max-w-full'>
+    <div className='prose max-w-full dark:prose-invert md:prose-lg'>
       {children}
     </div>
   );

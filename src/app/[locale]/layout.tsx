@@ -10,6 +10,7 @@ import { Navbar } from '@/components/nav_bar';
 import { WebVitals } from '@/components/web-vitals';
 import { siteConfig } from '@/config/site';
 import GitHubButton from './../../components/github-button';
+import NextTopLoader from 'nextjs-toploader';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -43,13 +44,6 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const locale = (await params).locale;
-  // // Ensure that the incoming `locale` is valid
-  // if (!routing.locales.includes(locale as never)) {
-  //   redirect({ href: '/', locale: routing.defaultLocale });
-  // }
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -58,18 +52,19 @@ export default async function RootLayout({
         className={clsx(
           'min-h-screen bg-background font-sans antialiased',
           fontSans.variable,
-          fontMono.variable
+          fontMono.variable,
         )}
       >
         <WebVitals />
+        <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
         <NextIntlClientProvider messages={messages}>
           <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-            <div className='relative flex flex-col h-screen'>
+            <div className='relative flex h-screen flex-col'>
               <Navbar />
-              <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
+              <main className='container mx-auto max-w-7xl flex-grow px-6 pt-16'>
                 {children}
               </main>
-              <footer className='w-full flex items-center justify-between py-3 p-6 text-sm'>
+              <footer className='flex w-full items-center justify-between p-6 py-3 text-sm'>
                 <Link
                   className='flex items-center gap-2'
                   href={siteConfig.author.url}

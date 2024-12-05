@@ -14,6 +14,7 @@ import LocaleSwitch from './locale-switch';
 import { useTranslations } from 'next-intl';
 import GitHubButton from './github-button';
 import SearchButton from './search-button';
+import { Bars3Icon } from '@heroicons/react/24/outline';
 
 export const Navbar = () => {
   const t = useTranslations();
@@ -21,16 +22,12 @@ export const Navbar = () => {
   return (
     <NextUINavbar maxWidth='xl' shouldHideOnScroll>
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
-        <NavbarBrand className='gap-3 max-w-fit'>
-          <Link className='flex justify-start items-center gap-1' href='/'>
-            {/* <Avatar
-              src={siteConfig.links.githubAvatar}
-              name={siteConfig.author.name}
-            /> */}
+        <NavbarBrand className='max-w-fit gap-3'>
+          <Link className='flex items-center justify-start gap-1' href='/'>
             <p className='font-bold text-inherit'>{t('site.name')}</p>
           </Link>
         </NavbarBrand>
-        <ul className='hidden sm:flex gap-4 justify-start ml-2'>
+        <ul className='ml-2 hidden justify-start gap-6 sm:flex'>
           <NavbarItem key='/'>
             <Link href='/'>{t('home')}</Link>
           </NavbarItem>
@@ -44,10 +41,10 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className='hidden sm:flex basis-1/5 sm:basis-full'
+        className='hidden basis-1/5 sm:flex sm:basis-full'
         justify='end'
       >
-        <NavbarItem className='hidden sm:flex gap-2'>
+        <NavbarItem className='hidden gap-2 sm:flex'>
           <LocaleSwitch />
           <GitHubButton />
           <ThemeButton />
@@ -55,12 +52,14 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className='sm:hidden basis-1 pl-4' justify='end'>
+      <NavbarContent className='basis-1 pl-4 sm:hidden' justify='end'>
         <LocaleSwitch />
         <GitHubButton />
         <ThemeButton />
         <SearchButton />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle
+          icon={<Bars3Icon className='w-5 text-default-500' />}
+        />
       </NavbarContent>
 
       <NavbarMenu>

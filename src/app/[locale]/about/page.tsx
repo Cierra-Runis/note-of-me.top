@@ -1,16 +1,22 @@
 import {
   SiEslint,
+  SiEslintHex,
   SiGit,
+  SiGitHex,
   SiGithub,
   SiMdx,
   SiNextdotjs,
   SiNextui,
   SiReact,
+  SiReactHex,
   SiSimpleicons,
   SiTailwindcss,
+  SiTailwindcssHex,
   SiTypescript,
+  SiTypescriptHex,
   SiVercel,
   SiYarn,
+  SiYarnHex,
 } from '@icons-pack/react-simple-icons';
 import { Button } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
@@ -77,7 +83,9 @@ export default function AboutPage() {
             <Button
               href='https://react.dev/'
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiReact />}
+              startContent={
+                <SiReact className='w-5 text-default-500' color={SiReactHex} />
+              }
               as={Link}
               variant='light'
             >
@@ -87,7 +95,7 @@ export default function AboutPage() {
               href='https://nextjs.org/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiNextdotjs />}
+              startContent={<SiNextdotjs className='w-5 text-default-500' />}
               variant='light'
             >
               Next.js
@@ -96,7 +104,7 @@ export default function AboutPage() {
               href='https://vercel.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiVercel />}
+              startContent={<SiVercel className='w-5 text-default-500' />}
               variant='light'
             >
               Vercel
@@ -105,7 +113,12 @@ export default function AboutPage() {
               href='https://tailwindcss.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiTailwindcss />}
+              startContent={
+                <SiTailwindcss
+                  className='w-5 text-default-500'
+                  color={SiTailwindcssHex}
+                />
+              }
               variant='light'
             >
               TailwindCSS
@@ -113,8 +126,8 @@ export default function AboutPage() {
             <Button
               href='https://nextui.org/'
               as={Link}
-              className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiNextui />}
+              className='f col-span-2 max-h-12 w-full object-contain lg:col-span-1'
+              startContent={<SiNextui className='w-5 text-default-500' />}
               variant='light'
             >
               NextUI
@@ -123,7 +136,9 @@ export default function AboutPage() {
               href='https://yarnpkg.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiYarn />}
+              startContent={
+                <SiYarn className='w-5 text-default-500' color={SiYarnHex} />
+              }
               variant='light'
             >
               Yarn
@@ -132,7 +147,7 @@ export default function AboutPage() {
               href='https://mdxjs.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiMdx />}
+              startContent={<SiMdx className='w-5 text-default-500' />}
               variant='light'
             >
               MDX
@@ -141,7 +156,12 @@ export default function AboutPage() {
               href='https://www.typescriptlang.org/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiTypescript />}
+              startContent={
+                <SiTypescript
+                  className='w-5 text-default-500'
+                  color={SiTypescriptHex}
+                />
+              }
               variant='light'
             >
               TypeScript
@@ -150,7 +170,12 @@ export default function AboutPage() {
               href='https://eslint.org/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiEslint />}
+              startContent={
+                <SiEslint
+                  className='w-5 text-default-500'
+                  color={SiEslintHex}
+                />
+              }
               variant='light'
             >
               EsLint
@@ -159,7 +184,9 @@ export default function AboutPage() {
               href='https://git-scm.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiGit />}
+              startContent={
+                <SiGit className='w-5 text-default-500' color={SiGitHex} />
+              }
               variant='light'
             >
               Git
@@ -168,7 +195,7 @@ export default function AboutPage() {
               href='https://github.com/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiGithub />}
+              startContent={<SiGithub className='w-5 text-default-500' />}
               variant='light'
             >
               GitHub
@@ -177,7 +204,7 @@ export default function AboutPage() {
               href='https://simpleicons.org/'
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-              startContent={<SiSimpleicons />}
+              startContent={<SiSimpleicons className='w-5 text-default-500' />}
               variant='light'
             >
               Simple Icons

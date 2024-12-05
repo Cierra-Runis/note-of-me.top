@@ -16,7 +16,7 @@ export default async function Projects() {
     filenames.map(async (filename) => {
       const content = await fs.readFile(
         path.join(process.cwd(), 'src/post', filename),
-        'utf-8'
+        'utf-8',
       );
       const { frontmatter } = await compileMDX<Frontmatter>({
         source: content,
@@ -29,7 +29,7 @@ export default async function Projects() {
         slug: filename.replace('.mdx', ''),
         ...frontmatter,
       };
-    })
+    }),
   );
 
   return (

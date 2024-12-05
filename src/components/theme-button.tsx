@@ -38,9 +38,9 @@ export const ThemeButton: FC<ThemeSwitchProps> = () => {
       onClick={onChange}
     >
       {!isSelected || isSSR ? (
-        <SunIcon className='text-default-500 w-5' />
+        <SunIcon className='w-5 text-default-500' />
       ) : (
-        <MoonIcon className='text-default-500 w-5' />
+        <MoonIcon className='w-5 text-default-500' />
       )}
     </Button>
   );
