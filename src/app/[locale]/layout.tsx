@@ -9,6 +9,7 @@ import { Providers } from '@/components/providers';
 import { Navbar } from '@/components/nav_bar';
 import { WebVitals } from '@/components/web-vitals';
 import { siteConfig } from '@/config/site';
+import GitHubButton from './../../components/github-button';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -68,15 +69,17 @@ export default async function RootLayout({
               <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
                 {children}
               </main>
-              <footer className='w-full flex items-center justify-center py-3'>
+              <footer className='w-full flex items-center justify-between py-3 p-6 text-sm'>
                 <Link
-                  className='flex items-center gap-1 text-current'
-                  href='https://nextui-docs-v2.vercel.app?utm_source=next-app-template'
-                  title=''
+                  className='flex items-center gap-2'
+                  href={siteConfig.author.url}
                 >
                   <span className='text-default-600'>Powered by</span>
                   <p className='text-primary'>Cierra Runis</p>
                 </Link>
+                <div>
+                  <GitHubButton />
+                </div>
               </footer>
             </div>
           </Providers>
