@@ -2,11 +2,11 @@
 
 import * as React from 'react';
 import { NextUIProvider } from '@nextui-org/system';
-import { useRouter } from '@/i18n/routing';
 import {
   ThemeProvider as NextThemesProvider,
   ThemeProviderProps,
 } from 'next-themes';
+import { useRouter } from '@/i18n/routing';
 
 export interface ProvidersProps {
   children: React.ReactNode;

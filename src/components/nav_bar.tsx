@@ -7,25 +7,36 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/navbar';
-import { Link } from '@/i18n/routing';
 
 import { ThemeButton } from '@/components/theme-button';
 import LocaleSwitch from './locale-switch';
 import { useTranslations } from 'next-intl';
+import { Link as I18nLink } from '@/i18n/routing';
 import GitHubButton from './github-button';
 import SearchButton from './search-button';
 import { Bars3Icon } from '@heroicons/react/24/outline';
+import { Link } from '@nextui-org/link';
 
 export const Navbar = () => {
   const t = useTranslations();
 
   return (
-    <NextUINavbar maxWidth='xl' shouldHideOnScroll>
-      <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
+    <NextUINavbar
+      maxWidth='xl'
+      shouldHideOnScroll
+      isBordered
+    >
+      <NavbarContent
+        className='basis-1/5 sm:basis-full'
+        justify='start'
+      >
         <NavbarBrand className='max-w-fit gap-3'>
-          <Link className='flex items-center justify-start gap-1' href='/'>
+          <I18nLink
+            className='flex items-center justify-start gap-1'
+            href='/'
+          >
             <p className='font-bold text-inherit'>{t('site.name')}</p>
-          </Link>
+          </I18nLink>
         </NavbarBrand>
         <ul className='ml-2 hidden justify-start gap-6 sm:flex'>
           <NavbarItem key='/'>
@@ -35,7 +46,7 @@ export const Navbar = () => {
             <Link href='/post'>{t('post')}</Link>
           </NavbarItem>
           <NavbarItem key='/about'>
-            <Link href='/about'>{t('about')}</Link>
+            <Link href='/about'>{t('about.name')}</Link>
           </NavbarItem>
         </ul>
       </NavbarContent>
@@ -52,7 +63,10 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className='basis-1 pl-4 sm:hidden' justify='end'>
+      <NavbarContent
+        className='basis-1 pl-4 sm:hidden'
+        justify='end'
+      >
         <LocaleSwitch />
         <GitHubButton />
         <ThemeButton />
@@ -64,13 +78,28 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <NavbarMenuItem key='/'>
-          <Link href='/'>{t('home')}</Link>
+          <Link
+            href='/'
+            className='w-full'
+          >
+            {t('home')}
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/post'>
-          <Link href='/post'>{t('post')}</Link>
+          <Link
+            href='/post'
+            className='w-full'
+          >
+            {t('post')}
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/about'>
-          <Link href='/about'>{t('about')}</Link>
+          <Link
+            href='/about'
+            className='w-full'
+          >
+            {t('about.name')}
+          </Link>
         </NavbarMenuItem>
       </NavbarMenu>
     </NextUINavbar>

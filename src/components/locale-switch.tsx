@@ -2,13 +2,14 @@
 
 import { redirect, routing, usePathname } from '@/i18n/routing';
 import { LanguageIcon } from '@heroicons/react/24/outline';
+import { Button } from '@nextui-org/button';
 import {
-  Button,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/react';
+} from '@nextui-org/dropdown';
+
 import { useLocale, useTranslations } from 'next-intl';
 
 export default function LocaleSwitch() {
@@ -34,7 +35,10 @@ export default function LocaleSwitch() {
         }
       >
         {routing.locales.map((key) => (
-          <DropdownItem key={key} title={t(`locales.${key}`)} />
+          <DropdownItem
+            key={key}
+            title={t(`locales.${key}`)}
+          />
         ))}
       </DropdownMenu>
     </Dropdown>

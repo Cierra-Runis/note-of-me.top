@@ -5,7 +5,7 @@ import { SwitchProps, useSwitch } from '@nextui-org/switch';
 import { useTheme } from 'next-themes';
 import { useIsSSR } from '@react-aria/ssr';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/react';
+import { Button } from '@nextui-org/button';
 import { siteConfig } from '@/config/site';
 
 export interface ThemeSwitchProps {

@@ -1,6 +1,6 @@
-import { CircularProgress } from '@nextui-org/react';
+import { Spinner } from '@nextui-org/spinner';
 
 export default function Loading() {
   // Or a custom loading skeleton component
-  return <CircularProgress aria-label='Loading...' />;
+  return <Spinner aria-label='Loading...' />;
 }

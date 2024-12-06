@@ -11,7 +11,10 @@
   },
   "home": "主页",
   "post": "文章",
-  "about": "关于",
+  "about": {
+    "name": "关于",
+    "description": "一个简单的笔记"
+  },
   "languages": "语言",
   "whatAreWeUsingNow": "技术栈"
 }

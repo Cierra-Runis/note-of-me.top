@@ -11,7 +11,10 @@
   },
   "home": "Home",
   "post": "Post",
-  "about": "About",
+  "about": {
+    "name": "About",
+    "description": "A Simple Note"
+  },
   "languages": "Languages",
   "whatAreWeUsingNow": "What are we using now"
 }

@@ -18,7 +18,7 @@ import {
   SiYarn,
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
-import { Button } from '@nextui-org/react';
+import { Button } from '@nextui-org/button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -29,49 +29,11 @@ export default function AboutPage() {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-5xl font-semibold tracking-tight sm:text-7xl'>
-            {t('about')}
+            {t('about.name')}
           </h2>
           <p className='mt-8 text-pretty text-lg font-medium sm:text-xl/8'>
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat.
+            {t('about.description')}
           </p>
-        </div>
-        <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
-          <div className='grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10'>
-            <a href='#'>
-              Open roles <span aria-hidden='true'>&rarr;</span>
-            </a>
-            <a href='#'>
-              Internship program <span aria-hidden='true'>&rarr;</span>
-            </a>
-            <a href='#'>
-              Our values <span aria-hidden='true'>&rarr;</span>
-            </a>
-            <a href='#'>
-              Meet our leadership <span aria-hidden='true'>&rarr;</span>
-            </a>
-          </div>
-          <dl className='mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4'>
-            <div className='flex flex-col-reverse gap-1'>
-              <dt className='text-base/7'>Offices worldwide</dt>
-              <dd className='text-4xl font-semibold tracking-tight'>12</dd>
-            </div>
-            <div className='flex flex-col-reverse gap-1'>
-              <dt className='text-base/7'>Full-time colleagues</dt>
-              <dd className='text-4xl font-semibold tracking-tight'>300+</dd>
-            </div>
-            <div className='flex flex-col-reverse gap-1'>
-              <dt className='text-base/7'>Hours per week</dt>
-              <dd className='text-4xl font-semibold tracking-tight'>40</dd>
-            </div>
-            <div className='flex flex-col-reverse gap-1'>
-              <dt className='text-base/7'>Paid time off</dt>
-              <dd className='text-4xl font-semibold tracking-tight'>
-                Unlimited
-              </dd>
-            </div>
-          </dl>
         </div>
       </div>
       <div className='py-24 sm:py-32'>
@@ -84,7 +46,10 @@ export default function AboutPage() {
               href='https://react.dev/'
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiReact className='w-5 text-default-500' color={SiReactHex} />
+                <SiReact
+                  className='w-5 text-default-500'
+                  color={SiReactHex}
+                />
               }
               as={Link}
               variant='light'
@@ -137,7 +102,10 @@ export default function AboutPage() {
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiYarn className='w-5 text-default-500' color={SiYarnHex} />
+                <SiYarn
+                  className='w-5 text-default-500'
+                  color={SiYarnHex}
+                />
               }
               variant='light'
             >
@@ -185,7 +153,10 @@ export default function AboutPage() {
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiGit className='w-5 text-default-500' color={SiGitHex} />
+                <SiGit
+                  className='w-5 text-default-500'
+                  color={SiGitHex}
+                />
               }
               variant='light'
             >

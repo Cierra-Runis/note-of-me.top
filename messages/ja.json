@@ -11,7 +11,10 @@
   },
   "home": "ホーム",
   "post": "投稿",
-  "about": "について",
+  "about": {
+    "name": "について",
+    "description": "シンプルなノートだけ"
+  },
   "languages": "言語",
   "whatAreWeUsingNow": "テクノロジー"
 }

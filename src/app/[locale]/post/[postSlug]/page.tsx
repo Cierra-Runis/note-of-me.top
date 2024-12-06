@@ -1,4 +1,4 @@
-import { Code } from '@nextui-org/react';
+import { Code } from '@nextui-org/code';
 import { promises as fs } from 'fs';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import path from 'path';
@@ -9,7 +9,7 @@ export default async function Post(props: {
   const params = await props.params;
   const content = await fs.readFile(
     path.join(process.cwd(), 'src/post', `${params.postSlug}.mdx`),
-    'utf-8'
+    'utf-8',
   );
 
   const data = await compileMDX<{ title: string }>({
