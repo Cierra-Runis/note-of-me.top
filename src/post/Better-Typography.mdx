@@ -7,9 +7,24 @@ tags: 笔记
 
 自写日记开始，自己就越来越注重文字排版。
 
-我是希望自己编写出来的东西是被精心设计过的，被别人看到时别人会感到舒适的。
+我是希望自己编写出来的东西是被精心设计过的，被别人看到时别人会感到舒适的，所以会去了解、学习一些相关知识。
 
-除了之前所谈的“注意语病”外，现在多加的习性则是：
+故在此摘录并补充如下来源的一些规则：
+
+- [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/)
+- [Requirements for Chinese Text Layout - 中文排版需求](https://www.w3.org/International/clreq/)
+
+## 使用居中的省略号
+
+> 其呈现上占两个汉字空间、包含六个省略点且在水平和垂直方向均位于字面正中，通常使用两个连续的 `U+2026 HORIZONTAL ELLIPSIS […]` 来实现。
+>
+> 在 Unicode 标准第 14 版的 6.2 章中，也推荐使用 `U+22EF MIDLINE HORIZONTAL ELLIPSIS [⋯]` 作为省略号。
+>
+> 此符号配合适当的转向与取代机制，在显示上无论直横排，省略点皆居中，更符合排版需求。
+
+但据 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) 指出，后者是隶属于数学符号的——应该就是 LaTeX 里 `\cdots` 对应的字符——加之 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) 指出 <kbd>^</kbd> 默认映射为前者，我个人还是会使用前者的。
+
+本网站为实现居中省略号，特地使用了字形为居中样式的字体。
 
 ## 使用标准的专有名词
 
@@ -17,9 +32,19 @@ tags: 笔记
 
 Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
-当然，编程里有 camelCase 这样的命名规范，那么这时 GitHub 对应什么？是 github 还是 gitHub 呢？
+当然，编程里有 `camelCase` 这样的命名规范，那么这时 GitHub 对应什么？是 `github` 还是 `gitHub` 呢？
 
-看个人喜好啦～
+有需求的读者可参见 [camelCase 英文维基百科](https://en.m.wikipedia.org/wiki/Camel_case) 中的 Programming and coding 一节。
+
+我是这样想的，人家既然这样设计了，必然保留人家的特征是最好的。
+
+在此列表列出个人会最终采用的命名：
+
+- 专有名词：GitHub、SurviRed、API、JSON
+- 变量、函数名 `camelCase`：gitHub、surviRed、api、json
+- 类名 `PascalCase`：GitHubAPI、SurviRedJSON、APIJSON
+- 常量名 `SNAKE_CASE`：SURVIRED_API
+- 文件名、URL：`kebab-case`：github-json
 
 ## 不再过分使用括号
 
