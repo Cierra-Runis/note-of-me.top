@@ -13,3 +13,8 @@
 [Simple Icons](https://simpleicons.org/)
 
 [Youtube - MDX in Next.js is Easy Now](https://www.youtube.com/watch?v=MsSUAOkepCw)
+
+## Checklist
+
+- [ ] [Contentlayer](https://github.com/timlrx/contentlayer2)
+- [ ] [Shiki](https://github.com/shikijs/shiki)
