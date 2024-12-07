@@ -1,4 +1,5 @@
 import { Code } from '@nextui-org/code';
+import { Kbd } from '@nextui-org/kbd';
 import { promises as fs } from 'fs';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import path from 'path';
@@ -17,6 +18,7 @@ export default async function Post(props: {
     options: { parseFrontmatter: true },
     components: {
       code: (codeProps) => <Code color='secondary'>{codeProps.children}</Code>,
+      kbd: (kbdProps) => <Kbd>{kbdProps.children}</Kbd>,
     },
   });
 

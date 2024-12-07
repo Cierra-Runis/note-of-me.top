@@ -4515,6 +4515,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unicode/unicode-15.0.0@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "@unicode/unicode-15.0.0@npm:1.6.5"
+  checksum: 10c0/b9367f6ec7dc2a6aa94074ab2cc6e5bba066a72b16df9afcdf0bb0c66209654cfa3dbed809531cb4b2bc5f9b2b494fe5b4c52113eaa58b4fb4af1c1cdcee5876
+  languageName: node
+  linkType: hard
+
 "@vercel/analytics@npm:^1.4.1":
   version: 1.4.1
   resolution: "@vercel/analytics@npm:1.4.1"
@@ -7903,6 +7910,7 @@ __metadata:
     "@types/node": "npm:^20.17.9"
     "@types/react": "npm:^18.3.14"
     "@types/react-dom": "npm:^18.3.2"
+    "@unicode/unicode-15.0.0": "npm:^1.6.5"
     "@vercel/analytics": "npm:^1.4.1"
     "@vercel/speed-insights": "npm:^1.1.0"
     eslint: "npm:^9.16.0"

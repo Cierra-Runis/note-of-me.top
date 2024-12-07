@@ -57,7 +57,6 @@ export default async function RootLayout({
       >
         <Providers>
           <Statistics />
-
           <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
           <NextIntlClientProvider messages={messages}>
             <div className='relative flex h-screen flex-col'>
