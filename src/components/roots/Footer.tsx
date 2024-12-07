@@ -1,4 +1,4 @@
-import GitHubButton from '@/components/buttons/GitHubButton';
+import GitHubButton from '../buttons/GitHubButton';
 import { siteConfig } from '@/config';
 import { Link } from '@nextui-org/link';
 
