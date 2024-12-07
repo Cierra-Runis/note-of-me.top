@@ -1,6 +1,6 @@
 'use client';
 
-import { redirect, routing, usePathname, useRouter } from '@/i18n/routing';
+import { redirect, routing, usePathname } from '@/i18n/routing';
 import { LanguageIcon } from '@heroicons/react/24/outline';
 import { Button } from '@nextui-org/button';
 import {
