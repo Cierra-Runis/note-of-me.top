@@ -9,16 +9,17 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from '@nextui-org/dropdown';
-
 import { useLocale, useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function LocaleSwitch() {
   const locale = useLocale();
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations();
 
   return (
-    <Dropdown>
+    <Dropdown isOpen={isOpen} onOpenChange={setIsOpen}>
       <DropdownTrigger>
         <Button
           size='sm'
@@ -30,15 +31,16 @@ export default function LocaleSwitch() {
       <DropdownMenu
         selectedKeys={[locale]}
         selectionMode='single'
-        onAction={(key) =>
-          redirect({ locale: key as string, href: { pathname: pathname } })
-        }
+        onAction={(key) => {
+          setIsOpen(false);
+          return redirect({
+            locale: key as string,
+            href: { pathname: pathname },
+          });
+        }}
       >
         {routing.locales.map((key) => (
-          <DropdownItem
-            key={key}
-            title={t(`locales.${key}`)}
-          />
+          <DropdownItem key={key} title={t(`locales.${key}`)} />
         ))}
       </DropdownMenu>
     </Dropdown>

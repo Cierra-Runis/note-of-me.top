@@ -16,7 +16,7 @@ export default async function Post(props: {
     source: content,
     options: { parseFrontmatter: true },
     components: {
-      code: (props) => <Code color='secondary'>{props.children}</Code>,
+      code: (codeProps) => <Code color='secondary'>{codeProps.children}</Code>,
     },
   });
 

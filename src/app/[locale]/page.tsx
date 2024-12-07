@@ -1,10 +1,10 @@
 import { subtitle, title } from '@/components/primitives';
-import { button as buttonStyles } from '@nextui-org/theme';
 import { siteConfig } from '@/config/site';
-import { Code } from '@nextui-org/code';
-import { SiGithub } from '@icons-pack/react-simple-icons';
 import { Link } from '@/i18n/routing';
+import { SiGithub } from '@icons-pack/react-simple-icons';
+import { Code } from '@nextui-org/code';
 import { Snippet } from '@nextui-org/snippet';
+import { button as buttonStyles } from '@nextui-org/theme';
 
 export default function Home() {
   return (
@@ -41,11 +41,7 @@ export default function Home() {
       </div>
 
       <div className='mt-8'>
-        <Snippet
-          hideCopyButton
-          hideSymbol
-          variant='bordered'
-        >
+        <Snippet hideCopyButton hideSymbol variant='bordered'>
           <span>
             Get started by editing <Code color='primary'>app/page.tsx</Code>
           </span>

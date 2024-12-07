@@ -1,8 +1,8 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc';
 import { Link } from '@/i18n/routing';
+import { promises as fs } from 'fs';
 import { getTranslations } from 'next-intl/server';
+import { compileMDX } from 'next-mdx-remote/rsc';
+import path from 'path';
 
 export default async function Projects() {
   const filenames = await fs.readdir(path.join(process.cwd(), 'src/post'));

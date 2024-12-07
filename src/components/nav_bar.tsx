@@ -1,3 +1,10 @@
+import GitHubButton from './github-button';
+import LocaleSwitch from './locale-switch';
+import SearchButton from './search-button';
+import { ThemeButton } from '@/components/theme-button';
+import { Link as I18nLink } from '@/i18n/routing';
+import { Bars3Icon } from '@heroicons/react/24/outline';
+import { Link } from '@nextui-org/link';
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,34 +14,16 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from '@nextui-org/navbar';
-
-import { ThemeButton } from '@/components/theme-button';
-import LocaleSwitch from './locale-switch';
 import { useTranslations } from 'next-intl';
-import { Link as I18nLink } from '@/i18n/routing';
-import GitHubButton from './github-button';
-import SearchButton from './search-button';
-import { Bars3Icon } from '@heroicons/react/24/outline';
-import { Link } from '@nextui-org/link';
 
 export const Navbar = () => {
   const t = useTranslations();
 
   return (
-    <NextUINavbar
-      maxWidth='xl'
-      shouldHideOnScroll
-      isBordered
-    >
-      <NavbarContent
-        className='basis-1/5 sm:basis-full'
-        justify='start'
-      >
+    <NextUINavbar maxWidth='xl' shouldHideOnScroll isBordered>
+      <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand className='max-w-fit gap-3'>
-          <I18nLink
-            className='flex items-center justify-start gap-1'
-            href='/'
-          >
+          <I18nLink className='flex items-center justify-start gap-1' href='/'>
             <p className='font-bold text-inherit'>{t('site.name')}</p>
           </I18nLink>
         </NavbarBrand>
@@ -63,10 +52,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent
-        className='basis-1 pl-4 sm:hidden'
-        justify='end'
-      >
+      <NavbarContent className='basis-1 pl-4 sm:hidden' justify='end'>
         <LocaleSwitch />
         <GitHubButton />
         <ThemeButton />
@@ -78,26 +64,17 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <NavbarMenuItem key='/'>
-          <Link
-            href='/'
-            className='w-full'
-          >
+          <Link href='/' className='w-full'>
             {t('home')}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/post'>
-          <Link
-            href='/post'
-            className='w-full'
-          >
+          <Link href='/post' className='w-full'>
             {t('post')}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/about'>
-          <Link
-            href='/about'
-            className='w-full'
-          >
+          <Link href='/about' className='w-full'>
             {t('about.name')}
           </Link>
         </NavbarMenuItem>

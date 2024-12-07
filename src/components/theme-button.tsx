@@ -1,19 +1,13 @@
 'use client';
 
-import { FC } from 'react';
-import { SwitchProps, useSwitch } from '@nextui-org/switch';
-import { useTheme } from 'next-themes';
-import { useIsSSR } from '@react-aria/ssr';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
 import { siteConfig } from '@/config/site';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { Button, ButtonProps } from '@nextui-org/button';
+import { useSwitch } from '@nextui-org/switch';
+import { useIsSSR } from '@react-aria/ssr';
+import { useTheme } from 'next-themes';
 
-export interface ThemeSwitchProps {
-  className?: string;
-  classNames?: SwitchProps['classNames'];
-}
-
-export const ThemeButton: FC<ThemeSwitchProps> = () => {
+export function ThemeButton(props: ButtonProps) {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
@@ -30,12 +24,13 @@ export const ThemeButton: FC<ThemeSwitchProps> = () => {
 
   return (
     <Button
-      aria-label='Github'
+      {...props}
+      aria-label='GitHub'
       href={siteConfig.author.url}
       size='sm'
       variant='light'
       isIconOnly
-      onClick={onChange}
+      onPress={onChange}
     >
       {!isSelected || isSSR ? (
         <SunIcon className='w-5 text-default-500' />
@@ -44,4 +39,4 @@ export const ThemeButton: FC<ThemeSwitchProps> = () => {
       )}
     </Button>
   );
-};
+}

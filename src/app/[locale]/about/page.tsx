@@ -46,10 +46,7 @@ export default function AboutPage() {
               href='https://react.dev/'
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiReact
-                  className='w-5 text-default-500'
-                  color={SiReactHex}
-                />
+                <SiReact className='w-5 text-default-500' color={SiReactHex} />
               }
               as={Link}
               variant='light'
@@ -102,10 +99,7 @@ export default function AboutPage() {
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiYarn
-                  className='w-5 text-default-500'
-                  color={SiYarnHex}
-                />
+                <SiYarn className='w-5 text-default-500' color={SiYarnHex} />
               }
               variant='light'
             >
@@ -153,10 +147,7 @@ export default function AboutPage() {
               as={Link}
               className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
               startContent={
-                <SiGit
-                  className='w-5 text-default-500'
-                  color={SiGitHex}
-                />
+                <SiGit className='w-5 text-default-500' color={SiGitHex} />
               }
               variant='light'
             >

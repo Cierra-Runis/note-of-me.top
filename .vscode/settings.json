@@ -24,7 +24,11 @@
     "**/node_modules": true,
     "**/.next": true,
     "**/.yarn": true,
-    "**/next-env.d.ts": true
+    "**/next-env.d.ts": true,
+    "**/.vercel": true
   },
   "explorerExclude.backup": {},
+  "cSpell.words": [
+    "nextui"
+  ],
 }
