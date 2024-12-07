@@ -1,7 +1,7 @@
-import Footer from './Footer';
-import { NavBar } from './NavBar';
-import { Providers } from './Providers';
-import Statistics from './Statistics';
+import Footer from '@/components/roots/Footer';
+import { NavBar } from '@/components/roots/NavBar';
+import { Providers } from '@/components/roots/Providers';
+import Statistics from '@/components/roots/Statistics';
 import { fontMono, fontSans } from '@/config';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
