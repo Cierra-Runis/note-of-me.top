@@ -7,7 +7,7 @@ import { useSwitch } from '@nextui-org/switch';
 import { useIsSSR } from '@react-aria/ssr';
 import { useTheme } from 'next-themes';
 
-export function ThemeButton(props: ButtonProps) {
+export default function ThemeButton(props: ButtonProps) {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 

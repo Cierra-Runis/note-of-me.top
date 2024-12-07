@@ -25,10 +25,12 @@
     "**/.next": true,
     "**/.yarn": true,
     "**/next-env.d.ts": true,
-    "**/.vercel": true
+    "**/.vercel": true,
+    "**/yarn.lock": true
   },
   "explorerExclude.backup": {},
   "cSpell.words": [
+    "Contentlayer",
     "nextui"
   ],
 }

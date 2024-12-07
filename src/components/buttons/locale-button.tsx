@@ -1,6 +1,6 @@
 'use client';
 
-import { redirect, routing, usePathname } from '@/i18n/routing';
+import { redirect, routing, usePathname, useRouter } from '@/i18n/routing';
 import { LanguageIcon } from '@heroicons/react/24/outline';
 import { Button } from '@nextui-org/button';
 import {
@@ -12,14 +12,18 @@ import {
 import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export default function LocaleSwitch() {
+export default function LocaleButton() {
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations();
 
   return (
-    <Dropdown isOpen={isOpen} onOpenChange={setIsOpen}>
+    <Dropdown
+      aria-label={t('languages')}
+      isOpen={isOpen}
+      onOpenChange={setIsOpen}
+    >
       <DropdownTrigger>
         <Button
           size='sm'

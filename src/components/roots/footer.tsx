@@ -1,6 +1,6 @@
 import GitHubButton from '../buttons/github-button';
 import { siteConfig } from '@/config/site';
-import { Link } from '@/i18n/routing';
+import { Link } from '@nextui-org/link';
 
 export default function Footer() {
   return (

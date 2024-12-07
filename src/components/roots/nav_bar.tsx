@@ -1,8 +1,7 @@
-import GitHubButton from '../buttons/github-button';
-import SearchButton from '../buttons/search-button';
-import LocaleSwitch from '../locale-switch';
-import { ThemeButton } from '@/components/buttons/theme-button';
-import { Link as I18nLink } from '@/i18n/routing';
+import GitHubButton from '@/components/buttons/github-button';
+import LocaleButton from '@/components/buttons/locale-button';
+import SearchButton from '@/components/buttons/search-button';
+import ThemeButton from '@/components/buttons/theme-button';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { Link } from '@nextui-org/link';
 import {
@@ -23,9 +22,9 @@ export const Navbar = () => {
     <NextUINavbar maxWidth='xl' shouldHideOnScroll isBordered>
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand className='max-w-fit gap-3'>
-          <I18nLink className='flex items-center justify-start gap-1' href='/'>
-            <p className='font-bold text-inherit'>{t('site.name')}</p>
-          </I18nLink>
+          <Link className='flex items-center justify-start gap-1' href='/'>
+            <p className='font-bold text-inherit'>{t('site.title')}</p>
+          </Link>
         </NavbarBrand>
         <ul className='ml-2 hidden justify-start gap-6 sm:flex'>
           <NavbarItem key='/'>
@@ -35,7 +34,7 @@ export const Navbar = () => {
             <Link href='/post'>{t('post')}</Link>
           </NavbarItem>
           <NavbarItem key='/about'>
-            <Link href='/about'>{t('about.name')}</Link>
+            <Link href='/about'>{t('about.title')}</Link>
           </NavbarItem>
         </ul>
       </NavbarContent>
@@ -45,7 +44,7 @@ export const Navbar = () => {
         justify='end'
       >
         <NavbarItem className='hidden gap-2 sm:flex'>
-          <LocaleSwitch />
+          <LocaleButton />
           <GitHubButton />
           <ThemeButton />
           <SearchButton />
@@ -53,7 +52,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className='basis-1 pl-4 sm:hidden' justify='end'>
-        <LocaleSwitch />
+        <LocaleButton />
         <GitHubButton />
         <ThemeButton />
         <SearchButton />
@@ -75,7 +74,7 @@ export const Navbar = () => {
         </NavbarMenuItem>
         <NavbarMenuItem key='/about'>
           <Link href='/about' className='w-full'>
-            {t('about.name')}
+            {t('about.title')}
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>

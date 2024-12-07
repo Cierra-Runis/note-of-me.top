@@ -29,7 +29,7 @@ export default function AboutPage() {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-5xl font-semibold tracking-tight sm:text-7xl'>
-            {t('about.name')}
+            {t('about.title')}
           </h2>
           <p className='mt-8 text-pretty text-lg font-medium sm:text-xl/8'>
             {t('about.description')}

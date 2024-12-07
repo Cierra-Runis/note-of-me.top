@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "ノート of 我",
-    "description": "A Simple Note"
+    "description": "A Simple Note",
+    "title": "ノート of 我"
   },
   "locales": {
     "lang": "English",
@@ -12,9 +12,25 @@
   "home": "Home",
   "post": "Post",
   "about": {
-    "name": "About",
-    "description": "A Simple Note"
+    "description": "A Simple Note",
+    "title": "About"
   },
   "languages": "Languages",
-  "whatAreWeUsingNow": "What are we using now"
+  "whatAreWeUsingNow": "What are we using now",
+  "errors": {
+    "pageNotFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist"
+    },
+    "internal": {
+      "title": "Internal Server Error",
+      "description": "Server error occurred"
+    }
+  },
+  "common": {
+    "back": "Back",
+    "backToHome": "Back to Home",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  }
 }

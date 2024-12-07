@@ -1,9 +1,9 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { Link } from '@/i18n/routing';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { Button } from '@nextui-org/button';
+import { Link } from '@nextui-org/link';
 
 export default function GitHubButton() {
   return (

@@ -24,12 +24,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const locale = (await params).locale;
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   return {
-    title: t('site.name'),
-    applicationName: t('site.name'),
+    title: t('site.title'),
+    applicationName: t('site.title'),
     description: t('site.description'),
     authors: siteConfig.author,
     icons: '/icon.svg',
@@ -43,7 +43,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const locale = (await params).locale;
+  const { locale } = await params;
   const messages = await getMessages();
 
   return (
@@ -55,10 +55,10 @@ export default async function RootLayout({
           fontMono.variable,
         )}
       >
-        <Providers>
+        <NextIntlClientProvider messages={messages}>
           <Statistics />
           <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
-          <NextIntlClientProvider messages={messages}>
+          <Providers>
             <div className='relative flex h-screen flex-col'>
               <Navbar />
               <main className='container mx-auto max-w-7xl flex-grow px-6 pt-16'>
@@ -66,8 +66,8 @@ export default async function RootLayout({
               </main>
               <Footer />
             </div>
-          </NextIntlClientProvider>
-        </Providers>
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

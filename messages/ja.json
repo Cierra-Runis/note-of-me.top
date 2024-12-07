@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "ノート of 我",
-    "description": "シンプルなノートだけ"
+    "description": "シンプルなノートだけ",
+    "title": "ノート of 我"
   },
   "locales": {
     "lang": "日本語",
@@ -12,9 +12,25 @@
   "home": "ホーム",
   "post": "投稿",
   "about": {
-    "name": "について",
-    "description": "シンプルなノートだけ"
+    "description": "シンプルなノートだけ",
+    "title": "について"
   },
   "languages": "言語",
-  "whatAreWeUsingNow": "テクノロジー"
+  "whatAreWeUsingNow": "テクノロジー",
+  "errors": {
+    "pageNotFound": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは存在しません"
+    },
+    "internal": {
+      "title": "内部サーバーエラー",
+      "description": "サーバーでエラーが発生しました"
+    }
+  },
+  "common": {
+    "back": "戻る",
+    "cancel": "取消",
+    "confirm": "確認する",
+    "backToHome": "ホームに戻る"
+  }
 }
