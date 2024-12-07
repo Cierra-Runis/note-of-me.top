@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/config';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { Button, ButtonProps } from '@nextui-org/button';
 import { useSwitch } from '@nextui-org/switch';

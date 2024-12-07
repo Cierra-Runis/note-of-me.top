@@ -1,7 +1,7 @@
-import GitHubButton from '@/components/buttons/github-button';
-import LocaleButton from '@/components/buttons/locale-button';
-import SearchButton from '@/components/buttons/search-button';
-import ThemeButton from '@/components/buttons/theme-button';
+import GitHubButton from '../buttons/GitHubButton';
+import LocaleButton from '../buttons/LocaleButton';
+import SearchButton from '../buttons/SearchButton';
+import ThemeButton from '../buttons/ThemeButton';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { Link } from '@nextui-org/link';
 import {
@@ -15,7 +15,7 @@ import {
 } from '@nextui-org/navbar';
 import { useTranslations } from 'next-intl';
 
-export const Navbar = () => {
+export const NavBar = () => {
   const t = useTranslations();
 
   return (

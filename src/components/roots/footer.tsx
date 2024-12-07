@@ -1,5 +1,5 @@
-import GitHubButton from '../buttons/github-button';
-import { siteConfig } from '@/config/site';
+import GitHubButton from '@/components/buttons/GitHubButton';
+import { siteConfig } from '@/config';
 import { Link } from '@nextui-org/link';
 
 export default function Footer() {

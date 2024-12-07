@@ -2,9 +2,9 @@
 
 import { useReportWebVitals } from 'next/web-vitals';
 
-export function WebVitals() {
+export default function WebVitals() {
   useReportWebVitals((metric) => {
-    console.log('Metric', metric);
+    console.info('Metric', metric);
   });
   return <></>;
 }

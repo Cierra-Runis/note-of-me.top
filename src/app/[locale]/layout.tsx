@@ -1,16 +1,16 @@
-import Footer from '@/components/roots/footer';
-import { Navbar } from '@/components/roots/nav_bar';
-import { Providers } from '@/components/roots/providers';
-import Statistics from '@/components/roots/statistics';
-import { fontSans, fontMono } from '@/config/fonts';
-import { siteConfig } from '@/config/site';
-import '@/styles/globals.css';
-import clsx from 'clsx';
+import '@/app/globals.css';
+import BaseLayout from '@/components/roots/BaseLayout';
+import { siteConfig } from '@/config';
+import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
-import NextTopLoader from 'nextjs-toploader';
-import React from 'react';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import React, { ReactNode } from 'react';
+
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
 export const viewport: Viewport = {
   themeColor: [
@@ -18,6 +18,10 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -36,39 +40,14 @@ export async function generateMetadata({
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-  const messages = await getMessages();
 
-  return (
-    <html lang={locale} suppressHydrationWarning>
-      <body
-        className={clsx(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable,
-          fontMono.variable,
-        )}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Statistics />
-          <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
-          <Providers>
-            <div className='relative flex h-screen flex-col'>
-              <Navbar />
-              <main className='container mx-auto max-w-7xl flex-grow px-6 pt-16'>
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </Providers>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  return <BaseLayout locale={locale}>{children}</BaseLayout>;
 }

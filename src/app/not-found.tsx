@@ -1,24 +1,15 @@
-'use client';
+import BaseLayout from '@/components/roots/BaseLayout';
+import NotFoundPage from '@/components/roots/NotFoundPage';
+import { routing } from '@/i18n/routing';
 
-export default function NotFound() {
-  // const t = useTranslations();
+// This page renders when a route like `/unknown.txt` is requested.
+// In this case, the layout at `app/[locale]/layout.tsx` receives
+// an invalid value as the `[locale]` param and calls `notFound()`.
 
+export default function GlobalNotFound() {
   return (
-    <section className='grid min-h-full place-items-center  px-6 py-24 sm:py-32 lg:px-8'>
-      <div className='text-center'>
-        <p className='text-base font-semibold text-secondary'>404</p>
-        {/* <h1 className='mt-4 text-balance text-5xl font-semibold tracking-tight sm:text-7xl'>
-          {t('errors.pageNotFound.title')}
-        </h1>
-        <p className='mt-6 text-pretty text-lg font-medium text-secondary-600 sm:text-xl/8'>
-          {t('errors.pageNotFound.description')}
-        </p>
-        <div className='mt-10 flex items-center justify-center gap-x-6'>
-          <Button href='/' as={Link} color='secondary'>
-            {t('common.backToHome')}
-          </Button>
-        </div> */}
-      </div>
-    </section>
+    <BaseLayout locale={routing.defaultLocale}>
+      <NotFoundPage />
+    </BaseLayout>
   );
 }

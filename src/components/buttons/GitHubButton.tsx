@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/config';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { Button } from '@nextui-org/button';
 import { Link } from '@nextui-org/link';

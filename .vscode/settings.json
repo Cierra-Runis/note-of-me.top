@@ -26,7 +26,8 @@
     "**/.yarn": true,
     "**/next-env.d.ts": true,
     "**/.vercel": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/.contentlayer": true
   },
   "explorerExclude.backup": {},
   "cSpell.words": [
