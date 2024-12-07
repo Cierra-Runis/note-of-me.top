@@ -1,51 +1,56 @@
-'use server';
-
-import { allPosts, Post } from 'contentlayer/generated';
+import { Code } from '@nextui-org/code';
+import { Link } from '@nextui-org/link';
+import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
-import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
-import React from 'react';
+import type { MDXComponents } from 'mdx/types';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { useLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { use } from 'react';
 
-export type PostPageParams = Promise<{
-  slug: string;
-}>;
-
-export const generateStaticParams = async () =>
-  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
-
-export const generateMetadata = async ({
-  params,
-}: {
-  params: PostPageParams;
-}): Promise<Metadata> => {
-  const { slug } = await params;
-
-  const post: Post | undefined = allPosts.find(
-    (post) => post._raw.flattenedPath === slug,
-  );
-
-  return { title: post?.title };
+const mdxComponents: MDXComponents = {
+  a: ({ href, children }) => <Link href={href}>{children}</Link>,
+  code: ({ children }) => <Code color='secondary'>{children}</Code>,
+  MyComponent: () => <div>Hello World!</div>,
 };
 
-export default async function PostPage({ params }: { params: PostPageParams }) {
-  const { slug } = await params;
+export function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }));
+}
 
-  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
+  const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
+  if (!post) return { notFound: true };
 
-  if (post === undefined) return redirect('/404');
+  return {
+    title: post.title,
+  };
+}
+
+export default function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = use(props.params);
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  if (!post) notFound();
+
+  const MDXContent = useMDXComponent(post.body.code);
 
   return (
     <div>
       <div className='mb-8 text-center'>
-        <time dateTime={post.date} className='mb-1 text-xs text-gray-600'>
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
+        <time dateTime={post.date} className='mb-1 text-xs text-secondary-600'>
+          {
+            /// TODO: I18n
+            format(parseISO(post.date), 'LLLL d, yyyy')
+          }
         </time>
         <h1 className='text-3xl font-bold'>{post.title}</h1>
       </div>
-      <div
-        className='[&>*]:mb-3 [&>*:last-child]:mb-0'
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      <MDXContent components={mdxComponents} />
     </div>
   );
 }

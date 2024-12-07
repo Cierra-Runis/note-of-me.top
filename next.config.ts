@@ -1,5 +1,5 @@
 import type { NextConfig } from 'next';
-import { withContentlayer } from 'next-contentlayer';
+import { withContentlayer } from 'next-contentlayer2';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
