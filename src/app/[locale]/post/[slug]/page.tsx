@@ -4,7 +4,6 @@ import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { MDXComponents } from 'mdx/types';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
-import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
 
