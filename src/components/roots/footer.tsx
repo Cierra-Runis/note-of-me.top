@@ -1,4 +1,4 @@
-import GitHubButton from './github-button';
+import GitHubButton from '../buttons/github-button';
 import { siteConfig } from '@/config/site';
 import { Link } from '@/i18n/routing';
 

@@ -1,7 +1,7 @@
-import Footer from '@/components/footer';
-import { Navbar } from '@/components/nav_bar';
-import { Providers } from '@/components/providers';
-import Statistics from '@/components/statistics';
+import Footer from '@/components/roots/footer';
+import { Navbar } from '@/components/roots/nav_bar';
+import { Providers } from '@/components/roots/providers';
+import Statistics from '@/components/roots/statistics';
 import { fontSans, fontMono } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 import '@/styles/globals.css';
@@ -10,6 +10,7 @@ import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import NextTopLoader from 'nextjs-toploader';
+import React from 'react';
 
 export const viewport: Viewport = {
   themeColor: [

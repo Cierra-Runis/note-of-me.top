@@ -1,7 +1,7 @@
-import GitHubButton from './github-button';
-import LocaleSwitch from './locale-switch';
-import SearchButton from './search-button';
-import { ThemeButton } from '@/components/theme-button';
+import GitHubButton from '../buttons/github-button';
+import SearchButton from '../buttons/search-button';
+import LocaleSwitch from '../locale-switch';
+import { ThemeButton } from '@/components/buttons/theme-button';
 import { Link as I18nLink } from '@/i18n/routing';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { Link } from '@nextui-org/link';
