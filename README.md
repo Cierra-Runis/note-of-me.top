@@ -14,6 +14,8 @@
 
 [Youtube - MDX in Next.js is Easy Now](https://www.youtube.com/watch?v=MsSUAOkepCw)
 
+[Lorem Ipsum](https://www.lipsum.com/)
+
 ## Checklist
 
 - [ ] [Contentlayer](https://github.com/timlrx/contentlayer2)
