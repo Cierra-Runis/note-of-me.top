@@ -1,3 +1,5 @@
+'use client';
+
 import GitHubButton from '../buttons/GitHubButton';
 import LocaleButton from '../buttons/LocaleButton';
 import SearchButton from '../buttons/SearchButton';
@@ -14,12 +16,21 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/navbar';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const t = useTranslations();
 
   return (
-    <NextUINavbar maxWidth='xl' shouldHideOnScroll isBordered>
+    <NextUINavbar
+      isMenuOpen={isMenuOpen}
+      maxWidth='xl'
+      shouldHideOnScroll
+      isBordered
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand className='max-w-fit gap-3'>
           <Link className='flex items-center justify-start gap-1' href='/'>
@@ -63,17 +74,29 @@ export const NavBar = () => {
 
       <NavbarMenu>
         <NavbarMenuItem key='/'>
-          <Link href='/' className='w-full'>
+          <Link
+            href='/'
+            className='w-full'
+            onClick={() => setIsMenuOpen(false)}
+          >
             {t('home')}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/post'>
-          <Link href='/post' className='w-full'>
+          <Link
+            href='/post'
+            className='w-full'
+            onClick={() => setIsMenuOpen(false)}
+          >
             {t('post')}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem key='/about'>
-          <Link href='/about' className='w-full'>
+          <Link
+            href='/about'
+            className='w-full'
+            onClick={() => setIsMenuOpen(false)}
+          >
             {t('about.title')}
           </Link>
         </NavbarMenuItem>
