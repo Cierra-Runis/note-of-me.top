@@ -15,7 +15,7 @@ function PostCard(post: Post) {
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
       <div className='text-sm [&>*]:mb-3 [&>*:last-child]:mb-0 line-clamp-3'>
-        {post.body.code}
+        {post.body.raw}
       </div>
     </div>
   );
