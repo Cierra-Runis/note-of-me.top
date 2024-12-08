@@ -2,6 +2,7 @@ import Footer from './Footer';
 import { NavBar } from './NavBar';
 import { Providers } from './Providers';
 import Statistics from './Statistics';
+import '@/app/globals.css';
 import { fontMono, fontSans } from '@/config';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';

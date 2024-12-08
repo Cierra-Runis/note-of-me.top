@@ -1,4 +1,3 @@
-import '@/app/globals.css';
 import BaseLayout from '@/components/roots/BaseLayout';
 import { siteConfig } from '@/config';
 import { routing } from '@/i18n/routing';
