@@ -25,7 +25,6 @@
     "**/.next": true,
     "**/.yarn": true,
     "**/next-env.d.ts": true,
-    "**/.vercel": true,
     "**/yarn.lock": true,
     "**/.contentlayer": true
   },
