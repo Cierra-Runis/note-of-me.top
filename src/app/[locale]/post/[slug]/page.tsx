@@ -1,16 +1,38 @@
 import { Code } from '@nextui-org/code';
+import { Image } from '@nextui-org/image';
+import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
+import { Snippet } from '@nextui-org/snippet';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { MDXComponents } from 'mdx/types';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
-import { use } from 'react';
+import { HTMLProps, use } from 'react';
 
+/// TODO: Implement <Unicode/> component
+function Unicode(props: { code: string }) {
+  return <Code color='danger'>{props.code}</Code>;
+}
+
+/**
+ *  {@link React.JSX.IntrinsicElements}
+ */
 const mdxComponents: MDXComponents = {
-  a: ({ href, children }) => <Link href={href}>{children}</Link>,
-  code: ({ children }) => <Code color='secondary'>{children}</Code>,
-  MyComponent: () => <div>Hello World!</div>,
+  a: ({ href, children }: HTMLProps<HTMLAnchorElement>) => (
+    <Link href={href}>{children}</Link>
+  ),
+  code: ({ children }) => <code className='not-prose'>{children}</code>,
+  img: ({ src, alt, children, ...props }) => (
+    <Image src={src} alt={alt} {...props} isBlurred suppressHydrationWarning>
+      {children}
+    </Image>
+  ),
+  kbd: ({ children }: HTMLProps<HTMLElement>) => <Kbd>{children}</Kbd>,
+  /// FIXME: <p> contains <div> will cause error
+  // p: ({ children }:React.HTMLProps<HTMLParagraphElement>) => <p>{children}</p>,
+  Unicode,
+  Snippet,
 };
 
 export function generateStaticParams() {
