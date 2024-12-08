@@ -64,10 +64,8 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
     <div>
       <div className='mb-8 text-center'>
         <time dateTime={post.date} className='mb-1 text-xs text-secondary-600'>
-          {
-            /// TODO: I18n
-            format(parseISO(post.date), 'LLLL d, yyyy')
-          }
+          {/* TODO: I18n */}
+          {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
         <h1 className='text-3xl font-bold'>{post.title}</h1>
       </div>
