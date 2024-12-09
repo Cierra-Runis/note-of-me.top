@@ -5,7 +5,7 @@ import React from 'react';
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
   // Create any shared layout or styles here
   return (
-    <div className='prose max-w-full dark:prose-invert md:prose-lg bg-[var(--shiki-light-bg)] text-[var(--shiki-light)] dark:bg-[var(--shiki-dark-bg)] dark:text-[var(--shiki-dark)]'>
+    <div className='prose max-w-full dark:prose-invert md:prose-lg'>
       {children}
     </div>
   );
