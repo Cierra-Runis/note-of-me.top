@@ -1,23 +1,21 @@
+import { Link } from '@nextui-org/link';
 import { allPosts, Post } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
-import Link from 'next/link';
 
 function PostCard(post: Post) {
   return (
-    <div className='mb-8'>
-      <h2 className='mb-1 text-xl'>
-        <Link href={post.url}>{post.title}</Link>
-      </h2>
-      <time
-        dateTime={post.date}
-        className='mb-2 block text-xs text-foreground-600'
-      >
+    <Link
+      className='mb-8 flex flex-col items-start justify-center'
+      href={post.url}
+    >
+      <h2 className='mb-1'>{post.title}</h2>
+      <time dateTime={post.date} className='mb-2 block text-foreground-600'>
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
-      <div className='text-sm [&>*]:mb-3 [&>*:last-child]:mb-0 line-clamp-3'>
+      <div className='line-clamp-3 text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
         {post.body.raw}
       </div>
-    </div>
+    </Link>
   );
 }
 

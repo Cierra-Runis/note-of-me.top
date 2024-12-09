@@ -22,24 +22,12 @@ const mdxComponents: MDXComponents = {
   a: ({ href, children }: HTMLProps<HTMLAnchorElement>) => (
     <Link href={href}>{children}</Link>
   ),
-  // code: ({ children, ...props }) => (
-  //   <code className='not-prose' {...props}>
-  //     {children}
-  //   </code>
-  // ),
-  // pre: ({ children, ...props }: HTMLProps<HTMLPreElement>) => (
-  //   <pre className='not-prose' {...props}>
-  //     {children}
-  //   </pre>
-  // ),
   img: ({ src, alt, children, ...props }) => (
-    <Image src={src} alt={alt} {...props} isBlurred suppressHydrationWarning>
+    <Image src={src} alt={alt} {...props} isBlurred>
       {children}
     </Image>
   ),
   Kbd,
-  /// FIXME: <p> contains <div> will cause error
-  // p: ({ children }:React.HTMLProps<HTMLParagraphElement>) => <p>{children}</p>,
   Unicode,
   Snippet,
 };
@@ -72,11 +60,11 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   return (
     <div>
       <div className='mb-8 text-center'>
-        <time dateTime={post.date} className='mb-1 text-xs text-secondary-600'>
+        <strong className='mb-1 text-secondary-600'>
           {/* TODO: I18n */}
           {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </time>
-        <h1 className='text-3xl font-bold'>{post.title}</h1>
+        </strong>
+        <h1>{post.title}</h1>
       </div>
       <MDXContent components={mdxComponents} />
     </div>

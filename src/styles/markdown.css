@@ -11,7 +11,6 @@ code[data-line-numbers] > [data-line]::before {
   width: 0.75rem;
   margin-right: 2rem;
   text-align: right;
-  color: gray;
 }
 
 code[data-line-numbers-max-digits='2'] > [data-line]::before {
