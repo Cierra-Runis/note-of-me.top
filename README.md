@@ -16,7 +16,6 @@
 
 [Lorem Ipsum](https://www.lipsum.com/)
 
-## Checklist
+[Contentlayer](https://github.com/timlrx/contentlayer2)
 
-- [ ] [Contentlayer](https://github.com/timlrx/contentlayer2)
-- [ ] [Shiki](https://github.com/shikijs/shiki)
+[Shiki](https://github.com/shikijs/shiki)
