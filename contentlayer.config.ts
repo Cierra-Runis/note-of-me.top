@@ -1,8 +1,10 @@
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
-import { all } from 'lowlight';
-import rehypeHighlight from 'rehype-highlight';
 import rehypeKaTeX from 'rehype-katex';
-import remarkGFM from 'remark-gfm';
+import {
+  rehypePrettyCode,
+  Options as RehypePrettyCodeOptions,
+} from 'rehype-pretty-code';
+import remarkGFM, { Options as RemarkGFMOptions } from 'remark-gfm';
 import remarkMath from 'remark-math';
 
 export const Post = defineDocumentType(() => ({
@@ -22,11 +24,18 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
+  theme: 'one-dark-pro',
+  keepBackground: false,
+};
+
+const remarkGFMOptions: RemarkGFMOptions = {};
+
 export default makeSource({
   contentDirPath: 'src/post',
   documentTypes: [Post],
   mdx: {
-    rehypePlugins: [rehypeKaTeX, [rehypeHighlight, { languages: all }]],
-    remarkPlugins: [remarkMath, remarkGFM],
+    rehypePlugins: [rehypeKaTeX, [rehypePrettyCode, rehypePrettyCodeOptions]],
+    remarkPlugins: [remarkMath, [remarkGFM, remarkGFMOptions]],
   },
 });

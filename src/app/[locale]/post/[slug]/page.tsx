@@ -22,13 +22,22 @@ const mdxComponents: MDXComponents = {
   a: ({ href, children }: HTMLProps<HTMLAnchorElement>) => (
     <Link href={href}>{children}</Link>
   ),
-  code: ({ children }) => <code className='not-prose'>{children}</code>,
+  // code: ({ children, ...props }) => (
+  //   <code className='not-prose' {...props}>
+  //     {children}
+  //   </code>
+  // ),
+  // pre: ({ children, ...props }: HTMLProps<HTMLPreElement>) => (
+  //   <pre className='not-prose' {...props}>
+  //     {children}
+  //   </pre>
+  // ),
   img: ({ src, alt, children, ...props }) => (
     <Image src={src} alt={alt} {...props} isBlurred suppressHydrationWarning>
       {children}
     </Image>
   ),
-  kbd: ({ children }: HTMLProps<HTMLElement>) => <Kbd>{children}</Kbd>,
+  Kbd,
   /// FIXME: <p> contains <div> will cause error
   // p: ({ children }:React.HTMLProps<HTMLParagraphElement>) => <p>{children}</p>,
   Unicode,

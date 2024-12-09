@@ -1,7 +1,7 @@
 import BaseLayout from '@/components/roots/BaseLayout';
 import { siteConfig } from '@/config';
 import { routing } from '@/i18n/routing';
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import React, { ReactNode } from 'react';
@@ -9,13 +9,6 @@ import React, { ReactNode } from 'react';
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
 };
 
 export function generateStaticParams() {
