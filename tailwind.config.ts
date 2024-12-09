@@ -1,8 +1,25 @@
-import { nextui } from '@nextui-org/theme';
+import { nextui, NextUIPluginConfig } from '@nextui-org/theme';
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
-export default {
+const nextUIPluginConfig: NextUIPluginConfig = {
+  themes: {
+    light: {
+      colors: {
+        background: '#EEEEEE',
+        primary: '#FF8000',
+      },
+    },
+    dark: {
+      colors: {
+        background: '#282c34',
+        primary: '#FF8000',
+      },
+    },
+  },
+};
+
+const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -18,23 +35,7 @@ export default {
     },
   },
   darkMode: 'class',
-  plugins: [
-    nextui({
-      themes: {
-        light: {
-          colors: {
-            background: '#EEEEEE',
-            primary: '#FF8000',
-          },
-        },
-        dark: {
-          colors: {
-            background: '#282c34',
-            primary: '#FF8000',
-          },
-        },
-      },
-    }),
-    typography(),
-  ],
-} satisfies Config;
+  plugins: [nextui(nextUIPluginConfig), typography()],
+};
+
+export default config;
