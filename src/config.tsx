@@ -26,7 +26,7 @@ import { Link } from '@nextui-org/link';
 import { Snippet } from '@nextui-org/snippet';
 import type { MDXComponents } from 'mdx/types';
 import { Kode_Mono as FontMono, Saira as FontSans } from 'next/font/google';
-import { HTMLProps, ReactElement, ReactNode, isValidElement } from 'react';
+import { HTMLProps, ReactElement } from 'react';
 
 export const port = process.env.PORT || 3000;
 export const host = process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -73,7 +73,7 @@ export const mdxComponents: MDXComponents = {
       {children}
     </Link>
   ),
-  pre: ({ children, ...props }: HTMLProps<HTMLPreElement>) => {
+  pre: ({ children }: HTMLProps<HTMLPreElement>) => {
     // const codeBlock = children as ReactElement<HTMLProps<HTMLElement>>;
     // const codeBlockChildren = codeBlock.props.children as Array<ReactNode>;
     // const spans = codeBlockChildren.filter((e) =>
