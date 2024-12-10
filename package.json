@@ -66,7 +66,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "contentlayer2": "^0.5.3",
     "date-fns": "^4.1.0",
-    "framer-motion": "^11.13.3",
+    "framer-motion": "^11.13.4",
     "katex": "^0.16.15",
     "next": "15.0.4",
     "next-contentlayer2": "^0.5.3",
