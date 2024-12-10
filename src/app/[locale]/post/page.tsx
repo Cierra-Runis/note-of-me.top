@@ -1,6 +1,7 @@
 import { Link } from '@nextui-org/link';
 import { allPosts, Post } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
+import { useTranslations } from 'next-intl';
 
 function PostCard(post: Post) {
   return (
@@ -12,7 +13,7 @@ function PostCard(post: Post) {
       <time dateTime={post.date} className='mb-2 block text-foreground-600'>
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
-      <div className='line-clamp-3 text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
+      <div className='line-clamp-3 break-all text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
         {post.body.raw}
       </div>
     </Link>
@@ -20,15 +21,14 @@ function PostCard(post: Post) {
 }
 
 export default function Posts() {
+  const t = useTranslations();
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   );
 
   return (
     <section>
-      <h1 className='mb-8 text-center text-2xl font-black'>
-        Next.js + Contentlayer Example
-      </h1>
+      <h1 className='mb-8 text-center'>{t('post')}</h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
