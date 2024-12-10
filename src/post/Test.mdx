@@ -3,21 +3,25 @@ title: 'Test'
 date: '2024-12-09 03:23:45'
 ---
 
-## Headings
+## 标题
 
-To create a heading, add one to six <Kbd>#</Kbd> symbols before your heading text. The number of <Kbd>#</Kbd> you use will determine the hierarchy level and typeface size of the heading.
+在标题文字前使用 1 到 6 个 <Kbd>#</Kbd> 符号生成标题。其数量决定了标题的级别与字号大小。
 
 ```markdown
-# A first-level heading
+# 一级标题
 
-## A second-level heading
+## 二级标题
 
-### A third-level heading
+### 三级标题
+
+#### 四级标题
+
+##### 五级标题
+
+###### 六级标题
 ```
 
-## Styling text
-
-You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and `.md` files.
+## 文本样式
 
 |         Style          |      Syntax       |                 Example                  |                 Output                 |
 | :--------------------: | :---------------: | :--------------------------------------: | :------------------------------------: |
@@ -30,19 +34,17 @@ You can indicate emphasis with bold, italic, strikethrough, subscript, or supers
 |      Superscript       |  `<sup> </sup>`   | `This is a <sup>superscript</sup> text`  | This is a <sup>superscript</sup> text  |
 |       Underline        |  `<ins> </ins>`   | `This is an <ins>underlined</ins> text`  | This is an <ins>underlined</ins> text  |
 
-## Quoting text
+## 引用
 
-You can quote text with a <Kbd>></Kbd>.
+使用 <Kbd>></Kbd> 引用文字
 
 ```markdown
-Text that is not a quote
-
-> Text that is a quote
+> Quoted text is indented, with a different style.
 ```
 
 > Quoted text is indented, with a different style.
 
-## Quoting code
+## 代码
 
 You can call out code or a command within a sentence with single backticks. The text within the backticks will not be formatted. You can also press the <Kbd keys={'command'}>E</Kbd> (Mac) or <Kbd keys={'ctrl'}>E</Kbd> (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
 
@@ -62,13 +64,15 @@ git commit
 ```
 ````
 
-## Links
+在反引号后接编程语言名称，代码会按其语法高亮。
+
+## 链接
 
 You can create an inline link by wrapping link text in brackets `[ ]`, and then wrapping the URL in parentheses `( )`. You can also use the keyboard shortcut <Kbd keys={'command'}>K</Kbd> to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.
 
 `This site was built using [GitHub Pages](https://pages.github.com/).`
 
-## Lists
+## 列表
 
 You can make an unordered list by preceding one or more lines of text with <Kbd>-</Kbd>, <Kbd>\*</Kbd>, or <Kbd>+</Kbd>.
 
@@ -98,7 +102,7 @@ To order your list, precede each line with a number.
 2. James Monroe
 3. John Quincy Adams
 
-### Nested Lists
+### 嵌套列表
 
 You can create a nested list by indenting one or more list items below another item.
 
@@ -140,7 +144,7 @@ You can create multiple levels of nested lists using the same method. For exampl
 
 For more examples, see the [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#example-265).
 
-## Task lists
+## 任务清单
 
 To create a task list, preface list items with a hyphen and space followed by [ ]. To mark a task as complete, use [x].
 
@@ -154,13 +158,11 @@ To create a task list, preface list items with a hyphen and space followed by [ 
 - [ ] https://github.com/octo-org/octo-repo/issues/740
 - [ ] Add delight to the experience when all tasks are complete 🎉
 
-## Paragraphs
+## 段落
 
 You can create a new paragraph by leaving a blank line between lines of text.
 
-## Footnotes
-
-{/* FIXME: Ref Miss Hit */}
+## 脚注
 
 You can add footnotes to your content by using this bracket syntax:
 
@@ -199,17 +201,17 @@ Use alerts only when they are crucial for user success and limit them to one or 
 To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Six types of alerts are available:
 
 ```markdown
-> <Alert title={'Default Style'} description={'Some normal information content.'} />
->
-> <Alert color={'primary'} title={'Primary Style'} description={'Useful information that users should know, even when skimming content.'} />
->
-> <Alert color={'secondary'} title={'Secondary Style'} description={'Helpful advice for doing things better or more easily.'} />
-> 
-> <Alert color={'success'} title={'Success Style'} description={'We did it!'} />
->
-> <Alert color={'warning'} title={'Warning Style'} description={'Urgent info that needs immediate user attention to avoid problems.'} />
->
-> <Alert color={'danger'} title={'Danger Style'} description={'Advises about risks or negative outcomes of certain actions.'} />
+<Alert title={'Default Style'} description={'Some normal information content.'} />
+
+<Alert color={'primary'} title={'Primary Style'} description={'Useful information that users should know, even when skimming content.'} />
+
+<Alert color={'secondary'} title={'Secondary Style'} description={'Helpful advice for doing things better or more easily.'} />
+ 
+<Alert color={'success'} title={'Success Style'} description={'We did it!'} />
+
+<Alert color={'warning'} title={'Warning Style'} description={'Urgent info that needs immediate user attention to avoid problems.'} />
+
+<Alert color={'danger'} title={'Danger Style'} description={'Advises about risks or negative outcomes of certain actions.'} />
 ```
 
 <Alert title={'Default Style'} description={'Some normal information content.'} />
@@ -224,7 +226,7 @@ To add an alert, use a special blockquote line specifying the alert type, follow
 
 <Alert color={'danger'} title={'Danger Style'} description={'Advises about risks or negative outcomes of certain actions.'} />
 
-## Hiding content with comments
+## 注释
 
 You can tell to hide content from the rendered Markdown by placing the content in an HTML comment.
 
@@ -251,7 +253,3 @@ Let's rename \*our-new-project\* to \*our-old-project\*.
 For more information on backslashes, see Daring Fireball's "[Markdown Syntax](https://daringfireball.net/projects/markdown/syntax#backslash)."
 
 > The Markdown formatting will not be ignored in the title of an issue or a pull request.
-
-## Further reading
-
-- [Flavored Markdown Spec](https://github.github.com/gfm/)
