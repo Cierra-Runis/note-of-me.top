@@ -1,10 +1,13 @@
+import MarkdownImage from '@/components/MarkdownImage';
+import '@/styles/markdown.css';
+import { Checkbox } from '@nextui-org/checkbox';
 import { Code } from '@nextui-org/code';
-import { Image } from '@nextui-org/image';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
 import { Snippet } from '@nextui-org/snippet';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
+import 'katex/dist/katex.min.css';
 import type { MDXComponents } from 'mdx/types';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
@@ -19,13 +22,38 @@ function Unicode(props: { code: string }) {
  *  {@link React.JSX.IntrinsicElements}
  */
 const mdxComponents: MDXComponents = {
-  a: ({ href, children }: HTMLProps<HTMLAnchorElement>) => (
-    <Link href={href}>{children}</Link>
+  a: ({ id, href, children, ...props }: HTMLProps<HTMLAnchorElement>) => (
+    <Link
+      id={id}
+      href={href}
+      aria-label={props['aria-label']}
+      aria-describedby={props['aria-describedby']}
+    >
+      {children}
+    </Link>
   ),
   img: ({ src, alt, children, ...props }) => (
-    <Image src={src} alt={alt} {...props} isBlurred>
+    <MarkdownImage
+      src={src}
+      alt={alt}
+      {...props}
+      isBlurred
+      isZoomed
+      className='mx-auto'
+    >
       {children}
-    </Image>
+    </MarkdownImage>
+  ),
+  input: ({ checked, type, ...props }: HTMLProps<HTMLInputElement>) => {
+    if (type === 'checkbox') {
+      return <Checkbox isDisabled defaultSelected={checked} />;
+    }
+    return <input {...props} />;
+  },
+  table: ({ children, ...props }) => (
+    <div className='overflow-auto'>
+      <table {...props}>{children}</table>
+    </div>
   ),
   Kbd,
   Unicode,

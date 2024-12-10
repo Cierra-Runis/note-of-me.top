@@ -1,5 +1,3 @@
-import '@/styles/markdown.css';
-import 'katex/dist/katex.min.css';
 import React from 'react';
 
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
