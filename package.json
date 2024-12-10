@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:content": "contentlayer2 build",
-    "start": "next start ",
+    "start": "next start",
     "lint": "next lint",
     "format": "prettier --write 'src/**'",
     "update": "nextui upgrade && yarn upgrade-interactive"
@@ -66,8 +66,8 @@
     "@vercel/speed-insights": "^1.1.0",
     "contentlayer2": "^0.5.3",
     "date-fns": "^4.1.0",
-    "framer-motion": "^11.13.1",
-    "katex": "^0.16.14",
+    "framer-motion": "^11.13.3",
+    "katex": "^0.16.15",
     "next": "15.0.4",
     "next-contentlayer2": "^0.5.3",
     "next-intl": "^3.26.0",
@@ -80,7 +80,7 @@
     "rehype-pretty-code": "^0.14.0",
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
-    "shiki": "^1.24.1",
+    "shiki": "^1.24.2",
     "swr": "^2.2.5"
   },
   "devDependencies": {
@@ -92,7 +92,7 @@
     "@types/katex": "^0.16.7",
     "@types/node": "^20.17.9",
     "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "@unicode/unicode-15.0.0": "^1.6.5",
     "eslint": "^9.16.0",
     "eslint-config-next": "15.0.4",
