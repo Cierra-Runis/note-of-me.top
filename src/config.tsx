@@ -19,6 +19,7 @@ import {
   SiYarn,
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
+import { Alert } from '@nextui-org/alert';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Code } from '@nextui-org/code';
 import { Kbd } from '@nextui-org/kbd';
@@ -102,6 +103,7 @@ export const mdxComponents: MDXComponents = {
       <table {...props}>{children}</table>
     </div>
   ),
+  Alert,
   Kbd,
   Unicode,
 };
