@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
+import { KatexOptions } from 'katex';
 import rehypeKaTeX from 'rehype-katex';
 import {
   rehypePrettyCode,
@@ -24,18 +25,34 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+const rehypeKaTeXOptions: KatexOptions = {
+  output: 'html',
+};
+
 const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
   theme: 'one-dark-pro',
   keepBackground: false,
 };
 
-const remarkGFMOptions: RemarkGFMOptions = {};
+const remarkGFMOptions: RemarkGFMOptions = {
+  singleTilde: false,
+};
 
 export default makeSource({
   contentDirPath: 'src/post',
   documentTypes: [Post],
   mdx: {
-    rehypePlugins: [rehypeKaTeX, [rehypePrettyCode, rehypePrettyCodeOptions]],
-    remarkPlugins: [remarkMath, [remarkGFM, remarkGFMOptions]],
+    rehypePlugins: [
+      /// https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
+      [rehypeKaTeX, rehypeKaTeXOptions],
+      /// https://rehype-pretty.pages.dev
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+    ],
+    remarkPlugins: [
+      /// https://github.com/remarkjs/remark-math
+      [remarkMath],
+      /// https://github.com/remarkjs/remark-gfm
+      [remarkGFM, remarkGFMOptions],
+    ],
   },
 });

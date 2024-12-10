@@ -24,3 +24,8 @@ code[data-line-numbers-max-digits='3'] > [data-line]::before {
 code[data-line-numbers-max-digits='4'] > [data-line]::before {
   width: 2.25rem;
 }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
