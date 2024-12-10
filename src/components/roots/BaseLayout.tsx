@@ -24,7 +24,7 @@ export default async function BaseLayout({ children, locale }: Props) {
     <html lang={locale} suppressHydrationWarning>
       <body
         className={clsx(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen bg-background font-sans antialiased selection:bg-secondary-500',
           fontSans.variable,
           fontMono.variable,
         )}

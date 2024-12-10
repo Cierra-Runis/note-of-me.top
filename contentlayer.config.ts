@@ -30,7 +30,10 @@ const rehypeKaTeXOptions: KatexOptions = {
 };
 
 const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
-  theme: 'one-dark-pro',
+  theme: {
+    light: 'one-light',
+    dark: 'one-dark-pro',
+  },
   keepBackground: false,
 };
 
