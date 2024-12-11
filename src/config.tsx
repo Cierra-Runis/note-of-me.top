@@ -20,11 +20,11 @@ import {
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
 import { Alert } from '@nextui-org/alert';
+import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Code } from '@nextui-org/code';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
-import { Snippet } from '@nextui-org/snippet';
 import type { MDXComponents } from 'mdx/types';
 import { Kode_Mono as FontMono, Saira as FontSans } from 'next/font/google';
 import { HTMLProps, ReactElement } from 'react';
@@ -74,19 +74,6 @@ export const mdxComponents: MDXComponents = {
       {children}
     </Link>
   ),
-  pre: ({ children }: HTMLProps<HTMLPreElement>) => {
-    // const codeBlock = children as ReactElement<HTMLProps<HTMLElement>>;
-    // const codeBlockChildren = codeBlock.props.children as Array<ReactNode>;
-    // const spans = codeBlockChildren.filter((e) =>
-    //   isValidElement<HTMLProps<'span'>>(e),
-    // );
-    /// FIXME: A Lot of work to do here
-    return (
-      <Snippet hideSymbol fullWidth size='lg' className='not-prose'>
-        {children}
-      </Snippet>
-    );
-  },
   img: ({ src, alt, children }: HTMLProps<HTMLImageElement>) => (
     <MarkdownImage src={src} alt={alt} isBlurred isZoomed className='mx-auto'>
       {children}

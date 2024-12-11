@@ -27,7 +27,7 @@ export default function Posts() {
   );
 
   return (
-    <section>
+    <section className='flex flex-col gap-y-12'>
       <h1 className='mb-8 text-center'>{t('post')}</h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />

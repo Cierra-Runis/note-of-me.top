@@ -1,5 +1,9 @@
+import { Calendar } from '@nextui-org/calendar';
+
 export default function Home() {
   return (
-    <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'></section>
+    <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
+      <Calendar></Calendar>
+    </section>
   );
 }

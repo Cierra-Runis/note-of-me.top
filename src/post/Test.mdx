@@ -7,7 +7,7 @@ date: '2024-12-09 03:23:45'
 
 在标题文字前使用 1 到 6 个 <Kbd>#</Kbd> 符号生成标题。其数量决定了标题的级别与字号大小。
 
-```markdown
+```markdown {1} showLineNumbers /标题/
 # 一级标题
 
 ## 二级标题
@@ -200,31 +200,77 @@ Use alerts only when they are crucial for user success and limit them to one or 
 
 To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Six types of alerts are available:
 
-```markdown
-<Alert title={'Default Style'} description={'Some normal information content.'} />
+```mdx
+<Alert
+  title={'Default Style'}
+  description={'Some normal information content.'}
+/>
 
-<Alert color={'primary'} title={'Primary Style'} description={'Useful information that users should know, even when skimming content.'} />
+<Alert
+  color={'primary'}
+  title={'Primary Style'}
+  description={
+    'Useful information that users should know, even when skimming content.'
+  }
+/>
 
-<Alert color={'secondary'} title={'Secondary Style'} description={'Helpful advice for doing things better or more easily.'} />
- 
+<Alert
+  color={'secondary'}
+  title={'Secondary Style'}
+  description={'Helpful advice for doing things better or more easily.'}
+/>
+
 <Alert color={'success'} title={'Success Style'} description={'We did it!'} />
 
-<Alert color={'warning'} title={'Warning Style'} description={'Urgent info that needs immediate user attention to avoid problems.'} />
+<Alert
+  color={'warning'}
+  title={'Warning Style'}
+  description={
+    'Urgent info that needs immediate user attention to avoid problems.'
+  }
+/>
 
-<Alert color={'danger'} title={'Danger Style'} description={'Advises about risks or negative outcomes of certain actions.'} />
+<Alert
+  color={'danger'}
+  title={'Danger Style'}
+  description={'Advises about risks or negative outcomes of certain actions.'}
+/>
 ```
 
-<Alert title={'Default Style'} description={'Some normal information content.'} />
+<Alert
+  title={'Default Style'}
+  description={'Some normal information content.'}
+/>
 
-<Alert color={'primary'} title={'Primary Style'} description={'Useful information that users should know, even when skimming content.'} />
+<Alert
+  color={'primary'}
+  title={'Primary Style'}
+  description={
+    'Useful information that users should know, even when skimming content.'
+  }
+/>
 
-<Alert color={'secondary'} title={'Secondary Style'} description={'Helpful advice for doing things better or more easily.'} />
- 
+<Alert
+  color={'secondary'}
+  title={'Secondary Style'}
+  description={'Helpful advice for doing things better or more easily.'}
+/>
+
 <Alert color={'success'} title={'Success Style'} description={'We did it!'} />
 
-<Alert color={'warning'} title={'Warning Style'} description={'Urgent info that needs immediate user attention to avoid problems.'} />
+<Alert
+  color={'warning'}
+  title={'Warning Style'}
+  description={
+    'Urgent info that needs immediate user attention to avoid problems.'
+  }
+/>
 
-<Alert color={'danger'} title={'Danger Style'} description={'Advises about risks or negative outcomes of certain actions.'} />
+<Alert
+  color={'danger'}
+  title={'Danger Style'}
+  description={'Advises about risks or negative outcomes of certain actions.'}
+/>
 
 ## 注释
 
