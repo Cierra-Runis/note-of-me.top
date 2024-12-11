@@ -20,7 +20,6 @@ import {
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
 import { Alert } from '@nextui-org/alert';
-import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Code } from '@nextui-org/code';
 import { Kbd } from '@nextui-org/kbd';
