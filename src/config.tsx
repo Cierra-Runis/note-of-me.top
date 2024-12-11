@@ -1,4 +1,3 @@
-import MarkdownImage from './components/MarkdownImage';
 import {
   SiEslint,
   SiEslintHex,
@@ -19,14 +18,7 @@ import {
   SiYarn,
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
-import { Alert } from '@nextui-org/alert';
-import { Checkbox } from '@nextui-org/checkbox';
-import { Code } from '@nextui-org/code';
-import { Kbd } from '@nextui-org/kbd';
-import { Link } from '@nextui-org/link';
-import type { MDXComponents } from 'mdx/types';
-import { Kode_Mono as FontMono, Saira as FontSans } from 'next/font/google';
-import { HTMLProps, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 export const port = process.env.PORT || 3000;
 export const host = process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -42,56 +34,6 @@ export const siteConfig = {
     githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
     docs: 'https://nextui.org',
   },
-};
-
-export const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
-
-export const fontMono = FontMono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
-
-/// TODO: Implement <Unicode/> component
-function Unicode(props: { code: string }) {
-  return <Code color='danger'>{props.code}</Code>;
-}
-
-/**
- *  {@link React.JSX.IntrinsicElements}
- */
-export const mdxComponents: MDXComponents = {
-  a: ({ id, href, children, ...props }: HTMLProps<HTMLAnchorElement>) => (
-    <Link
-      id={id}
-      href={href}
-      aria-label={props['aria-label']}
-      aria-describedby={props['aria-describedby']}
-    >
-      {children}
-    </Link>
-  ),
-  img: ({ src, alt, children }: HTMLProps<HTMLImageElement>) => (
-    <MarkdownImage src={src} alt={alt} isBlurred isZoomed className='mx-auto'>
-      {children}
-    </MarkdownImage>
-  ),
-  input: ({ checked, type, ...props }: HTMLProps<HTMLInputElement>) => {
-    if (type === 'checkbox') {
-      return <Checkbox isDisabled defaultSelected={checked} />;
-    }
-    return <input {...props} />;
-  },
-  table: ({ children, ...props }: HTMLProps<HTMLTableElement>) => (
-    <div className='overflow-auto'>
-      <table {...props}>{children}</table>
-    </div>
-  ),
-  Alert,
-  Kbd,
-  Unicode,
 };
 
 export const technicalStack: {

@@ -16,7 +16,7 @@ date: '2024-05-05 22:03:56'
 
 > 其呈现上占两个汉字空间、包含六个省略点且在水平和垂直方向均位于字面正中，通常使用两个连续的 `U+2026 HORIZONTAL ELLIPSIS […]` 来实现。
 >
-> 在 Unicode 标准第 14 版的 6.2 章中，也推荐使用 <Unicode code='U+22EF'/> `U+22EF MIDLINE HORIZONTAL ELLIPSIS [⋯]` 作为省略号。
+> 在 Unicode 标准第 14 版的 6.2 章中，也推荐使用 `U+22EF MIDLINE HORIZONTAL ELLIPSIS [⋯]` 作为省略号。
 >
 > 此符号配合适当的转向与取代机制，在显示上无论直横排，省略点皆居中，更符合排版需求。
 
@@ -38,11 +38,13 @@ Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
 在此列表列出个人会最终采用的命名：
 
-- 专有名词：GitHub、SurviRed、API、JSON
-- 变量、函数名 `camelCase`：`gitHub`、`surviRed`、`api`、`json`
-- 类名 `PascalCase`：`GitHubAPI`、`SurviRedJSON`、`APIJSON`
-- 常量名 `CONSTANT_CASE`：`SURVIRED_API`
-- 文件名、URL：`kebab-case`：`github-json`
+|     类别     |    命名法     |                   例                   |
+| :----------: | :-----------: | :------------------------------------: |
+|   专有名词   |       -       |      GitHub、SurviRed、API、JSON       |
+| 变量、函数名 |   camelCase   |  `gitHub`、`surviRed`、`api`、`json`   |
+|     类名     |  PascalCase   | `GitHubAPI`、`SurviRedJSON`、`APIJSON` |
+|    常量名    | CONSTANT_CASE |             `SURVIRED_API`             |
+| 文件名、URL  |  kebab-case   |             `github-json`              |
 
 ## 不再过分使用括号
 

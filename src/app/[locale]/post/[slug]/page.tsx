@@ -1,4 +1,4 @@
-import { mdxComponents } from '@/config';
+import { mdxComponents } from '@/styles/markdown';
 import '@/styles/markdown.css';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';

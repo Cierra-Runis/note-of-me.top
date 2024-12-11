@@ -77,7 +77,7 @@ export const NavBar = () => {
           <Link
             href='/'
             className='w-full'
-            onClick={() => setIsMenuOpen(false)}
+            onPress={() => setIsMenuOpen(false)}
           >
             {t('home')}
           </Link>
@@ -86,7 +86,7 @@ export const NavBar = () => {
           <Link
             href='/post'
             className='w-full'
-            onClick={() => setIsMenuOpen(false)}
+            onPress={() => setIsMenuOpen(false)}
           >
             {t('post')}
           </Link>
@@ -95,7 +95,7 @@ export const NavBar = () => {
           <Link
             href='/about'
             className='w-full'
-            onClick={() => setIsMenuOpen(false)}
+            onPress={() => setIsMenuOpen(false)}
           >
             {t('about.title')}
           </Link>
