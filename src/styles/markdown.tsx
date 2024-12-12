@@ -38,11 +38,15 @@ export const mdxComponents: MDXComponents = {
     return <input {...props} />;
   },
   table: ({ children, ...props }: HTMLProps<HTMLTableElement>) => (
-    <div className='overflow-auto'>
+    <figure className='overflow-auto'>
       <table {...props}>{children}</table>
-    </div>
+    </figure>
   ),
-  Alert,
+  Alert: ({ ...props }) => (
+    <figure>
+      <Alert {...props} />
+    </figure>
+  ),
   Kbd,
   Unicode,
 };

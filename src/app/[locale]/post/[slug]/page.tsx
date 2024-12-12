@@ -33,7 +33,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
-    <section className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl prose-p:text-foreground-500 prose-code:font-semibold prose-pre:bg-transparent'>
+    <section className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl prose-headings:text-foreground prose-p:text-foreground-500 prose-code:font-semibold prose-pre:bg-transparent'>
       <div className='mb-8 text-center'>
         <strong className='mb-1 text-secondary-600'>
           {/* TODO: I18n */}

@@ -2,7 +2,7 @@ import Footer from './Footer';
 import { NavBar } from './NavBar';
 import { Providers } from './Providers';
 import Statistics from './Statistics';
-import { localeToFont } from '@/styles/font';
+import { saira, kodeMono } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
@@ -20,14 +20,13 @@ export default async function BaseLayout({ children, locale }: Props) {
   // side is the easiest way to get started
   const messages = await getMessages();
 
-  const fonts = localeToFont[locale];
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={clsx(
           'min-h-screen bg-background font-sans antialiased selection:bg-primary-300 selection:text-background',
-          fonts,
+          saira.variable,
+          kodeMono.variable,
         )}
       >
         <NextIntlClientProvider messages={messages}>
