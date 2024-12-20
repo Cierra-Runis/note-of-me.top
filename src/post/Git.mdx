@@ -1,0 +1,93 @@
+---
+title: 'Git'
+date: '2024-12-20 09:46:38'
+---
+
+Git commit 信息的最佳实践主要围绕清晰、简洁和一致性，以帮助团队成员理解每次提交的目的和内容。以下是一些常见的最佳实践：
+
+## 使用简洁、明确的标题
+
+- 每个提交信息应以一个简短的动词（通常是过去式）开始，描述这次提交的主要修改。
+- 标题应简洁明了，尽量不超过 50 个字符。
+- 标题后不要加句号 `.`。
+
+示例：
+
+- `Fix login button alignment`
+- `Add user authentication middleware`
+
+## 提交信息正文
+
+- 如果需要详细描述，可以在标题后添加正文部分。
+- 正文应空一行，并尽量保持每行 72 个字符以内，便于在命令行中查看。
+- 详细描述是什么原因导致了这个改动，以及改动的背景和实现方式（如果有必要的话）。
+
+示例：
+
+```
+Fix login button alignment
+
+The login button was misaligned in mobile view. Adjusted the margin
+and padding to ensure it appears correctly on all screen sizes.
+```
+
+## 遵循约定俗成的提交类型（可选）
+
+- 很多人使用约定式提交（Conventional Commits），这种方式通过规定提交信息的格式来提高提交日志的可读性和自动化生成版本号的能力。
+
+约定格式示例：
+
+- `feat`: 新功能
+- `fix`: 修复 bug
+- `docs`: 文档更新
+- `style`: 代码格式相关（空格、分号等）
+- `refactor`: 代码重构
+- `test`: 测试相关
+- `chore`: 其他杂项任务
+
+示例：
+
+- `feat: add search functionality to homepage`
+- `fix: resolve issue with image loading on mobile`
+
+## 描述“为什么”而不仅仅是“做了什么”
+
+- 如果改动比较复杂或者难以理解，除了“做了什么”，最好还要简要说明为什么要做这个改动，避免未来的开发者困惑。
+
+示例：
+
+```
+refactor: extract authentication logic into middleware
+
+This makes the authentication logic reusable across multiple routes
+and reduces duplication of code.
+```
+
+## 使用小而频繁的提交
+
+- 避免一次提交过多的内容，应该将提交拆成小块，每个提交解决一个问题或完成一个功能。这有助于代码的审查、回滚和后期维护。
+
+## 避免 “WIP”（Work in Progress）提交
+
+- 如果提交不完整，应该避免推送到主分支。可以使用 `git commit --amend` 来修改最后一次提交，或者使用临时的“WIP”提交仅推送到个人分支。
+
+## 避免使用“fixes”这种不清晰的表达
+
+- 尽量避免写诸如 `fix` 或 `update` 这样模糊的提交信息。要具体说明是修复哪个问题或功能。
+
+## 提交信息应该和代码相关
+
+- 提交信息应该专注于所做的代码修改或功能，不要涉及外部依赖或其他不相关内容。
+
+## 为非直接的更改添加背景
+
+- 对于可能会让其他开发者疑惑的改动，可以提供更多的背景信息，如“此修改依赖于外部库版本更新”或“此改动符合新的需求”。
+
+## 总结
+
+- 标题：简洁、明确，50 字符以内，不加句号。
+- 正文：可选，简洁清晰，72 字符以内。
+- 格式：遵循约定的提交类型如 `feat`、`fix`、`docs`。
+- 小而频繁的提交，避免提交过多或过大的更改。
+
+这样做能够帮助团队更轻松地理解提交记录，并为未来的代码回滚或审查提供清晰的历史记录。
