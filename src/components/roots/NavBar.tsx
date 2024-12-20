@@ -47,6 +47,9 @@ export const NavBar = () => {
           <NavbarItem key='/about'>
             <Link href='/about'>{t('about.title')}</Link>
           </NavbarItem>
+          <NavbarItem key='/friend'>
+            <Link href='/friend'>{t('friend')}</Link>
+          </NavbarItem>
         </ul>
       </NavbarContent>
 
@@ -98,6 +101,15 @@ export const NavBar = () => {
             onPress={() => setIsMenuOpen(false)}
           >
             {t('about.title')}
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem key='/friend'>
+          <Link
+            href='/friend'
+            className='w-full'
+            onPress={() => setIsMenuOpen(false)}
+          >
+            {t('friend')}
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
