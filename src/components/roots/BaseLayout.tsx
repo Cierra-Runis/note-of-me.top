@@ -1,8 +1,9 @@
+import ScrollToTopButton from '../buttons/ScrollToTopButton';
 import Footer from './Footer';
 import { NavBar } from './NavBar';
 import { Providers } from './Providers';
 import Statistics from './Statistics';
-import { saira, kodeMono } from '@/styles/font';
+import { kodeMono, saira } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
@@ -31,8 +32,9 @@ export default async function BaseLayout({ children, locale }: Props) {
       >
         <NextIntlClientProvider messages={messages}>
           <Statistics />
-          <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
           <Providers>
+            <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
+
             <div className='relative flex h-screen flex-col'>
               <NavBar />
               <main className='container mx-auto max-w-7xl flex-grow px-6 pt-16'>
@@ -40,6 +42,7 @@ export default async function BaseLayout({ children, locale }: Props) {
               </main>
               <Footer />
             </div>
+            <ScrollToTopButton />
           </Providers>
         </NextIntlClientProvider>
       </body>
