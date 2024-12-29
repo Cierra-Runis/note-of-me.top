@@ -1,10 +1,9 @@
 'use client';
 
 import LocaleButton from '../buttons/LocaleButton';
+import SearchButton from '../buttons/SearchButton';
 import ThemeButton from '../buttons/ThemeButton';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { Avatar } from '@nextui-org/avatar';
-import { Button } from '@nextui-org/button';
 import { Link } from '@nextui-org/link';
 import {
   NavbarBrand,
@@ -49,15 +48,7 @@ export const NavBar = () => {
       </NavbarBrand>
       <NavbarContent className='basis-full' justify='end'>
         <NavbarItem className='flex gap-2'>
-          <Button
-            startContent={
-              <MagnifyingGlassIcon className='w-5 text-default-500' />
-            }
-            size='sm'
-            variant='bordered'
-          >
-            {t('site.title')}
-          </Button>
+          <SearchButton />
           <LocaleButton />
           <ThemeButton />
         </NavbarItem>
