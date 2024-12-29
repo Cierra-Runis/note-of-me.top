@@ -16,7 +16,7 @@ export default function GitHubButton() {
       target='_blank'
       isIconOnly
     >
-      <SiGithub className='w-5 text-default-500' />
+      <SiGithub className='w-5' />
     </Button>
   );
 }

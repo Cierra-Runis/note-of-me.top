@@ -33,9 +33,9 @@ export default function ThemeButton(props: ButtonProps) {
       onPress={onChange}
     >
       {!isSelected || isSSR ? (
-        <SunIcon className='w-5 text-default-500' />
+        <SunIcon className='w-5' />
       ) : (
-        <MoonIcon className='w-5 text-default-500' />
+        <MoonIcon className='w-5' />
       )}
     </Button>
   );

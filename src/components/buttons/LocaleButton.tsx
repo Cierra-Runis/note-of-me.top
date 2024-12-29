@@ -28,7 +28,7 @@ export default function LocaleButton() {
         <Button
           size='sm'
           variant='light'
-          startContent={<LanguageIcon className='w-5 text-default-500' />}
+          startContent={<LanguageIcon className='w-5' />}
           isIconOnly
         />
       </DropdownTrigger>
