@@ -6,7 +6,7 @@ export default function Page() {
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
       <div className='flex gap-4'>
         <Link href='https://www.kablog.top'>
-          <Avatar src='https://www.kablog.top/images/avatar.jpg' name='咖酱' />
+          <Avatar src='/avatar/ka.jpg' name='咖酱' />
         </Link>
       </div>
     </section>
