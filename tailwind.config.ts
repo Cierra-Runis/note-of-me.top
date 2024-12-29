@@ -8,7 +8,20 @@ const nextUIPluginConfig: NextUIPluginConfig = {
       colors: {
         background: '#FEFEFE',
         foreground: {
-          DEFAULT: '#282C34',
+          DEFAULT: '#6F7A90',
+          50: '#D7DAE0',
+          100: '#CBCFD7',
+          200: '#B4BAC5',
+          300: '#9DA5B4',
+          400: '#868FA2',
+          500: '#6F7A90',
+          600: '#5D6779',
+          700: '#4B5362',
+          800: '#3A404B',
+          900: '#282C34',
+        },
+        default: {
+          foreground: '#6F7A90',
           50: '#D7DAE0',
           100: '#CBCFD7',
           200: '#B4BAC5',
@@ -26,7 +39,7 @@ const nextUIPluginConfig: NextUIPluginConfig = {
       colors: {
         background: '#282C34',
         foreground: {
-          DEFAULT: '#D7DAE0',
+          DEFAULT: '#868FA2',
           900: '#D7DAE0',
           800: '#CBCFD7',
           700: '#B4BAC5',
@@ -37,6 +50,9 @@ const nextUIPluginConfig: NextUIPluginConfig = {
           200: '#4B5362',
           100: '#3A404B',
           50: '#282C34',
+        },
+        default: {
+          foreground: '#868FA2',
         },
       },
     },
