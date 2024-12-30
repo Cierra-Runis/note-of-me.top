@@ -29,6 +29,7 @@ const nextUIPluginConfig: NextUIPluginConfig = {
         /// Default colors as same as foreground
         default: {
           DEFAULT: '#454f5f', /// But DEFAULT is the same as 200
+          foreground: '#8895a8',
           900: '#f6f7f9',
           800: '#edeef1',
           700: '#d6dae1',
@@ -66,6 +67,7 @@ const nextUIPluginConfig: NextUIPluginConfig = {
         /// Default colors as same as foreground
         default: {
           DEFAULT: '#6a798d', /// But DEFAULT is the same as 500
+          foreground: '#454f5f',
           50: '#f6f7f9',
           100: '#edeef1',
           200: '#d6dae1',
@@ -100,6 +102,68 @@ const tailwindConfig: TailwindConfig = {
       fontFamily: {
         sans: ['var(--font-sans)'],
         mono: ['var(--font-mono)'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-headings': 'hsl(var(--nextui-foreground-700))',
+            '--tw-prose-lead': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-links': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-bold': 'hsl(var(--nextui-foreground-700))',
+            '--tw-prose-counters': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-bullets': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-hr': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-quotes': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-quote-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-captions': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-kbd': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-kdb-shadows': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-code': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-pre-code': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-pre-bg': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-th-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-td-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-body': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-headings': 'hsl(var(--nextui-foreground-700))',
+            '--tw-prose-invert-lead': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-links': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-bold': 'hsl(var(--nextui-foreground-700))',
+            '--tw-prose-invert-counters': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-bullets': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-hr': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-quotes': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-quote-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-captions': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-kbd': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-kdb-shadows': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-code': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-pre-code': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-pre-bg': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-th-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-invert-td-borders': 'hsl(var(--nextui-foreground))',
+            blockquote: {
+              fontStyle: 'normal',
+            },
+            'blockquote p:first-of-type::before': {
+              content: '',
+            },
+            'blockquote p:last-of-type::after': {
+              content: '',
+            },
+            code: {
+              fontWeight: '600',
+            },
+            pre: {
+              color: 'inherit',
+              fontWeight: '600',
+              backgroundColor: 'inherit',
+            },
+            'pre code': {
+              fontWeight: '600',
+            },
+          },
+        },
       },
     },
   },
