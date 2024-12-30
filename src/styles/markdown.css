@@ -12,6 +12,14 @@ code[data-line-numbers] {
   counter-reset: line;
 }
 
+span[data-highlighted-line] {
+  background: linear-gradient(
+    to right,
+    hsl(var(--nextui-foreground-50)),
+    hsl(var(--nextui-foreground-100))
+  );
+}
+
 code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
