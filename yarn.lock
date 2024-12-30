@@ -4352,6 +4352,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/marked@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/marked@npm:6.0.0"
+  dependencies:
+    marked: "npm:*"
+  checksum: 10c0/1a831af52413b1a208c91539d3bdda9be83d5451dc094c3cbc07e3e07186970673b9ec3ad5edd6c136b1249875c41e22c39eacb3c00ea7c59d0873c35c273035
+  languageName: node
+  linkType: hard
+
 "@types/mdast@npm:^4.0.0":
   version: 4.0.4
   resolution: "@types/mdast@npm:4.0.4"
@@ -7637,6 +7646,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"marked@npm:*, marked@npm:^15.0.4":
+  version: 15.0.4
+  resolution: "marked@npm:15.0.4"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/e2bfd9178e5242cc814aaf8020f3c2e954c047652c498dac0732f4b711d5e3ab80dbc54b964799d80470d6c515a24905e554c4a40f87b05dedc26e4e36cfdfdb
+  languageName: node
+  linkType: hard
+
 "mdast-util-find-and-replace@npm:^3.0.0":
   version: 3.0.1
   resolution: "mdast-util-find-and-replace@npm:3.0.1"
@@ -8806,6 +8824,7 @@ __metadata:
     "@tailwindcss/typography": "npm:^0.5.15"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/katex": "npm:^0.16.7"
+    "@types/marked": "npm:^6.0.0"
     "@types/node": "npm:^20.17.10"
     "@types/react": "npm:^19.0.2"
     "@types/react-dom": "npm:^19.0.2"
@@ -8817,7 +8836,9 @@ __metadata:
     eslint-config-next: "npm:15.1.3"
     eslint-config-prettier: "npm:^9.1.0"
     framer-motion: "npm:^11.15.0"
+    github-slugger: "npm:^2.0.0"
     katex: "npm:^0.16.19"
+    marked: "npm:^15.0.4"
     next: "npm:15.1.3"
     next-contentlayer2: "npm:^0.5.3"
     next-intl: "npm:^3.26.3"

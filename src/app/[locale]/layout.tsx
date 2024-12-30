@@ -4,7 +4,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
@@ -24,9 +24,12 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('site.title'),
-    applicationName: t('site.title'),
+    title: {
+      default: t('site.title'),
+      template: `%s - ${t('site.title')}`,
+    },
     description: t('site.description'),
+    applicationName: t('site.title'),
     authors: siteConfig.author,
     icons: '/icon.svg',
   };

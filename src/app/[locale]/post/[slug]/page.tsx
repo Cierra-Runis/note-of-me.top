@@ -1,5 +1,7 @@
+import { DocsToc } from '@/components/roots/Toc';
 import { mdxComponents } from '@/styles/markdown';
 import '@/styles/markdown.css';
+import { getHeadings } from '@/utils/heading';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import 'katex/dist/katex.min.css';
@@ -31,17 +33,21 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   if (!post) notFound();
 
   const MDXContent = useMDXComponent(post.body.code);
+  const headings = getHeadings(post.body.raw);
 
   return (
-    <section className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl'>
-      <div className='mb-8 text-center'>
-        <strong className='mb-1 text-secondary-600'>
-          {/* TODO: I18n */}
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </strong>
-        <h1>{post.title}</h1>
-      </div>
-      <MDXContent components={mdxComponents} />
+    <section className='flex'>
+      <article className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl'>
+        <div className='mb-8 text-center'>
+          <strong className='mb-1 text-secondary-600'>
+            {/* TODO: I18n */}
+            {format(parseISO(post.date), 'LLLL d, yyyy')}
+          </strong>
+          <h1>{post.title}</h1>
+        </div>
+        <MDXContent components={mdxComponents} />
+      </article>
+      <DocsToc headings={headings} />
     </section>
   );
 }
