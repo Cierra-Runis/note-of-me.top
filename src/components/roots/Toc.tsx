@@ -42,7 +42,7 @@ export const DocsToc: FC<{
   }, [activeId, activeIndex]);
 
   return (
-    <div className='fixed right-0 hidden 2xl:flex'>
+    <div className='fixed right-0 flex'>
       <div
         ref={tocRef}
         className='flex max-h-screen w-full max-w-[18rem] flex-col gap-4 overflow-y-scroll pb-16 text-left scrollbar-hide'
