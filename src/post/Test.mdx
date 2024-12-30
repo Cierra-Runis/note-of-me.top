@@ -7,7 +7,7 @@ date: '2024-12-09 03:23:45'
 
 在标题文字前使用 1 到 6 个 <Kbd>#</Kbd> 符号生成标题。其数量决定了标题的级别与字号大小。
 
-```markdown {1} showLineNumbers /标题/
+```markdown {1-5} showLineNumbers /标题/
 # 一级标题
 
 ## 二级标题
@@ -23,40 +23,54 @@ date: '2024-12-09 03:23:45'
 
 ## 文本样式
 
-|         Style          |      Syntax       |                 Example                  |                 Output                 |
-| :--------------------: | :---------------: | :--------------------------------------: | :------------------------------------: |
-|          Bold          |      `** **`      |         `**This is bold text**`          |         **This is bold text**          |
-|         Italic         |       `_ _`       |       `_This text is italicized_`        |       _This text is italicized_        |
-|     Strikethrough      |      `~~ ~~`      |       `~~This was mistaken text~~`       |       ~~This was mistaken text~~       |
-| Bold and nested italic | `** **` and `_ _` | `**This text is _extremely_ important**` | **This text is _extremely_ important** |
-|  All bold and italic   |     `**_ _**`     |    `**_All this text is important_**`    |    **_All this text is important_**    |
-|       Subscript        |  `<sub> </sub>`   |  `This is a <sub>subscript</sub> text`   |  This is a <sub>subscript</sub> text   |
-|      Superscript       |  `<sup> </sup>`   | `This is a <sup>superscript</sup> text`  | This is a <sup>superscript</sup> text  |
-|       Underline        |  `<ins> </ins>`   | `This is an <ins>underlined</ins> text`  | This is an <ins>underlined</ins> text  |
+|     样式     |       语法       |          示例          |        Output        |
+| :----------: | :--------------: | :--------------------: | :------------------: |
+|     粗体     |     `** **`      |       `**粗体**`       |       **粗体**       |
+|     斜体     |      `_ _`       |        `_斜体_`        |        _斜体_        |
+|    删除线    |     `~~ ~~`      |      `~~删除线~~`      |      ~~删除线~~      |
+| 粗体嵌套斜体 | `** **` 与 `_ _` | `**粗体 _嵌套_ 斜体**` | **粗体 _嵌套_ 斜体** |
+|    粗斜体    |    `**_ _**`     |     `**_粗斜体_**`     |     **_粗斜体_**     |
+|     下标     |  `<sub> </sub>`  |   `下<sub>标</sub>`    |   下<sub>标</sub>    |
+|     上标     |  `<sup> </sup>`  |   `上<sup>标</sup>`    |   上<sup>标</sup>    |
+|    下划线    |  `<ins> </ins>`  |  `<ins>下划线</ins>`   |  <ins>下划线</ins>   |
 
 ## 引用
 
 使用 <Kbd>></Kbd> 引用文字
 
 ```markdown
-> Quoted text is indented, with a different style.
+> 引用的文本具有不同的样式
 ```
 
-> Quoted text is indented, with a different style.
+> 引用的文本具有不同的样式
 
 ## 代码
 
-You can call out code or a command within a sentence with single backticks. The text within the backticks will not be formatted. You can also press the <Kbd keys={'command'}>E</Kbd> (Mac) or <Kbd keys={'ctrl'}>E</Kbd> (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
+使用一对反引号标注代码或命令行，反引号内的文本不会被格式化。
 
 ```markdown
-Use `git status` to list all new or modified files that haven't yet been committed.
+使用 `git status` 列出所有尚未提交的新文件或修改过的文件
 ```
 
-To format code or text into its own distinct block, use triple backticks.
+结果：
+
+使用 `git status` 列出所有尚未提交的新文件或修改过的文件
+
+可以在末尾如下高亮语言：
+
+```markdown
+使用 `git status{:bash}` 列出所有尚未提交的新文件或修改过的文件
+```
+
+结果：
+
+使用 `git status{:bash}` 列出所有尚未提交的新文件或修改过的文件
+
+## 代码块
+
+使用三对反引号包裹代码块，可以在反引号后指定代码语言，以实现代码高亮。
 
 ````markdown
-Some basic Git commands are:
-
 ```bash
 git status
 git add
@@ -64,7 +78,51 @@ git commit
 ```
 ````
 
-在反引号后接编程语言名称，代码会按其语法高亮。
+结果：
+
+```bash
+git status
+git add
+git commit
+```
+
+若代码块内部需要包含代码块，可以使用四对反引号。
+
+若需要高亮行号，可以在反引号后指定行号。
+
+````markdown
+```bash {1-2,3}
+git status
+git add
+git commit
+```
+````
+
+结果：
+
+```bash {1-2,3}
+git status
+git add
+git commit
+```
+
+若要显示行号， 可以在反引号后指定 `showLineNumbers`。
+
+````markdown
+```bash showLineNumbers
+git status
+git add
+git commit
+```
+````
+
+结果：
+
+```bash showLineNumbers
+git status
+git add
+git commit
+```
 
 ## 链接
 
@@ -200,7 +258,7 @@ Use alerts only when they are crucial for user success and limit them to one or 
 
 To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Six types of alerts are available:
 
-```mdx
+```tsx
 <Alert
   title={'Default Style'}
   description={'Some normal information content.'}
