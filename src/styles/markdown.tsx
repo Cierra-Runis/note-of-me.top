@@ -1,16 +1,10 @@
 import MarkdownImage from '@/components/MarkdownImage';
 import { Alert } from '@nextui-org/alert';
 import { Checkbox } from '@nextui-org/checkbox';
-import { Code } from '@nextui-org/code';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
 import type { MDXComponents } from 'mdx/types';
 import { HTMLProps } from 'react';
-
-/// TODO: Implement <Unicode/> component
-function Unicode(props: { code: string }) {
-  return <Code color='danger'>{props.code}</Code>;
-}
 
 /**
  *  {@link React.JSX.IntrinsicElements}
@@ -48,5 +42,4 @@ export const mdxComponents: MDXComponents = {
     </figure>
   ),
   Kbd,
-  Unicode,
 };
