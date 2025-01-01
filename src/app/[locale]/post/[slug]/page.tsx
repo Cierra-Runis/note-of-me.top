@@ -36,8 +36,8 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const headings = getHeadings(post.body.raw);
 
   return (
-    <section className='flex'>
-      <article className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl'>
+    <section className='grid grid-cols-8'>
+      <article className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl lg:col-span-7'>
         <div className='mb-8 text-center'>
           <strong className='mb-1 text-secondary-600'>
             {/* TODO: I18n */}
@@ -47,7 +47,9 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         </div>
         <MDXContent components={mdxComponents} />
       </article>
-      <DocsToc headings={headings} />
+      <div className='hidden lg:flex'>
+        <DocsToc headings={headings} />
+      </div>
     </section>
   );
 }
