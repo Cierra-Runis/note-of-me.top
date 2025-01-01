@@ -2,8 +2,8 @@ import MarkdownImage from '@/components/MarkdownImage';
 import { Alert } from '@nextui-org/alert';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Kbd } from '@nextui-org/kbd';
-import { Link } from '@nextui-org/link';
 import type { MDXComponents } from 'mdx/types';
+import NextLink from 'next/link';
 import { HTMLProps } from 'react';
 
 /**
@@ -11,14 +11,14 @@ import { HTMLProps } from 'react';
  */
 export const mdxComponents: MDXComponents = {
   a: ({ id, href, children, ...props }: HTMLProps<HTMLAnchorElement>) => (
-    <Link
+    <NextLink
       id={id}
-      href={href}
+      href={href ?? ''}
       aria-label={props['aria-label']}
       aria-describedby={props['aria-describedby']}
     >
       {children}
-    </Link>
+    </NextLink>
   ),
   img: ({ src, alt, children }: HTMLProps<HTMLImageElement>) => (
     <MarkdownImage src={src} alt={alt} isBlurred isZoomed className='mx-auto'>
