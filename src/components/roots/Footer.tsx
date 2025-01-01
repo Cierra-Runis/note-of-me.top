@@ -1,3 +1,4 @@
+import EmailButton from '../buttons/EmailButton';
 import GitHubButton from '../buttons/GitHubButton';
 import { siteConfig } from '@/config';
 import { Link } from '@nextui-org/link';
@@ -9,8 +10,9 @@ export default function Footer() {
         <span className='text-default-600'>Powered by</span>
         <p className='text-primary'>Cierra Runis</p>
       </Link>
-      <div>
+      <div className='flex items-center gap-2'>
         <GitHubButton />
+        <EmailButton />
       </div>
     </footer>
   );
