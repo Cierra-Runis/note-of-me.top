@@ -5,6 +5,7 @@ import { getHeadings } from '@/utils/heading';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import 'katex/dist/katex.min.css';
+import { Metadata } from 'next';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
@@ -17,10 +18,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const params = await props.params;
   const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
-  if (!post) return { notFound: true };
+  if (!post) return { title: '404' };
 
   return {
     title: post.title,
@@ -36,8 +37,8 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const headings = getHeadings(post.body.raw);
 
   return (
-    <section className='grid grid-cols-8'>
-      <article className='prose max-w-full dark:prose-invert md:prose-lg lg:prose-xl lg:col-span-7'>
+    <section className='grid grid-cols-6 gap-4'>
+      <article className='prose col-span-full max-w-full dark:prose-invert md:prose-lg lg:prose-xl lg:col-span-5'>
         <div className='mb-8 text-center'>
           <strong className='mb-1 text-secondary-600'>
             {/* TODO: I18n */}
@@ -47,9 +48,9 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         </div>
         <MDXContent components={mdxComponents} />
       </article>
-      <div className='hidden lg:flex'>
+      <aside className='relative hidden lg:flex'>
         <DocsToc headings={headings} />
-      </div>
+      </aside>
     </section>
   );
 }

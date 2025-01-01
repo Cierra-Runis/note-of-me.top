@@ -2,7 +2,9 @@
 
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
 import { Heading } from '@/utils/heading';
+import { ScrollShadow } from '@nextui-org/scroll-shadow';
 import { clsx } from '@nextui-org/shared-utils';
+import { useTranslations } from 'next-intl';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -15,6 +17,7 @@ const paddingLeftByLevel: Record<number, string> = {
 export const DocsToc: FC<{
   headings: Heading[];
 }> = ({ headings }) => {
+  const t = useTranslations();
   const tocRef = useRef<HTMLDivElement>(null);
 
   const activeId = useScrollSpy(
@@ -42,11 +45,12 @@ export const DocsToc: FC<{
   }, [activeId, activeIndex]);
 
   return (
-    <div
+    <ScrollShadow
       ref={tocRef}
-      className='fixed flex max-h-screen w-full max-w-[18rem] flex-col gap-4 overflow-y-scroll pb-16 text-left scrollbar-hide'
+      className='fixed flex h-3/4 flex-col gap-4 overflow-y-scroll overscroll-contain text-left'
+      hideScrollBar
     >
-      <h2 className='text-lg font-medium'>On this page</h2>
+      <h2 className='text-lg font-medium'>{t('tableOfContent')}</h2>
       <ul className='flex flex-col gap-2 scrollbar-hide'>
         {headings.map(
           (heading, i) =>
@@ -77,6 +81,6 @@ export const DocsToc: FC<{
             ),
         )}
       </ul>
-    </div>
+    </ScrollShadow>
   );
 };
