@@ -33,7 +33,7 @@ export const siteConfig = {
   links: {
     githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
     docs: 'https://nextui.org',
-    email: 'mailto://byrdsaron@gmail.com',
+    email: 'mailto:byrdsaron@gmail.com',
   },
 };
 
