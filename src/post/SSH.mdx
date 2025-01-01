@@ -9,11 +9,11 @@ date: '2024-11-03 12:57:45'
 
 我是小学用 `bat` 文件开 Minecraft 服务器时接触的，当时就想这个界面可真丑，黑咕隆咚的 —— 现在不一样了，尽情美化喵。
 
-终端是那个展示 shell 的窗口，而 shell 的话，Windows 有 `cmd`、`PowerShell`、`Windows PowerShell`，macOS、Linux 有 `bash`，Android 可以使用 [Termux](https://github.com/termux/termux-app)，也相当于是 Linux 了 —— 有关 Termux 的配置详见 [Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)。
+终端是那个展示 Shell 的窗口，而 Shell 的话，Windows 有 cmd、PowerShell、Windows PowerShell，macOS、Linux 有 Bash，Android 可以使用 [Termux](https://github.com/termux/termux-app)，也相当于是 Linux 了 —— 有关 Termux 的配置详见 [Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)。
 
-macOS 和 Linux 的关系更近，总之都能使用 `zsh` 而不是 `bash` 作为 shell，有关 `zsh` 的配置参见 [这篇文章](https://www.mintimate.cn/2021/02/05/configZsh)。
+MacOS 和 Linux 的关系更近，总之都能使用 Zsh 而不是 Bash 作为 Shell，有关 Zsh 的配置参见 [这篇文章](https://www.mintimate.cn/2021/02/05/configZsh)。
 
-`zsh` 相比 `bash` 能提供命令行历史补全的功能，在 Windows 上，这需要下载 [PowerToys](https://github.com/microsoft/PowerToys) 并启用里面的 `未找到命令` 功能 —— 看起来命令行补全是 `PowerShell` 的功能，但总之这样配置之后就没问题。
+Zsh 相比 Bash 能提供命令行历史补全的功能，在 Windows 上，这需要下载 [PowerToys](https://github.com/microsoft/PowerToys) 并启用里面的 `未找到命令` 功能 —— 看起来命令行补全是 PowerShell 的功能，但总之这样配置之后就没问题。
 
 在 macOS 上，自带的终端并没有那么“好看”，总之转用了 [iTerm2](https://iterm2.com)，相关的配置略。
 
@@ -39,7 +39,7 @@ SSH 支持免密登录，总之使用 GPG 的非对称加密 —— 我其实对
 
 ## 奔向 PowerShell
 
-配置好 Windows 和 macOS 上的 SSH 服务后，成功使用 Windows 远程连接到 macOS，相对应的，macOS 也可以远程连接到 Windows，但是远程连接后默认进入的 shell 居然是 `cmd`，这个实在是有点搞笑了。
+配置好 Windows 和 macOS 上的 SSH 服务后，成功使用 Windows 远程连接到 macOS，相对应的，macOS 也可以远程连接到 Windows，但是远程连接后默认进入的 Shell 居然是 cmd，这个实在是有点搞笑了。
 
 [SSH 连接 Windows 默认启用 PowerShell](https://learn.microsoft.com/zh-cn/windows-server/administration/OpenSSH/openssh-server-configuration#configuring-the-default-shell-for-openssh-in-windows)
 
