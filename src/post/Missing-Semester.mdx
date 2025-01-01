@@ -3,9 +3,62 @@ title: '计算机教育中缺失的一课'
 date: '2025-01-01 02:23:13'
 ---
 
-本篇博客是本人给 MIT 课程《计算机教育中缺失的一课》写的一些笔记和个人感悟。
+本篇博客是本人给 MIT 课程《计算机教育中缺失的一课》写的一些笔记和个人感悟，不作为课程的代替。
 
 在此附上 [中文讲义](https://missing-semester-cn.github.io/) 和 [bilibili 熟肉](https://www.bilibili.com/video/BV1b2421M7v3)。
+
+## 路径
+
+路径这个应该是比较基础的东西了，`.` 代表当前目录，`..` 代表上一级目录，这些在 Windows 里也是相通的。
+
+但 Windows 和 Unix 系统的路径分隔符是不同的，Windows 使用 `\`，而 Unix 使用 `/`，所以我们最好使用一些库来处理路径，如 Python 的 `os.path`，自己处理路径容易出现问题。
+
+令我印象比较深刻的是 [LeetCode 71 题](https://leetcode.com/problems/simplify-path/)，其要求简化一个 Unix 风格的路径，非常推荐大家去做一下。
+
+## Shell 与 Bash
+
+这一节内容实际上在 [SSH](/post/SSH) 中已经提到了，这里再补充一些。
+
+实际上我在以前都是使用 Python 来写脚本的，比如 mercurius 用于构建 apk、Windows zip 并将它们移动到 `out` 文件夹的脚本，而这实际上要求使用脚本的人都安装了 Python，这显然不是一个好的选择。
+
+而 Bash 是 Unix 系统的默认 Shell，其脚本文件以 `.sh` 结尾，而在 Windows 上，我们可以使用 WSL 来运行 Bash 脚本 —— 当然我觉得 Windows 上应该还得是使用 PowerShell，其脚本文件以 `.ps1` 结尾，当然还有 `.bat` 和 `.cmd` 这种比较古老的批处理文件。
+
+在看本节课的同时，我也在使用 Termux。由于 GitHub 最近抽风，完全看不到最近有哪些仓库有新的 Release，于是结合 `GitHub CLI` 和 `jq` 命令，我写了一个脚本来获取最近的 Release，在此就不献丑了。
+
+## Regex
+
+正则表达式是一种用于匹配字符串的模式，其在很多地方都有应用，如搜索引擎、文本编辑器、IDE 等。
+
+在我刚学习 Java 的时候，写了一个模拟 Minecraft 命令的 Java 程序，我使用的还是字符串切割：
+
+```java
+// 匹配指令
+public void match(String input) {
+
+    int i; // 指令索引
+    for (i = 0; i < Command.length; i++) { // 搜索
+        // 若输入的指令左边部分与指令库中指令相符
+        if (input.regionMatches(0, Command[i], 0, Command[i].length())) {
+            // 则将左边部分切掉，把指令索引和右边切片传入 toCommand 函数
+            input = input.substring(Command[i].length());
+            String[] splitCommand = input.split(" "); // 以空格切分输入的命令
+            toCommand(i, splitCommand);
+            return;
+        }
+    }
+
+    // 否则提示无匹配指令
+    if (i == Command.length) {
+        System.out.print("\33[31;1mNo matched command!\33[0m\n\n");
+    }
+}
+```
+
+如果使用正则表达式，那么这个程序可能会更加简洁 —— 当然，像这种命令行程序都是有对应的包的，如 [Picocli](https://github.com/remkop/picocli/)、[JCommander](https://github.com/cbeust/jcommander/) 以及 Kotlin Only 的 [Clikt](https://ajalt.github.io/clikt/) 等。
+
+后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 mercurius 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
+
+但正则表达式有时也有一些坑，比如 [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531/) 这个视频，一个小小的 `.*.*=.*{:regex}` 的正则表达式干烂了整个 Cloudflare。
 
 ## Vim
 
@@ -20,15 +73,15 @@ date: '2025-01-01 02:23:13'
 
 ## 语义化版本号
 
-语义化版本号的链接在此。
+语义化版本号参见 [此链接](https://semver.org/)。
 
-我最早认识到版本号应该还是 Minecraft 的版本号，如 `1.7.2` 这样的，但 Minecraft 并不完全遵循这一规范，而在开发版本号上我们还能见到另外一种版本号格式：`24w06a`。
+我最早认识到版本号应该还是 Minecraft 的版本号，如 `1.7.2` 这样的，但 Minecraft 并不完全遵循这一规范，而在 Snapshot 快照版本号上我们还能见到另外一种版本号格式：`24w06a`，其 24 代表 2024 年，w06 代表 6 周，a 代表这一周的第一个快照版本。
 
-其具体格式参见此链接。
+其具体格式参见[此链接](https://minecraft.wiki/w/Version_formats/)。
 
 ## `source script.sh{:bash}` 和 `./script.sh{:bash}` 的区别
 
-我隐约记得前者被称作源化，第一次使用这个命令则是在配置 bash / zsh 的时候。
+我隐约记得前者被称作源化，第一次使用这个命令则是在配置 zsh 的时候。
 
 具体来说，前者是在当前会话运行 sh 文件，如果在文件内进行了如环境变量的配置，那么运行之后这个配置则会应用到当前会话；而后者则是在一个子进程中运行，其不会影响至外部的会话。
 
@@ -36,7 +89,9 @@ date: '2025-01-01 02:23:13'
 
 ## 个人想法
 
-我能说这节课包含了绝大多数我这大学四年自己了解的课堂外的知识，而这些知识相比于 408 那四大样，是更加符合实践的 —— 我反正不会成天去摸底层。
+如果说这是“计算机教育中缺失的一课”，那么我缺失的可就不止一课了。
+
+我能说这节课包含了绝大多数这几年自己了解的课堂外的知识，而这些知识相比于 408 那四大样 —— 虽然说它们也是不能忽视的 —— 是更加符合实践的。我反正不会成天去搞数据结构、计算机组成原理、计算机网络、操作系统这些东西。
 
 我觉得兴趣也是很重要的，那四大件的教学模式，完全就是空中楼阁，让人完全提不起兴趣 —— 然而前段时间了解 GFW 的一些原理时不是看的很开心吗？
 
