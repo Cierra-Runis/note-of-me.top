@@ -144,6 +144,7 @@ const tailwindConfig: TailwindConfig = {
             '--tw-prose-invert-td-borders': 'hsl(var(--nextui-foreground))',
             blockquote: {
               fontStyle: 'normal',
+              fontWeight: 'inherit',
             },
             'blockquote p:first-of-type::before': {
               content: '',
