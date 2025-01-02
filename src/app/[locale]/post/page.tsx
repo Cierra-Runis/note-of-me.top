@@ -1,11 +1,12 @@
-import { Link } from '@nextui-org/link';
 import { allPosts, Post } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
 import { useTranslations } from 'next-intl';
+import NextLink from 'next/link';
 
 function PostCard(post: Post) {
   return (
-    <Link
+    <NextLink
+      prefetch
       className='mb-8 flex flex-col items-start justify-center'
       href={post.url}
     >
@@ -16,7 +17,7 @@ function PostCard(post: Post) {
       <div className='line-clamp-3 break-all text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
         {post.body.raw}
       </div>
-    </Link>
+    </NextLink>
   );
 }
 

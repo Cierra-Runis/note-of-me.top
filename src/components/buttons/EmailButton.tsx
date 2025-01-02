@@ -1,13 +1,14 @@
 import { siteConfig } from '@/config';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { Button } from '@nextui-org/button';
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 export default function EmailButton() {
   return (
     <Button
+      prefetch
       aria-label='Email'
-      as={Link}
+      as={NextLink}
       href={siteConfig.links.email}
       size='sm'
       variant='light'

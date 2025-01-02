@@ -12,6 +12,7 @@ import { HTMLProps } from 'react';
 export const mdxComponents: MDXComponents = {
   a: ({ id, href, children, ...props }: HTMLProps<HTMLAnchorElement>) => (
     <NextLink
+      prefetch
       id={id}
       href={href ?? ''}
       aria-label={props['aria-label']}
