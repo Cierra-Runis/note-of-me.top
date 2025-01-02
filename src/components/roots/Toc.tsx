@@ -5,6 +5,7 @@ import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@nextui-org/scroll-shadow';
 import { clsx } from '@nextui-org/shared-utils';
 import { useTranslations } from 'next-intl';
+import NextLink from 'next/link';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -76,7 +77,7 @@ export const DocsToc: FC<{
                 )}
                 data-active={activeId == heading.id}
               >
-                <a href={`#${heading.id}`}>{heading.text}</a>
+                <NextLink href={`#${heading.id}`}>{heading.text}</NextLink>
               </li>
             ),
         )}
