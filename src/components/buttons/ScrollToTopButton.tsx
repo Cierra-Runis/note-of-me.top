@@ -21,16 +21,16 @@ export default function ScrollToTopButton() {
   }, []);
 
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ behavior: 'smooth', top: 0 });
   };
 
   return (
     <Button
       className={`fixed bottom-12 right-12 ${isShow ? 'flex' : 'hidden'}`}
+      isIconOnly
       onPress={handleClick}
       size='sm'
       variant='ghost'
-      isIconOnly
     >
       <ArrowUpIcon className='w-5 text-foreground-500' />
     </Button>

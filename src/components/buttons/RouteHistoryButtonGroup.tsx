@@ -9,10 +9,10 @@ export default function RouteHistoryButtonGroup() {
 
   return (
     <ButtonGroup>
-      <Button isIconOnly size='sm' variant='light' onPress={router.back}>
+      <Button isIconOnly onPress={router.back} size='sm' variant='light'>
         <ArrowLeftIcon className='w-5' />
       </Button>
-      <Button isIconOnly size='sm' variant='light' onPress={router.forward}>
+      <Button isIconOnly onPress={router.forward} size='sm' variant='light'>
         <ArrowRightIcon className='w-5' />
       </Button>
     </ButtonGroup>

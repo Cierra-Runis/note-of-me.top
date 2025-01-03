@@ -19,10 +19,10 @@ export default function SearchButton() {
   return (
     <>
       <Button
-        startContent={<MagnifyingGlassIcon className='w-5' />}
-        size='sm'
-        variant='bordered'
         onPress={onOpen}
+        size='sm'
+        startContent={<MagnifyingGlassIcon className='w-5' />}
+        variant='bordered'
       >
         {t('site.title')}
       </Button>
@@ -54,7 +54,7 @@ export default function SearchButton() {
                 </p>
               </ModalBody>
               <ModalFooter>
-                <Button color='danger' variant='light' onPress={onClose}>
+                <Button color='danger' onPress={onClose} variant='light'>
                   Close
                 </Button>
                 <Button color='primary' onPress={onClose}>

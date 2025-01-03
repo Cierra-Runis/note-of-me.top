@@ -1,4 +1,14 @@
 {
   "jsxSingleQuote": true,
-  "singleQuote": true
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "filepath": "src/**/*.{js,jsx,ts,tsx}",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }

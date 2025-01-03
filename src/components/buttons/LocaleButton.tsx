@@ -26,22 +26,22 @@ export default function LocaleButton() {
     >
       <DropdownTrigger>
         <Button
-          size='sm'
-          variant='light'
-          startContent={<LanguageIcon className='w-5' />}
           isIconOnly
+          size='sm'
+          startContent={<LanguageIcon className='w-5' />}
+          variant='light'
         />
       </DropdownTrigger>
       <DropdownMenu
-        selectedKeys={[locale]}
-        selectionMode='single'
         onAction={(key) => {
           setIsOpen(false);
           return redirect({
-            locale: key as string,
             href: { pathname: pathname },
+            locale: key as string,
           });
         }}
+        selectedKeys={[locale]}
+        selectionMode='single'
       >
         {routing.locales.map((key) => (
           <DropdownItem key={key} title={t(`locales.${key}`)} />

@@ -38,18 +38,18 @@ export const DocsToc: FC<{
       scrollIntoView(anchor, {
         behavior: 'smooth',
         block: 'center',
+        boundary: tocRef.current,
         inline: 'center',
         scrollMode: 'always',
-        boundary: tocRef.current,
       });
     }
   }, [activeId, activeIndex]);
 
   return (
     <ScrollShadow
-      ref={tocRef}
       className='fixed flex h-3/4 flex-col gap-4 overflow-y-scroll overscroll-contain text-left'
       hideScrollBar
+      ref={tocRef}
     >
       <h2 className='text-lg font-medium'>{t('tableOfContent')}</h2>
       <ul className='flex flex-col gap-2 scrollbar-hide'>
@@ -57,7 +57,6 @@ export const DocsToc: FC<{
           (heading, i) =>
             heading.level > 1 && (
               <li
-                key={i}
                 className={clsx(
                   'transition-colors',
                   'flex items-center text-tiny font-normal text-default-500 dark:text-default-300',
@@ -76,6 +75,7 @@ export const DocsToc: FC<{
                   paddingLeftByLevel[heading.level],
                 )}
                 data-active={activeId == heading.id}
+                key={i}
               >
                 <NextLink href={`#${heading.id}`}>{heading.text}</NextLink>
               </li>

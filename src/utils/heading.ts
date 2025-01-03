@@ -1,11 +1,11 @@
 import Slugger from 'github-slugger';
 import { marked } from 'marked';
 
-export type Heading = { level: number; text: string; id: string };
+export type Heading = { id: string; level: number; text: string };
 
 const slugger = new Slugger();
 export function getHeadings(markdownText: string | undefined): Heading[] {
-  let headings: Heading[] = [];
+  const headings: Heading[] = [];
 
   if (!markdownText) {
     return headings;
@@ -17,9 +17,9 @@ export function getHeadings(markdownText: string | undefined): Heading[] {
   tokens.forEach((token) => {
     if (token.type === 'heading') {
       headings.push({
+        id: slugger.slug(token.text),
         level: token.depth,
         text: token.text,
-        id: slugger.slug(token.text),
       });
     }
   });

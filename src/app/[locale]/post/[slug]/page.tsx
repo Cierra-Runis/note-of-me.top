@@ -10,12 +10,6 @@ import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
 
-export function generateStaticParams() {
-  return allPosts.map((post) => ({
-    slug: post._raw.flattenedPath,
-  }));
-}
-
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
@@ -26,6 +20,12 @@ export async function generateMetadata(props: {
   return {
     title: post.title,
   };
+}
+
+export function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post._raw.flattenedPath,
+  }));
 }
 
 export default function Page(props: { params: Promise<{ slug: string }> }) {

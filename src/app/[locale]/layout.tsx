@@ -1,7 +1,8 @@
+import type { Metadata } from 'next';
+
 import BaseLayout from '@/components/roots/BaseLayout';
 import { siteConfig } from '@/config';
-import { routing } from '@/i18n/routing';
-import type { Metadata } from 'next';
+import { Locale, routing } from '@/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
@@ -10,10 +11,6 @@ type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 };
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
 
 export async function generateMetadata({
   params,
@@ -24,22 +21,28 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
+    applicationName: t('site.title'),
+    authors: siteConfig.author,
+    description: t('site.description'),
+    icons: '/icon.svg',
     title: {
       default: t('site.title'),
       template: `%s - ${t('site.title')}`,
     },
-    description: t('site.description'),
-    applicationName: t('site.title'),
-    authors: siteConfig.author,
-    icons: '/icon.svg',
   };
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) notFound();
+  if (!routing.locales.includes(locale as Locale)) {
+    return notFound();
+  }
 
   // Enable static rendering
   setRequestLocale(locale);

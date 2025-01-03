@@ -6,14 +6,14 @@ import NextLink from 'next/link';
 export default function EmailButton() {
   return (
     <Button
-      prefetch
       aria-label='Email'
       as={NextLink}
       href={siteConfig.links.email}
-      size='sm'
-      variant='light'
-      target='_blank'
       isIconOnly
+      prefetch
+      size='sm'
+      target='_blank'
+      variant='light'
     >
       <EnvelopeIcon className='w-5' />
     </Button>

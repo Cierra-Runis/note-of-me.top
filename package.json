@@ -8,7 +8,7 @@
     "build:content": "contentlayer2 build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write 'src/**' && yarn lint --fix --no-cache",
+    "format": "prettier . --write && yarn lint --fix --no-cache",
     "update": "nextui upgrade && yarn upgrade-interactive"
   },
   "packageManager": "yarn@4.2.2",

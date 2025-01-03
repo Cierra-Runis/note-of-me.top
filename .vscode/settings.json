@@ -3,14 +3,9 @@
     "source.fixAll.eslint": "always"
   },
   "tailwindCSS.experimental.classRegex": [
-    [
-      "clsx\\(([^)]*)\\)",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ]
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "i18n-ally.localesPaths": [
-    "./src/messages"
-  ],
+  "i18n-ally.localesPaths": ["./src/messages"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.editor.preferEditor": true,
   "files.exclude": {
@@ -29,12 +24,5 @@
     "**/.contentlayer": true
   },
   "explorerExclude.backup": {},
-  "cSpell.words": [
-    "Contentlayer",
-    "katex",
-    "Kode",
-    "nextui",
-    "Noto",
-    "saira"
-  ],
+  "cSpell.words": ["Contentlayer", "katex", "Kode", "nextui", "Noto", "saira"]
 }

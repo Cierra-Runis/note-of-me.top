@@ -3,9 +3,11 @@ import js from '@eslint/js';
 /// [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 /// Turns off all rules that are unnecessary or might conflict with Prettier
 import eslintConfigPrettier from 'eslint-config-prettier';
+/// [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist)
+/// ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
-/// While you can use the official plugin [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss) for ordering your classnames...
-/// eslint-plugin-tailwindcss offers more than 5 other rules, that you can benefit from on top of prettier-plugin-tailwindcss.
+/// [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
+/// While you can use the official plugin for ordering, this plugin offers more than 5 other rules
 import eslintPluginTailwindCSS from 'eslint-plugin-tailwindcss';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

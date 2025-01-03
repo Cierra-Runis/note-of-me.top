@@ -3,24 +3,6 @@ import { compareDesc, format, parseISO } from 'date-fns';
 import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
 
-function PostCard(post: Post) {
-  return (
-    <NextLink
-      prefetch
-      className='mb-8 flex flex-col items-start justify-center'
-      href={post.url}
-    >
-      <h2 className='mb-1'>{post.title}</h2>
-      <time dateTime={post.date} className='mb-2 block text-foreground-600'>
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </time>
-      <div className='line-clamp-3 break-all text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
-        {post.body.raw}
-      </div>
-    </NextLink>
-  );
-}
-
 export default function Posts() {
   const t = useTranslations();
   const posts = allPosts.sort((a, b) =>
@@ -34,5 +16,23 @@ export default function Posts() {
         <PostCard key={idx} {...post} />
       ))}
     </section>
+  );
+}
+
+function PostCard(post: Post) {
+  return (
+    <NextLink
+      className='mb-8 flex flex-col items-start justify-center'
+      href={post.url}
+      prefetch
+    >
+      <h2 className='mb-1'>{post.title}</h2>
+      <time className='mb-2 block text-foreground-600' dateTime={post.date}>
+        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      </time>
+      <div className='line-clamp-3 break-all text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
+        {post.body.raw}
+      </div>
+    </NextLink>
   );
 }

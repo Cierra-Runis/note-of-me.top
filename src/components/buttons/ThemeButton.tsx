@@ -8,17 +8,17 @@ import { useIsSSR } from '@react-aria/ssr';
 import { useTheme } from 'next-themes';
 
 export default function ThemeButton(props: ButtonProps) {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const isSSR = useIsSSR();
 
   const onChange = () =>
     theme === 'light' ? setTheme('dark') : setTheme('light');
 
   const { isSelected } = useSwitch({
-    isSelected: theme === 'light' || isSSR,
     'aria-label': `Switch to ${
       theme === 'light' || isSSR ? 'dark' : 'light'
     } mode`,
+    isSelected: theme === 'light' || isSSR,
     onChange,
   });
 
@@ -27,10 +27,10 @@ export default function ThemeButton(props: ButtonProps) {
       {...props}
       aria-label='GitHub'
       href={siteConfig.author.url}
-      size='sm'
-      variant='light'
       isIconOnly
       onPress={onChange}
+      size='sm'
+      variant='light'
     >
       {!isSelected || isSSR ? (
         <SunIcon className='w-5' />

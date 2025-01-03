@@ -31,75 +31,75 @@ export const siteConfig = {
     url: 'https://github.com/Cierra-Runis',
   },
   links: {
-    githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
     docs: 'https://nextui.org',
     email: 'mailto:byrdsaron@gmail.com',
+    githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
   },
 };
 
 export const technicalStack: {
+  icon: ReactElement;
   name: string;
   url: string;
-  icon: ReactElement;
 }[] = [
   {
+    icon: <SiReact className='w-5' color={SiReactHex} />,
     name: 'React',
     url: 'https://react.dev/',
-    icon: <SiReact className='w-5' color={SiReactHex} />,
   },
   {
+    icon: <SiNextdotjs className='w-5' />,
     name: 'Next.js',
     url: 'https://nextjs.org/',
-    icon: <SiNextdotjs className='w-5' />,
   },
   {
+    icon: <SiVercel className='w-5' />,
     name: 'Vercel',
     url: 'https://vercel.com/',
-    icon: <SiVercel className='w-5' />,
   },
   {
+    icon: <SiTailwindcss className='w-5' color={SiTailwindcssHex} />,
     name: 'TailwindCSS',
     url: 'https://tailwindcss.com/',
-    icon: <SiTailwindcss className='w-5' color={SiTailwindcssHex} />,
   },
   {
+    icon: <SiNextui className='w-5' />,
     name: 'NextUI',
     url: 'https://nextui.org/',
-    icon: <SiNextui className='w-5' />,
   },
   {
+    icon: <SiYarn className='w-5' color={SiYarnHex} />,
     name: 'Yarn',
     url: 'https://yarnpkg.com/',
-    icon: <SiYarn className='w-5' color={SiYarnHex} />,
   },
   {
+    icon: <SiMdx className='w-5' />,
     name: 'MDX',
     url: 'https://mdxjs.com/',
-    icon: <SiMdx className='w-5' />,
   },
   {
+    icon: <SiTypescript className='w-5' color={SiTypescriptHex} />,
     name: 'TypeScript',
     url: 'https://www.typescriptlang.org/',
-    icon: <SiTypescript className='w-5' color={SiTypescriptHex} />,
   },
   {
+    icon: <SiEslint className='w-5' color={SiEslintHex} />,
     name: 'EsLint',
     url: 'https://eslint.org/',
-    icon: <SiEslint className='w-5' color={SiEslintHex} />,
   },
   {
+    icon: <SiGit className='w-5' color={SiGitHex} />,
     name: 'Git',
     url: 'https://git-scm.com/',
-    icon: <SiGit className='w-5' color={SiGitHex} />,
   },
   {
+    icon: <SiGithub className='w-5' />,
     name: 'GitHub',
     url: 'https://github.com/',
-    icon: <SiGithub className='w-5' />,
   },
   {
+    icon: <SiSimpleicons className='w-5' />,
     name: 'Simple Icons',
     url: 'https://simpleicons.org/',
-    icon: <SiSimpleicons className='w-5' />,
   },
 ];

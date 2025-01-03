@@ -1,4 +1,4 @@
-import { Saira, Kode_Mono } from 'next/font/google';
+import { Kode_Mono, Saira } from 'next/font/google';
 
 /// TIPS: https://github.com/vercel/next.js/issues/49207
 /// TIPS: https://github.com/vercel/next.js/issues/53522

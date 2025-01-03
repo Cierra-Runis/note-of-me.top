@@ -1,15 +1,16 @@
-import ScrollToTopButton from '../buttons/ScrollToTopButton';
-import Footer from './Footer';
-import { NavBar } from './NavBar';
-import { Providers } from './Providers';
-import Statistics from './Statistics';
 import { kodeMono, saira } from '@/styles/font';
-import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
+import '@/styles/globals.css';
+
+import ScrollToTopButton from '../buttons/ScrollToTopButton';
+import Footer from './Footer';
+import { NavBar } from './NavBar';
+import { Providers } from './Providers';
+import Statistics from './Statistics';
 
 type Props = {
   children: ReactNode;
@@ -33,11 +34,11 @@ export default async function BaseLayout({ children, locale }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Statistics />
           <Providers>
-            <NextTopLoader showSpinner={false} shadow={false} color='#AD80FF' />
+            <NextTopLoader color='#AD80FF' shadow={false} showSpinner={false} />
 
             <div className='relative flex h-screen flex-col'>
               <NavBar />
-              <main className='container mx-auto max-w-7xl flex-grow px-6 pt-16'>
+              <main className='container mx-auto max-w-7xl grow px-6 pt-16'>
                 {children}
               </main>
               <Footer />

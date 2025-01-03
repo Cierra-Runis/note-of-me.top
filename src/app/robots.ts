@@ -1,13 +1,14 @@
-import { host } from '@/config';
 import type { MetadataRoute } from 'next';
+
+import { host } from '@/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
+    host: host,
     rules: {
-      userAgent: '*',
       allow: '/',
+      userAgent: '*',
     },
     sitemap: `${host}/sitemap.xml`,
-    host: host,
   };
 }

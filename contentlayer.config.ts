@@ -15,21 +15,21 @@ import remarkMath from 'remark-math';
 
 const computedFields: ComputedFields = {
   url: {
-    type: 'string',
     resolve: (post: { _raw: { flattenedPath: string } }) =>
       `/post/${post._raw.flattenedPath}`,
+    type: 'string',
   },
 };
 
 export const Post = defineDocumentType(() => ({
-  name: 'Post',
-  filePathPattern: `**/*.mdx`,
+  computedFields,
   contentType: 'mdx',
   fields: {
-    title: { type: 'string', required: true },
-    date: { type: 'date', required: true },
+    date: { required: true, type: 'date' },
+    title: { required: true, type: 'string' },
   },
-  computedFields,
+  filePathPattern: `**/*.mdx`,
+  name: 'Post',
 }));
 
 const rehypeKaTeXOptions: KatexOptions = {
@@ -37,11 +37,11 @@ const rehypeKaTeXOptions: KatexOptions = {
 };
 
 const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
-  theme: {
-    light: 'one-light',
-    dark: 'one-dark-pro',
-  },
   keepBackground: false,
+  theme: {
+    dark: 'one-dark-pro',
+    light: 'one-light',
+  },
 };
 
 const remarkGFMOptions: RemarkGFMOptions = {
