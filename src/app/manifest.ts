@@ -6,9 +6,29 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const t = await getTranslations({ locale });
 
   return {
-    name: t('site.title'),
-    short_name: t('site.title'),
+    background_color: '#000',
+    categories: [
+      'Technology',
+      '技術',
+      '技术',
+      'Blog',
+      'ブログ',
+      '博客',
+      'Note of Me',
+      '個人ノート',
+      '个人笔记',
+    ],
     description: t('site.description'),
+    icons: [
+      {
+        sizes: '48x48',
+        src: '/favicon.ico',
+        type: 'image/x-icon',
+      },
+    ],
+    name: `${t('site.title')} - ${t('site.description')}`,
+
+    short_name: t('site.title'),
     start_url: '/',
   };
 }
