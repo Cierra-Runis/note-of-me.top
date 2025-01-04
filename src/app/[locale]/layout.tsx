@@ -24,10 +24,6 @@ export async function generateMetadata({
     applicationName: t('site.title'),
     authors: siteConfig.author,
     description: t('site.description'),
-    icons: {
-      apple: '/apple-icon.png',
-      icon: '/icon.svg',
-    },
     title: {
       default: t('site.title'),
       template: `%s - ${t('site.title')}`,
