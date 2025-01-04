@@ -19,7 +19,8 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+/**  @type {import('eslint').Linter.Config[]} */
+const config = [
   js.configs.recommended,
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
@@ -27,4 +28,4 @@ const eslintConfig = [
   ...eslintPluginTailwindCSS.configs['flat/recommended'],
 ];
 
-export default eslintConfig;
+export default config;
