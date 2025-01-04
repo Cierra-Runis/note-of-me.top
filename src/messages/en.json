@@ -9,6 +9,12 @@
     "zh-CN": "简体中文",
     "ja": "日本語"
   },
+  "theme": {
+    "title": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "home": "Home",
   "post": "Post",
   "about": {

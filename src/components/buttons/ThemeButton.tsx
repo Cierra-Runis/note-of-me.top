@@ -1,42 +1,49 @@
 'use client';
 
-import { siteConfig } from '@/config';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { Button, ButtonProps } from '@nextui-org/button';
-import { useSwitch } from '@nextui-org/switch';
-import { useIsSSR } from '@react-aria/ssr';
+import { Button } from '@nextui-org/button';
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from '@nextui-org/dropdown';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 
-export default function ThemeButton(props: ButtonProps) {
-  const { setTheme, theme } = useTheme();
-  const isSSR = useIsSSR();
+const __icons = {
+  dark: <MoonIcon className='w-5' />,
+  light: <SunIcon className='w-5' />,
+  // Default theme is light
+  system: <SunIcon className='w-5' />,
+};
 
-  const onChange = () =>
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+type Theme = keyof typeof __icons;
 
-  const { isSelected } = useSwitch({
-    'aria-label': `Switch to ${
-      theme === 'light' || isSSR ? 'dark' : 'light'
-    } mode`,
-    isSelected: theme === 'light' || isSSR,
-    onChange,
-  });
+export default function ThemeDropdown() {
+  const t = useTranslations();
+
+  const { resolvedTheme, setTheme, theme } = useTheme();
 
   return (
-    <Button
-      {...props}
-      aria-label='GitHub'
-      href={siteConfig.author.url}
-      isIconOnly
-      onPress={onChange}
-      size='sm'
-      variant='light'
-    >
-      {!isSelected || isSSR ? (
-        <SunIcon className='w-5' />
-      ) : (
-        <MoonIcon className='w-5' />
-      )}
-    </Button>
+    <Dropdown aria-label={t('theme.title')}>
+      <DropdownTrigger>
+        <Button
+          isIconOnly
+          size='sm'
+          startContent={__icons[(resolvedTheme || 'system') as Theme]}
+          variant='light'
+        />
+      </DropdownTrigger>
+      <DropdownMenu
+        onAction={(key) => setTheme(key as string)}
+        selectedKeys={[theme || 'system']}
+        selectionMode='single'
+      >
+        {Object.keys(__icons).map((key) => (
+          <DropdownItem key={key} title={t(`theme.${key}`)} />
+        ))}
+      </DropdownMenu>
+    </Dropdown>
   );
 }

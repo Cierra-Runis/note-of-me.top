@@ -34,5 +34,11 @@
     "backToHome": "返回首页"
   },
   "friend": "友链",
-  "tableOfContent": "目录"
+  "tableOfContent": "目录",
+  "theme": {
+    "dark": "常暗模式",
+    "light": "常亮模式",
+    "system": "跟随系统",
+    "title": "主题"
+  }
 }

@@ -34,5 +34,11 @@
     "backToHome": "ホームに戻る"
   },
   "friend": "友達",
-  "tableOfContent": "目次"
+  "tableOfContent": "目次",
+  "theme": {
+    "dark": "常に暗い",
+    "light": "常に明るい",
+    "system": "システムに従う",
+    "title": "テーマ"
+  }
 }
