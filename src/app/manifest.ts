@@ -19,15 +19,8 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
       '个人笔记',
     ],
     description: t('site.description'),
-    icons: [
-      {
-        sizes: '48x48',
-        src: '/favicon.ico',
-        type: 'image/x-icon',
-      },
-    ],
+    icons: [{ src: '/icon.svg' }],
     name: `${t('site.title')} - ${t('site.description')}`,
-
     short_name: t('site.title'),
     start_url: '/',
   };
