@@ -23,7 +23,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
       { sizes: '192x192', src: '/icon-192x192.png', type: 'image/png' },
       { sizes: '512x512', src: '/icon-512x512.png', type: 'image/png' },
     ],
-    name: `${t('site.title')} - ${t('site.description')}`,
+    name: `${t('site.title')}`,
     short_name: t('site.title'),
     start_url: '/',
   };
