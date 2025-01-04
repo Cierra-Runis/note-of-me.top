@@ -53,17 +53,17 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     rehypePlugins: [
-      /// https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
+      // https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
       [rehypeKaTeX, rehypeKaTeXOptions],
-      /// https://rehype-pretty.pages.dev
+      // https://rehype-pretty.pages.dev
       [rehypePrettyCode, rehypePrettyCodeOptions],
-      /// https://github.com/rehypejs/rehype-slug
+      // https://github.com/rehypejs/rehype-slug
       [rehypeSlug],
     ],
     remarkPlugins: [
-      /// https://github.com/remarkjs/remark-math
+      // https://github.com/remarkjs/remark-math
       [remarkMath],
-      /// https://github.com/remarkjs/remark-gfm
+      // https://github.com/remarkjs/remark-gfm
       [remarkGFM, remarkGFMOptions],
     ],
   },
