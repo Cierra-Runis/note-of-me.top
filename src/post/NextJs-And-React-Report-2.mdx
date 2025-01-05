@@ -9,21 +9,21 @@ date: '2024-12-15 22:59:00'
 
 ## Vercel
 
-之前自己的博客是搭建在 GitHub Pages 上的，而 GitHub Pages 是一个静态网页托管平台，这说明网页的内容是静态的，这很适合博客这一类更新频率低，不需要用户登录交互的场景。
+之前自己的博客是搭建在 [GitHub Pages](https://pages.github.com) 上的，而 GitHub Pages 是一个静态网页托管平台，这说明网页的内容是静态的，这很适合博客这一类更新频率低，不需要用户登录交互的场景。
 
-这次转向 Vercel 单纯是因为其对 Next.js 有很好的支持 —— 因为 Vercel 就是搞 Next.js 的那群人做出来的。
+这次转向 [Vercel](https://vercel.com) 单纯是因为其对 Next.js 有很好的支持 —— 因为 Vercel 就是搞 Next.js 的那群人做出来的。
 
-可玩性比 GitHub Pages 要搞多了，不局限于原先的 Hexo 框架和 Butterfly 主题，任何地方都能自己去设计。
+可玩性比 GitHub Pages 要高多了，不局限于原先的 [Hexo 框架](https://hexo.io) 和 [Butterfly 主题](https://butterfly.js.org)，任何地方都能自己去设计。
 
-Vercel 还提供了 Analytics 和 Speed Insight 功能，可以查看网页状态，开箱即用非常方便。
+Vercel 还提供了 [Analytics](https://vercel.com/docs/analytics) 和 [Speed Insight](https://vercel.com/docs/speed-insights) 功能，可以查看网页状态，开箱即用非常方便。
 
-其实之前也想用 GitHub Actions 来监视仓库变化，以自动构建、部署网页，但总之还是麻烦的，后面不了了之。而 Vercel 在链接到 GitHub 仓库后就能自动 CI/CD，极度方便线上做一些简单的改变 —— 用 GitHub 客户端写个 MDX 的事。
+其实之前也想用 GitHub Actions 来监视仓库变化，以自动构建、部署网页，但总之还是麻烦的，后面不了了之。而 Vercel 在链接到 GitHub 仓库后就能自动 CI/CD，极度方便线上做一些简单的改变 —— 用 GitHub 客户端写个 [MDX](https://mdxjs.com) 的事。
 
 ## International
 
-国际化一直是我很喜欢做的一件事，mercurius 就实现了 en、zh-CN、ja 三种语言，我也想博客支持多语言。
+国际化一直是我很喜欢做的一件事，[Mercurius](https://github.com/Cierra-Runis/mercurius) 就实现了 en、zh-CN、ja 三种语言，我也想博客支持多语言。
 
-国际化的资料还是比较少，直到 Next.js 15 才内置了这个功能 —— 虽然说在此之前我也不知道国际化是个什么情况就是了。
+国际化的资料还是比较少，直到 Next.js 15 才内置了这个功能（存疑）—— 虽然说在此之前我也不知道国际化是个什么情况就是了。
 
 其实我一度想用 [Docusaurus](https://docusaurus.io) 来搭建博客，但正如前面提到的，不想被某个框架局限，最终还是决定自己搭建。
 
@@ -37,7 +37,7 @@ Vercel 还提供了 Analytics 和 Speed Insight 功能，可以查看网页状�
 
 ## NextUI
 
-我很喜欢 NextUI 这个 UI 库，其更新频度挺高的，可惜目前我重写博客的时机好像有点不太好，卡在 Next.js 14 到 15、Tailwind CSS 从 v3 到 v4、NextUI 更新 v2.6 版本、ESLint 结束 v8.x 版本维护的这个时间点，许多从网上找的教程还是基于老版本的，也就带来了不便。
+我很喜欢 [NextUI](https://nextui.org) 这个 UI 库，其更新频度挺高的，可惜目前我重写博客的时机好像有点不太好，卡在 Next.js 14 到 15、[Tailwind CSS](https://tailwindcss.com) 从 v3 到 v4、NextUI 更新 v2.6 版本、ESLint 结束 v8.x 版本维护的这个时间点，许多从网上找的教程还是基于老版本的，也就带来了不便。
 
 好像有点偏题了，说回 UI。
 
@@ -45,7 +45,7 @@ Vercel 还提供了 Analytics 和 Speed Insight 功能，可以查看网页状�
 
 就以彩虹上出现的七种颜色来说，红色用于 Error，橙色用于 Warning，绿色用于 Success，蓝色用于 Primary，紫色用于 Secondary。但我一旦想把橙色作为 Primary，一下就很难设计一个好看、直观的色盘了。
 
-对于背景色，我直接抄的 One Dark Pro 的颜色，这真的好看吧。
+对于背景色，我直接抄的 [One Dark Pro](https://binaryify.github.io/OneDark-Pro) 的颜色，这真的好看吧。
 
 还有一点，我已经很久没使用亮色模式了，所以对于设计出的亮色模式下的配色，我是极度的感到不适应 ……
 
@@ -53,7 +53,7 @@ Vercel 还提供了 Analytics 和 Speed Insight 功能，可以查看网页状�
 
 ## 包管理器
 
-目前我使用的是 yarn v4 版本，目前我还是挺喜欢这个包管理器的，但像是 pnpm、bun 我也非常想尝试，什么时候会转向 pnpm 或者 bun 也说不定，特别是 bun，一个挺厉害的 JavaScript 运行时，还加了很多好东西 ……
+目前我使用的是 [yarn v4](https://yarnpkg.com) 版本，目前我还是挺喜欢这个包管理器的，但像是 [pnpm](https://pnpm.io)、[bun](https://bun.sh) 我也非常想尝试，什么时候会转向 pnpm 或者 bun 也说不定，特别是 bun，一个挺厉害的 JavaScript 运行时，还加了很多好东西 ……
 
 但我之前在 Windows 安装后升级出了一点问题来着，也就暂时搁置了。
 

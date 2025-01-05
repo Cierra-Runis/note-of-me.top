@@ -19,7 +19,7 @@ date: '2025-01-01 02:23:13'
 
 这一节内容实际上在 [SSH](/post/SSH) 中已经提到了，这里再补充一些。
 
-实际上我在以前都是使用 Python 来写脚本的，比如 mercurius 用于构建 apk、Windows zip 并将它们移动到 `out` 文件夹的脚本，而这实际上要求使用脚本的人都安装了 Python，这显然不是一个好的选择。
+实际上我在以前都是使用 Python 来写脚本的，比如 Mercurius 用于构建 APK、Windows ZIP 并将它们移动到 `out` 文件夹的脚本，而这实际上要求使用脚本的人都安装了 Python，这显然不是一个好的选择。
 
 而 Bash 是 Unix 系统的默认 Shell，其脚本文件以 `.sh` 结尾，而在 Windows 上，我们可以使用 WSL 来运行 Bash 脚本 —— 当然我觉得 Windows 上应该还得是使用 PowerShell，其脚本文件以 `.ps1` 结尾，当然还有 `.bat` 和 `.cmd` 这种比较古老的批处理文件。
 
@@ -56,7 +56,7 @@ public void match(String input) {
 
 如果使用正则表达式，那么这个程序可能会更加简洁 —— 当然，像这种命令行程序都是有对应的包的，如 [Picocli](https://github.com/remkop/picocli/)、[JCommander](https://github.com/cbeust/jcommander/) 以及 Kotlin Only 的 [Clikt](https://ajalt.github.io/clikt/) 等。
 
-后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 mercurius 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
+后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
 
 但正则表达式有时也有一些坑，比如 [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531/) 这个视频，一个小小的 `.*.*=.*{:regex}` 的正则表达式干烂了整个 Cloudflare。
 
@@ -75,7 +75,7 @@ public void match(String input) {
 
 语义化版本号参见 [此链接](https://semver.org/)。
 
-我最早认识到版本号应该还是 Minecraft 的版本号，如 `1.7.2` 这样的，但 Minecraft 并不完全遵循这一规范，而在 Snapshot 快照版本号上我们还能见到另外一种版本号格式：`24w06a`，其 24 代表 2024 年，w06 代表 6 周，a 代表这一周的第一个快照版本。
+我最早认识到版本号应该还是 Minecraft 的版本号，如 `1.7.2` 这样的，但 Minecraft 并不完全遵循这一规范，而在 Snapshot 快照版本号上我们还能见到另外一种版本号格式：`24w06a`，其 `24` 代表 2024 年，`w06` 代表 6 周，`a` 代表这一周的第一个快照版本。
 
 其具体格式参见[此链接](https://minecraft.wiki/w/Version_formats/)。
 
