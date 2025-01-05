@@ -1,40 +1,28 @@
 {
+  "cSpell.words": ["Contentlayer", "katex", "Kode", "nextui", "Noto", "saira"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "tailwindCSS.experimental.classRegex": [
-    [
-      "clsx\\(([^)]*)\\)",
-      "(?:'|\"|`)([^']*)(?:'|\"|`)"
-    ]
-  ],
-  "i18n-ally.localesPaths": [
-    "./src/i18n"
-  ],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.editor.preferEditor": true,
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.ruby-lsp": true,
-    "**/node_modules": true,
+    "**/.contentlayer": true,
+    "**/.git": true,
+    "**/.hg": true,
     "**/.next": true,
+    "**/.ruby-lsp": true,
+    "**/.svn": true,
+    "**/.vercel": true,
     "**/.yarn": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
     "**/next-env.d.ts": true,
-    "**/yarn.lock": true,
-    "**/.contentlayer": true
+    "**/node_modules": true,
+    "**/yarn.lock": true
   },
-  "explorerExclude.backup": {},
-  "cSpell.words": [
-    "Contentlayer",
-    "katex",
-    "Kode",
-    "nextui",
-    "Noto",
-    "saira"
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["./src/i18n"],
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ]
 }
