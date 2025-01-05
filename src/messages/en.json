@@ -1,44 +1,44 @@
 {
-  "site": {
-    "description": "A Simple Note",
-    "title": "ノート of 我"
-  },
-  "locales": {
-    "lang": "English",
-    "en": "English",
-    "zh-CN": "简体中文",
-    "ja": "日本語"
-  },
-  "theme": {
-    "title": "Theme",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
-  },
-  "home": "Home",
-  "post": "Post",
   "about": {
     "description": "A Simple Note",
     "title": "About"
   },
-  "languages": "Languages",
-  "whatAreWeUsingNow": "What are we using now",
-  "errors": {
-    "pageNotFound": {
-      "title": "Page Not Found",
-      "description": "The page you are looking for does not exist"
-    },
-    "internal": {
-      "title": "Internal Server Error",
-      "description": "Server error occurred"
-    }
-  },
   "common": {
     "back": "Back",
     "backToHome": "Back to Home",
-    "confirm": "Confirm",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "errors": {
+    "internal": {
+      "description": "Server error occurred",
+      "title": "Internal Server Error"
+    },
+    "pageNotFound": {
+      "description": "The page you are looking for does not exist",
+      "title": "Page Not Found"
+    }
   },
   "friend": "Friend",
-  "tableOfContent": "On this page"
+  "home": "Home",
+  "languages": "Languages",
+  "locales": {
+    "en": "English",
+    "ja": "日本語",
+    "lang": "English",
+    "zh-CN": "简体中文"
+  },
+  "post": "Post",
+  "site": {
+    "description": "A Simple Note",
+    "title": "ノート of 我"
+  },
+  "tableOfContent": "On this page",
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System",
+    "title": "Theme"
+  },
+  "whatAreWeUsingNow": "What are we using now"
 }

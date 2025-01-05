@@ -1,44 +1,44 @@
 {
-  "site": {
-    "description": "シンプルなノートだけ",
-    "title": "ノート of 我"
-  },
-  "locales": {
-    "lang": "日本語",
-    "en": "English",
-    "zh-CN": "简体中文",
-    "ja": "日本語"
-  },
-  "home": "ホーム",
-  "post": "投稿",
   "about": {
     "description": "シンプルなノートだけ",
     "title": "について"
   },
-  "languages": "言語",
-  "whatAreWeUsingNow": "テクノロジー",
-  "errors": {
-    "pageNotFound": {
-      "title": "ページが見つかりません",
-      "description": "お探しのページは存在しません"
-    },
-    "internal": {
-      "title": "内部サーバーエラー",
-      "description": "サーバーでエラーが発生しました"
-    }
-  },
   "common": {
     "back": "戻る",
+    "backToHome": "ホームに戻る",
     "cancel": "取消",
-    "confirm": "確認する",
-    "backToHome": "ホームに戻る"
+    "confirm": "確認する"
+  },
+  "errors": {
+    "internal": {
+      "description": "サーバーでエラーが発生しました",
+      "title": "内部サーバーエラー"
+    },
+    "pageNotFound": {
+      "description": "お探しのページは存在しません",
+      "title": "ページが見つかりません"
+    }
   },
   "friend": "友達",
+  "home": "ホーム",
+  "languages": "言語",
+  "locales": {
+    "en": "English",
+    "ja": "日本語",
+    "lang": "日本語",
+    "zh-CN": "简体中文"
+  },
+  "post": "投稿",
+  "site": {
+    "description": "シンプルなノートだけ",
+    "title": "ノート of 我"
+  },
   "tableOfContent": "目次",
   "theme": {
     "dark": "常に暗い",
     "light": "常に明るい",
     "system": "システムに従う",
     "title": "テーマ"
-  }
+  },
+  "whatAreWeUsingNow": "テクノロジー"
 }

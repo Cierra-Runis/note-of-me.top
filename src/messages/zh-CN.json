@@ -1,44 +1,44 @@
 {
-  "site": {
-    "description": "一个简单的笔记",
-    "title": "ノート of 我"
-  },
-  "locales": {
-    "lang": "简体中文",
-    "en": "English",
-    "zh-CN": "简体中文",
-    "ja": "日本語"
-  },
-  "home": "首页",
-  "post": "文章",
   "about": {
     "description": "一个简单的笔记",
     "title": "关于"
   },
-  "languages": "语言",
-  "whatAreWeUsingNow": "技术栈",
-  "errors": {
-    "pageNotFound": {
-      "title": "页面不存在",
-      "description": "您查找的页面不存在"
-    },
-    "internal": {
-      "title": "内部服务器错误",
-      "description": "服务器发生错误"
-    }
-  },
   "common": {
     "back": "返回",
+    "backToHome": "返回首页",
     "cancel": "取消",
-    "confirm": "确认",
-    "backToHome": "返回首页"
+    "confirm": "确认"
+  },
+  "errors": {
+    "internal": {
+      "description": "服务器发生错误",
+      "title": "内部服务器错误"
+    },
+    "pageNotFound": {
+      "description": "您查找的页面不存在",
+      "title": "页面不存在"
+    }
   },
   "friend": "友链",
+  "home": "首页",
+  "languages": "语言",
+  "locales": {
+    "en": "English",
+    "ja": "日本語",
+    "lang": "简体中文",
+    "zh-CN": "简体中文"
+  },
+  "post": "文章",
+  "site": {
+    "description": "一个简单的笔记",
+    "title": "ノート of 我"
+  },
   "tableOfContent": "目录",
   "theme": {
     "dark": "常暗模式",
     "light": "常亮模式",
     "system": "跟随系统",
     "title": "主题"
-  }
+  },
+  "whatAreWeUsingNow": "技术栈"
 }
