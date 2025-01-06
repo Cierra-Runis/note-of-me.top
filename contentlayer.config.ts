@@ -15,9 +15,12 @@ import remarkMath from 'remark-math';
 
 const computedFields: ComputedFields = {
   url: {
-    resolve: (post: { _raw: { flattenedPath: string } }) =>
-      `/post/${post._raw.flattenedPath}`,
+    resolve: (post) => `/post/${post._raw.flattenedPath}`,
     type: 'string',
+  },
+  wordCount: {
+    resolve: (post) => post.body.raw.length,
+    type: 'number',
   },
 };
 

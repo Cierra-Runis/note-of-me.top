@@ -1,7 +1,7 @@
-import { allPosts, Post } from 'contentlayer/generated';
-import { compareDesc, format, parseISO } from 'date-fns';
+import PostCard from '@/components/PostCard';
+import { allPosts } from 'contentlayer/generated';
+import { compareDesc } from 'date-fns';
 import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
 
 export default function Posts() {
   const t = useTranslations();
@@ -10,29 +10,13 @@ export default function Posts() {
   );
 
   return (
-    <section className='flex flex-col gap-y-12'>
-      <h1 className='mb-8 text-center'>{t('post')}</h1>
+    <section className='flex max-w-full flex-col gap-y-12 dark:prose-invert'>
+      <h1 className='mb-8 text-center text-3xl font-bold text-foreground-700 md:text-4xl lg:text-5xl'>
+        {t('post')}
+      </h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
     </section>
-  );
-}
-
-function PostCard(post: Post) {
-  return (
-    <NextLink
-      className='mb-8 flex flex-col items-start justify-center'
-      href={post.url}
-      prefetch
-    >
-      <h2 className='mb-1'>{post.title}</h2>
-      <time className='mb-2 block text-foreground-600' dateTime={post.date}>
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </time>
-      <div className='line-clamp-3 break-all text-foreground-500 [&>*:last-child]:mb-0 [&>*]:mb-3'>
-        {post.body.raw}
-      </div>
-    </NextLink>
   );
 }

@@ -40,5 +40,6 @@
     "system": "跟随系统",
     "title": "主题"
   },
-  "whatAreWeUsingNow": "技术栈"
+  "whatAreWeUsingNow": "技术栈",
+  "wordCount": "{count, plural, =0 {内容为空} other {# 字}}"
 }

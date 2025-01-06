@@ -40,5 +40,6 @@
     "system": "System",
     "title": "Theme"
   },
-  "whatAreWeUsingNow": "What are we using now"
+  "whatAreWeUsingNow": "What are we using now",
+  "wordCount": "{count, plural, =0 {No Words} one {# Word} other {# Words}}"
 }
