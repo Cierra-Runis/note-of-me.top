@@ -103,12 +103,27 @@ const tailwindConfig: TailwindConfig = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-mono)'],
+        mono: [
+          'var(--font-mono)',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
         sans: [
           'var(--font-sans)',
           'var(--font-sans-locale)',
-          '-apple-system',
+          'ui-sans-serif',
+          'system-ui',
           'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
         ],
       },
       typography: {
