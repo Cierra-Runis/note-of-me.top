@@ -1086,15 +1086,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/accordion@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/accordion@npm:2.2.6"
+"@nextui-org/accordion@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/accordion@npm:2.2.7"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
+    "@nextui-org/aria-utils": "npm:2.2.7"
     "@nextui-org/divider": "npm:2.2.5"
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-aria-accordion": "npm:2.2.2"
@@ -1111,16 +1111,16 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/bb119284095e2d4f099f040bcaa84864627f57cae110cff1305ad4ceb8f4a04ba105c9964ce72c7cd0f11a5b5ee1579d112a7f10450d6ea5925d54d732f14cc1
+  checksum: 10c0/9f46dc60682da0f6a8725447de99d538d020618583ef2f69b0b9aa0b3a6c3d5e63b0ac5a8b1d7ce75a4562454d413a29504a4234e0b6316d35cc84d91d3e4f82
   languageName: node
   linkType: hard
 
-"@nextui-org/alert@npm:2.2.8":
-  version: 2.2.8
-  resolution: "@nextui-org/alert@npm:2.2.8"
+"@nextui-org/alert@npm:2.2.9":
+  version: 2.2.9
+  resolution: "@nextui-org/alert@npm:2.2.9"
   dependencies:
-    "@nextui-org/button": "npm:2.2.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/button": "npm:2.2.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/utils": "npm:3.26.0"
@@ -1130,17 +1130,17 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/93c0751d71f1359de422f699eb0a6d609bd46cdf62d4d80e4e63babf6e4bb2b526600d4d990eef77a0313052fdc31360d009f97a189405318bc220ce55367e1d
+  checksum: 10c0/484171f38ba399d44ac0d9ef358c720903d1478d83a0154d48b7ddeea450df2e77f285d31e352f42300bdbe30f1b8bd2cfd6003c81a317e784ee4b6a3d65e3f2
   languageName: node
   linkType: hard
 
-"@nextui-org/aria-utils@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/aria-utils@npm:2.2.6"
+"@nextui-org/aria-utils@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/aria-utils@npm:2.2.7"
   dependencies:
     "@nextui-org/react-rsc-utils": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/system": "npm:2.4.5"
+    "@nextui-org/system": "npm:2.4.6"
     "@react-aria/utils": "npm:3.26.0"
     "@react-stately/collections": "npm:3.12.0"
     "@react-stately/overlays": "npm:3.6.12"
@@ -1149,25 +1149,25 @@ __metadata:
   peerDependencies:
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/b90377ec766c3121d771080d0f30210b3cfc564a59a12f302ec5524166cec3c2384377c9543682da6ccb8b2727e95f8dfbb20685167cebbd5ea464e8a9e271ce
+  checksum: 10c0/10f5fd6024447ecab5607607e3d9cf3f330f6357e68df71b1fd6968ec07fac4c47c8345b4997bc5b65d6b13a7573f95e7c3200216d4de9b51349a93af5226cb8
   languageName: node
   linkType: hard
 
-"@nextui-org/autocomplete@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@nextui-org/autocomplete@npm:2.3.8"
+"@nextui-org/autocomplete@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@nextui-org/autocomplete@npm:2.3.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/button": "npm:2.2.8"
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/input": "npm:2.4.7"
-    "@nextui-org/listbox": "npm:2.3.8"
-    "@nextui-org/popover": "npm:2.3.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
-    "@nextui-org/scroll-shadow": "npm:2.3.4"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/button": "npm:2.2.9"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/input": "npm:2.4.8"
+    "@nextui-org/listbox": "npm:2.3.9"
+    "@nextui-org/popover": "npm:2.3.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
+    "@nextui-org/scroll-shadow": "npm:2.3.5"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/spinner": "npm:2.2.5"
+    "@nextui-org/spinner": "npm:2.2.6"
     "@nextui-org/use-aria-button": "npm:2.2.4"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
     "@react-aria/combobox": "npm:3.11.0"
@@ -1185,17 +1185,17 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/dbe183771494970a01e8d70fc806d2384a0fa97949f5ff29937b78cd1b82fb5c7949d681d6574cef40f207fdf453f07dfc98963a791d35e5f43c87253d4e9fe8
+  checksum: 10c0/2081564f08b2660287e485c2758f04d4cd50e3601de39f44475c9fd6b27140600a0702d123e4ee2cf57867d3887e701ccac32476abd61ef5526ae1416f36582d
   languageName: node
   linkType: hard
 
-"@nextui-org/avatar@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/avatar@npm:2.2.5"
+"@nextui-org/avatar@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/avatar@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/use-image": "npm:2.1.1"
+    "@nextui-org/use-image": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/interactions": "npm:3.22.5"
     "@react-aria/utils": "npm:3.26.0"
@@ -1204,30 +1204,30 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/c2336d663efd4b185960fc766fa23dd9e9f01612ee057a88457bcf08eac3261ae283cfc53a3d24b631a77eb784d20c4ac7593c6f0bbc4ac302fe49fa3caab892
+  checksum: 10c0/eb83df24ccc2f32247c723e8e3b16b0a0b21b590967c1d872653c856c0323d4a2682a187b1b2aeafd167f7116e1bc235c6b14b79a4a013d8c5a5e4a7cd6fcf56
   languageName: node
   linkType: hard
 
-"@nextui-org/badge@npm:2.2.4":
-  version: 2.2.4
-  resolution: "@nextui-org/badge@npm:2.2.4"
+"@nextui-org/badge@npm:2.2.5":
+  version: 2.2.5
+  resolution: "@nextui-org/badge@npm:2.2.5"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/29b4977a3a8b09b33d2e5590db79b68de7f2bea10116a4081a6a674f68aecbd790f6cd73b2da91c2e876545adb36786f63aa43e38de3c676dbcbf9c06c8cd491
+  checksum: 10c0/6ac552eb748bc84840ef2db2cc55ae09a3d79b64f00f98c47e9ef6300fdf4d3043587c682c5d4c352dbe3815dc9d64c74c92340c8c325aa9847735c63639d903
   languageName: node
   linkType: hard
 
-"@nextui-org/breadcrumbs@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/breadcrumbs@npm:2.2.5"
+"@nextui-org/breadcrumbs@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/breadcrumbs@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/breadcrumbs": "npm:3.5.19"
@@ -1240,18 +1240,18 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/65a6afc648048dbc1046dce7c59c4eb3ece6ef09374af5d373a15bf63a864970169ad7fab44f1ff09064df0c6888f290231e91ed3c237038a6f266bcb5cf1556
+  checksum: 10c0/4e89499bb3e1b14655972689bf077d8c0c62901296f6e2077e1ed14028550d3671b4c85888d21f350601caf2dde7c0b31d4eeae9d2f369c4fc6d7917a2f12b4c
   languageName: node
   linkType: hard
 
-"@nextui-org/button@npm:2.2.8":
-  version: 2.2.8
-  resolution: "@nextui-org/button@npm:2.2.8"
+"@nextui-org/button@npm:2.2.9":
+  version: 2.2.9
+  resolution: "@nextui-org/button@npm:2.2.9"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
-    "@nextui-org/ripple": "npm:2.2.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
+    "@nextui-org/ripple": "npm:2.2.7"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/spinner": "npm:2.2.5"
+    "@nextui-org/spinner": "npm:2.2.6"
     "@nextui-org/use-aria-button": "npm:2.2.4"
     "@react-aria/button": "npm:3.11.0"
     "@react-aria/focus": "npm:3.19.0"
@@ -1265,19 +1265,19 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/a5f5800bb3d988ab3d975f6752953deacbcdec6e4b3044ecb714ccd165e2f2bfd090e393caedd0d059ecd9e96491aef1bce7f14caf522f55197accbbcabdbaf3
+  checksum: 10c0/1fe66a2aa650323ad8ecfdb49fd17b67a4bd3e5b14f68f93b6f00b5e6e56ef7ead237a992e995fed0ac25a819b628671e9ff8ab1c0807c16263a3ddea441eb5e
   languageName: node
   linkType: hard
 
-"@nextui-org/calendar@npm:2.2.8":
-  version: 2.2.8
-  resolution: "@nextui-org/calendar@npm:2.2.8"
+"@nextui-org/calendar@npm:2.2.9":
+  version: 2.2.9
+  resolution: "@nextui-org/calendar@npm:2.2.9"
   dependencies:
     "@internationalized/date": "npm:3.6.0"
-    "@nextui-org/button": "npm:2.2.8"
+    "@nextui-org/button": "npm:2.2.9"
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-aria-button": "npm:2.2.4"
@@ -1300,16 +1300,16 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/f1af9885dcc82b65cbc76ab3a886d94b5369ab713c1dd7f9684947fa279d4e4e5f7e4c4a1f37232157195dfbd20c1f74c53e9afb710c6bdd3453e278d36e822e
+  checksum: 10c0/53cb3444d8e57655256b841406565b18c31b005862eabaeb445606ee75ee7a13220fa2af1f2b5ad9f5ece9b26c333ed6bae3813badb9dc47dbc0c84a9413147d
   languageName: node
   linkType: hard
 
-"@nextui-org/card@npm:2.2.8":
-  version: 2.2.8
-  resolution: "@nextui-org/card@npm:2.2.8"
+"@nextui-org/card@npm:2.2.9":
+  version: 2.2.9
+  resolution: "@nextui-org/card@npm:2.2.9"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
-    "@nextui-org/ripple": "npm:2.2.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
+    "@nextui-org/ripple": "npm:2.2.7"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-aria-button": "npm:2.2.4"
     "@react-aria/button": "npm:3.11.0"
@@ -1323,16 +1323,16 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/2ac1b928a750b07065d120f40d53740a487ad39add2d59f237812127ba1e627d0ea07a960f12c8719673b01f523798527e99e080e59305c32e0b01718a7bf8da
+  checksum: 10c0/2061af6b143aa0ec8fa29ecbb4fd11e06ec459652d0acfeb35ad879e2752ea0700b53d4a98565635f88168ecca9c1c1e050a06a8db5f65fdd8be1aa4b0e5fb1a
   languageName: node
   linkType: hard
 
-"@nextui-org/checkbox@npm:2.3.7":
-  version: 2.3.7
-  resolution: "@nextui-org/checkbox@npm:2.3.7"
+"@nextui-org/checkbox@npm:2.3.8":
+  version: 2.3.8
+  resolution: "@nextui-org/checkbox@npm:2.3.8"
   dependencies:
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-callback-ref": "npm:2.1.1"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
@@ -1350,15 +1350,15 @@ __metadata:
     "@nextui-org/theme": ">=2.4.3"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/8dfe42d0616de601ecab0618a6447e735eb9774902a297213513b67f20032a8a432dc25ab5fb9c77b24d208354cd5cd12498193514a42407904db6bac8d33111
+  checksum: 10c0/5b146742167c857b70b2620ce0405d1083beadb5fe55e67c516e6c71f523839b72f69e4b4511d8a2fe147d8b250c423137f6b8f89986b68106ae4aca0b815786
   languageName: node
   linkType: hard
 
-"@nextui-org/chip@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/chip@npm:2.2.5"
+"@nextui-org/chip@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/chip@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
@@ -1370,32 +1370,32 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/1d07e45750a2980bdf95c97e7a7b7695a1477d7262f1e23e71c43d206f188820a0d268758a4b3e2ddd361f83d1061c0f782a2d5c056efd1e23e3ac9a5f3d778b
+  checksum: 10c0/6868c646da47922dfce2e7bfc3da5421dd7f22bf468af624298f067434d75953c670e264d1fafff696c451e317197109724ac05f5a02971cbd1035e466e087cc
   languageName: node
   linkType: hard
 
-"@nextui-org/code@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/code@npm:2.2.5"
+"@nextui-org/code@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/code@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/system-rsc": "npm:2.3.5"
   peerDependencies:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/11b6e6c72f3a3013db4fee825a67e8c0b3cbcfaae42b293e8202bfd84990bcd10b8fd702d82250d9bea9b5ef922a23893cd479430297d871922dd1e7e63217f2
+  checksum: 10c0/206e10bafd91d9c640b121d68ce96de025c0f7e0f5625fa3b5673d89f0e3ae58c6926eb484425bef07148a1353575295a1807a7337aa6ea3ec41b77d93c0bb7c
   languageName: node
   linkType: hard
 
-"@nextui-org/date-input@npm:2.3.7":
-  version: 2.3.7
-  resolution: "@nextui-org/date-input@npm:2.3.7"
+"@nextui-org/date-input@npm:2.3.8":
+  version: 2.3.8
+  resolution: "@nextui-org/date-input@npm:2.3.8"
   dependencies:
     "@internationalized/date": "npm:3.6.0"
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/datepicker": "npm:3.12.0"
     "@react-aria/i18n": "npm:3.12.4"
@@ -1408,22 +1408,22 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/add1a7ffae396ae38954b31c8d3304ce8af09f1405467ac1733a57fc9359570100a277c17c3c12721478a948643c13333847e1e29d3c558d8edeae0458dcaba0
+  checksum: 10c0/8ce589267d59453a155ad11f929db53699f2fa51f1b2ac785b3b85b7027b586b145f2df39c2e634567d7dccd6b23702cb75e1f2f7e0280791147ed994c61be2f
   languageName: node
   linkType: hard
 
-"@nextui-org/date-picker@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@nextui-org/date-picker@npm:2.3.8"
+"@nextui-org/date-picker@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@nextui-org/date-picker@npm:2.3.9"
   dependencies:
     "@internationalized/date": "npm:3.6.0"
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/button": "npm:2.2.8"
-    "@nextui-org/calendar": "npm:2.2.8"
-    "@nextui-org/date-input": "npm:2.3.7"
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/popover": "npm:2.3.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/button": "npm:2.2.9"
+    "@nextui-org/calendar": "npm:2.2.9"
+    "@nextui-org/date-input": "npm:2.3.8"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/popover": "npm:2.3.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/datepicker": "npm:3.12.0"
@@ -1440,7 +1440,7 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/a3f42954e4e9892103d55ba3d022faf3ead760ceb0384eb6158eeb2208a7f5f1bc3bf98c59eb1518823ef77765a3da70658fce2afad1b6450e4560e9ae145fe8
+  checksum: 10c0/a094f944e07b54c9ffd4e2cdca4d3bf1b09af05680d991a3501254a274e36924a0aa9a63a8357b80e93d66c26b21a2b1200f2a5d6c7ab7d467996e19703ae85b
   languageName: node
   linkType: hard
 
@@ -1469,35 +1469,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/drawer@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/drawer@npm:2.2.6"
+"@nextui-org/drawer@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/drawer@npm:2.2.7"
   dependencies:
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/modal": "npm:2.2.6"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/modal": "npm:2.2.7"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/0060584346342ad5e070125bbbfef69835f60819780e46692a13433875a528965e85d71b35a37c09029b3b19d490238432f58416b7e7074d380d688656bf53ba
+  checksum: 10c0/ec708ae63ac90281b8096cb92c86dd54f70287d47a3592ca80fd383824356fbbdfb714398fb3c49a7386225f16754196053137b9d58c265169d749f322d1342c
   languageName: node
   linkType: hard
 
-"@nextui-org/dropdown@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@nextui-org/dropdown@npm:2.3.8"
+"@nextui-org/dropdown@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@nextui-org/dropdown@npm:2.3.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/menu": "npm:2.2.8"
-    "@nextui-org/popover": "npm:2.3.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/menu": "npm:2.2.9"
+    "@nextui-org/popover": "npm:2.3.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/menu": "npm:3.16.0"
-    "@react-aria/overlays": "npm:3.24.0"
     "@react-aria/utils": "npm:3.26.0"
     "@react-stately/menu": "npm:3.9.0"
     "@react-types/menu": "npm:3.9.13"
@@ -1507,18 +1506,18 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/d2cfef2f595a392ae9322368b6316d2ffb13e87cad7b22d468a61870065319f8a5755be1a220a40df53c395c882083e1961573675d8239c9b0ad0f9562713e67
+  checksum: 10c0/1590a091f4c09fd81fd8a877ee2ea2853abb257fb9543ca46f00bb816a232523db54d1269539880c64b26a5cfab62795607095de9d44d6c2d69183f29e077704
   languageName: node
   linkType: hard
 
-"@nextui-org/form@npm:2.1.7":
-  version: 2.1.7
-  resolution: "@nextui-org/form@npm:2.1.7"
+"@nextui-org/form@npm:2.1.8":
+  version: 2.1.8
+  resolution: "@nextui-org/form@npm:2.1.8"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/system": "npm:2.4.5"
-    "@nextui-org/theme": "npm:2.4.4"
+    "@nextui-org/system": "npm:2.4.6"
+    "@nextui-org/theme": "npm:2.4.5"
     "@react-aria/utils": "npm:3.26.0"
     "@react-stately/form": "npm:3.1.0"
     "@react-types/form": "npm:3.7.8"
@@ -1528,47 +1527,47 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18"
     react-dom: ">=18"
-  checksum: 10c0/3601f728d13f7764280eeb0864821cbc77e18fbfc004bec01d349181858698a87ad63dc0bd7f1553b29e62df29a13239377419d7b9e877f6269d997e6ebdf54b
+  checksum: 10c0/ed6c694d2f53719f4b00c37ca1e9d8355822b004715a90442f5611a46e2a02f49caafd1d1bca46e5ad6a1873695784d19fe4f4115297ce03eafc58a07b20484f
   languageName: node
   linkType: hard
 
-"@nextui-org/framer-utils@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@nextui-org/framer-utils@npm:2.1.5"
+"@nextui-org/framer-utils@npm:2.1.6":
+  version: 2.1.6
+  resolution: "@nextui-org/framer-utils@npm:2.1.6"
   dependencies:
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/system": "npm:2.4.5"
+    "@nextui-org/system": "npm:2.4.6"
     "@nextui-org/use-measure": "npm:2.1.1"
   peerDependencies:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/c97e13f4517ffd55e6478c293148640051356c3e04cf693aec996cbfe071925b8c67924b07b3ed10820412259d3e71d277cde9eb1670411ea644f52b9315cfdd
+  checksum: 10c0/10d6cf79e01fb4f45754a2b5cce0a1464e8753a52f3e366b885571717b23b309720775d464bb07b9faafbba36c0bf1b4a34647ca3af1a8acb5a37d9a10205b05
   languageName: node
   linkType: hard
 
-"@nextui-org/image@npm:2.2.4":
-  version: 2.2.4
-  resolution: "@nextui-org/image@npm:2.2.4"
+"@nextui-org/image@npm:2.2.5":
+  version: 2.2.5
+  resolution: "@nextui-org/image@npm:2.2.5"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/use-image": "npm:2.1.1"
+    "@nextui-org/use-image": "npm:2.1.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/97662fa4967d695e85eaeae598c35ba25102c87a400d53b22d13249928233ba5dfd6bae6c1853ec9f79b065573960228dd4eee6777a9ec0f38385660f4bbcf0e
+  checksum: 10c0/b18ffa493d878000ccb7cf8442584f650762d2cd777b88bc1a2aedf10bd8bfa6dd2ed52367fe962eef15d2fd984c7733be9b7814d2e01ef47d592f1feca776e0
   languageName: node
   linkType: hard
 
-"@nextui-org/input-otp@npm:2.1.7":
-  version: 2.1.7
-  resolution: "@nextui-org/input-otp@npm:2.1.7"
+"@nextui-org/input-otp@npm:2.1.8":
+  version: 2.1.8
+  resolution: "@nextui-org/input-otp@npm:2.1.8"
   dependencies:
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/form": "npm:3.0.11"
@@ -1582,16 +1581,16 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18"
     react-dom: ">=18"
-  checksum: 10c0/365e8c4fba44b66bcff295d530fec9de044829cb38bd089a10c504ffb72738e20d19b8e02d5d47fda3d37dcfcfe3a8fcae3b7a9d2e11afe74b1f241222ee85a3
+  checksum: 10c0/71899b6f04e9986a71c2cbff390e9b1b3de910b1c6ec426986c4cd6c4bde416b8a92ca921bc5fc7b7b43d02b09f7550d39da902fe3d7831809035b04111a6bfd
   languageName: node
   linkType: hard
 
-"@nextui-org/input@npm:2.4.7":
-  version: 2.4.7
-  resolution: "@nextui-org/input@npm:2.4.7"
+"@nextui-org/input@npm:2.4.8":
+  version: 2.4.8
+  resolution: "@nextui-org/input@npm:2.4.8"
   dependencies:
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
@@ -1608,15 +1607,15 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/ac1496e29e04ae972386380dd4ee01c465f497804c8bef602673fee8f300a87fa5fc1218e976f8be95d22a142b6139bb4d487e59a0c28b66babaf9f817725b2d
+  checksum: 10c0/1b420452da33a73cb5cf484de4ab92d377343f665ab7fac8589b589e4331f6d7ead08d773402aa3162dd308d8843e863dce2cf728440460001ea656693a1946f
   languageName: node
   linkType: hard
 
-"@nextui-org/kbd@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/kbd@npm:2.2.5"
+"@nextui-org/kbd@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/kbd@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/system-rsc": "npm:2.3.5"
     "@react-aria/utils": "npm:3.26.0"
@@ -1624,18 +1623,18 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/e783f971b3b76790f6584fc9c53ec6992f2716345e7dcd75bc0c948a9f1ba8b0a5a397e7d268bfc0e385cc5c0002b84ef6378cd7592e327941b8a1b310755dd0
+  checksum: 10c0/5462b6dcdd4473dcabdd3bbcacfa680f52ae1d1860d5b09225fdf534b9088dfe198bc485b48b2cfdd94b7c6cd3701d3aeaf174f4b17d670056d2f429a53ba75f
   languageName: node
   linkType: hard
 
-"@nextui-org/link@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/link@npm:2.2.6"
+"@nextui-org/link@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/link@npm:2.2.7"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/use-aria-link": "npm:2.2.4"
+    "@nextui-org/use-aria-link": "npm:2.2.5"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/link": "npm:3.7.7"
     "@react-aria/utils": "npm:3.26.0"
@@ -1645,17 +1644,17 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/aca207d74be0ed65d71bf8ef09881bc081fc5da7f97820bab9ff78df0e3861bfbe8060afe942e6a0f4cd1b260a8977f94e3963a96c4b6fdf9fa2ad7e61960735
+  checksum: 10c0/d763e243a89505f8e490d84cfbdfa1bfd68aee38f03bc45a6d63bbfe412f15d48901bc87cf2e99ff0411f8519f7648cd43cf5fc1ff0e2df3f4a4c56de180c21b
   languageName: node
   linkType: hard
 
-"@nextui-org/listbox@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@nextui-org/listbox@npm:2.3.8"
+"@nextui-org/listbox@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@nextui-org/listbox@npm:2.3.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
+    "@nextui-org/aria-utils": "npm:2.2.7"
     "@nextui-org/divider": "npm:2.2.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-is-mobile": "npm:2.2.2"
     "@react-aria/focus": "npm:3.19.0"
@@ -1665,23 +1664,23 @@ __metadata:
     "@react-stately/list": "npm:3.11.1"
     "@react-types/menu": "npm:3.9.13"
     "@react-types/shared": "npm:3.26.0"
-    "@tanstack/react-virtual": "npm:3.10.9"
+    "@tanstack/react-virtual": "npm:3.11.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/006a5b59294622573b551de1b72828f2208b2e998a7703867187ffb9a26a98647d41280254fea0f99999bcb225a810aff68338ce199961665e95dfdfb9579d78
+  checksum: 10c0/772643f63f2dcab5e35f48596d33425c0db5cd5723f7790909191823a16248fa820d96b62a4c328b29d1395b173ee2c805372ab33ff7e7bf08f52224dce8d8ec
   languageName: node
   linkType: hard
 
-"@nextui-org/menu@npm:2.2.8":
-  version: 2.2.8
-  resolution: "@nextui-org/menu@npm:2.2.8"
+"@nextui-org/menu@npm:2.2.9":
+  version: 2.2.9
+  resolution: "@nextui-org/menu@npm:2.2.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
+    "@nextui-org/aria-utils": "npm:2.2.7"
     "@nextui-org/divider": "npm:2.2.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-is-mobile": "npm:2.2.2"
     "@react-aria/focus": "npm:3.19.0"
@@ -1697,17 +1696,17 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/e5dbde6e28a28ce773927ef8d940a940849a699f364f89a0bb51800c090805d98be1d6392e8df80e1e729a37164d2ea276ada4daa52981e4e62e8aa0055c9972
+  checksum: 10c0/5b51763cf4274933d1460b96b8a72b578d8f9cf3809ad50a3e72ca8cfb4860a3f5b1e71b17243d1d431cb1bb883803f20719f3dd12c05b2f41c660e2414c9357
   languageName: node
   linkType: hard
 
-"@nextui-org/modal@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/modal@npm:2.2.6"
+"@nextui-org/modal@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/modal@npm:2.2.7"
   dependencies:
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-aria-button": "npm:2.2.4"
@@ -1727,17 +1726,17 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/25ffd0d905a0065e92b0bfe246f54364b65c9373aa38a659d13881880229bced9533d56ead6e03856119c3541d96728733eb9667d804e67542e188814d825f24
+  checksum: 10c0/7190d75c27b2930206766d65212f2ddd615894444c89cdb375502f6f703a7f8546b731409ca6ece6d004732b0f8f27ef7ef14addaa7233ed5ee309968a5c25ae
   languageName: node
   linkType: hard
 
-"@nextui-org/navbar@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@nextui-org/navbar@npm:2.2.7"
+"@nextui-org/navbar@npm:2.2.8":
+  version: 2.2.8
+  resolution: "@nextui-org/navbar@npm:2.2.8"
   dependencies:
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-scroll-position": "npm:2.1.1"
     "@react-aria/button": "npm:3.11.0"
@@ -1753,15 +1752,15 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/12c3a4a7cd141a23006389053576f3c4dc8fe1d7b8ab6590825484cfc19a7bbd25d3c77ff768785a341caf3d0e01cfeb7530dfe98e446d6de1d41a7c269a8dab
+  checksum: 10c0/1ff0dd186f1c916db97144a0f98d43d14e87f29145cfea1da7632aedfbb1bbba18246e6f9592b2a4e3ae984b491604237b787059b46c0620ceb739a6a74fa54d
   languageName: node
   linkType: hard
 
-"@nextui-org/pagination@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@nextui-org/pagination@npm:2.2.7"
+"@nextui-org/pagination@npm:2.2.8":
+  version: 2.2.8
+  resolution: "@nextui-org/pagination@npm:2.2.8"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-intersection-observer": "npm:2.2.2"
@@ -1776,19 +1775,19 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/12b603c11410cd5507d79eb55a18684fbf7973b981ee2539d212931ff0442b577c49efffdefc1dd2eed02e17ef06d6b55a6670f391172d2a0bc2cb4d8b73282a
+  checksum: 10c0/76c5374cb77a85b71a061df3063b98da53849721a57c273673bec3678172295e192858751489d1f30e2f0cff0a6ca6cbb4087356f73bb0c34bf0c31087a87a41
   languageName: node
   linkType: hard
 
-"@nextui-org/popover@npm:2.3.8":
-  version: 2.3.8
-  resolution: "@nextui-org/popover@npm:2.3.8"
+"@nextui-org/popover@npm:2.3.9":
+  version: 2.3.9
+  resolution: "@nextui-org/popover@npm:2.3.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/button": "npm:2.2.8"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/button": "npm:2.2.9"
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-aria-button": "npm:2.2.4"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
@@ -1806,15 +1805,15 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/5d41573c931e94ab06462823d25a4fd09c386dd0598dc0e5a98705a9ea1a9331134c1bcc113071ed119f9f994d285029838b2993e360ef228fc5866b66469927
+  checksum: 10c0/55e197f77f930ea6c8591084b8b04d73940f0c1cc717aa1cce4b83bbb7afdcc8cf0663d9e63612f02c3b3afad7ba09784c1fdaee6666a1180d7ce6b25e1fb517
   languageName: node
   linkType: hard
 
-"@nextui-org/progress@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/progress@npm:2.2.5"
+"@nextui-org/progress@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/progress@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-is-mounted": "npm:2.1.1"
     "@react-aria/i18n": "npm:3.12.4"
@@ -1826,16 +1825,16 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/2b473c5b88ccc6a19e276b29a0b53127bebbd322183a8e8bd10bfe3b23fa737b9f39b6c9cd5332ba86ac91d49acfe7bd4a7db77abb9d937df2ff3dc817854b8a
+  checksum: 10c0/03a90e8307b6702c04927acb6ac36b1921a22b427855ec3504fba0c7508f0623a38a21d72a0dcb3972c632b11c20ee34a93c6ced493696e6462b71618036e466
   languageName: node
   linkType: hard
 
-"@nextui-org/radio@npm:2.3.7":
-  version: 2.3.7
-  resolution: "@nextui-org/radio@npm:2.3.7"
+"@nextui-org/radio@npm:2.3.8":
+  version: 2.3.8
+  resolution: "@nextui-org/radio@npm:2.3.8"
   dependencies:
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/interactions": "npm:3.22.5"
@@ -1850,7 +1849,7 @@ __metadata:
     "@nextui-org/theme": ">=2.4.3"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/19af22053f3a89b6d4f741bbaef6274b5bf3bb43dc0482d6eb9d9a5fb5dfdf4e7274009d31e0a1ce146502785cf01e984772792d5b85bb9dab1dd17e90953485
+  checksum: 10c0/d046b4e602853560ea53b7ded36f92e955c3ad77a009613f8cb018fc19f0b22f7489fb399f764c2d2746e230c13ecee59c0e4f379c7858f56b3e131eba58775d
   languageName: node
   linkType: hard
 
@@ -1863,24 +1862,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/react-utils@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@nextui-org/react-utils@npm:2.1.2"
+"@nextui-org/react-utils@npm:2.1.3":
+  version: 2.1.3
+  resolution: "@nextui-org/react-utils@npm:2.1.3"
   dependencies:
     "@nextui-org/react-rsc-utils": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
   peerDependencies:
     react: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/51e97a717eedd482e25a0480f6bd2defcaaf5265b4e53248d1098b58df6a28259fc5d3719c4783be87e32dcf92149c90801a3485d6a444cd7d15314e467f2fd1
+  checksum: 10c0/97d525b63ad56eb12fc131f0c2f570e78d782c754159896d3111f38e1f72d34d34d9bb1e1852c499ac2d37fa424ca92d8452c2a8592f43ec050c19cf47005e24
   languageName: node
   linkType: hard
 
-"@nextui-org/ripple@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/ripple@npm:2.2.6"
+"@nextui-org/ripple@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/ripple@npm:2.2.7"
   dependencies:
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
@@ -1888,15 +1887,15 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/a67d32557897acc3071bf32dbccc511b8a244aba17cd658413ef5cc496d168dfd2cf104bc44a8c077d2b9c8b8ccd3e544df03a778240b2244d8f78b81e0b8afa
+  checksum: 10c0/62eb6a68f024adb47520dd036c98b6e024727e0b7ee08cb04926f4eae71fa68163e78349a1646610690c859f8721f7c59e003ead432c67a0336d627d6fe8f272
   languageName: node
   linkType: hard
 
-"@nextui-org/scroll-shadow@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@nextui-org/scroll-shadow@npm:2.3.4"
+"@nextui-org/scroll-shadow@npm:2.3.5":
+  version: 2.3.5
+  resolution: "@nextui-org/scroll-shadow@npm:2.3.5"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-data-scroll-overflow": "npm:2.2.2"
   peerDependencies:
@@ -1904,23 +1903,23 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/7a698d62182999beba11389fc1a36d4522582271fa176307bb424c69cec80159460287274a460c32472448a000bcc2fc347b4d3f529e45df9133f85b8fa55f83
+  checksum: 10c0/3853fe20a22dc9cf8303961eac1e03f27cdcc67d54b0d0a3a075d9d17959b09f84268ee2438ad51491c027a0e858935b77b5fa8e50d0bb69cf1da0bd9442691b
   languageName: node
   linkType: hard
 
-"@nextui-org/select@npm:2.4.8":
-  version: 2.4.8
-  resolution: "@nextui-org/select@npm:2.4.8"
+"@nextui-org/select@npm:2.4.9":
+  version: 2.4.9
+  resolution: "@nextui-org/select@npm:2.4.9"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/listbox": "npm:2.3.8"
-    "@nextui-org/popover": "npm:2.3.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
-    "@nextui-org/scroll-shadow": "npm:2.3.4"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/listbox": "npm:2.3.9"
+    "@nextui-org/popover": "npm:2.3.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
+    "@nextui-org/scroll-shadow": "npm:2.3.5"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/spinner": "npm:2.2.5"
+    "@nextui-org/spinner": "npm:2.2.6"
     "@nextui-org/use-aria-button": "npm:2.2.4"
     "@nextui-org/use-aria-multiselect": "npm:2.4.3"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
@@ -1930,14 +1929,14 @@ __metadata:
     "@react-aria/utils": "npm:3.26.0"
     "@react-aria/visually-hidden": "npm:3.8.18"
     "@react-types/shared": "npm:3.26.0"
-    "@tanstack/react-virtual": "npm:3.10.9"
+    "@tanstack/react-virtual": "npm:3.11.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/cd9c9bca5dc4d6a7b99063843e07ca64b7cf309a454537d46e07b08d518ac8464097d9c170c0ba00ff02a8b0337283c397a46712675b05080cfcaf6e87de27e0
+  checksum: 10c0/9a9bbe753e0c54695ce094e189ceb398b05eac7095cf0dfea031ca8b92a5d6d6e5743c815b939cfafa79e84e8ce9c494cce90e2c9fe56c32013dbf26a074cf41
   languageName: node
   linkType: hard
 
@@ -1957,28 +1956,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/skeleton@npm:2.2.4":
-  version: 2.2.4
-  resolution: "@nextui-org/skeleton@npm:2.2.4"
+"@nextui-org/skeleton@npm:2.2.5":
+  version: 2.2.5
+  resolution: "@nextui-org/skeleton@npm:2.2.5"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
   peerDependencies:
     "@nextui-org/system": ">=2.4.0"
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/7975abceb77ee5c72bc9a842187b28fd67040d6275486c0f576cd5c06aa7ab38f55e3476ebff34c9fd4342be6ff1d62c5cbceaac3cb4444013905b24c3b6de97
+  checksum: 10c0/b27814cebd0362a6c0c1107d67ca65fe7d42ea17e371d407d904918431656d5ecd0a9bfffa0fb1f2191fb2556ef415b679520009799ee5ac7e651b1e5574892b
   languageName: node
   linkType: hard
 
-"@nextui-org/slider@npm:2.4.6":
-  version: 2.4.6
-  resolution: "@nextui-org/slider@npm:2.4.6"
+"@nextui-org/slider@npm:2.4.7":
+  version: 2.4.7
+  resolution: "@nextui-org/slider@npm:2.4.7"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/tooltip": "npm:2.2.6"
+    "@nextui-org/tooltip": "npm:2.2.7"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/i18n": "npm:3.12.4"
     "@react-aria/interactions": "npm:3.22.5"
@@ -1991,20 +1990,20 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/9569766f7a715ce419f89c7ab5333073d497b192656fcf7ba03900b06e27e20f18d0e17970e7ee285654bd01894767bb637e0245ad949d13ee6120071239a90a
+  checksum: 10c0/8382db4bf077fc2e827e0bcb05776d8445151fc12596a5c0f10d5570cd9936704827f8cbd1892a11c3b9ef8998fdc489aa52a569b221ca48ffc2b70719b2ce2a
   languageName: node
   linkType: hard
 
-"@nextui-org/snippet@npm:2.2.9":
-  version: 2.2.9
-  resolution: "@nextui-org/snippet@npm:2.2.9"
+"@nextui-org/snippet@npm:2.2.10":
+  version: 2.2.10
+  resolution: "@nextui-org/snippet@npm:2.2.10"
   dependencies:
-    "@nextui-org/button": "npm:2.2.8"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/button": "npm:2.2.9"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/tooltip": "npm:2.2.6"
-    "@nextui-org/use-clipboard": "npm:2.1.1"
+    "@nextui-org/tooltip": "npm:2.2.7"
+    "@nextui-org/use-clipboard": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/utils": "npm:3.26.0"
   peerDependencies:
@@ -2013,45 +2012,45 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/6034e546c04350fe9f76e117c48c5593077d09a7144bd5b067879b4f72a1ec4985e2606ae2d215d98b5602b8a40311ace10aec2504add83436f9bf9558b91659
+  checksum: 10c0/9b15efe4f265da9ac6a898a1fc1341e2c96a044fbbc51d9fb65fa26e81198992888231f038687e882148eed46d3ba545dd49fb0755d30f77e5d1732b6d7f18dd
   languageName: node
   linkType: hard
 
-"@nextui-org/spacer@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/spacer@npm:2.2.5"
+"@nextui-org/spacer@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/spacer@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/system-rsc": "npm:2.3.5"
   peerDependencies:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/9ce7998ade73a375d12cf0518611ed6f84dd025f1a26e77136a66563ed48a33ff672ec9e673c0b04e370e4c357941361aa39fad7e339295abc92666a03b08dce
+  checksum: 10c0/15ada66b8b4164939795b578b8ffde3831432238fa21fdd86f143d8f7b6f67db849a827c8189695946cb2560a85de87085e8a8c868e608ea70f9b4275ce4c915
   languageName: node
   linkType: hard
 
-"@nextui-org/spinner@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/spinner@npm:2.2.5"
+"@nextui-org/spinner@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/spinner@npm:2.2.6"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/system-rsc": "npm:2.3.5"
   peerDependencies:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/ef1c81b87301b079731b548d3d158199e6f311d1fbc2d580714358ca4591b9084b8acd109f3422243e39d9312fa239ca099a229205b3ac06842b5fb85adff973
+  checksum: 10c0/a511c9d0f2b16b120ffef1da6be6a7705f9680cb9b8df514d9ca3146b3758e35e4d22ad50e40072e2300912fff46a26f5ccc1081ab36a0a330a06e75cfe22552
   languageName: node
   linkType: hard
 
-"@nextui-org/switch@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@nextui-org/switch@npm:2.2.7"
+"@nextui-org/switch@npm:2.2.8":
+  version: 2.2.8
+  resolution: "@nextui-org/switch@npm:2.2.8"
   dependencies:
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
     "@react-aria/focus": "npm:3.19.0"
@@ -2066,7 +2065,7 @@ __metadata:
     "@nextui-org/theme": ">=2.4.3"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/f03b7f47ce221a3b5c07a829bed06db8b25c08c877a03e1536772cb5cc9a825603cc9c7adf77335d4dbc30d44b8abbe8b20e87b7b36c0fb27169f1a837fd9331
+  checksum: 10c0/b3b78ab38575bf5c85cb214469ac3d78a0361594db567c070333b9b1e4476e856fb5e5957b3c1c025d3274a1f740b6e8157068eb15cae92a80248a1b7bbce718
   languageName: node
   linkType: hard
 
@@ -2083,12 +2082,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/system@npm:2.4.5, @nextui-org/system@npm:^2.4.5":
-  version: 2.4.5
-  resolution: "@nextui-org/system@npm:2.4.5"
+"@nextui-org/system@npm:2.4.6, @nextui-org/system@npm:^2.4.6":
+  version: 2.4.6
+  resolution: "@nextui-org/system@npm:2.4.6"
   dependencies:
     "@internationalized/date": "npm:3.6.0"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/system-rsc": "npm:2.3.5"
     "@react-aria/i18n": "npm:3.12.4"
     "@react-aria/overlays": "npm:3.24.0"
@@ -2099,19 +2098,19 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/b42736e1e9b202066add8d4c1b9ef0a77b1714d4b3d29eebf8a3aaa64b06f508fdb5b2fb616a4ee3292689aa6ee12c6ac3cd07ff7acf8777e7b3667c332db37e
+  checksum: 10c0/c02d70cb5543281bfd4a1440d6d0d79e85684220a74bf90311132455804459dbc7460f4983cec1fe130ef73198a8c77e42c50914a765d18499ac62e63bffe0f9
   languageName: node
   linkType: hard
 
-"@nextui-org/table@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@nextui-org/table@npm:2.2.7"
+"@nextui-org/table@npm:2.2.8":
+  version: 2.2.8
+  resolution: "@nextui-org/table@npm:2.2.8"
   dependencies:
-    "@nextui-org/checkbox": "npm:2.3.7"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/checkbox": "npm:2.3.8"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-icons": "npm:2.1.1"
     "@nextui-org/shared-utils": "npm:2.1.2"
-    "@nextui-org/spacer": "npm:2.2.5"
+    "@nextui-org/spacer": "npm:2.2.6"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/interactions": "npm:3.22.5"
     "@react-aria/table": "npm:3.16.0"
@@ -2126,17 +2125,17 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/928e63b330b1b69260dfdaf0ced97c926ad1a387719fcf1a7ed477259498f5321a6b5d62c45b7dadd093c74009b200dddaf8c036004fef29c734f6ce810b0641
+  checksum: 10c0/bbfd26445d865784a1284181ba3189b87b115131f85b459d20f8a9769ae72990588ceafb2d47ae4be7495c16063a3b4bbfad2ebbb045af7789364899a988af58
   languageName: node
   linkType: hard
 
-"@nextui-org/tabs@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/tabs@npm:2.2.6"
+"@nextui-org/tabs@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/tabs@npm:2.2.7"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/aria-utils": "npm:2.2.7"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-is-mounted": "npm:2.1.1"
     "@nextui-org/use-update-effect": "npm:2.1.1"
@@ -2154,13 +2153,13 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/524a0474f14447d79dc2eb69fb21dc00dfae4df0badd566838ce0e75371f4192c8941ba301a5e9efc2bb36fa5633c2b7f193c12febaf661026caf3d4f9badce5
+  checksum: 10c0/d219753bd74c16bc4b198fbebd2e2d55d6418beeafb2bfafa9a482d8d56bb62bb06efadea5abb80b1945138c65764c3aebebd1c604b239c54afdcaaa5a80852c
   languageName: node
   linkType: hard
 
-"@nextui-org/theme@npm:2.4.4, @nextui-org/theme@npm:^2.4.4":
-  version: 2.4.4
-  resolution: "@nextui-org/theme@npm:2.4.4"
+"@nextui-org/theme@npm:2.4.5, @nextui-org/theme@npm:^2.4.5":
+  version: 2.4.5
+  resolution: "@nextui-org/theme@npm:2.4.5"
   dependencies:
     "@nextui-org/shared-utils": "npm:2.1.2"
     clsx: "npm:^1.2.1"
@@ -2172,18 +2171,18 @@ __metadata:
     tailwind-variants: "npm:^0.1.20"
   peerDependencies:
     tailwindcss: ">=3.4.0"
-  checksum: 10c0/18a6a848f8d73de3a4f3cb59269844d9b4d3009a9000dbd58c1c04a088f3b4e31c5df4a584aaa03460aa1b8722a477c9c696649152f1726303f751c28c4a45c9
+  checksum: 10c0/b91a80775510e85baf86363d9ccea78d8f08b099d1413ee1232e12ac8916595dd5074f4d3ac9d0c913bb4baacddeedbdcd78debbc6df01f32172c1c638ebfd78
   languageName: node
   linkType: hard
 
-"@nextui-org/tooltip@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@nextui-org/tooltip@npm:2.2.6"
+"@nextui-org/tooltip@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@nextui-org/tooltip@npm:2.2.7"
   dependencies:
-    "@nextui-org/aria-utils": "npm:2.2.6"
+    "@nextui-org/aria-utils": "npm:2.2.7"
     "@nextui-org/dom-animation": "npm:2.1.1"
-    "@nextui-org/framer-utils": "npm:2.1.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/framer-utils": "npm:2.1.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
     "@react-aria/interactions": "npm:3.22.5"
@@ -2199,7 +2198,7 @@ __metadata:
     framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/616217d546137fe74dcca24c500ffa76318576f6d02b7fa02697ce106f09c697e87d2929304c26ee8c81717ac4438f4120cd7cf50a4b45705ab18fc7aabc54bd
+  checksum: 10c0/a8bedfa53ef0cfecd08278baa7b300a9dec9efff31c97d178fc126c208fcd23f4c730a61d481ca20a2abb517ca9f91daf10150b14edd21241f28aec29bd0db2a
   languageName: node
   linkType: hard
 
@@ -2236,9 +2235,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/use-aria-link@npm:2.2.4":
-  version: 2.2.4
-  resolution: "@nextui-org/use-aria-link@npm:2.2.4"
+"@nextui-org/use-aria-link@npm:2.2.5":
+  version: 2.2.5
+  resolution: "@nextui-org/use-aria-link@npm:2.2.5"
   dependencies:
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
@@ -2248,7 +2247,7 @@ __metadata:
     "@react-types/shared": "npm:3.26.0"
   peerDependencies:
     react: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/1a6d937a5883f0973ddb3e7f9dfe701c2f5f6d87beb33ccbfb1e6083cae511047e55cfb207074672d0a3140d82fd6110f8b298bc12b0d005343bdf086793c9ae
+  checksum: 10c0/ef6ddd7ef8b0d4e9894a983946a060b6e095a2d58798109a347b38397039499aac265bcd876f5ea65070f3f172c2e15b5aeda0bb357123ae587cf110b8b8befb
   languageName: node
   linkType: hard
 
@@ -2303,12 +2302,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/use-clipboard@npm:2.1.1":
-  version: 2.1.1
-  resolution: "@nextui-org/use-clipboard@npm:2.1.1"
+"@nextui-org/use-clipboard@npm:2.1.2":
+  version: 2.1.2
+  resolution: "@nextui-org/use-clipboard@npm:2.1.2"
   peerDependencies:
     react: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/e92799b3142750bd676be71b557699ebd2b2fae1d6412f93344f1ee222f8519ff5453c81db036682c67ef9544d4de0d56172ab33c91dc741b3349f14bb0dc879
+  checksum: 10c0/308bf5fa553452c72b019ed82fde0927b091f6f33b5c071fcb78ba28ce972cecb1cdecd3c24910a9fbf84ed135033a23d8c73145271bb2c125819eb646b06184
   languageName: node
   linkType: hard
 
@@ -2347,14 +2346,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/use-image@npm:2.1.1":
-  version: 2.1.1
-  resolution: "@nextui-org/use-image@npm:2.1.1"
+"@nextui-org/use-image@npm:2.1.2":
+  version: 2.1.2
+  resolution: "@nextui-org/use-image@npm:2.1.2"
   dependencies:
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/use-safe-layout-effect": "npm:2.1.1"
   peerDependencies:
     react: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/f26f15d7561a1ad2afab54e7bc807ab780f575b8fc850efc84c636d25aac65a3c3b990e2dd416865e280d65bf221525a9f2ea8e6474eb546e6d2210bd2d40eab
+  checksum: 10c0/497d22bc7061390ae0ad3c486eb6e3390f948b9177fb38930aece7c78f7058424bf5118b742e03ac69d739e97d84b66a90a2cb0cf0e6884fc469dad011c97f8d
   languageName: node
   linkType: hard
 
@@ -2440,12 +2440,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nextui-org/user@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@nextui-org/user@npm:2.2.5"
+"@nextui-org/user@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@nextui-org/user@npm:2.2.6"
   dependencies:
-    "@nextui-org/avatar": "npm:2.2.5"
-    "@nextui-org/react-utils": "npm:2.1.2"
+    "@nextui-org/avatar": "npm:2.2.6"
+    "@nextui-org/react-utils": "npm:2.1.3"
     "@nextui-org/shared-utils": "npm:2.1.2"
     "@react-aria/focus": "npm:3.19.0"
     "@react-aria/utils": "npm:3.26.0"
@@ -2454,7 +2454,7 @@ __metadata:
     "@nextui-org/theme": ">=2.4.0"
     react: ">=18 || >=19.0.0-rc.0"
     react-dom: ">=18 || >=19.0.0-rc.0"
-  checksum: 10c0/4eb6a1f7128bf5e6322ee047cd1cacde0c1e625f8355ce3f9d40b069524f1c3ea7d2288603df706b9576da6cefc58ec8eeb99c470774b1ecc61ea8e1b7572aed
+  checksum: 10c0/91e990b2a9ddb87d50536aa3da710048d61cf9ee4033839800a9b164013dd1864b73c346442e3be1b1e076ea03395fa62147b91654c5df7b8a5fa03020874923
   languageName: node
   linkType: hard
 
@@ -4023,55 +4023,73 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.24.4":
-  version: 1.24.4
-  resolution: "@shikijs/core@npm:1.24.4"
+"@shikijs/core@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/core@npm:1.26.1"
   dependencies:
-    "@shikijs/engine-javascript": "npm:1.24.4"
-    "@shikijs/engine-oniguruma": "npm:1.24.4"
-    "@shikijs/types": "npm:1.24.4"
-    "@shikijs/vscode-textmate": "npm:^9.3.1"
+    "@shikijs/engine-javascript": "npm:1.26.1"
+    "@shikijs/engine-oniguruma": "npm:1.26.1"
+    "@shikijs/types": "npm:1.26.1"
+    "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
     hast-util-to-html: "npm:^9.0.4"
-  checksum: 10c0/4ebdb3022d6d7c0598f42c90f26dc039a758dbda168d0244a1265be805124c2c1846ee502e141605ae75bd2f154a0b99db803603ccc272a90ea96abaefa7cd2b
+  checksum: 10c0/c1b9748db7b6209b19eaabb68592e3c5ed6e4d1350ce4ffa6ab3c48d212421a33080b548f9e36457c8cc10386649dfa77a37650004e21c52f4ab93647a85ee5a
   languageName: node
   linkType: hard
 
-"@shikijs/engine-javascript@npm:1.24.4":
-  version: 1.24.4
-  resolution: "@shikijs/engine-javascript@npm:1.24.4"
+"@shikijs/engine-javascript@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/engine-javascript@npm:1.26.1"
   dependencies:
-    "@shikijs/types": "npm:1.24.4"
-    "@shikijs/vscode-textmate": "npm:^9.3.1"
-    oniguruma-to-es: "npm:0.8.1"
-  checksum: 10c0/dcd244a552f1d8e589140b908496eeeb2a960dfd761dfb3f5ceee00b9560867657267eebaab236fc601bdbd04783e88cd62c7a7c7cdff65e64b521f303df664f
+    "@shikijs/types": "npm:1.26.1"
+    "@shikijs/vscode-textmate": "npm:^10.0.1"
+    oniguruma-to-es: "npm:0.10.0"
+  checksum: 10c0/aa21dcc54d19e4db1b0ad39e83b8faca80899ea85792eb5f7b4907398bbf504fbc88fca6e3326ff76373f196cd60c9e409ad31440c183045efd8da0069a3d2ab
   languageName: node
   linkType: hard
 
-"@shikijs/engine-oniguruma@npm:1.24.4":
-  version: 1.24.4
-  resolution: "@shikijs/engine-oniguruma@npm:1.24.4"
+"@shikijs/engine-oniguruma@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/engine-oniguruma@npm:1.26.1"
   dependencies:
-    "@shikijs/types": "npm:1.24.4"
-    "@shikijs/vscode-textmate": "npm:^9.3.1"
-  checksum: 10c0/613180014ca639af9b281c5351d7d5c642c82e53dea7f4f6fd58abaf96c86d6cb06954d6e84f9b463be9d0a215381ee06d0ed14e057d5b770ee72871072334f0
+    "@shikijs/types": "npm:1.26.1"
+    "@shikijs/vscode-textmate": "npm:^10.0.1"
+  checksum: 10c0/ea5b222459346ad77a0504d27b1e5b47953062a2954d7cdd0632851b0b163fe9bc62c78b505056c5fb0152b12bbb5d076829ffcb3b2440f545287d1283da6a6a
   languageName: node
   linkType: hard
 
-"@shikijs/types@npm:1.24.4":
-  version: 1.24.4
-  resolution: "@shikijs/types@npm:1.24.4"
+"@shikijs/langs@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/langs@npm:1.26.1"
   dependencies:
-    "@shikijs/vscode-textmate": "npm:^9.3.1"
+    "@shikijs/types": "npm:1.26.1"
+  checksum: 10c0/3299f06f206cf74421f55fdb18b41e1a0d9a22a25c51ce30300158b311491cc24b72876c38034dcab191ede80fd4cce1aa1947cea16259036644b03cbc81f2f6
+  languageName: node
+  linkType: hard
+
+"@shikijs/themes@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/themes@npm:1.26.1"
+  dependencies:
+    "@shikijs/types": "npm:1.26.1"
+  checksum: 10c0/b57ef7f52aec869b142ccffa4fa36e519c2af167e6163db79e6cd6dcf2e54fdf98380bbc73d33c34601f459ab5a73af32133aaad99908f78f8b4fc97373fa2f5
+  languageName: node
+  linkType: hard
+
+"@shikijs/types@npm:1.26.1":
+  version: 1.26.1
+  resolution: "@shikijs/types@npm:1.26.1"
+  dependencies:
+    "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
-  checksum: 10c0/43128e287c445ebdeb0666054d09a78a524e728dbb8dee4565eb27f6e93ad75db9a7e94d37437bcad3874df92e10da57961b18224825e6775904545aeb011a97
+  checksum: 10c0/7f47a071c3ae844936a00b09ae1c973e5e2c9e501f7027a162bdfafc04c5a25ce8c5d593cdd5d83113254b3cda016e4d9fc9498e7808e96167e94e35f44d4f7b
   languageName: node
   linkType: hard
 
-"@shikijs/vscode-textmate@npm:^9.3.1":
-  version: 9.3.1
-  resolution: "@shikijs/vscode-textmate@npm:9.3.1"
-  checksum: 10c0/8db3aa96696d83d30a56670516b128191340830382f1d1edc3108c2f0a418e7cc405dd9f253bf8b0d00fe4426795669b2c4dac3a035ebfe965eda241c33bfe9d
+"@shikijs/vscode-textmate@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "@shikijs/vscode-textmate@npm:10.0.1"
+  checksum: 10c0/acdbcf1b00d2503620ab50c2a23c7876444850ae0610c8e8b85a29587a333be40c9b98406ff17b9f87cbc64674dac6a2ada680374bde3e51a890e16cf1407490
   languageName: node
   linkType: hard
 
@@ -4105,22 +4123,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-virtual@npm:3.10.9":
-  version: 3.10.9
-  resolution: "@tanstack/react-virtual@npm:3.10.9"
+"@tanstack/react-virtual@npm:3.11.2":
+  version: 3.11.2
+  resolution: "@tanstack/react-virtual@npm:3.11.2"
   dependencies:
-    "@tanstack/virtual-core": "npm:3.10.9"
+    "@tanstack/virtual-core": "npm:3.11.2"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/a854b6fb2bdccec9e581442def5ed6ee568fd2b12178e70450c03d9e60a1e5794be71c4ad3f385af717872c039e569ff88c52adb11a2ddf2c02ded3f83bc851d
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/de446ce517d0855b3d58e79b6a75a37be40b4529baf0a5c3ffa2662dea80aba03409e06545aea27aa9e3a36fc2a2e3005ecbfce16a4659991d66930ea3bd62d4
   languageName: node
   linkType: hard
 
-"@tanstack/virtual-core@npm:3.10.9":
-  version: 3.10.9
-  resolution: "@tanstack/virtual-core@npm:3.10.9"
-  checksum: 10c0/960cde330235daff5403e0da23837ac30a0f95a02c8866692f8382d03b675d6802e129436b0b3e7e737d8a5347ef2cadec448ba4c0878462228c094440d0207b
+"@tanstack/virtual-core@npm:3.11.2":
+  version: 3.11.2
+  resolution: "@tanstack/virtual-core@npm:3.11.2"
+  checksum: 10c0/38f1047127c6b1d07fe95becb7a12e66fb7c59d37ec0359e4ab339f837c6b906e1adff026ebd12849ba851d3f118d491014205c6b3c6ed8568cc232a798aeaaf
   languageName: node
   linkType: hard
 
@@ -4142,7 +4160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint-plugin-tailwindcss@npm:^3":
+"@types/eslint-plugin-tailwindcss@npm:^3.17.0":
   version: 3.17.0
   resolution: "@types/eslint-plugin-tailwindcss@npm:3.17.0"
   dependencies:
@@ -4264,12 +4282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.17.10":
-  version: 20.17.10
-  resolution: "@types/node@npm:20.17.10"
+"@types/node@npm:^20.17.12":
+  version: 20.17.12
+  resolution: "@types/node@npm:20.17.12"
   dependencies:
     undici-types: "npm:~6.19.2"
-  checksum: 10c0/458ec725319e57d4692cbb56d81f1a90f9074cef9ec185c59e6f6c557a3d2ded57c5e443b1e82eba923d53dda4db18797fb131ee6e46fdb3d7d2f54d54aaebe3
+  checksum: 10c0/340b65a11e4486e597163991532a08e525beee40f082cf73dc830c060426fa9ea8690a4e3931d91375e946816a884d6140d96e99ac048b51f280f21cc70d22ed
   languageName: node
   linkType: hard
 
@@ -5865,16 +5883,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-perfectionist@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "eslint-plugin-perfectionist@npm:4.5.0"
+"eslint-plugin-perfectionist@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "eslint-plugin-perfectionist@npm:4.6.0"
   dependencies:
     "@typescript-eslint/types": "npm:^8.19.0"
     "@typescript-eslint/utils": "npm:^8.19.0"
     natural-orderby: "npm:^5.0.0"
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: 10c0/c281701358b5f1b95a23bcc4b5fe2f503b331741c773f9148b60f819710bca8c2868fac0b0acfe573e410033d43420f58ffbaf4eb969d5c7783ef33da05c8474
+  checksum: 10c0/8ce74e9bf050a9b83d536cabe89815d41b21dafd584eda143607835d45e3a8eb501afe61297043451bdd3f1fb173cab8fb75b4a56a95d325118bc643f1d7003c
   languageName: node
   linkType: hard
 
@@ -7563,12 +7581,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:*, marked@npm:^15.0.4":
+"marked@npm:*":
   version: 15.0.4
   resolution: "marked@npm:15.0.4"
   bin:
     marked: bin/marked.js
   checksum: 10c0/e2bfd9178e5242cc814aaf8020f3c2e954c047652c498dac0732f4b711d5e3ab80dbc54b964799d80470d6c515a24905e554c4a40f87b05dedc26e4e36cfdfdb
+  languageName: node
+  linkType: hard
+
+"marked@npm:^15.0.5":
+  version: 15.0.5
+  resolution: "marked@npm:15.0.5"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/c05fadadc8203acdb17d96075ee25a221bf92b1e5feeacc3e454be668f0a162866c9e031f31cc791693c256edc658e24b54f985a6dc127bbd03e6784a1dad7fc
   languageName: node
   linkType: hard
 
@@ -8699,57 +8726,57 @@ __metadata:
     "@eslint/js": "npm:^9.17.0"
     "@heroicons/react": "npm:^2.2.0"
     "@icons-pack/react-simple-icons": "npm:^10.2.0"
-    "@nextui-org/accordion": "npm:2.2.6"
-    "@nextui-org/alert": "npm:2.2.8"
-    "@nextui-org/autocomplete": "npm:2.3.8"
-    "@nextui-org/avatar": "npm:2.2.5"
-    "@nextui-org/badge": "npm:2.2.4"
-    "@nextui-org/breadcrumbs": "npm:2.2.5"
-    "@nextui-org/button": "npm:2.2.8"
-    "@nextui-org/calendar": "npm:2.2.8"
-    "@nextui-org/card": "npm:2.2.8"
-    "@nextui-org/checkbox": "npm:2.3.7"
-    "@nextui-org/chip": "npm:2.2.5"
-    "@nextui-org/code": "npm:2.2.5"
-    "@nextui-org/date-input": "npm:2.3.7"
-    "@nextui-org/date-picker": "npm:2.3.8"
+    "@nextui-org/accordion": "npm:2.2.7"
+    "@nextui-org/alert": "npm:2.2.9"
+    "@nextui-org/autocomplete": "npm:2.3.9"
+    "@nextui-org/avatar": "npm:2.2.6"
+    "@nextui-org/badge": "npm:2.2.5"
+    "@nextui-org/breadcrumbs": "npm:2.2.6"
+    "@nextui-org/button": "npm:2.2.9"
+    "@nextui-org/calendar": "npm:2.2.9"
+    "@nextui-org/card": "npm:2.2.9"
+    "@nextui-org/checkbox": "npm:2.3.8"
+    "@nextui-org/chip": "npm:2.2.6"
+    "@nextui-org/code": "npm:2.2.6"
+    "@nextui-org/date-input": "npm:2.3.8"
+    "@nextui-org/date-picker": "npm:2.3.9"
     "@nextui-org/divider": "npm:2.2.5"
-    "@nextui-org/drawer": "npm:2.2.6"
-    "@nextui-org/dropdown": "npm:2.3.8"
-    "@nextui-org/form": "npm:2.1.7"
-    "@nextui-org/image": "npm:2.2.4"
-    "@nextui-org/input": "npm:2.4.7"
-    "@nextui-org/input-otp": "npm:2.1.7"
-    "@nextui-org/kbd": "npm:2.2.5"
-    "@nextui-org/link": "npm:2.2.6"
-    "@nextui-org/listbox": "npm:2.3.8"
-    "@nextui-org/menu": "npm:2.2.8"
-    "@nextui-org/modal": "npm:2.2.6"
-    "@nextui-org/navbar": "npm:2.2.7"
-    "@nextui-org/pagination": "npm:2.2.7"
-    "@nextui-org/popover": "npm:2.3.8"
-    "@nextui-org/progress": "npm:2.2.5"
-    "@nextui-org/radio": "npm:2.3.7"
-    "@nextui-org/ripple": "npm:2.2.6"
-    "@nextui-org/scroll-shadow": "npm:2.3.4"
-    "@nextui-org/select": "npm:2.4.8"
-    "@nextui-org/skeleton": "npm:2.2.4"
-    "@nextui-org/slider": "npm:2.4.6"
-    "@nextui-org/snippet": "npm:2.2.9"
-    "@nextui-org/spacer": "npm:2.2.5"
-    "@nextui-org/spinner": "npm:2.2.5"
-    "@nextui-org/switch": "npm:2.2.7"
-    "@nextui-org/system": "npm:^2.4.5"
-    "@nextui-org/table": "npm:2.2.7"
-    "@nextui-org/tabs": "npm:2.2.6"
-    "@nextui-org/theme": "npm:^2.4.4"
-    "@nextui-org/tooltip": "npm:2.2.6"
-    "@nextui-org/user": "npm:2.2.5"
+    "@nextui-org/drawer": "npm:2.2.7"
+    "@nextui-org/dropdown": "npm:2.3.9"
+    "@nextui-org/form": "npm:2.1.8"
+    "@nextui-org/image": "npm:2.2.5"
+    "@nextui-org/input": "npm:2.4.8"
+    "@nextui-org/input-otp": "npm:2.1.8"
+    "@nextui-org/kbd": "npm:2.2.6"
+    "@nextui-org/link": "npm:2.2.7"
+    "@nextui-org/listbox": "npm:2.3.9"
+    "@nextui-org/menu": "npm:2.2.9"
+    "@nextui-org/modal": "npm:2.2.7"
+    "@nextui-org/navbar": "npm:2.2.8"
+    "@nextui-org/pagination": "npm:2.2.8"
+    "@nextui-org/popover": "npm:2.3.9"
+    "@nextui-org/progress": "npm:2.2.6"
+    "@nextui-org/radio": "npm:2.3.8"
+    "@nextui-org/ripple": "npm:2.2.7"
+    "@nextui-org/scroll-shadow": "npm:2.3.5"
+    "@nextui-org/select": "npm:2.4.9"
+    "@nextui-org/skeleton": "npm:2.2.5"
+    "@nextui-org/slider": "npm:2.4.7"
+    "@nextui-org/snippet": "npm:2.2.10"
+    "@nextui-org/spacer": "npm:2.2.6"
+    "@nextui-org/spinner": "npm:2.2.6"
+    "@nextui-org/switch": "npm:2.2.8"
+    "@nextui-org/system": "npm:^2.4.6"
+    "@nextui-org/table": "npm:2.2.8"
+    "@nextui-org/tabs": "npm:2.2.7"
+    "@nextui-org/theme": "npm:^2.4.5"
+    "@nextui-org/tooltip": "npm:2.2.7"
+    "@nextui-org/user": "npm:2.2.6"
     "@tailwindcss/typography": "npm:^0.5.15"
-    "@types/eslint-plugin-tailwindcss": "npm:^3"
+    "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
     "@types/katex": "npm:^0.16.7"
     "@types/marked": "npm:^6.0.0"
-    "@types/node": "npm:^20.17.10"
+    "@types/node": "npm:^20.17.12"
     "@types/react": "npm:^19.0.2"
     "@types/react-dom": "npm:^19.0.2"
     "@vercel/analytics": "npm:^1.4.1"
@@ -8759,12 +8786,12 @@ __metadata:
     eslint: "npm:^9.17.0"
     eslint-config-next: "npm:15.1.3"
     eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-perfectionist: "npm:^4.5.0"
+    eslint-plugin-perfectionist: "npm:^4.6.0"
     eslint-plugin-tailwindcss: "npm:^3.17.5"
     framer-motion: "npm:^11.15.0"
     github-slugger: "npm:^2.0.0"
     katex: "npm:^0.16.19"
-    marked: "npm:^15.0.4"
+    marked: "npm:^15.0.5"
     next: "npm:15.1.3"
     next-contentlayer2: "npm:^0.5.3"
     next-intl: "npm:^3.26.3"
@@ -8780,7 +8807,7 @@ __metadata:
     rehype-slug: "npm:^6.0.0"
     remark-gfm: "npm:^4.0.0"
     remark-math: "npm:^6.0.0"
-    shiki: "npm:^1.24.4"
+    shiki: "npm:^1.26.1"
     swr: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.17"
     typescript: "npm:^5.7.2"
@@ -8879,14 +8906,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oniguruma-to-es@npm:0.8.1":
-  version: 0.8.1
-  resolution: "oniguruma-to-es@npm:0.8.1"
+"oniguruma-to-es@npm:0.10.0":
+  version: 0.10.0
+  resolution: "oniguruma-to-es@npm:0.10.0"
   dependencies:
     emoji-regex-xs: "npm:^1.0.0"
-    regex: "npm:^5.0.2"
-    regex-recursion: "npm:^5.0.0"
-  checksum: 10c0/994373a52a424c6ecb81960ee46efdd03c5fbf3d0dd692ec7f164cc29e3a57cebd3ea069b4c1499f1b26cc36b5ef28b42012cedccd3c300f52c4a7acb5c15cbf
+    regex: "npm:^5.1.1"
+    regex-recursion: "npm:^5.1.1"
+  checksum: 10c0/d54c3975515d655186e51973bbbfa41c3191eedaca2fdb909c10d1ce463c4bbbfd075705f58552a724615e3e0d301de05123cb5cad8eac1255c36e75b8562fd5
   languageName: node
   linkType: hard
 
@@ -9374,12 +9401,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regex-recursion@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "regex-recursion@npm:5.0.0"
+"regex-recursion@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "regex-recursion@npm:5.1.1"
   dependencies:
+    regex: "npm:^5.1.1"
     regex-utilities: "npm:^2.3.0"
-  checksum: 10c0/ceb46f92b0c986db7d26359a4d3ce2aecc7ec6735ebfd8a48e99e5f4d075d1c2b453c6e5c269d00cd8a1289a930e52061e6c03152fd1f2ebb5c7ca82e1d0d726
+  checksum: 10c0/c61c284bc41f2b271dfa0549d657a5a26397108b860d7cdb15b43080196681c0092bf8cf920a8836213e239d1195c4ccf6db9be9298bce4e68c9daab1febeab9
   languageName: node
   linkType: hard
 
@@ -9390,12 +9418,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regex@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "regex@npm:5.0.2"
+"regex@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "regex@npm:5.1.1"
   dependencies:
     regex-utilities: "npm:^2.3.0"
-  checksum: 10c0/a9bc88a4b4cfb14a1c273312bb81c1bea5869648810bfb66353aa1ba6ce8bc8967559203eff3e20992c2696af41ed161872b9c49885503ea1c78f8433a9def81
+  checksum: 10c0/314e032f0fe09497ce7a160b99675c4a16c7524f0a24833f567cbbf3a2bebc26bf59737dc5c23f32af7c74aa7a6bd3f809fc72c90c49a05faf8be45677db508a
   languageName: node
   linkType: hard
 
@@ -9885,17 +9913,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^1.24.4":
-  version: 1.24.4
-  resolution: "shiki@npm:1.24.4"
+"shiki@npm:^1.26.1":
+  version: 1.26.1
+  resolution: "shiki@npm:1.26.1"
   dependencies:
-    "@shikijs/core": "npm:1.24.4"
-    "@shikijs/engine-javascript": "npm:1.24.4"
-    "@shikijs/engine-oniguruma": "npm:1.24.4"
-    "@shikijs/types": "npm:1.24.4"
-    "@shikijs/vscode-textmate": "npm:^9.3.1"
+    "@shikijs/core": "npm:1.26.1"
+    "@shikijs/engine-javascript": "npm:1.26.1"
+    "@shikijs/engine-oniguruma": "npm:1.26.1"
+    "@shikijs/langs": "npm:1.26.1"
+    "@shikijs/themes": "npm:1.26.1"
+    "@shikijs/types": "npm:1.26.1"
+    "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
-  checksum: 10c0/c3758f67ea997f7b9ce4fe32cf50178a5f26fa49fdb2c3550115764d0a55441f63bd89e659e6ba133bdaeac57bfad485412c1b19c19f3ae523c8ffd4334b0c38
+  checksum: 10c0/1a9ca4d8e1adfc8c6342ffd4760781667b7c3e7647231b12c82b8087bcf782b0c5189fb950d740f89dc38f403f3707807d10831f3ec9fcd28569297b42e292e5
   languageName: node
   linkType: hard
 
