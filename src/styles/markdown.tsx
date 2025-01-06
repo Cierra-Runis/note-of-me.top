@@ -3,7 +3,6 @@ import type { MDXComponents } from 'mdx/types';
 import MarkdownImage from '@/components/MarkdownImage';
 import { Alert } from '@nextui-org/alert';
 import { Checkbox } from '@nextui-org/checkbox';
-import { Chip } from '@nextui-org/chip';
 import { Kbd } from '@nextui-org/kbd';
 import NextLink from 'next/link';
 import { HTMLProps } from 'react';
@@ -28,7 +27,6 @@ export const mdxComponents: MDXComponents = {
       <Alert {...props} />
     </figure>
   ),
-  Chip,
   img: ({ alt, children, src }: HTMLProps<HTMLImageElement>) => (
     <MarkdownImage alt={alt} className='mx-auto' isBlurred isZoomed src={src}>
       {children}
