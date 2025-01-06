@@ -104,7 +104,12 @@ const tailwindConfig: TailwindConfig = {
     extend: {
       fontFamily: {
         mono: ['var(--font-mono)'],
-        sans: ['var(--font-sans)'],
+        sans: [
+          'var(--font-sans)',
+          'var(--font-sans-locale)',
+          '-apple-system',
+          'sans-serif',
+        ],
       },
       typography: {
         DEFAULT: {

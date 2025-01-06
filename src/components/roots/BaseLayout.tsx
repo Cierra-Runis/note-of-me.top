@@ -1,4 +1,5 @@
-import { kodeMono, saira } from '@/styles/font';
+import { Locale } from '@/i18n/routing';
+import { kodeMono, localeToSans, saira } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
@@ -28,6 +29,7 @@ export default async function BaseLayout({ children, locale }: Props) {
         className={clsx(
           'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary-300 selection:text-background',
           saira.variable,
+          localeToSans[locale as Locale].variable,
           kodeMono.variable,
         )}
       >
