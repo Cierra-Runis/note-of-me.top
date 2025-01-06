@@ -5,7 +5,7 @@ date: '2025-01-01 02:23:13'
 
 本篇博客是本人给 MIT 课程《计算机教育中缺失的一课》写的一些笔记和个人感悟，不作为课程的代替。
 
-在此附上 [中文讲义](https://missing-semester-cn.github.io/) 和 [bilibili 熟肉](https://www.bilibili.com/video/BV1b2421M7v3)。
+在此附上 [中文讲义](https://missing-semester-cn.github.io) 和 [bilibili 熟肉](https://www.bilibili.com/video/BV1b2421M7v3)。
 
 ## 路径
 
@@ -13,7 +13,7 @@ date: '2025-01-01 02:23:13'
 
 但 Windows 和 Unix 系统的路径分隔符是不同的，Windows 使用 `\`，而 Unix 使用 `/`，所以我们最好使用一些库来处理路径，如 Python 的 `os.path`，自己处理路径容易出现问题。
 
-令我印象比较深刻的是 [LeetCode 71 题](https://leetcode.com/problems/simplify-path/)，其要求简化一个 Unix 风格的路径，非常推荐大家去做一下。
+令我印象比较深刻的是 [LeetCode 71 题](https://leetcode.com/problems/simplify-path)，其要求简化一个 Unix 风格的路径，非常推荐大家去做一下。
 
 ## Shell 与 Bash
 
@@ -54,11 +54,11 @@ public void match(String input) {
 }
 ```
 
-如果使用正则表达式，那么这个程序可能会更加简洁 —— 当然，像这种命令行程序都是有对应的包的，如 [Picocli](https://github.com/remkop/picocli/)、[JCommander](https://github.com/cbeust/jcommander/) 以及 Kotlin Only 的 [Clikt](https://ajalt.github.io/clikt/) 等。
+如果使用正则表达式，那么这个程序可能会更加简洁 —— 当然，像这种命令行程序都是有对应的包的，如 [Picocli](https://github.com/remkop/picocli)、[JCommander](https://github.com/cbeust/jcommander) 以及 Kotlin Only 的 [Clikt](https://ajalt.github.io/clikt) 等。
 
 后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
 
-但正则表达式有时也有一些坑，比如 [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531/) 这个视频，一个小小的 `.*.*=.*{:regex}` 的正则表达式干烂了整个 Cloudflare。
+但正则表达式有时也有一些坑，比如 [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531) 这个视频，一个小小的 `.*.*=.*{:regex}` 的正则表达式干烂了整个 Cloudflare。
 
 ## Vim
 
@@ -73,11 +73,11 @@ public void match(String input) {
 
 ## 语义化版本号
 
-语义化版本号参见 [此链接](https://semver.org/)。
+语义化版本号参见 [此链接](https://semver.org)。
 
 我最早认识到版本号应该还是 Minecraft 的版本号，如 `1.7.2` 这样的，但 Minecraft 并不完全遵循这一规范，而在 Snapshot 快照版本号上我们还能见到另外一种版本号格式：`24w06a`，其 `24` 代表 2024 年，`w06` 代表 6 周，`a` 代表这一周的第一个快照版本。
 
-其具体格式参见 [此链接](https://minecraft.wiki/w/Version_formats/)。
+其具体格式参见 [此链接](https://minecraft.wiki/w/Version_formats)。
 
 ## `source script.sh` 和 `./script.sh` 的区别
 
