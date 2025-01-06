@@ -36,7 +36,11 @@ export default async function BaseLayout({ children, locale }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Statistics />
           <Providers>
-            <NextTopLoader color='#AD80FF' shadow={false} showSpinner={false} />
+            <NextTopLoader
+              color='hsl(var(--nextui-secondary))'
+              shadow={false}
+              showSpinner={false}
+            />
 
             <div className='relative flex h-screen flex-col'>
               <NavBar />
