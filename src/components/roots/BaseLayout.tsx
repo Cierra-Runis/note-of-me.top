@@ -1,10 +1,10 @@
 import { kodeMono, saira } from '@/styles/font';
+import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
-import '@/styles/globals.css';
 
 import ScrollToTopButton from '../buttons/ScrollToTopButton';
 import Footer from './Footer';
