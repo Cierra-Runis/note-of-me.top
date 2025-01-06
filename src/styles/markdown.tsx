@@ -1,10 +1,10 @@
 import type { MDXComponents } from 'mdx/types';
 
 import MarkdownImage from '@/components/MarkdownImage';
+import { Link as NextLink } from '@/i18n/routing';
 import { Alert } from '@nextui-org/alert';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Kbd } from '@nextui-org/kbd';
-import NextLink from 'next/link';
 import { HTMLProps } from 'react';
 
 /**

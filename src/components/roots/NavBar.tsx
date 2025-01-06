@@ -1,5 +1,6 @@
 'use client';
 
+import { Link as NextLink } from '@/i18n/routing';
 import { Avatar } from '@nextui-org/avatar';
 import {
   NavbarBrand,
@@ -8,7 +9,6 @@ import {
   Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
 import { useState } from 'react';
 
 import LocaleButton from '../buttons/LocaleButton';

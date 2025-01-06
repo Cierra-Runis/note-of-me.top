@@ -37,11 +37,13 @@ export const siteConfig = {
   },
 };
 
-export const technicalStack: {
+export type Technical = {
   icon: ReactElement;
   name: string;
   url: string;
-}[] = [
+};
+
+export const technicalStack: Technical[] = [
   {
     icon: <SiReact className='w-5' color={SiReactHex} />,
     name: 'React',

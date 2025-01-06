@@ -1,5 +1,5 @@
+import { Link as NextLink } from '@/i18n/routing';
 import { Avatar } from '@nextui-org/avatar';
-import NextLink from 'next/link';
 
 export default function Page() {
   return (

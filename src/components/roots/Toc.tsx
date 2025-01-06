@@ -1,11 +1,11 @@
 'use client';
 
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
+import { Link as NextLink } from '@/i18n/routing';
 import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@nextui-org/scroll-shadow';
 import { clsx } from '@nextui-org/shared-utils';
 import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 

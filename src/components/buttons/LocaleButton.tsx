@@ -1,6 +1,6 @@
 'use client';
 
-import { redirect, routing, usePathname } from '@/i18n/routing';
+import { routing, usePathname, useRouter } from '@/i18n/routing';
 import { LanguageIcon } from '@heroicons/react/24/outline';
 import { Button } from '@nextui-org/button';
 import {
@@ -10,13 +10,16 @@ import {
   DropdownTrigger,
 } from '@nextui-org/dropdown';
 import { useLocale, useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { useState } from 'react';
 
 export default function LocaleButton() {
   const locale = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
   const t = useTranslations();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Dropdown
@@ -35,10 +38,13 @@ export default function LocaleButton() {
       <DropdownMenu
         onAction={(key) => {
           setIsOpen(false);
-          return redirect({
-            href: { pathname: pathname },
-            locale: key as string,
-          });
+          return router.replace(
+            // @ts-expect-error -- TypeScript will validate that only known `params`
+            // are used in combination with a given `pathname`. Since the two will
+            // always match for the current route, we can skip runtime checks.
+            { params, pathname },
+            { locale: key as string },
+          );
         }}
         selectedKeys={[locale]}
         selectionMode='single'
