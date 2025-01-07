@@ -1,66 +1,84 @@
 'use client';
 
+import { Link as NextLink } from '@/i18n/routing';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { Button } from '@nextui-org/button';
+import { Divider } from '@nextui-org/divider';
+import { Input } from '@nextui-org/input';
+import { Kbd } from '@nextui-org/kbd';
 import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/modal';
+import { allPosts } from 'contentlayer/generated';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function SearchButton() {
   const t = useTranslations();
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [search, setSearch] = useState('');
+  const { isOpen, onOpen, onOpenChange } = useDisclosure({
+    onClose: () => setSearch(''),
+  });
+
+  const filteredPosts = allPosts.filter((post) =>
+    post.body.raw.includes(search),
+  );
 
   return (
     <>
       <Button
+        isIconOnly
         onPress={onOpen}
         size='sm'
         startContent={<MagnifyingGlassIcon className='w-5' />}
-        variant='bordered'
+        variant='light'
+      />
+      <Modal
+        hideCloseButton
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        scrollBehavior='inside'
+        size='5xl'
       >
-        {t('site.title')}
-      </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className='flex flex-col gap-1'>
-                Modal Title
+              <ModalHeader>
+                <Input
+                  endContent={<Kbd keys={'escape'} />}
+                  onValueChange={setSearch}
+                  startContent={<MagnifyingGlassIcon className='w-5' />}
+                  value={search}
+                  variant='faded'
+                />
               </ModalHeader>
+
+              <Divider />
+
               <ModalBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat
-                  consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
-                  incididunt cillum quis. Velit duis sit officia eiusmod Lorem
-                  aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem
-                  eiusmod et. Culpa deserunt nostrud ad veniam.
-                </p>
+                {filteredPosts.length == 0 ? (
+                  <p className='text-center'>{t('noData')}</p>
+                ) : (
+                  filteredPosts.map((post) => (
+                    <NextLink
+                      className='prose mb-8 flex max-w-full flex-col items-start justify-center gap-2 dark:prose-invert'
+                      href={post.url}
+                      key={post.url}
+                      onClick={onClose}
+                      prefetch
+                    >
+                      <h3>{post.title}</h3>
+                      <p className='line-clamp-3 break-all'>
+                        {post.body.raw.substring(post.body.raw.indexOf(search))}
+                      </p>
+                    </NextLink>
+                  ))
+                )}
               </ModalBody>
-              <ModalFooter>
-                <Button color='danger' onPress={onClose} variant='light'>
-                  Close
-                </Button>
-                <Button color='primary' onPress={onClose}>
-                  Action
-                </Button>
-              </ModalFooter>
             </>
           )}
         </ModalContent>

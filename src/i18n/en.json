@@ -41,5 +41,6 @@
     "title": "Theme"
   },
   "whatAreWeUsingNow": "What are we using now",
-  "wordCount": "{count, plural, =0 {No Words} one {# Word} other {# Words}}"
+  "wordCount": "{count, plural, =0 {No Words} one {# Word} other {# Words}}",
+  "noData": "No Data"
 }
