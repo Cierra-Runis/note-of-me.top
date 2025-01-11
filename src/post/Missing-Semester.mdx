@@ -13,6 +13,11 @@ date: '2025-01-01T02:23:13+08:00'
 
 但 Windows 和 Unix 系统的路径分隔符是不同的，Windows 使用 `\`，而 Unix 使用 `/`，所以我们最好使用一些库来处理路径，如 Python 的 `os.path`，自己处理路径容易出现问题。
 
+<Alert
+  title='2025-01-11 14:25:09 提醒'
+  description='Python 的 `os.path` 已经逐渐被推荐用 `pathlib` 替代，更现代化，也更易读'
+/>
+
 令我印象比较深刻的是 [LeetCode 71 题](https://leetcode.com/problems/simplify-path)，其要求简化一个 Unix 风格的路径，非常推荐大家去做一下。
 
 ## Shell 与 Bash
