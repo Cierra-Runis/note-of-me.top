@@ -8,7 +8,7 @@ export default function Home() {
   const t = useTranslations();
   return (
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <div className='flex items-center justify-center gap-6'>
+      <div className='flex flex-col items-center justify-center gap-6 md:flex-row'>
         <Avatar
           className='h-auto w-48 text-large'
           src={siteConfig.links.githubAvatar}
