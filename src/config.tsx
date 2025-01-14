@@ -31,7 +31,6 @@ export const siteConfig = {
     url: 'https://github.com/Cierra-Runis',
   },
   links: {
-    docs: 'https://nextui.org',
     email: 'mailto:byrdsaron@gmail.com',
     githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
   },

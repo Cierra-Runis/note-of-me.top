@@ -1,5 +1,6 @@
 'use client';
 
+import { siteConfig } from '@/config';
 import { Link as NextLink } from '@/i18n/routing';
 import { Avatar } from '@nextui-org/avatar';
 import {
@@ -34,10 +35,7 @@ export const NavBar = () => {
           href='/'
           prefetch
         >
-          <Avatar
-            size='sm'
-            src='https://avatars.githubusercontent.com/u/29329988'
-          />
+          <Avatar size='sm' src={siteConfig.links.githubAvatar} />
         </NextLink>
         <ul className='ml-2 flex justify-start gap-6'>
           <NavbarItem key='/post'>
