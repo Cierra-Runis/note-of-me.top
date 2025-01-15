@@ -26,6 +26,6 @@ While configuring tools to improve code quality, I was unsure whether I should u
 
 Although Prettier plugins like [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) and [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports) can address this, I don't consider them the "best practice".
 
-As discussed in this [GitHub Issue](<(https://github.com/prettier/prettier/issues/2460)>) and this [Reddit Post](https://www.reddit.com/r/typescript/comments/15lr8p1/sorting_imports_eslint_vs_prettier), sorting can introduce side effects. Therefore, it's better to handle sorting with ESLint.
+As discussed in this [GitHub Issue](https://github.com/prettier/prettier/issues/2460) and this [Reddit Post](https://www.reddit.com/r/typescript/comments/15lr8p1/sorting_imports_eslint_vs_prettier), sorting can introduce side effects. Therefore, it's better to handle sorting with ESLint.
 
 Moreover, Prettier will not warn you about incorrect order, but ESLint will, as this is exactly what ES**Lint** is supposed to do.
