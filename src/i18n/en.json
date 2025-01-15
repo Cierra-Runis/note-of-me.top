@@ -42,5 +42,6 @@
   },
   "whatAreWeUsingNow": "What are we using now",
   "wordCount": "{count, plural, =0 {No Words} one {# Word} other {# Words}}",
-  "noData": "No Data"
+  "noData": "No Data",
+  "midi": "Midi"
 }

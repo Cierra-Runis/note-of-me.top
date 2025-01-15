@@ -42,5 +42,6 @@
   },
   "whatAreWeUsingNow": "テクノロジー",
   "wordCount": "{count, plural, =0 {文字なし} other {# 字数}}",
-  "noData": "データ無し"
+  "noData": "データ無し",
+  "midi": "Midi"
 }

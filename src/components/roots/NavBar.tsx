@@ -43,6 +43,11 @@ export const NavBar = () => {
               {t('post')}
             </NextLink>
           </NavbarItem>
+          <NavbarItem>
+            <NextLink href='/midi' prefetch>
+              {t('midi')}
+            </NextLink>
+          </NavbarItem>
           <NavbarItem key='/about'>
             <NextLink href='/about' prefetch>
               {t('about.title')}

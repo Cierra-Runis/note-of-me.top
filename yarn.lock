@@ -30,7 +30,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.6, @babel/runtime@npm:^7.26.0":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -4143,6 +4143,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tonejs/midi@npm:^2.0.28":
+  version: 2.0.28
+  resolution: "@tonejs/midi@npm:2.0.28"
+  dependencies:
+    array-flatten: "npm:^3.0.0"
+    midi-file: "npm:^1.2.2"
+  checksum: 10c0/062d960c66fdf7ba1773aba6bc35c3035b5dc0dad0325c199f7e8e018125d9059dd85c362aa649eca8c98f61402ef8b24e6c1ee90b8e4b210a2c2100f0a077b4
+  languageName: node
+  linkType: hard
+
 "@types/acorn@npm:^4.0.0":
   version: 4.0.6
   resolution: "@types/acorn@npm:4.0.6"
@@ -4709,6 +4719,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-flatten@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "array-flatten@npm:3.0.0"
+  checksum: 10c0/202dae2bcee760f12e29958a0957bd166b3a9a8b41d0c942786d48857f903479c8a10fc7f55ed64904254dce7240f9fa50633504c925288fd051d9fb122cbb48
+  languageName: node
+  linkType: hard
+
 "array-includes@npm:^3.1.6, array-includes@npm:^3.1.8":
   version: 3.1.8
   resolution: "array-includes@npm:3.1.8"
@@ -4824,6 +4841,16 @@ __metadata:
   bin:
     astring: bin/astring
   checksum: 10c0/e7519544d9824494e80ef0e722bb3a0c543a31440d59691c13aeaceb75b14502af536b23f08db50aa6c632dafaade54caa25f0788aa7550b6b2d6e2df89e0830
+  languageName: node
+  linkType: hard
+
+"automation-events@npm:^7.0.9":
+  version: 7.1.5
+  resolution: "automation-events@npm:7.1.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.26.0"
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/754355df0e193d77da461bb8e699eafc79377c6c31c78986cae1e128d262a5e2e41294a1d49a57dc8f346e62915f32c798a246e49c46fa8cf0f1844a384a3245
   languageName: node
   linkType: hard
 
@@ -6243,6 +6270,15 @@ __metadata:
   dependencies:
     flat-cache: "npm:^4.0.0"
   checksum: 10c0/9e2b5938b1cd9b6d7e3612bdc533afd4ac17b2fc646569e9a8abbf2eb48e5eb8e316bc38815a3ef6a1b456f4107f0d0f055a614ca613e75db6bf9ff4d72c1638
+  languageName: node
+  linkType: hard
+
+"file-selector@npm:0.2.4":
+  version: 0.2.4
+  resolution: "file-selector@npm:0.2.4"
+  dependencies:
+    tslib: "npm:^2.0.3"
+  checksum: 10c0/f43a8c370e69897c5c060dcfdeacb8828ccbdacdd2a255723c28fd16f230098ba079526de2dd0e7e519e4d9e72a06f2be0bbaee7ab8e09bed8f05b619f3fba94
   languageName: node
   linkType: hard
 
@@ -8366,6 +8402,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"midi-file@npm:^1.2.2":
+  version: 1.2.4
+  resolution: "midi-file@npm:1.2.4"
+  checksum: 10c0/7095ae3244ff4d96b9d9adc07de5d71703b71b670872cfa8ec43be4aa14368313fdbd2f3c98dc0b6c4417dbcd61e3b15d6375ec038a5ada9be4d38c3942e7ca4
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -8776,6 +8819,7 @@ __metadata:
     "@nextui-org/tooltip": "npm:2.2.7"
     "@nextui-org/user": "npm:2.2.6"
     "@tailwindcss/typography": "npm:^0.5.16"
+    "@tonejs/midi": "npm:^2.0.28"
     "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
     "@types/katex": "npm:^0.16.7"
     "@types/marked": "npm:^6.0.0"
@@ -8813,7 +8857,9 @@ __metadata:
     shiki: "npm:^1.27.0"
     swr: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.17"
+    tone: "npm:15.0.4"
     typescript: "npm:^5.7.3"
+    use-file-picker: "npm:^2.1.2"
   languageName: unknown
   linkType: soft
 
@@ -10067,6 +10113,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"standardized-audio-context@npm:^25.3.70":
+  version: 25.3.77
+  resolution: "standardized-audio-context@npm:25.3.77"
+  dependencies:
+    "@babel/runtime": "npm:^7.25.6"
+    automation-events: "npm:^7.0.9"
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/41d5e3a64b881691fecd709313045ab9bddb864ed79c6eb51490056cec080e808e9f5b3ef94d734567b9da88f9c95e68cc63a3a0343374b2f865b1a961fb46ef
+  languageName: node
+  linkType: hard
+
 "streamsearch@npm:^1.1.0":
   version: 1.1.0
   resolution: "streamsearch@npm:1.1.0"
@@ -10422,6 +10479,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tone@npm:15.0.4":
+  version: 15.0.4
+  resolution: "tone@npm:15.0.4"
+  dependencies:
+    standardized-audio-context: "npm:^25.3.70"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/2dff3d8be884c818a877c1b9532f623e5a83deba4aebcc3f9c584208e9e19735c1b0d5f1697da148dfe793a0b4dbf6bf5a0f074f0f30f8a12a9e8a51445d881a
+  languageName: node
+  linkType: hard
+
 "tree-dump@npm:^1.0.1":
   version: 1.0.2
   resolution: "tree-dump@npm:1.0.2"
@@ -10480,7 +10547,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.8.0":
+"tslib@npm:2, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.7.0, tslib@npm:^2.8.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
@@ -10764,6 +10831,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/e64ce52f4b18c020407636784192726807404a2552609acf7497b66a2b7070674fb5d2b950d426c4aa85f353e2bbecb02ebf9c5b865cd06797938c70bcbf5d26
+  languageName: node
+  linkType: hard
+
+"use-file-picker@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "use-file-picker@npm:2.1.2"
+  dependencies:
+    file-selector: "npm:0.2.4"
+  peerDependencies:
+    react: ">=16"
+  checksum: 10c0/7d1c5f8800d87584731a9caf83b447f3633bc2dc05408f668b3349a374502f81a4116d216d2008d682f63076615894ad01a1c3a518d7142307a529a1d11776d0
   languageName: node
   linkType: hard
 

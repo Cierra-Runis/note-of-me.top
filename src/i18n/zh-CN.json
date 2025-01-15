@@ -42,5 +42,6 @@
   },
   "whatAreWeUsingNow": "技术栈",
   "wordCount": "{count, plural, =0 {内容为空} other {# 字}}",
-  "noData": "无数据"
+  "noData": "无数据",
+  "midi": "Midi"
 }
