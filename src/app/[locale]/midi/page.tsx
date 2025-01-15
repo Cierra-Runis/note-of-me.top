@@ -114,3 +114,9 @@ export default function MidiPage() {
     </section>
   );
 }
+
+/// TODO: Add Playlist
+/// TODO: Add Timeline
+/// TODO: Add Remote/Local Midi Source Support
+/// FIXME: Multiple Files Conflict
+/// FIXME: Visualizer Sticky when Continuously Playing Same Note
