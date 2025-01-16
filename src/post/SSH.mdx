@@ -9,17 +9,17 @@ date: '2024-11-03T12:57:45+08:00'
 
 我是小学用 `bat` 文件开 Minecraft 服务器时接触的，当时就想这个界面可真丑，黑咕隆咚的 —— 现在不一样了，尽情美化喵。
 
-终端是展示 Shell 的窗口，而 Shell 的话，Windows 有 [cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)、[PowerShell](https://github.com/PowerShell/PowerShell)、[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/what-is-windows-powershell)，MacOS、Linux 有 [Bash](https://www.gnu.org/software/bash)，Android 可以使用 [Termux](https://github.com/termux/termux-app)，也相当于是 Linux 了 —— 有关 Termux 的配置详见 [Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)。
+终端是展示 Shell 的窗口，而 Shell 的话，Windows 有 [cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)、[PowerShell](https://github.com/PowerShell/PowerShell)、[Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/what-is-windows-powershell)，macOS、Linux 有 [Bash](https://www.gnu.org/software/bash)，Android 可以使用 [Termux](https://github.com/termux/termux-app)，也相当于是 Linux 了 —— 有关 Termux 的配置详见 [Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)。
 
-MacOS 和 Linux 的关系更近，总之都能使用 [Zsh](https://ohmyz.sh) 而不是 Bash 作为 Shell，有关 Zsh 的配置参见 [这篇文章](https://www.mintimate.cn/2021/02/05/configZsh)。
+macOS 和 Linux 的关系更近，总之都能使用 [Zsh](https://ohmyz.sh) 而不是 Bash 作为 Shell，有关 Zsh 的配置参见 [这篇文章](https://www.mintimate.cn/2021/02/05/configZsh)。
 
 Zsh 相比 Bash 能提供命令行历史补全的功能，在 Windows 上，这需要下载 [PowerToys](https://github.com/microsoft/PowerToys) 并启用里面的 `未找到命令` 功能 —— 看起来命令行补全是 PowerShell 的功能，但总之这样配置之后就没问题。
 
-在 MacOS 上，自带的终端并没有那么“好看”，总之转用了 [iTerm2](https://iterm2.com)，相关的配置略。
+在 macOS 上，自带的终端并没有那么“好看”，总之转用了 [iTerm2](https://iterm2.com)，相关的配置略。
 
 ## 奔向 SSH
 
-在购入了 Mac mini 后，除了写 [SwiftUI](https://developer.apple.com/xcode/swiftui) 外，也想用 Mac mini 做些别的什么 —— 我是用不来 MacOS，操作逻辑相比 Windows 总是有太多别扭的地方，我是应该还会把 Windows 作为主要的开发环境的。
+在购入了 Mac mini 后，除了写 [SwiftUI](https://developer.apple.com/xcode/swiftui) 外，也想用 Mac mini 做些别的什么 —— 我是用不来 macOS，操作逻辑相比 Windows 总是有太多别扭的地方，我是应该还会把 Windows 作为主要的开发环境的。
 
 于是看视频，了解到 Mac mini 可以作为 [软路由](https://bulianglin.com/archives/openwrt.html)、[NAS](https://en.wikipedia.org/wiki/Network-attached_storage)、服务器 …… 诶，服务器。
 
@@ -41,7 +41,7 @@ SSH 支持免密登录，总之使用 [GPG](https://gnupg.org) 的非对称加�
 
 ## 奔向 PowerShell
 
-配置好 Windows 和 MacOS 上的 SSH 服务后，成功使用 Windows 远程连接到 MacOS，相对应的，MacOS 也可以远程连接到 Windows，但是远程连接后默认进入的 Shell 居然是 cmd，这个实在是有点搞笑了。
+配置好 Windows 和 macOS 上的 SSH 服务后，成功使用 Windows 远程连接到 macOS，相对应的，macOS 也可以远程连接到 Windows，但是远程连接后默认进入的 Shell 居然是 cmd，这个实在是有点搞笑了。
 
 - [SSH 连接 Windows 默认启用 PowerShell](https://learn.microsoft.com/zh-cn/windows-server/administration/OpenSSH/openssh-server-configuration#configuring-the-default-shell-for-openssh-in-windows)
 
@@ -51,7 +51,7 @@ SSH 支持免密登录，总之使用 [GPG](https://gnupg.org) 的非对称加�
 
 ## BUG
 
-是的，从 Windows 访问 MacOS 使用 `ls/ll` 命令列出含有中文文件的文件夹内容时，会有如下的乱码：
+是的，从 Windows 访问 macOS 使用 `ls/ll` 命令列出含有中文文件的文件夹内容时，会有如下的乱码：
 
 ```bash
 ➜  mods git:(main) ✗ ll
