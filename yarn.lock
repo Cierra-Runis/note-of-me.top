@@ -1015,74 +1015,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/env@npm:15.1.4"
-  checksum: 10c0/88b8e81f97b49abdad40c7ebe5be93b0387d6c138a5c66cc1dce3a9db9d4eac8e258a1b617544ee23085111b5cdc6d5206389596e18c3370ff74cb54e60966f5
+"@next/env@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/env@npm:15.1.5"
+  checksum: 10c0/bf6b8d6d87a88b6f8eba40d69192d2bde6d6ecee9dfcc779b383bf87c4efbf1de67b468a5b652225c32725192a644ac5175f51604f58ed094a2ef8e8c0f7a803
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/eslint-plugin-next@npm:15.1.4"
+"@next/eslint-plugin-next@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/eslint-plugin-next@npm:15.1.5"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/6b5356275027e7b597914aa410805dab6b988c81c7ec0855e829e967d0064b9512828efc5d3b8826b798b30f1494618c82c5067c36d6d7837071ed670d690eab
+  checksum: 10c0/56105ca4b5804379eb6eca6f11275f72f8ce70bb3f5ce057b0f16008a1b23b53b2eefee9ed3355ca0461b9a0ea3f72727b626432b887304970d9dbef934929d3
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-darwin-arm64@npm:15.1.4"
+"@next/swc-darwin-arm64@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-darwin-arm64@npm:15.1.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-darwin-x64@npm:15.1.4"
+"@next/swc-darwin-x64@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-darwin-x64@npm:15.1.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.1.4"
+"@next/swc-linux-arm64-gnu@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-linux-arm64-gnu@npm:15.1.5"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-linux-arm64-musl@npm:15.1.4"
+"@next/swc-linux-arm64-musl@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-linux-arm64-musl@npm:15.1.5"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-linux-x64-gnu@npm:15.1.4"
+"@next/swc-linux-x64-gnu@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-linux-x64-gnu@npm:15.1.5"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-linux-x64-musl@npm:15.1.4"
+"@next/swc-linux-x64-musl@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-linux-x64-musl@npm:15.1.5"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.1.4"
+"@next/swc-win32-arm64-msvc@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-win32-arm64-msvc@npm:15.1.5"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:15.1.4":
-  version: 15.1.4
-  resolution: "@next/swc-win32-x64-msvc@npm:15.1.4"
+"@next/swc-win32-x64-msvc@npm:15.1.5":
+  version: 15.1.5
+  resolution: "@next/swc-win32-x64-msvc@npm:15.1.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4024,66 +4024,66 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/core@npm:1.27.0"
+"@shikijs/core@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/core@npm:1.27.2"
   dependencies:
-    "@shikijs/engine-javascript": "npm:1.27.0"
-    "@shikijs/engine-oniguruma": "npm:1.27.0"
-    "@shikijs/types": "npm:1.27.0"
+    "@shikijs/engine-javascript": "npm:1.27.2"
+    "@shikijs/engine-oniguruma": "npm:1.27.2"
+    "@shikijs/types": "npm:1.27.2"
     "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
     hast-util-to-html: "npm:^9.0.4"
-  checksum: 10c0/307e564bab0de9b6be1a73eccd7f61c02ee8b6f80f0adf7c5252d359ab2dcd280cdff68f7fdc9848d664d5d5635b159d0902a24f54283e6fa82ef84d70763dd2
+  checksum: 10c0/6eaa5f7a0e8cd472d725b81cb8d283c0ca63be0e3d229745323a53df93b008b816cd8b32f47aa6d1726c7aea7f0cda8c0d0c30067962e786450317bf34bea17e
   languageName: node
   linkType: hard
 
-"@shikijs/engine-javascript@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/engine-javascript@npm:1.27.0"
+"@shikijs/engine-javascript@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/engine-javascript@npm:1.27.2"
   dependencies:
-    "@shikijs/types": "npm:1.27.0"
+    "@shikijs/types": "npm:1.27.2"
     "@shikijs/vscode-textmate": "npm:^10.0.1"
-    oniguruma-to-es: "npm:^1.0.0"
-  checksum: 10c0/834389814821108ff3d041536dd98ba80e0fe75208101b27feb673d4ed8e299ebf8ef02acb35ce628f2d138c1b3ce00c07875c3eff4e52798e02f71c7fb262e3
+    oniguruma-to-es: "npm:^2.0.0"
+  checksum: 10c0/70be3008093848640829db577faf390f1f33ad647bbfd5f847be6d88cd43b1310ae98922ab4c387cbbff049ae49625ca8558306cd4c16466a8d78944a0ddcdb2
   languageName: node
   linkType: hard
 
-"@shikijs/engine-oniguruma@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/engine-oniguruma@npm:1.27.0"
+"@shikijs/engine-oniguruma@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/engine-oniguruma@npm:1.27.2"
   dependencies:
-    "@shikijs/types": "npm:1.27.0"
+    "@shikijs/types": "npm:1.27.2"
     "@shikijs/vscode-textmate": "npm:^10.0.1"
-  checksum: 10c0/ed7e85fc79cd4ebf02047e8d16915d33495f2fd879e4d46563a6fc62ab9ccfc6f32f0aee2979feca3afe0f48ee3e5cce0ab674582cc1c09f307eafc61da2df19
+  checksum: 10c0/d4039c8f9b55c3db9941c2cdf85963a856a244ab982e039e650a81c71748bb2cc78132b253e9eb32e8864c01c9a12ffb41868fc08d58cf5b9f5ddd42ba8b4e3c
   languageName: node
   linkType: hard
 
-"@shikijs/langs@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/langs@npm:1.27.0"
+"@shikijs/langs@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/langs@npm:1.27.2"
   dependencies:
-    "@shikijs/types": "npm:1.27.0"
-  checksum: 10c0/9a3fb9ca1096b9658123038e446e3588b7ce943308505aa91c1cde0bec761fd2e8311a3f3ad44793cee1254aa60724389732d6e459a04f2a80de00fa539a0e1f
+    "@shikijs/types": "npm:1.27.2"
+  checksum: 10c0/80ea8327d08446fe87cd2c11b9385c04dffd3c2bc5f802eb22e50741de69eee4b30e6aee6363a35c5acfa004fcbc2606953145c8f76f6f72a537173117aaf88d
   languageName: node
   linkType: hard
 
-"@shikijs/themes@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/themes@npm:1.27.0"
+"@shikijs/themes@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/themes@npm:1.27.2"
   dependencies:
-    "@shikijs/types": "npm:1.27.0"
-  checksum: 10c0/8272b09a0d7be61cb31c95fa647e75d1f15f62ce08352fb249b20c19e1a14c504504b51ad3f0f9d3981fd475529ebd2ace4efa9a24cfb68b7f9410723044e9ce
+    "@shikijs/types": "npm:1.27.2"
+  checksum: 10c0/b1d498532128c099492436bd738871e30569ae7ce904de78a5cab8d4a1327bf5a7f96abe4f03f5f1759140c44cee80072df23f2c819d7f373b934a2cf8ff6c55
   languageName: node
   linkType: hard
 
-"@shikijs/types@npm:1.27.0":
-  version: 1.27.0
-  resolution: "@shikijs/types@npm:1.27.0"
+"@shikijs/types@npm:1.27.2":
+  version: 1.27.2
+  resolution: "@shikijs/types@npm:1.27.2"
   dependencies:
     "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
-  checksum: 10c0/c3c3559cfa73d9b4e7ea989fd707fc38d80a41e7144b4868abee3dfd84f1bca2124be51a7456c736e772c74db483f0ff5529bbab0175a53c19a55dd04694e690
+  checksum: 10c0/0910bdfe1b0d9026d935d7d84624e5bede7fc6ecaafd7cd16f9f9b305b05d9bc74c076eabecbaac6dc0767998143ab53a29de8ae39f40ce7ca2e316db465618c
   languageName: node
   linkType: hard
 
@@ -4293,12 +4293,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.17.12":
-  version: 20.17.12
-  resolution: "@types/node@npm:20.17.12"
+"@types/node@npm:^20.17.14":
+  version: 20.17.14
+  resolution: "@types/node@npm:20.17.14"
   dependencies:
     undici-types: "npm:~6.19.2"
-  checksum: 10c0/340b65a11e4486e597163991532a08e525beee40f082cf73dc830c060426fa9ea8690a4e3931d91375e946816a884d6140d96e99ac048b51f280f21cc70d22ed
+  checksum: 10c0/2af0722989c677416dec4d9bc37e262a9724e090e5ce021a976e4ab12d4fa26aecbb00dddc8114d0fbf4a6552f12ace0ec98156247a20bf4d57809b7ce90ea5a
   languageName: node
   linkType: hard
 
@@ -5774,11 +5774,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.1.4":
-  version: 15.1.4
-  resolution: "eslint-config-next@npm:15.1.4"
+"eslint-config-next@npm:15.1.5":
+  version: 15.1.5
+  resolution: "eslint-config-next@npm:15.1.5"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.1.4"
+    "@next/eslint-plugin-next": "npm:15.1.5"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -5794,7 +5794,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/9c52e8e2c6f71e94eec0a2d2a2ee0a32d6ac3cb6b354e8364ddb8b9942b2b1ea2207c3be1532dfb296a697df27f89f6f3eb86190ecf9ffaf5528d7a3749fb012
+  checksum: 10c0/b36edb20bfd08b68dd9589c379db5acf1291409e77958e1287693155888b44c48b21810377cdc162d0ea84b9b06840f89c70d73d31dc18f0a2ee42738a65ec72
   languageName: node
   linkType: hard
 
@@ -5961,15 +5961,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:^3.17.5":
-  version: 3.17.5
-  resolution: "eslint-plugin-tailwindcss@npm:3.17.5"
+"eslint-plugin-tailwindcss@npm:^3.18.0":
+  version: 3.18.0
+  resolution: "eslint-plugin-tailwindcss@npm:3.18.0"
   dependencies:
     fast-glob: "npm:^3.2.5"
     postcss: "npm:^8.4.4"
   peerDependencies:
     tailwindcss: ^3.4.0
-  checksum: 10c0/9ff1a36fd07f8066474f002bd82c24f1d3910b6ef484a452ec4ba1543b985dc1fde02266a21d458afba02fa404daa88b99cfbad8b4324e5d7bbae5fb1ab535c2
+  checksum: 10c0/e4e782c55bea1937d0a247853c8539914f99d08351d70b33b279289674c85cbb5cbed2e5d3e35cc8b7fea62b1a5495c2e51ad3b98d07468e4af37497d23921b4
   languageName: node
   linkType: hard
 
@@ -6353,12 +6353,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^11.18.0":
-  version: 11.18.0
-  resolution: "framer-motion@npm:11.18.0"
+"framer-motion@npm:^11.18.1":
+  version: 11.18.1
+  resolution: "framer-motion@npm:11.18.1"
   dependencies:
-    motion-dom: "npm:^11.16.4"
-    motion-utils: "npm:^11.16.0"
+    motion-dom: "npm:^11.18.1"
+    motion-utils: "npm:^11.18.1"
     tslib: "npm:^2.4.0"
   peerDependencies:
     "@emotion/is-prop-valid": "*"
@@ -6371,7 +6371,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/7f3c1e420bca2d920b7f48dfb54b072938771f9237feed02d576884398f4a68ccb2d1ae36b28cf2410dbfe2db6edb4c03429a1d896e789d08a972360c6ad82b1
+  checksum: 10c0/c19d81b67d078d496aa07b897e438208fd43a7f0700442573f92d765a5a1a83c25d88b48defe538365c54b31e8d005f13a869fba0512ab879be6059bd7c51206
   languageName: node
   linkType: hard
 
@@ -7440,14 +7440,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:^0.16.20":
-  version: 0.16.20
-  resolution: "katex@npm:0.16.20"
+"katex@npm:^0.16.21":
+  version: 0.16.21
+  resolution: "katex@npm:0.16.21"
   dependencies:
     commander: "npm:^8.3.0"
   bin:
     katex: cli.js
-  checksum: 10c0/390a3b8364c087078dcd1c17babfec867f1b5f44eabf6f2e8b9841b88496330b1bf8dc95f477172a0ddab6d12c11a8da6ed6269720d3d8cef2c505f5c2652255
+  checksum: 10c0/e2e4139ba72a13f2393308fbb2b4c5511611a19a40a6e39d956cf775e553af3517dbfd0a54477faaf401c923e4654e32296347846b8ff15dfa579f88ff8579bb
   languageName: node
   linkType: hard
 
@@ -8520,19 +8520,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-dom@npm:^11.16.4":
-  version: 11.16.4
-  resolution: "motion-dom@npm:11.16.4"
+"motion-dom@npm:^11.18.1":
+  version: 11.18.1
+  resolution: "motion-dom@npm:11.18.1"
   dependencies:
-    motion-utils: "npm:^11.16.0"
-  checksum: 10c0/66de6d40aef59d3004aaf17e39c7c2d2c679306207fdb28c73917d6a05e8c962747fea53d2e516c25d994109d38e127943a759fed18a0fadfc2572a3335fc0d2
+    motion-utils: "npm:^11.18.1"
+  checksum: 10c0/98378bdf9d77870829cdf3624c5eff02e48cfa820dfc74450364d7421884700048d60e277bfbf477df33270fbae4c1980e5914586f5b6dff28d4921fdca8ac47
   languageName: node
   linkType: hard
 
-"motion-utils@npm:^11.16.0":
-  version: 11.16.0
-  resolution: "motion-utils@npm:11.16.0"
-  checksum: 10c0/e68efa08b9546a2fb065537cedcbab1a416d43cdc5773e02ea01408c276e56bbea9ef76d330e80d8536a6ac585b0bbb6f4f2b9d97637d8d36418483e4492ddff
+"motion-utils@npm:^11.18.1":
+  version: 11.18.1
+  resolution: "motion-utils@npm:11.18.1"
+  checksum: 10c0/dac083bdeb6e433a277ac4362211b0fdce59ff09d6f7897f0f49d1e3561209c6481f676876daf99a33485054bc7e4b1d1b8d1de16f7b1e5c6f117fe76358ca00
   languageName: node
   linkType: hard
 
@@ -8639,19 +8639,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.1.4":
-  version: 15.1.4
-  resolution: "next@npm:15.1.4"
+"next@npm:15.1.5":
+  version: 15.1.5
+  resolution: "next@npm:15.1.5"
   dependencies:
-    "@next/env": "npm:15.1.4"
-    "@next/swc-darwin-arm64": "npm:15.1.4"
-    "@next/swc-darwin-x64": "npm:15.1.4"
-    "@next/swc-linux-arm64-gnu": "npm:15.1.4"
-    "@next/swc-linux-arm64-musl": "npm:15.1.4"
-    "@next/swc-linux-x64-gnu": "npm:15.1.4"
-    "@next/swc-linux-x64-musl": "npm:15.1.4"
-    "@next/swc-win32-arm64-msvc": "npm:15.1.4"
-    "@next/swc-win32-x64-msvc": "npm:15.1.4"
+    "@next/env": "npm:15.1.5"
+    "@next/swc-darwin-arm64": "npm:15.1.5"
+    "@next/swc-darwin-x64": "npm:15.1.5"
+    "@next/swc-linux-arm64-gnu": "npm:15.1.5"
+    "@next/swc-linux-arm64-musl": "npm:15.1.5"
+    "@next/swc-linux-x64-gnu": "npm:15.1.5"
+    "@next/swc-linux-x64-musl": "npm:15.1.5"
+    "@next/swc-win32-arm64-msvc": "npm:15.1.5"
+    "@next/swc-win32-x64-msvc": "npm:15.1.5"
     "@swc/counter": "npm:0.1.3"
     "@swc/helpers": "npm:0.5.15"
     busboy: "npm:1.6.0"
@@ -8696,7 +8696,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/55325f95e1a8eb13de4ff0f7d7945c130226139bc308950e4fb9002bacae1b3a012bf1488e259027e606cdc460826fa91408e07c79d53c6f69b516b23a4741c5
+  checksum: 10c0/13e0001dfb1b36a191fc5cf12ff73b8b472a0271460609be948371ef8fa865873753801823a751aca785f2eb626ac5e6ae38e961d3e1c45237e40d92d5335637
   languageName: node
   linkType: hard
 
@@ -8823,7 +8823,7 @@ __metadata:
     "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
     "@types/katex": "npm:^0.16.7"
     "@types/marked": "npm:^6.0.0"
-    "@types/node": "npm:^20.17.12"
+    "@types/node": "npm:^20.17.14"
     "@types/react": "npm:19.0.7"
     "@types/react-dom": "npm:^19.0.3"
     "@vercel/analytics": "npm:^1.4.1"
@@ -8831,15 +8831,15 @@ __metadata:
     contentlayer2: "npm:^0.5.3"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.18.0"
-    eslint-config-next: "npm:15.1.4"
+    eslint-config-next: "npm:15.1.5"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-perfectionist: "npm:^4.6.0"
-    eslint-plugin-tailwindcss: "npm:^3.17.5"
-    framer-motion: "npm:^11.18.0"
+    eslint-plugin-tailwindcss: "npm:^3.18.0"
+    framer-motion: "npm:^11.18.1"
     github-slugger: "npm:^2.0.0"
-    katex: "npm:^0.16.20"
+    katex: "npm:^0.16.21"
     marked: "npm:^15.0.6"
-    next: "npm:15.1.4"
+    next: "npm:15.1.5"
     next-contentlayer2: "npm:^0.5.3"
     next-intl: "npm:^3.26.3"
     next-mdx-remote: "npm:^5.0.0"
@@ -8854,10 +8854,10 @@ __metadata:
     rehype-slug: "npm:^6.0.0"
     remark-gfm: "npm:^4.0.0"
     remark-math: "npm:^6.0.0"
-    shiki: "npm:^1.27.0"
+    shiki: "npm:^1.27.2"
     swr: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.17"
-    tone: "npm:15.0.4"
+    tone: "npm:15.1.3"
     typescript: "npm:^5.7.3"
     use-file-picker: "npm:^2.1.2"
   languageName: unknown
@@ -8955,14 +8955,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oniguruma-to-es@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "oniguruma-to-es@npm:1.0.0"
+"oniguruma-to-es@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "oniguruma-to-es@npm:2.1.0"
   dependencies:
     emoji-regex-xs: "npm:^1.0.0"
     regex: "npm:^5.1.1"
     regex-recursion: "npm:^5.1.1"
-  checksum: 10c0/22863a70dcdb9196d6f791b09a57bd86729748a0a1f1378acd5c83accef1e62cf9dd37cf251ed5cd5136fd0f8e550df8900bdcdc3133dce7c631ea5f5546abcd
+  checksum: 10c0/780e3e17e3dd1d5ad1a4f13971b9738a8169c3cae7e092757ce1ec741b52736053e3f8cb338ecd72b74496c31175794ca58e62a0282fca9786064921dd1c68c6
   languageName: node
   linkType: hard
 
@@ -9973,19 +9973,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^1.27.0":
-  version: 1.27.0
-  resolution: "shiki@npm:1.27.0"
+"shiki@npm:^1.27.2":
+  version: 1.27.2
+  resolution: "shiki@npm:1.27.2"
   dependencies:
-    "@shikijs/core": "npm:1.27.0"
-    "@shikijs/engine-javascript": "npm:1.27.0"
-    "@shikijs/engine-oniguruma": "npm:1.27.0"
-    "@shikijs/langs": "npm:1.27.0"
-    "@shikijs/themes": "npm:1.27.0"
-    "@shikijs/types": "npm:1.27.0"
+    "@shikijs/core": "npm:1.27.2"
+    "@shikijs/engine-javascript": "npm:1.27.2"
+    "@shikijs/engine-oniguruma": "npm:1.27.2"
+    "@shikijs/langs": "npm:1.27.2"
+    "@shikijs/themes": "npm:1.27.2"
+    "@shikijs/types": "npm:1.27.2"
     "@shikijs/vscode-textmate": "npm:^10.0.1"
     "@types/hast": "npm:^3.0.4"
-  checksum: 10c0/4d0826afd83538b44b993b12d4a39b35f06e953ace979f252eb4877e46a2755a2aa44982917649b94d74f87696d46c61510633b6288eebb21ae694810a2542a9
+  checksum: 10c0/25efbe1c25cd2a7be2f030205d69ebcd6a1abdd01d4fa302e1c532476fb5ef37403b68df3a3e08792a7e5057da0033fdf380b8fa0e3b3044ed7a1b606cd5d24e
   languageName: node
   linkType: hard
 
@@ -10479,13 +10479,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tone@npm:15.0.4":
-  version: 15.0.4
-  resolution: "tone@npm:15.0.4"
+"tone@npm:15.1.3":
+  version: 15.1.3
+  resolution: "tone@npm:15.1.3"
   dependencies:
     standardized-audio-context: "npm:^25.3.70"
     tslib: "npm:^2.3.1"
-  checksum: 10c0/2dff3d8be884c818a877c1b9532f623e5a83deba4aebcc3f9c584208e9e19735c1b0d5f1697da148dfe793a0b4dbf6bf5a0f074f0f30f8a12a9e8a51445d881a
+  checksum: 10c0/c4dfae22621e2286d30ad2bf68a3ce2ffff0a2f715fe1ae9a494d745f487fc4784254aba35b93663fc2ac05b30540bcba8b21bb51c306f7b694ebb6b7501d213
   languageName: node
   linkType: hard
 
