@@ -36,11 +36,15 @@ export default function MidiPage() {
       }).toDestination();
 
       track.notes.forEach((note) => {
+        const time = note.time + Tone.now();
+        const timeoutTime = note.time * 1000;
+        const timeoutEndTime = timeoutTime + note.duration * 1000;
+
         // Trigger sound
         synth.triggerAttackRelease(
           note.name,
           note.duration,
-          note.time + Tone.now(),
+          time,
           note.velocity,
         );
 
@@ -50,17 +54,14 @@ export default function MidiPage() {
             ...prev,
             [`${trackIndex}-${note.name}`]: true,
           }));
-        }, note.time * 1000);
+        }, timeoutTime);
 
-        setTimeout(
-          () => {
-            setActiveKeys((prev) => ({
-              ...prev,
-              [`${trackIndex}-${note.name}`]: false,
-            }));
-          },
-          (note.time + note.duration) * 1000,
-        );
+        setTimeout(() => {
+          setActiveKeys((prev) => ({
+            ...prev,
+            [`${trackIndex}-${note.name}`]: false,
+          }));
+        }, timeoutEndTime);
       });
     });
   };
@@ -74,7 +75,7 @@ export default function MidiPage() {
           const isActive = activeKeys[`${trackIndex}-${note}`];
           return (
             <div
-              className={`h-5 w-1 rounded-md bg-foreground-50 transition-all duration-100 ease-in-out lg:h-10 lg:w-2`}
+              className={`h-5 w-1 rounded-md bg-foreground-50 transition-all duration-[1] ease-in-out lg:h-10 lg:w-2`}
               key={note}
               style={{
                 backgroundColor: isActive
