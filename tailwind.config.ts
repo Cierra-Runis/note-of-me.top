@@ -1,9 +1,9 @@
 import type { Config as TailwindConfig } from 'tailwindcss';
 
-import { nextui, NextUIPluginConfig } from '@nextui-org/theme';
+import { heroui, HeroUIPluginConfig } from '@heroui/theme';
 import typography from '@tailwindcss/typography';
 
-const nextUIPluginConfig: NextUIPluginConfig = {
+const heroUIPluginConfig: HeroUIPluginConfig = {
   themes: {
     dark: {
       colors: {
@@ -96,10 +96,10 @@ const tailwindConfig: TailwindConfig = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
-  plugins: [nextui(nextUIPluginConfig), typography()],
+  plugins: [heroui(heroUIPluginConfig), typography()],
   theme: {
     extend: {
       fontFamily: {
@@ -129,42 +129,42 @@ const tailwindConfig: TailwindConfig = {
       typography: {
         DEFAULT: {
           css: {
-            '--tw-prose-body': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-bold': 'hsl(var(--nextui-foreground-700))',
-            '--tw-prose-bullets': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-captions': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-code': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-counters': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-headings': 'hsl(var(--nextui-foreground-700))',
-            '--tw-prose-hr': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-body': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-bold': 'hsl(var(--nextui-foreground-700))',
-            '--tw-prose-invert-bullets': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-captions': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-code': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-counters': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-headings': 'hsl(var(--nextui-foreground-700))',
-            '--tw-prose-invert-hr': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-kbd': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-kdb-shadows': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-lead': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-links': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-pre-bg': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-pre-code': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-quote-borders': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-quotes': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-td-borders': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-invert-th-borders': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-kbd': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-kdb-shadows': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-lead': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-links': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-pre-bg': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-pre-code': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-quote-borders': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-quotes': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-td-borders': 'hsl(var(--nextui-foreground))',
-            '--tw-prose-th-borders': 'hsl(var(--nextui-foreground))',
+            '--tw-prose-body': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-bold': 'hsl(var(--heroui-foreground-700))',
+            '--tw-prose-bullets': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-captions': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-code': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-counters': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-headings': 'hsl(var(--heroui-foreground-700))',
+            '--tw-prose-hr': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-body': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-bold': 'hsl(var(--heroui-foreground-700))',
+            '--tw-prose-invert-bullets': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-captions': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-code': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-counters': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-headings': 'hsl(var(--heroui-foreground-700))',
+            '--tw-prose-invert-hr': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-kbd': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-kdb-shadows': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-lead': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-links': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-pre-bg': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-pre-code': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-quote-borders': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-quotes': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-td-borders': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-invert-th-borders': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-kbd': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-kdb-shadows': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-lead': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-links': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-pre-bg': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-pre-code': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-quote-borders': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-quotes': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-td-borders': 'hsl(var(--heroui-foreground))',
+            '--tw-prose-th-borders': 'hsl(var(--heroui-foreground))',
             blockquote: {
               fontStyle: 'normal',
               fontWeight: 'inherit',

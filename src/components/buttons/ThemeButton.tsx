@@ -1,13 +1,13 @@
 'use client';
 
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/button';
 import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/dropdown';
+} from '@heroui/dropdown';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 

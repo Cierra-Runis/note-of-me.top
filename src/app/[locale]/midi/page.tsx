@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, ButtonGroup } from '@nextui-org/button';
+import { Button, ButtonGroup } from '@heroui/button';
 import { Midi } from '@tonejs/midi';
 import { useState } from 'react';
 import * as Tone from 'tone';

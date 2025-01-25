@@ -37,7 +37,7 @@ export default async function BaseLayout({ children, locale }: Props) {
           <Statistics />
           <Providers>
             <NextTopLoader
-              color='hsl(var(--nextui-secondary))'
+              color='hsl(var(--heroui-secondary))'
               shadow={false}
               showSpinner={false}
             />

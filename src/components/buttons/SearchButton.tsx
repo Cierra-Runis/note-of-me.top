@@ -2,17 +2,17 @@
 
 import { Link as NextLink } from '@/i18n/routing';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
-import { Divider } from '@nextui-org/divider';
-import { Input } from '@nextui-org/input';
-import { Kbd } from '@nextui-org/kbd';
+import { Button } from '@heroui/button';
+import { Divider } from '@heroui/divider';
+import { Input } from '@heroui/input';
+import { Kbd } from '@heroui/kbd';
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalHeader,
   useDisclosure,
-} from '@nextui-org/modal';
+} from '@heroui/modal';
 import { allPosts } from 'contentlayer/generated';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';

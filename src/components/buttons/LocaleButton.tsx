@@ -2,13 +2,13 @@
 
 import { routing, usePathname, useRouter } from '@/i18n/routing';
 import { LanguageIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/button';
 import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/dropdown';
+} from '@heroui/dropdown';
 import { useLocale, useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';

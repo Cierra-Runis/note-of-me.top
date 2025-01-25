@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/button';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 

@@ -2,13 +2,13 @@
 
 |                           |                |                |                              |
 | :-----------------------: | :------------: | :------------: | :--------------------------: |
-|         [Next.js]         |    [Vercel]    |    [NextUI]    |        [Tailwind CSS]        |
+|         [Next.js]         |    [Vercel]    |    [HeroUI]    |        [Tailwind CSS]        |
 | [Tailwind CSS Typography] |  [Hero Icons]  | [Simple Icons] | [MDX in Next.js is Easy Now] |
 |       [Lorem Ipsum]       | [Contentlayer] |    [Shiki]     |                              |
 
 [Next.js]: https://nextjs.org/docs
 [Vercel]: https://vercel.com/
-[NextUI]: https://nextui.org/docs/guide/introduction
+[HeroUI]: https://www.heroui.com/docs/guide/introduction
 [Tailwind CSS]: https://tailwindcss.com/docs/installation
 [Tailwind CSS Typography]: https://github.com/tailwindlabs/tailwindcss-typography
 [Hero Icons]: https://heroicons.com/

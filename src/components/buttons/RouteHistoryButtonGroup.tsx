@@ -2,7 +2,7 @@
 
 import { useRouter } from '@/i18n/routing';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import { Button, ButtonGroup } from '@nextui-org/button';
+import { Button, ButtonGroup } from '@heroui/button';
 
 export default function RouteHistoryButtonGroup() {
   const router = useRouter();

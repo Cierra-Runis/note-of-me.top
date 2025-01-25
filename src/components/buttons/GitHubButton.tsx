@@ -2,8 +2,8 @@
 
 import { siteConfig } from '@/config';
 import { Link as NextLink } from '@/i18n/routing';
+import { Button } from '@heroui/button';
 import { SiGithub } from '@icons-pack/react-simple-icons';
-import { Button } from '@nextui-org/button';
 
 export default function GitHubButton() {
   return (

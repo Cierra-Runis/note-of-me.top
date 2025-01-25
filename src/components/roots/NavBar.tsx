@@ -2,13 +2,8 @@
 
 import { siteConfig } from '@/config';
 import { Link as NextLink } from '@/i18n/routing';
-import { Avatar } from '@nextui-org/avatar';
-import {
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Navbar as NextUINavbar,
-} from '@nextui-org/navbar';
+import { Avatar } from '@heroui/avatar';
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -22,7 +17,7 @@ export const NavBar = () => {
   const t = useTranslations();
 
   return (
-    <NextUINavbar
+    <Navbar
       isBordered
       isMenuOpen={isMenuOpen}
       maxWidth='xl'
@@ -67,6 +62,6 @@ export const NavBar = () => {
           <ThemeButton />
         </NavbarItem>
       </NavbarContent>
-    </NextUINavbar>
+    </Navbar>
   );
 };

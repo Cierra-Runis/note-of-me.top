@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Contentlayer", "katex", "Kode", "nextui", "Noto", "saira"],
+  "cSpell.words": ["Contentlayer", "katex", "Kode", "heroui", "Noto", "saira"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },

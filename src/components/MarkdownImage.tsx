@@ -1,6 +1,6 @@
 'use client';
 
-import { ImageProps, useImage } from '@nextui-org/image';
+import { ImageProps, useImage } from '@heroui/image';
 import { cloneElement, forwardRef } from 'react';
 
 const MarkdownImage = forwardRef<HTMLImageElement, ImageProps>((props, ref) => {

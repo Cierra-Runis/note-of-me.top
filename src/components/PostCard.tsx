@@ -1,7 +1,7 @@
 'use client';
 
 import { Link as NextLink } from '@/i18n/routing';
-import { Chip } from '@nextui-org/chip';
+import { Chip } from '@heroui/chip';
 import { Post } from 'contentlayer/generated';
 import { parseISO } from 'date-fns';
 import { useFormatter, useTimeZone, useTranslations } from 'next-intl';

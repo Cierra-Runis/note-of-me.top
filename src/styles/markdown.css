@@ -15,8 +15,8 @@ code[data-line-numbers] {
 span[data-highlighted-line] {
   background: linear-gradient(
     to right,
-    hsl(var(--nextui-foreground-50)),
-    hsl(var(--nextui-foreground-100))
+    hsl(var(--heroui-foreground-50)),
+    hsl(var(--heroui-foreground-100))
   );
 }
 

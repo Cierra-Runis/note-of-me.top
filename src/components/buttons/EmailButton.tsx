@@ -3,7 +3,7 @@
 import { siteConfig } from '@/config';
 import { Link as NextLink } from '@/i18n/routing';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/button';
 
 export default function EmailButton() {
   return (

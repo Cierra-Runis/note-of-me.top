@@ -2,7 +2,7 @@
 
 import { Technical } from '@/config';
 import { Link as NextLink } from '@/i18n/routing';
-import { Button, ButtonProps } from '@nextui-org/button';
+import { Button, ButtonProps } from '@heroui/button';
 
 type TechnicalButtonProps = { technical: Technical } & ButtonProps;
 
