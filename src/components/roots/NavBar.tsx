@@ -1,20 +1,16 @@
 'use client';
 
 import { siteConfig } from '@/config';
-import { Link as NextLink } from '@/i18n/routing';
 import { Avatar } from '@heroui/avatar';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
-import { useTranslations } from 'next-intl';
+import NextLink from 'next/link';
 import { useState } from 'react';
 
-import LocaleButton from '../buttons/LocaleButton';
 import SearchButton from '../buttons/SearchButton';
 import ThemeButton from '../buttons/ThemeButton';
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const t = useTranslations();
 
   return (
     <Navbar
@@ -35,22 +31,22 @@ export const NavBar = () => {
         <ul className='ml-2 flex justify-start gap-6'>
           <NavbarItem key='/post'>
             <NextLink href='/post' prefetch>
-              {t('post')}
+              文章
             </NextLink>
           </NavbarItem>
           <NavbarItem>
             <NextLink href='/midi' prefetch>
-              {t('midi')}
+              MIDI
             </NextLink>
           </NavbarItem>
           <NavbarItem key='/about'>
             <NextLink href='/about' prefetch>
-              {t('about.title')}
+              关于
             </NextLink>
           </NavbarItem>
           <NavbarItem key='/friend'>
             <NextLink href='/friend' prefetch>
-              {t('friend')}
+              友链
             </NextLink>
           </NavbarItem>
         </ul>
@@ -58,7 +54,6 @@ export const NavBar = () => {
       <NavbarContent className='basis-full' justify='end'>
         <NavbarItem className='flex gap-2'>
           <SearchButton />
-          <LocaleButton />
           <ThemeButton />
         </NavbarItem>
       </NavbarContent>

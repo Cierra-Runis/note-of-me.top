@@ -1,30 +1,17 @@
+import { siteConfig } from '@/config';
 import { MetadataRoute } from 'next';
-import { getTranslations } from 'next-intl/server';
 
-export default async function manifest(): Promise<MetadataRoute.Manifest> {
-  const locale = 'en';
-  const t = await getTranslations({ locale });
-
+export default function manifest(): MetadataRoute.Manifest {
   return {
     background_color: '#000',
-    categories: [
-      'Technology',
-      '技術',
-      '技术',
-      'Blog',
-      'ブログ',
-      '博客',
-      'Note of Me',
-      '個人ノート',
-      '个人笔记',
-    ],
-    description: t('site.description'),
+    categories: ['Technology', '技术', 'Blog', '博客'],
+    description: siteConfig.description,
     icons: [
       { sizes: '192x192', src: '/icon-192x192.png', type: 'image/png' },
       { sizes: '512x512', src: '/icon-512x512.png', type: 'image/png' },
     ],
-    name: `${t('site.title')}`,
-    short_name: t('site.title'),
+    name: siteConfig.title,
+    short_name: siteConfig.title,
     start_url: '/',
   };
 }

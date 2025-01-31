@@ -1,10 +1,10 @@
 import type { MDXComponents } from 'mdx/types';
 
 import MarkdownImage from '@/components/MarkdownImage';
-import { Link as NextLink } from '@/i18n/routing';
 import { Alert } from '@heroui/alert';
 import { Checkbox } from '@heroui/checkbox';
 import { Kbd } from '@heroui/kbd';
+import NextLink from 'next/link';
 import { HTMLProps } from 'react';
 
 /**

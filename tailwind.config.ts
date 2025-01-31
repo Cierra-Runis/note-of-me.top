@@ -116,7 +116,7 @@ const tailwindConfig: TailwindConfig = {
         ],
         sans: [
           'var(--font-sans)',
-          'var(--font-sans-locale)',
+          'var(--font-sans-sc)',
           'ui-sans-serif',
           'system-ui',
           'sans-serif',

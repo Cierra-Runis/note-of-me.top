@@ -30,10 +30,12 @@ export const siteConfig = {
     name: 'Cierra Runis',
     url: 'https://github.com/Cierra-Runis',
   },
+  description: '一个简单的笔记',
   links: {
     email: 'mailto:byrdsaron@gmail.com',
     githubAvatar: 'https://avatars.githubusercontent.com/u/29329988',
   },
+  title: 'ノート of 我',
 };
 
 export type Technical = {

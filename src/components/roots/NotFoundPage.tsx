@@ -1,12 +1,8 @@
-import { useTranslations } from 'next-intl';
-
 export default function NotFoundPage() {
-  const t = useTranslations('errors.pageNotFound');
-
   return (
     <section>
-      <h1>{t('title')}</h1>
-      <p className='max-w-[460px]'>{t('description')}</p>
+      <h1>页面不存在</h1>
+      <p className='max-w-[460px]'>您查找的页面不存在</p>
     </section>
   );
 }

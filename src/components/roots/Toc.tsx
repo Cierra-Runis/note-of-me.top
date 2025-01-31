@@ -1,11 +1,10 @@
 'use client';
 
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
-import { Link as NextLink } from '@/i18n/routing';
 import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@heroui/scroll-shadow';
 import { clsx } from '@heroui/shared-utils';
-import { useTranslations } from 'next-intl';
+import NextLink from 'next/link';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -18,7 +17,6 @@ const paddingLeftByLevel: Record<number, string> = {
 export const DocsToc: FC<{
   headings: Heading[];
 }> = ({ headings }) => {
-  const t = useTranslations();
   const tocRef = useRef<HTMLDivElement>(null);
 
   const activeId = useScrollSpy(
@@ -51,7 +49,7 @@ export const DocsToc: FC<{
       hideScrollBar
       ref={tocRef}
     >
-      <h2 className='text-lg font-medium'>{t('tableOfContent')}</h2>
+      <h2 className='text-lg font-medium'>您将看到</h2>
       <ul className='flex flex-col gap-2 scrollbar-hide'>
         {headings.map(
           (heading, i) =>

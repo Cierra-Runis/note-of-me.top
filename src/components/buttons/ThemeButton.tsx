@@ -1,49 +1,62 @@
 'use client';
 
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { Button } from '@heroui/button';
 import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from '@heroui/dropdown';
-import { useTranslations } from 'next-intl';
+  DeviceTabletIcon,
+  MoonIcon,
+  SunIcon,
+} from '@heroicons/react/24/outline';
+import { Button, ButtonGroup } from '@heroui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover';
 import { useTheme } from 'next-themes';
 
-const __icons = {
-  dark: <MoonIcon className='w-5' />,
-  light: <SunIcon className='w-5' />,
-  // Default theme is light
-  system: <SunIcon className='w-5' />,
+const __themes = {
+  dark: {
+    icon: <MoonIcon className='w-5' />,
+    title: '暗色',
+  },
+  light: {
+    icon: <SunIcon className='w-5' />,
+    title: '亮色',
+  },
+  system: {
+    // Default theme is light
+    icon: <DeviceTabletIcon className='w-5' />,
+    title: '系统',
+  },
 };
 
-type Theme = keyof typeof __icons;
+type ThemeVariant = keyof typeof __themes;
 
 export default function ThemeDropdown() {
-  const t = useTranslations();
-
   const { resolvedTheme, setTheme, theme } = useTheme();
 
   return (
-    <Dropdown aria-label={t('theme.title')}>
-      <DropdownTrigger>
+    <Popover aria-label='主题'>
+      <PopoverTrigger>
         <Button
           isIconOnly
           size='sm'
-          startContent={__icons[(resolvedTheme || 'system') as Theme]}
+          startContent={
+            __themes[(resolvedTheme || 'system') as ThemeVariant].icon
+          }
           variant='light'
         />
-      </DropdownTrigger>
-      <DropdownMenu
-        onAction={(key) => setTheme(key as string)}
-        selectedKeys={[theme || 'system']}
-        selectionMode='single'
-      >
-        {Object.keys(__icons).map((key) => (
-          <DropdownItem key={key} title={t(`theme.${key}`)} />
-        ))}
-      </DropdownMenu>
-    </Dropdown>
+      </PopoverTrigger>
+      <PopoverContent>
+        <ButtonGroup>
+          {Object.entries(__themes).map(([key, { icon, title }]) => (
+            <Button
+              aria-label={title}
+              isIconOnly
+              key={key}
+              onPress={() => setTheme(key)}
+              size='sm'
+              startContent={icon}
+              variant={theme === key ? 'solid' : 'light'}
+            />
+          ))}
+        </ButtonGroup>
+      </PopoverContent>
+    </Popover>
   );
 }

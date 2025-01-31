@@ -1,8 +1,8 @@
 'use client';
 
-import { useRouter } from '@/i18n/routing';
 import { HeroUIProvider } from '@heroui/system';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 export interface ProvidersProps {

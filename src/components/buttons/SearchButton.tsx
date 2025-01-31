@@ -1,6 +1,5 @@
 'use client';
 
-import { Link as NextLink } from '@/i18n/routing';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/button';
 import { Divider } from '@heroui/divider';
@@ -14,11 +13,10 @@ import {
   useDisclosure,
 } from '@heroui/modal';
 import { allPosts } from 'contentlayer/generated';
-import { useTranslations } from 'next-intl';
+import NextLink from 'next/link';
 import { useState } from 'react';
 
 export default function SearchButton() {
-  const t = useTranslations();
   const [search, setSearch] = useState('');
   const { isOpen, onOpen, onOpenChange } = useDisclosure({
     onClose: () => setSearch(''),
@@ -61,7 +59,7 @@ export default function SearchButton() {
 
               <ModalBody>
                 {filteredPosts.length == 0 ? (
-                  <p className='text-center'>{t('noData')}</p>
+                  <p className='text-center'>无数据</p>
                 ) : (
                   filteredPosts.map((post) => (
                     <NextLink

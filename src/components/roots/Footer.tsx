@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config';
-import { Link as NextLink } from '@/i18n/routing';
+import NextLink from 'next/link';
 
 import EmailButton from '../buttons/EmailButton';
 import GitHubButton from '../buttons/GitHubButton';

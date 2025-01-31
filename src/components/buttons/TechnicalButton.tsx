@@ -1,8 +1,8 @@
 'use client';
 
 import { Technical } from '@/config';
-import { Link as NextLink } from '@/i18n/routing';
 import { Button, ButtonProps } from '@heroui/button';
+import NextLink from 'next/link';
 
 type TechnicalButtonProps = { technical: Technical } & ButtonProps;
 

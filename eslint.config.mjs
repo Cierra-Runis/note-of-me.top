@@ -26,28 +26,6 @@ const config = [
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
   eslintConfigPrettier,
   ...eslintPluginTailwindCSS.configs['flat/recommended'],
-  {
-    rules: {
-      // Consistently import navigation APIs from `@/i18n/routing`
-      'no-restricted-imports': [
-        'warn',
-        {
-          message: 'Please import from `@/i18n/routing` instead.',
-          name: 'next/link',
-        },
-        {
-          importNames: [
-            'redirect',
-            'permanentRedirect',
-            'useRouter',
-            'usePathname',
-          ],
-          message: 'Please import from `@/i18n/routing` instead.',
-          name: 'next/navigation',
-        },
-      ],
-    },
-  },
 ];
 
 export default config;

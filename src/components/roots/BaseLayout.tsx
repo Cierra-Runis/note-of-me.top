@@ -1,9 +1,6 @@
-import { Locale } from '@/i18n/routing';
-import { kodeMono, localeToSans, saira } from '@/styles/font';
+import { kodeMono, notoSansSC, saira } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
 
@@ -13,45 +10,34 @@ import { NavBar } from './NavBar';
 import { Providers } from './Providers';
 import Statistics from './Statistics';
 
-type Props = {
-  children: ReactNode;
-  locale: string;
-};
-
-export default async function BaseLayout({ children, locale }: Props) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
+export default function BaseLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body
         className={clsx(
-          'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary-300 selection:text-background',
+          'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary selection:bg-opacity-80 selection:text-background',
           saira.variable,
-          localeToSans[locale as Locale].variable,
+          notoSansSC.variable,
           kodeMono.variable,
         )}
       >
-        <NextIntlClientProvider messages={messages}>
-          <Statistics />
-          <Providers>
-            <NextTopLoader
-              color='hsl(var(--heroui-secondary))'
-              shadow={false}
-              showSpinner={false}
-            />
+        <Statistics />
+        <Providers>
+          <NextTopLoader
+            color='hsl(var(--heroui-secondary))'
+            shadow={false}
+            showSpinner={false}
+          />
 
-            <div className='relative flex h-screen flex-col'>
-              <NavBar />
-              <main className='container mx-auto max-w-7xl grow px-6 pt-16'>
-                {children}
-              </main>
-              <Footer />
-            </div>
-            <ScrollToTopButton />
-          </Providers>
-        </NextIntlClientProvider>
+          <div className='relative flex h-screen flex-col'>
+            <NavBar />
+            <main className='container mx-auto max-w-7xl grow px-6 pt-16'>
+              {children}
+            </main>
+            <Footer />
+          </div>
+          <ScrollToTopButton />
+        </Providers>
       </body>
     </html>
   );

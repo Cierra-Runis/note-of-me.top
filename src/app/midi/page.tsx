@@ -91,17 +91,17 @@ export default function MidiPage() {
 
   return (
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <h1 className='mb-4 text-2xl font-bold'>Midi Visualizer</h1>
+      <h1 className='mb-4 text-2xl font-bold'>MIDI 可视化</h1>
       <ButtonGroup>
         <Button isLoading={loading} onPress={openFilePicker} variant='ghost'>
-          Pick
+          选取
         </Button>
         <Button
           isDisabled={midi === undefined || errors.length > 0}
           onPress={startVisualization}
           variant='ghost'
         >
-          Play
+          播放
         </Button>
       </ButtonGroup>
       <div className='mt-8 flex flex-col items-center justify-center space-y-4'>

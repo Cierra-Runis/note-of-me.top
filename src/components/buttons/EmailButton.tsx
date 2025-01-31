@@ -1,9 +1,9 @@
 'use client';
 
 import { siteConfig } from '@/config';
-import { Link as NextLink } from '@/i18n/routing';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/button';
+import NextLink from 'next/link';
 
 export default function EmailButton() {
   return (
