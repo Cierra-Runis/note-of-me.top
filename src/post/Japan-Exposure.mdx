@@ -46,3 +46,18 @@ date: '2024-10-10T00:14:18+08:00'
 一开始我们用的是纸质票，后面也有说给我们统一办 [Suica](https://www.jreast.co.jp/suica) 卡什么的，但总之拒绝了，明明可以自己搞的东西。我自己办了一张 Suica 的实体卡，这卡不仅能用在乘车，还能用在售货机，虽然不是很懂为什么要支持这种功能就是了。
 
 ## 项目
+
+在此不讲项目本身，而讲别的。
+
+### 时区
+
+有关 [GMT](https://en.m.wikipedia.org/wiki/Greenwich_Mean_Time)、[UTC](https://en.m.wikipedia.org/wiki/Coordinated_Universal_Time) 的介绍参加其链接。
+
+简而言之，现在开始我会尽可能使用 [ISO 8601](https://en.m.wikipedia.org/wiki/ISO_8601) 表示时间。
+
+使用 [时间戳](https://en.m.wikipedia.org/wiki/Timestamp) 是不好的：
+
+1. 标准上其表示整秒数，精度低 —— ISO 8061 支持秒数带有小数
+2. 有些情况毫秒数 Millisecond 和微秒 Microsecond 也被运用，就我曾保存过的一张照片其文件名就是以毫秒数保存的
+3. 32 位系统下会引发 [2038 年问题](https://en.m.wikipedia.org/wiki/Year_2038_problem)
+4. 人类不可读
