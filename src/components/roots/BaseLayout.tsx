@@ -15,7 +15,7 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
     <html suppressHydrationWarning>
       <body
         className={clsx(
-          'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary selection:bg-opacity-80 selection:text-background',
+          'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background',
           saira.variable,
           notoSansSC.variable,
           kodeMono.variable,
