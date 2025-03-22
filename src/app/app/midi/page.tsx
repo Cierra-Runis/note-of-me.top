@@ -5,7 +5,6 @@ import { Midi } from '@tonejs/midi';
 import { useState } from 'react';
 import * as Tone from 'tone';
 import { useFilePicker } from 'use-file-picker';
-import { FileTypeValidator } from 'use-file-picker/validators';
 
 export default function MidiPage() {
   const [midi, setMidi] = useState<Midi>();
@@ -13,13 +12,11 @@ export default function MidiPage() {
   const { errors, loading, openFilePicker } = useFilePicker({
     accept: '.mid',
     multiple: false,
-
     onFilesSuccessfullySelected: ({ filesContent }) => {
       const file = filesContent[0];
       setMidi(new Midi(file.content));
     },
     readAs: 'ArrayBuffer',
-    validators: [new FileTypeValidator(['mid'])],
   });
 
   const startVisualization = () => {

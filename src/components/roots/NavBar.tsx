@@ -35,8 +35,8 @@ export const NavBar = () => {
             </NextLink>
           </NavbarItem>
           <NavbarItem>
-            <NextLink href='/midi' prefetch>
-              MIDI
+            <NextLink href='/app' prefetch>
+              应用
             </NextLink>
           </NavbarItem>
           <NavbarItem key='/about'>
