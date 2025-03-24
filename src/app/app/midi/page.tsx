@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, ButtonGroup } from '@heroui/button';
+import { addToast } from '@heroui/toast';
 import { Midi } from '@tonejs/midi';
 import { useState } from 'react';
 import * as Tone from 'tone';
@@ -10,11 +11,19 @@ export default function MidiPage() {
   const [midi, setMidi] = useState<Midi>();
   const [activeKeys, setActiveKeys] = useState<{ [key: string]: boolean }>({});
   const { errors, loading, openFilePicker } = useFilePicker({
-    accept: '.mid',
     multiple: false,
     onFilesSuccessfullySelected: ({ filesContent }) => {
       const file = filesContent[0];
-      setMidi(new Midi(file.content));
+      try {
+        setMidi(new Midi(file.content));
+      } catch {
+        addToast({
+          color: 'danger',
+          description: '不合法的 MIDI 文件，请选择正确的文件',
+          title: '错误',
+        });
+        return;
+      }
     },
     readAs: 'ArrayBuffer',
   });

@@ -1,6 +1,7 @@
 'use client';
 
 import { HeroUIProvider } from '@heroui/system';
+import { ToastProvider } from '@heroui/toast';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useRouter } from 'next/navigation';
 import React from 'react';
@@ -14,6 +15,7 @@ export function Providers({ children }: ProvidersProps) {
 
   return (
     <HeroUIProvider navigate={router.push}>
+      <ToastProvider />
       <NextThemesProvider attribute='class' enableSystem>
         {children}
       </NextThemesProvider>
