@@ -15,12 +15,12 @@ date: '2025-03-25T01:45:57+08:00'
 | :--------: | :---------------------: | :---------------------------------------------------------------------------------------------: |
 |    手机    |       [Redmi K70]       |                                       单 USB-C；蓝牙 5.4                                        |
 |    平板    | [iPad Pro 2021 11 inch] |                                  单雷雳 4 可 DP 1.4；蓝牙 5.0                                   |
-|  蓝牙耳机  |    [AirPods Pro II]     |                                       单 USB-C；蓝牙 5.3                                        |
 |  ~~Mac~~   |    ~~[Mac mini M2]~~    |                     ~~双雷雳 4 可 DP 1.4；双 USB-A；单 HDMI 2.0；蓝牙 5.3~~                     |
 |    Mac     |      [Mac mini M4]      |                 正双 USB-C 10 Gb/s；反三雷雳 4 可 DP 1.4；单 HDMI 2.1；蓝牙 5.3                 |
-|   显示器   | 泰坦军团 P2SA2V 4K@144  | 单 DP 1.4 双 HDMI 2.1 均 DSC；单 USB-C 可 DP 1.2、PD 65 W，单 USB-B，其一作双 USB-A 5 Gb/s 上行 |
 | 笔记本电脑 |  [拯救者 R7000P 2021]   |        单 HDMI 2.1；双 USB-C 10 Gb/s 可 DP 1.4，其一 PD 100 W；四 USB-A 5 Gb/s；蓝牙 5.1        |
-|    键盘    | 狼蛛客制化旗舰 F99 系列 |  单 USB-C，回报率 1000 Hz；蓝牙 5.0，回报率 125 Hz；无线 2.4 G，回报率 1000 Hz；电池 8000 mAh   |
+|  蓝牙耳机  |    [AirPods Pro II]     |                                       单 USB-C；蓝牙 5.3                                        |
+|   显示器   | 泰坦军团 P2SA2V 4K@144  | 单 DP 1.4 双 HDMI 2.1 均 DSC；单 USB-C 可 DP 1.2、PD 65 W，单 USB-B，其一作双 USB-A 5 Gb/s 上行 |
+|    键盘    | 狼蛛客制化旗舰 F99 系列 |   单 USB-C，回报率 1000 Hz；蓝牙 5.0，回报率 125 Hz；无线 2.4G，回报率 1000 Hz；电池 8000 mAh   |
 |    鼠标    |     罗技 G502 HERO      |                                   按键宏编程；双模式疾速滚轮                                    |
 
 [Redmi K70]: https://www.mi.com/redmi-k70/specs
@@ -68,7 +68,7 @@ date: '2025-03-25T01:45:57+08:00'
 
 ### 共享键鼠
 
-首先将笔记本电脑和显示器用 USB-C 转 [DP](https://en.wikipedia.org/wiki/DisplayPort) 的线连接起来，显示器能以 4K@144 的预期模式显示画面，接着将鼠标和键盘 2.4 G 接收器插至显示器 USB-A 口。
+首先将笔记本电脑和显示器用 USB-C 转 [DP](https://en.wikipedia.org/wiki/DisplayPort) 的线连接起来，显示器能以 4K@144 的预期模式显示画面，接着将鼠标和键盘 2.4G 接收器插至显示器 USB-A 口。
 
 问题出现了，照理说这两外设应该连上笔记本电脑的，DP 协议是能够运送双向 USB 信号的 —— 总之再从笔记本电脑连出根 USB-C 转 USB-B 的线，显示器设置使 USB-B 作为上行。
 
@@ -179,3 +179,29 @@ macOS 上有程序坞，Windows 有任务栏，但我可不想把程序全“固
 ### 其他
 
 更多的见 [此 GitHub 仓库](https://github.com/Cierra-Runis/desktop_modified)，里面分享了更多自定义工具。
+
+## 拓扑图
+
+```mermaid
+graph TD
+    P(Redmi K70)
+    T(iPad Pro 2021 11 inch)
+    L(拯救者 R7000P 2021)
+    M4(Mac mini M4)
+
+    A(AirPods Pro II)
+    D(泰坦军团 P2SA2V 4K@144)
+    K(狼蛛客制化旗舰 F99)
+    M(罗技 G502 HERO)
+
+    L -- "USB-C 转 DP" --> D
+    L -- "USB-C 转 USB-B" --> D
+
+    M4 -- "HDMI 2.1" --> D
+    M4 -- "USB-C" --> D
+
+    D -. "USB-A 2.4G 接收器" .-> K
+    D -- "USB-A" --> M
+
+    P & T & L & M4 -. "蓝牙" .-> A
+```
