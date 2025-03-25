@@ -39,6 +39,7 @@ export const mdxComponents: MDXComponents = {
     return <input {...props} />;
   },
   Kbd,
+
   table: ({ children, ...props }: HTMLProps<HTMLTableElement>) => (
     <figure className='overflow-auto'>
       <table {...props}>{children}</table>
