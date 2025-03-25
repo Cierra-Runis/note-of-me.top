@@ -47,3 +47,12 @@ code[data-line-numbers-max-digits='4'] > [data-line]::before {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+.label {
+  font-family: inherit !important;
+  font-size: 15px;
+}
+
+svg {
+  font-family: inherit !important;
+}

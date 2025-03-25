@@ -5,6 +5,7 @@ import {
 } from 'contentlayer2/source-files';
 import { KatexOptions } from 'katex';
 import rehypeKaTeX from 'rehype-katex';
+import rehypeMermaid, { RehypeMermaidOptions } from 'rehype-mermaid';
 import {
   rehypePrettyCode,
   Options as RehypePrettyCodeOptions,
@@ -47,6 +48,12 @@ const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
   },
 };
 
+const rehypeMermaidOptions: RehypeMermaidOptions = {
+  mermaidConfig: {
+    wrap: true,
+  },
+};
+
 const remarkGFMOptions: RemarkGFMOptions = {
   singleTilde: false,
 };
@@ -58,6 +65,9 @@ export default makeSource({
     rehypePlugins: [
       // https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
       [rehypeKaTeX, rehypeKaTeXOptions],
+      // https://github.com/remcohaszing/rehype-mermaid
+      // TIPS: Mermaid must be loaded before rehype-pretty-code
+      [rehypeMermaid, rehypeMermaidOptions],
       // https://rehype-pretty.pages.dev
       [rehypePrettyCode, rehypePrettyCodeOptions],
       // https://github.com/rehypejs/rehype-slug
