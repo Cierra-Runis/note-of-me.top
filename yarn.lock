@@ -5032,15 +5032,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@types/marked@npm:6.0.0"
-  dependencies:
-    marked: "npm:*"
-  checksum: 10c0/1a831af52413b1a208c91539d3bdda9be83d5451dc094c3cbc07e3e07186970673b9ec3ad5edd6c136b1249875c41e22c39eacb3c00ea7c59d0873c35c273035
-  languageName: node
-  linkType: hard
-
 "@types/mdast@npm:^4.0.0":
   version: 4.0.4
   resolution: "@types/mdast@npm:4.0.4"
@@ -9002,15 +8993,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:*":
-  version: 15.0.4
-  resolution: "marked@npm:15.0.4"
-  bin:
-    marked: bin/marked.js
-  checksum: 10c0/e2bfd9178e5242cc814aaf8020f3c2e954c047652c498dac0732f4b711d5e3ab80dbc54b964799d80470d6c515a24905e554c4a40f87b05dedc26e4e36cfdfdb
-  languageName: node
-  linkType: hard
-
 "marked@npm:^15.0.7":
   version: 15.0.7
   resolution: "marked@npm:15.0.7"
@@ -10257,7 +10239,6 @@ __metadata:
     "@tonejs/midi": "npm:^2.0.28"
     "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
     "@types/katex": "npm:^0.16.7"
-    "@types/marked": "npm:^6.0.0"
     "@types/node": "npm:^20.17.19"
     "@types/react": "npm:19.0.10"
     "@types/react-dom": "npm:^19.0.4"

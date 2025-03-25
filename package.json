@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn dlx playwright install --with-deps chromium && next build",
+    "build": "yarn playwright install --with-deps chromium && next build",
     "build:content": "contentlayer2 build",
     "start": "next start",
     "lint": "next lint",
@@ -98,7 +98,6 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/katex": "^0.16.7",
-    "@types/marked": "^6.0.0",
     "@types/node": "^20.17.19",
     "@types/react": "19.0.10",
     "@types/react-dom": "^19.0.4",
