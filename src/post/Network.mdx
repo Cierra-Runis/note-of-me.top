@@ -137,6 +137,65 @@ date: '2025-03-25T23:34:26+08:00'
 
 我现在家里办理的是 1000 Mb/s 的光纤宽带，屋外的光纤线熔接与尾纤后接入光猫，光猫再通过 **~~超五类网线~~** 连接主路由器的 LAN1 口自动作为 WAN 口，主路由器的 LAN2 口连接副路由器的 WAN 口，副路由器的 LAN1 口连接 [Mac mini M4](#设备清单) 的 RJ45 网口，Mac mini M4 通过 Wi-Fi 连接 [iPad Pro 2021 11 inch](#设备清单)。
 
+## 本地域名
+
+首先要注意的一点是，在使用域名连接到本地时，请使用 `localhost`，几乎所有设备都会将其自动与 IPv4 下的 `127.0.0.1` 或 IPv6 下的 `::1` 绑定。
+
+在 [多设备协同与自定义](/post/Multi-Device-Collaboration-And-Customize#桌面自定义) 中也有提到，IP 的变化是会令人难受的，固定 IP 虽然能解决该问题，但一是这要求你对路由器有管理权，二是路由器要具备能固定 IP 的功能，再就是一旦换到另一个局域网，就又得重新设置。而本地域名则不会有这些问题。
+
+本地域名怎么获取呢？macOS 和 Windows 均使用 `hostname{:bash}` 命令即可，结果分别是 `Mac-mini.local` 和 `Cierra_Runis`。
+
+当然，这里给一下 [保留 IP 地址](https://zh.wikipedia.org/zh-cn/%E4%BF%9D%E7%95%99IP%E5%9C%B0%E5%9D%80) 和 [IPv6 地址分配情况](http://comeround.cn/article/ipv6-address.html) 的链接，请自行查阅。为 [安全起见](http://hello.fe80.cn/pages/ipv6/i6.html) 请不要把保留 IP 地址外的地址公布 —— 由于 IPv6 的分配被严格管理，可以查到你设备的位置，我自己查能精确到县级。
+
+下表来自 `ifconfig{:bash}` 和 `ipconfig /all{:bash}` 命令：
+
+|        设备        |                IP                 |        类型        |
+| :----------------: | :-------------------------------: | :----------------: |
+|      Mac mini      |         ☀️192.168.2.69/24         | IPv4 局域网私有 IP |
+|      Mac mini      | 🌞fe80::8bc:15d5:9bc3:9771%en1/64 | IPv6 链路本地地址  |
+| 拯救者 R7000P 2021 |         🌕192.168.2.75/24         | IPv4 局域网私有 IP |
+| 拯救者 R7000P 2021 | 🌝fe80::98b4:7a27:b5c0:d12f%18/64 | IPv6 链路本地地址  |
+
+- 这里不知道为什么是 %en1 而下面是 %9
+
+就我自己，在 Mac mini 和拯救者 R7000P 2021 搭配 Clash Verge 虚拟网卡开启及关闭时，使用 `ping{:bash}` 命令得到以下结果：
+
+|  操作系统   |        测试域名        |   ping 显示域名    | 双方皆关闭  |   双方皆打开    | 结果 |
+| :---------: | :--------------------: | :----------------: | :---------: | :-------------: | :--: |
+|    macOS    |         _Mac_          |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
+|    macOS    |       _Mac.lan_        |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
+|    macOS    |      _Mac.local_       |         -          |      -      |        -        |  💩  |
+|   Windows   |         _Mac_          |      Mac.lan       |     ☀️      |       ☀️        |  💔  |
+|   Windows   |       _Mac.lan_        |      Mac.lan       |     ☀️      | 198.18.0.69[^5] | 💢💢 |
+|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^5] | 💢💢 |
+|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
+|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
+|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |  127.0.0.1  |    127.0.0.1    |  😄  |
+|   Windows   |      **Mac-mini**      |   Mac-mini.local   |    🌞%9     |      🌞%9       |  🚀  |
+|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^5] | 💢💢 |
+| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |    🌞%9     | 198.18.0.72[^5] | 💢💢 |
+|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
+|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
+|    macOS    | **Cierra_Runis.local** | cierra_runis.local |     🌕      |       🌕        |  🚀  |
+|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
+|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |     🌕      | 198.18.0.73[^5] | 💢💢 |
+|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
+
+[^5]: Clash Verge 导致连续的 IP 地址变化
+
+- 删除线部分为不需要的测试，请使用 `localhost` 代替
+- 加粗部分为重要测试
+- 斜线部分为不确定是否能在其他局域网复现的测试
+- 💢: 不可用的 198.18.x.x 网段
+- 💩: 完全不通
+- 💔：此域名为路由器后台设备列表名称
+- 💢💢：不可用的 198.18.x.x 网段且两次结果不一样
+- 😄：“你老惦记你那本地域名干什么？那我缺的这个 `localhost` 谁给我补啊？”
+
+总结下来，两个最重要的测试，四个结果只有一个可用，有点尴尬了。
+
+而最后的结果很明显，Mac mini 给出的域名要去掉 `.local` 给 Windows 使用，而 Windows 反过来 —— 什么极限换家？
+
 ## 回到过去
 
 两台设备直接使用网线连接，这就是最简单的局域网 —— 教程可参加 [此视频](https://www.bilibili.com/video/av424790900)：
@@ -234,65 +293,6 @@ iperf Done.
 
 - 路由器不要开 [双频合一](#双频合一与同步双频)，前面提到了
 - 代理会影响最高速率，例如我代理套餐最高是 25 MB/s，一旦走代理，就会限定在其以下
-
-## 本地域名
-
-首先要注意的一点是，在使用域名连接到本地时，请使用 `localhost`，几乎所有设备都会将其自动与 IPv4 下的 `127.0.0.1` 或 IPv6 下的 `::1` 绑定。
-
-在 [多设备协同与自定义](/post/Multi-Device-Collaboration-And-Customize#桌面自定义) 中也有提到，IP 的变化是会令人难受的，固定 IP 虽然能解决该问题，但一是这要求你对路由器有管理权，二是路由器要具备能固定 IP 的功能，再就是一旦换到另一个局域网，就又得重新设置。而本地域名则不会有这些问题。
-
-本地域名怎么获取呢？macOS 和 Windows 均使用 `hostname{:bash}` 命令即可，结果分别是 `Mac-mini.local` 和 `Cierra_Runis`。
-
-当然，这里给一下 [保留 IP 地址](https://zh.wikipedia.org/zh-cn/%E4%BF%9D%E7%95%99IP%E5%9C%B0%E5%9D%80) 和 [IPv6 地址分配情况](http://comeround.cn/article/ipv6-address.html) 的链接，请自行查阅。为 [安全起见](http://hello.fe80.cn/pages/ipv6/i6.html) 请不要把保留 IP 地址外的地址公布 —— 由于 IPv6 的分配被严格管理，可以查到你设备的位置，我自己查能精确到县级。
-
-下表来自 `ifconfig{:bash}` 和 `ipconfig /all{:bash}` 命令：
-
-|        设备        |                IP                 |        类型        |
-| :----------------: | :-------------------------------: | :----------------: |
-|      Mac mini      |         ☀️192.168.2.69/24         | IPv4 局域网私有 IP |
-|      Mac mini      | 🌞fe80::8bc:15d5:9bc3:9771%en1/64 | IPv6 链路本地地址  |
-| 拯救者 R7000P 2021 |         🌕192.168.2.75/24         | IPv4 局域网私有 IP |
-| 拯救者 R7000P 2021 | 🌝fe80::98b4:7a27:b5c0:d12f%18/64 | IPv6 链路本地地址  |
-
-- 这里不知道为什么是 %en1 而下面是 %9
-
-就我自己，在 Mac mini 和拯救者 R7000P 2021 搭配 Clash Verge 虚拟网卡开启及关闭时，使用 `ping{:bash}` 命令得到以下结果：
-
-|  操作系统   |        测试域名        |   ping 显示域名    | 双方皆关闭  |   双方皆打开    | 结果 |
-| :---------: | :--------------------: | :----------------: | :---------: | :-------------: | :--: |
-|    macOS    |         _Mac_          |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
-|    macOS    |       _Mac.lan_        |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
-|    macOS    |      _Mac.local_       |         -          |      -      |        -        |  💩  |
-|   Windows   |         _Mac_          |      Mac.lan       |     ☀️      |       ☀️        |  💔  |
-|   Windows   |       _Mac.lan_        |      Mac.lan       |     ☀️      | 198.18.0.69[^5] | 💢💢 |
-|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^5] | 💢💢 |
-|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
-|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
-|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |  127.0.0.1  |    127.0.0.1    |  😄  |
-|   Windows   |      **Mac-mini**      |   Mac-mini.local   |    🌞%9     |      🌞%9       |  🚀  |
-|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^5] | 💢💢 |
-| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |    🌞%9     | 198.18.0.72[^5] | 💢💢 |
-|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
-|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
-|    macOS    | **Cierra_Runis.local** | cierra_runis.local |     🌕      |       🌕        |  🚀  |
-|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
-|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |     🌕      | 198.18.0.73[^5] | 💢💢 |
-|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
-
-[^5]: Clash Verge 导致连续的 IP 地址变化
-
-- 删除线部分为不需要的测试，请使用 `localhost` 代替
-- 加粗部分为重要测试
-- 斜线部分为不确定是否能在其他局域网复现的测试
-- 💢: 不可用的 198.18.x.x 网段
-- 💩: 完全不通
-- 💔：此域名为路由器后台设备列表名称
-- 💢💢：不可用的 198.18.x.x 网段且两次结果不一样
-- 😄：“你老惦记你那本地域名干什么？那我缺的这个 `localhost` 谁给我补啊？”
-
-总结下来，两个最重要的测试，四个结果只有一个可用，有点尴尬了。
-
-而最后的结果很明显，Mac mini 给出的域名要去掉 `.local` 给 Windows 使用，而 Windows 反过来 —— 什么极限换家？
 
 ## 拓扑图
 
