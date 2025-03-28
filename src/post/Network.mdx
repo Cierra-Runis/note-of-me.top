@@ -9,15 +9,15 @@ date: '2025-03-25T23:34:26+08:00'
 
 ## 设备清单
 
-|    设备    |          型号           |        有线         |      Wi-Fi 世代       |                    简要备注                     |
-| :--------: | :---------------------: | :-----------------: | :-------------------: | :---------------------------------------------: |
-|    手机    |       [Redmi K70]       |          -          | Wi-Fi 7[^1]、Wi-Fi 6E |           MLO；[MIMO] 2x2；[同步双频]           |
-|    平板    | [iPad Pro 2021 11 inch] |          -          |       Wi-Fi 6E        |       2.4G、5G [同步双频]；[MIMO] 80 MHz        |
-|    Mac     |      [Mac mini M4]      |    RJ45 千兆网口    |       Wi-Fi 6E        |                        -                        |
-| 笔记本电脑 |  [拯救者 R7000P 2021]   |    RJ45 千兆网口    |        Wi-Fi 6        |                        -                        |
-|    光猫    |        H3-2sLite        | 四 RJ45 千兆 LAN 口 |      不需要在意       |                        -                        |
-|  主路由器  |    [锐捷 RG-MA3063]     |  四 RJ45 千兆网口   |        Wi-Fi 6        | 最高 3000 Mb/s；[MIMO] 2x2；四网口任一作 WAN 口 |
-|  副路由器  |        [斐讯 K2]        |  五 RJ45 百兆网口   |        Wi-Fi 5        |      最高 1200 Mb/s；五网口其一固定 WAN 口      |
+|    设备    |          型号           |        有线         |      Wi-Fi 世代       |                   简要备注                    |
+| :--------: | :---------------------: | :-----------------: | :-------------------: | :-------------------------------------------: |
+|    手机    |       [Redmi K70]       |          -          | Wi-Fi 7[^1]、Wi-Fi 6E |           MLO；MIMO 2x2；[同步双频]           |
+|    平板    | [iPad Pro 2021 11 inch] |          -          |       Wi-Fi 6E        |       2.4G、5G [同步双频]；MIMO 80 MHz        |
+|    Mac     |      [Mac mini M4]      |    RJ45 千兆网口    |       Wi-Fi 6E        |                       -                       |
+| 笔记本电脑 |  [拯救者 R7000P 2021]   |    RJ45 千兆网口    |        Wi-Fi 6        |                       -                       |
+|    光猫    |        H3-2sLite        | 四 RJ45 千兆 LAN 口 |      不需要在意       |                       -                       |
+|  主路由器  |    [锐捷 RG-MA3063]     |  四 RJ45 千兆网口   |        Wi-Fi 6        | 最高 3000 Mb/s；MIMO 2x2；四网口任一作 WAN 口 |
+|  副路由器  |        [斐讯 K2]        |  五 RJ45 百兆网口   |        Wi-Fi 5        |     最高 1200 Mb/s；五网口其一固定 WAN 口     |
 
 [^1]: Wi-Fi 7 相关功能需 OTA 升级后开放，具体时间需待有关监管部门批准后推送
 
@@ -27,10 +27,11 @@ date: '2025-03-25T23:34:26+08:00'
 [拯救者 R7000P 2021]: https://item.lenovo.com.cn/product/1013207.html
 [锐捷 RG-MA3063]: https://www.acwifi.net/21472.html
 [斐讯 K2]: https://product.yesky.com/product/977/977854/param.shtml
-[MIMO]: #mimo-配置
 [同步双频]: #双频合一与同步双频
 
 ## 参考信息
+
+提前声明：本文内容仅供参考，请以信息来源为准。
 
 ### 有关比特、字节、速率的换算
 
@@ -55,20 +56,22 @@ date: '2025-03-25T23:34:26+08:00'
 
 下表来自 [维基百科](https://zh.wikipedia.org/wiki/Wi-Fi#%E4%B8%96%E4%BB%A3)：
 
-| Wi-Fi 世代 | IEEE 标准  |   年份   |  最大速率  | 频段 GHz  |
-| :--------: | :--------: | :------: | :--------: | :-------: |
-|  Wi-Fi 4   | [802.11n]  |   2009   |  75 MB/s   |  2.4、5   |
-|  Wi-Fi 5   | [802.11ac] |   2013   |  867 MB/s  |   5[^2]   |
-|  Wi-Fi 6   | [802.11ax] |   2021   |  1.2 GB/s  |  2.4、5   |
-|  Wi-Fi 6E  | [802.11ax] |   2021   |  1.2 GB/s  |   6[^3]   |
-|  Wi-Fi 7   | [802.11be] | 2024[^4] | 5.765 GB/s | 2.4、5、6 |
-|  Wi-Fi 8   | [802.11bn] | ~~2028~~ | 12.5 GB/s  | 2.4、5、6 |
+| Wi-Fi 世代 | IEEE 标准  |   年份   |   最大速率    | 频段 GHz  |
+| :--------: | :--------: | :------: | :-----------: | :-------: |
+|  Wi-Fi 4   | [802.11n]  |   2009   |    75 MB/s    |  2.4、5   |
+|  Wi-Fi 5   | [802.11ac] |   2013   |   867 MB/s    |   5[^2]   |
+|  Wi-Fi 6   | [802.11ax] |   2021   |   1.2 GB/s    |  2.4、5   |
+|  Wi-Fi 6E  | [802.11ax] |   2021   |   1.2 GB/s    |   6[^3]   |
+|  Wi-Fi 7   | [802.11be] | 2024[^4] | 2.88 GB/s[^5] | 2.4、5、6 |
+|  Wi-Fi 8   | [802.11bn] | ~~2028~~ |   12.5 GB/s   | 2.4、5、6 |
 
 [^2]: Wi-Fi 5 仅指定在 5 GHz 频段的操作，2.4 GHz 频段的操作由 Wi-Fi 4 指定
 
 [^3]: Wi-Fi 6E 是指在 6 GHz 频段运行的 Wi-Fi 设备的行业名称，其提供了 Wi-Fi 6 的功能和特性并扩展到 6 GHz 频段
 
 [^4]: Wi-Fi 联盟在 2024 年开始认证 Wi-Fi 7 设备，但截至 2025 年 1 月，Wi-Fi 7 尚未被正式批准
+
+[^5]: 中文维基百科给出的数值已经过时，以英文维基百科为准
 
 [802.11n]: https://zh.wikipedia.org/wiki/IEEE_802.11n
 [802.11ac]: https://zh.wikipedia.org/wiki/IEEE_802.11ac
@@ -77,21 +80,25 @@ date: '2025-03-25T23:34:26+08:00'
 [802.11bn]: https://zh.wikipedia.org/wiki/IEEE_802.11bn
 
 - 在此注意 Wi-Fi 6 即我们目前最常用的 Wi-Fi 世代即可，而 Wi-Fi 7 的就属于战未来的了
-- 且在中国大陆，6 GHz 的频段尚未开放 —— 也有可能永远不会开放
+- 且在中国大陆，6 GHz 的频段尚未开放 —— 也有可能永远不会开放🤗
 
-### MIMO 配置
+### Wi-Fi 速率
 
-下表来自 [Intel 支持知识库](https://www.intel.cn/content/www/cn/zh/support/articles/000005725/wireless/legacy-intel-wireless-products.html)：
+参见 [此视频](https://www.bilibili.com/video/av787776505)：
 
-| Wi-Fi 6 MIMO 单条流带宽 MHz | 最大速率 MB/s |
-| :-------------------------: | :-----------: |
-|             20              |    17.916     |
-|             40              |    35.833     |
-|             80              |      75       |
-|             160             |      150      |
+Wi-Fi 最大速率 $=$ 编码方式 $\times$ 码率 $\times$ 最大信道有效子载波数量 $\times$ 单位时间符号传输数量 $\times$ 空间流数量
 
-- 例：若设备为 MIMO 2x2 160 MHz，则查表计算最大速率为 $150 \times 2 = 300$ MB/s
-- 大多数设备为 MIMO 2x2
+以 Wi-Fi 6 与 Wi-Fi 7 为例，其最大速率计算如下：
+
+| Wi-Fi 世代 | 调制方式 | 编码方式 | 码率 |  带宽   | 单位时间符号传输数量 | 空间流数量 | 最大速率  |
+| :--------: | :------: | :------: | :--: | :-----: | :------------------: | :--------: | :-------: |
+|  Wi-Fi 6   | 1024-QAM |    10    | 5/6  | 160 MHz |        73529         |  MIMO 8x8  | 1.2 GB/s  |
+|  Wi-Fi 7   | 4096-QAM |    12    | 5/6  | 320 MHz |        73529         |  MIMO 8x8  | 2.88 GB/s |
+
+- 大多数设备为 MIMO 2x2，也即对应 300 MB/s 和 720 MB/s
+- 有关调制方式参见 [此视频](https://www.bilibili.com/video/av113683137041105)
+
+其实 [Wi-Fi 6 英文维基百科](https://en.wikipedia.org/wiki/Wi-Fi_6#Rate_set) 给出了单空间流最大速率表格，其相比于中文维基百科的更为简洁。
 
 ### 双频合一与同步双频
 
@@ -101,13 +108,15 @@ date: '2025-03-25T23:34:26+08:00'
 
 ### 以太网 Ethernet
 
-|   速度   |  非正式名称  | IEEE 标准 | 线缆类型 | 最大传输距离 m |
-| :------: | :----------: | :-------: | :------: | :------------: |
-| 10 Mb/s  |  10 BASE-T   |   802.3   |  双绞线  |      100       |
-| 100 Mb/s |  100 BASE-T  |  802.3u   |  双绞线  |      100       |
-|  1 Gb/s  | 1000 BASE-LX |  802.3z   |   光纤   |      5000      |
-|  1 Gb/s  | 1000 BASE-T  |  802.3ab  |  双绞线  |      100       |
-| 10 Gb/s  |  10 GBASE-T  |  802.3an  |  双绞线  |      100       |
+|   速度   | 非正式名称  | IEEE 标准 | 线缆类型 | 最大传输距离 m |
+| :------: | :---------: | :-------: | :------: | :------------: |
+| 10 Mb/s  |  10BASE-T   |   802.3   |  双绞线  |      100       |
+| 100 Mb/s |  100BASE-T  |  802.3u   |  双绞线  |      100       |
+| [1 Gb/s] | 1000BASE-LX |  802.3z   |   光纤   |      5000      |
+| [1 Gb/s] | 1000BASE-T  |  802.3ab  |  双绞线  |      100       |
+| 10 Gb/s  |  10GBASE-T  |  802.3an  |  双绞线  |      100       |
+
+[1 Gb/s]: https://zh.wikipedia.org/wiki/吉比特以太网
 
 ### 双绞线 CAT
 
@@ -129,13 +138,15 @@ date: '2025-03-25T23:34:26+08:00'
 [CAT-7]: https://zh.wikipedia.org/wiki/CAT-7
 [CAT-7A]: https://zh.wikipedia.org/wiki/CAT-7#Class_FA
 
-- 超过六类线请考虑光纤
+- 超过 CAT-6A 线请考虑光纤
+
+自己找到一根双绞线，上面写着 `AMPHENGKE CAT5E UTP 24AWG 4PAIR AWM 2835 60°C FT4 VERIFIED MADE IN CHINA 063 M`，其中 AMPHENGKE 为~~某不知名~~品牌，规格为 CAT-5e，线规为 24 AWG，最高温度为 60 °C，FT4 为 CSA 防火等级，VERIFIED 表示已验证，MADE IN CHINA 为产地，063 M 为长度标定以方便切割。
 
 ## 网络互联
 
 这里先提前说明一点，网络配置属实困难，光是我们上面的参考信息就占了很多篇幅，一些相关的计算机网络知识也并未在此列出，以及想法很多时候都只是想法，真要实际操作起来，还是会遇到很多问题的。就目前我家的网络配置来说，这并未是一个经过深思熟虑的结果，一些难以解决的问题 —— 比如墙内预埋线的规格问题 —— 也只能暂时搁置，等以后有能力、有财力再来解决。
 
-我现在家里办理的是 1000 Mb/s 的光纤宽带，屋外的光纤线熔接与尾纤后接入光猫，光猫再通过 **~~超五类网线~~** 连接主路由器的 LAN1 口自动作为 WAN 口，主路由器的 LAN2 口连接副路由器的 WAN 口，副路由器的 LAN1 口连接 [Mac mini M4](#设备清单) 的 RJ45 网口，Mac mini M4 通过 Wi-Fi 连接 [iPad Pro 2021 11 inch](#设备清单)。
+我现在家里办理的是 1000 Mb/s 的光纤宽带，屋外的光纤线熔接与尾纤后接入光猫，光猫再通过 CAT-5e 网线连接主路由器的 LAN1 口自动作为 WAN 口，主路由器的 LAN2 口连接副路由器的 WAN 口，副路由器的 LAN1 口连接 [Mac mini M4](#设备清单) 的 RJ45 网口，Mac mini M4 通过 Wi-Fi 连接 [iPad Pro 2021 11 inch](#设备清单)。
 
 ## 本地域名
 
@@ -166,22 +177,22 @@ date: '2025-03-25T23:34:26+08:00'
 |    macOS    |       _Mac.lan_        |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
 |    macOS    |      _Mac.local_       |         -          |      -      |        -        |  💩  |
 |   Windows   |         _Mac_          |      Mac.lan       |     ☀️      |       ☀️        |  💔  |
-|   Windows   |       _Mac.lan_        |      Mac.lan       |     ☀️      | 198.18.0.69[^5] | 💢💢 |
-|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^5] | 💢💢 |
+|   Windows   |       _Mac.lan_        |      Mac.lan       |     ☀️      | 198.18.0.69[^6] | 💢💢 |
+|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^6] | 💢💢 |
 |    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
 |    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
 |    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |  127.0.0.1  |    127.0.0.1    |  😄  |
 |   Windows   |      **Mac-mini**      |   Mac-mini.local   |    🌞%9     |      🌞%9       |  🚀  |
-|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^5] | 💢💢 |
-| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |    🌞%9     | 198.18.0.72[^5] | 💢💢 |
+|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^6] | 💢💢 |
+| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |    🌞%9     | 198.18.0.72[^6] | 💢💢 |
 |  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
 |    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
 |    macOS    | **Cierra_Runis.local** | cierra_runis.local |     🌕      |       🌕        |  🚀  |
 |   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
-|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |     🌕      | 198.18.0.73[^5] | 💢💢 |
+|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |     🌕      | 198.18.0.73[^6] | 💢💢 |
 |   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
 
-[^5]: Clash Verge 导致连续的 IP 地址变化
+[^6]: Clash Verge 导致连续的 IP 地址变化
 
 - 删除线部分为不需要的测试，请使用 `localhost` 代替
 - 加粗部分为重要测试
@@ -283,7 +294,7 @@ iperf Done.
 
 </details>
 
-双向网速都在 936 Mb/s = 117 MB/s 以上，非常完美🥵。
+双向网速都在 936 Mb/s = 117 MB/s 以上，非常完美🥵，而且不得不说，Wi-Fi 比双绞线复杂太多了，双绞线一插就能近乎满速，Wi-Fi 就 ……
 
 ## 推荐软件
 
