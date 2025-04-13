@@ -1,6 +1,10 @@
 'use client';
 
-import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/outline';
+import {
+  MegaphoneIcon,
+  SpeakerWaveIcon,
+  SpeakerXMarkIcon,
+} from '@heroicons/react/24/outline';
 import { Button, ButtonGroup } from '@heroui/button';
 import { addToast } from '@heroui/toast';
 import { Midi } from '@tonejs/midi';
@@ -15,7 +19,6 @@ export default function MidiPlayer() {
   const synthRefs = useRef<Tone.PolySynth[]>([]);
   const muteRefs = useRef<boolean[]>([]);
   const soloRefs = useRef<boolean[]>([]);
-  const volumeRefs = useRef<Tone.Volume[]>([]);
 
   const { loading, openFilePicker } = useFilePicker({
     multiple: false,
@@ -38,33 +41,18 @@ export default function MidiPlayer() {
 
   const resetRefs = (midiData: Midi) => {
     synthRefs.current = midiData.tracks.map(() => {
-      const volume = new Tone.Volume(0).toDestination();
-      volumeRefs.current.push(volume);
-      return new Tone.PolySynth(Tone.Synth).connect(volume);
+      return new Tone.PolySynth(Tone.Synth).toDestination();
     });
     muteRefs.current = midiData.tracks.map(() => false);
     soloRefs.current = midiData.tracks.map(() => false);
-    volumeRefs.current = midiData.tracks.map(() =>
-      new Tone.Volume(0).toDestination(),
-    );
   };
 
   const toggleMute = (index: number) => {
     muteRefs.current[index] = !muteRefs.current[index];
-    updateVolumes();
   };
 
   const toggleSolo = (index: number) => {
     soloRefs.current[index] = !soloRefs.current[index];
-    updateVolumes();
-  };
-
-  const updateVolumes = () => {
-    const soloActive = soloRefs.current.some(Boolean);
-    midi?.tracks.forEach((_, i) => {
-      const muted = soloActive ? !soloRefs.current[i] : muteRefs.current[i];
-      volumeRefs.current[i].volume.value = muted ? -Infinity : 0;
-    });
   };
 
   const startPlayback = async () => {
@@ -78,7 +66,7 @@ export default function MidiPlayer() {
 
     if (!midi) {
       return addToast({
-        color: 'danger',
+        color: 'warning',
         description: '请先选择 MIDI 文件',
         title: '错误',
       });
@@ -93,17 +81,20 @@ export default function MidiPlayer() {
       const synth = synthRefs.current[i];
       track.notes.forEach((note) => {
         Tone.Transport.schedule((time) => {
-          if (
-            (soloRefs.current.some(Boolean) && !soloRefs.current[i]) ||
-            muteRefs.current[i]
-          )
-            return;
+          const hasSolo = soloRefs.current.some(Boolean);
+          const isSolo = soloRefs.current[i];
+          if (hasSolo && !isSolo) return;
+
+          const isMuted = muteRefs.current[i];
+          if (isMuted) return;
+
           synth.triggerAttackRelease(
             note.name,
             note.duration,
             time,
             note.velocity,
           );
+
           Tone.Draw.schedule(() => {
             setActiveKeys((prev) => ({ ...prev, [`${i}-${note.name}`]: true }));
             setTimeout(() => {
@@ -192,12 +183,12 @@ export default function MidiPlayer() {
                   />
 
                   <Button
+                    isIconOnly
                     onPress={() => toggleSolo(i)}
                     size='sm'
-                    variant='ghost'
-                  >
-                    {soloRefs.current[i] ? '取消独奏' : '独奏'}
-                  </Button>
+                    startContent={<MegaphoneIcon className='w-4' />}
+                    variant={soloRefs.current[i] ? 'faded' : 'ghost'}
+                  />
                 </ButtonGroup>
               </div>
             </div>
