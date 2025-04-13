@@ -81,7 +81,7 @@ export default function MidiPage() {
           const isActive = activeKeys[`${trackIndex}-${note}`];
           return (
             <div
-              className={`h-5 w-1 rounded-md bg-foreground-50 transition-all duration-[1] ease-in-out lg:h-10 lg:w-2`}
+              className={`h-5 w-1 rounded-md bg-foreground-50 transition-all duration-75 ease-in-out lg:h-10 lg:w-2`}
               key={note}
               style={{
                 backgroundColor: isActive
