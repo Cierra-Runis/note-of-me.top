@@ -17,7 +17,7 @@ export default function MidiPlayer() {
   const soloRefs = useRef<boolean[]>([]);
   const volumeRefs = useRef<Tone.Volume[]>([]);
 
-  const { errors, loading, openFilePicker } = useFilePicker({
+  const { loading, openFilePicker } = useFilePicker({
     multiple: false,
     onFilesSuccessfullySelected: ({ filesContent }) => {
       const file = filesContent[0];
@@ -131,7 +131,7 @@ export default function MidiPlayer() {
           const isActive = activeKeys[`${trackIndex}-${note}`];
           return (
             <div
-              className='h-5 w-1 rounded-md bg-foreground-50 transition-all duration-75 ease-in-out lg:h-8 lg:w-2'
+              className='h-5 w-1 rounded-md bg-foreground-50 lg:h-8 lg:w-2'
               key={note}
               style={{
                 backgroundColor: isActive
@@ -164,9 +164,13 @@ export default function MidiPlayer() {
       <div className='flex flex-col'>
         {midi &&
           midi.tracks.map((track, i) => (
-            <div className='w-full max-w-5xl' key={i}>
+            <div key={i}>
               <div className='flex items-center gap-3'>
-                <span className='truncate text-sm font-medium'>
+                <span
+                  style={{
+                    color: `hsl(${(i * 30) % 360}, 100%, 70%)`,
+                  }}
+                >
                   {track.name || `轨道 ${i + 1}`}
                 </span>
               </div>
