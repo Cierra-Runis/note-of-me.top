@@ -214,6 +214,33 @@ Wi-Fi 最大速率 $=$ 编码方式 $\times$ 码率 $\times$ 最大信道有效�
 
 而最后的结果很明显，Mac mini 给出的域名要去掉 `.local` 给 Windows 使用，而 Windows 反过来 —— 什么极限换家？
 
+### Windows 与 macOS 在本地域名上的差异
+
+在 Windows 上，使用 `hostname{:bash}` 命令得到的结果是设备名称，这可以通过 `设置 > 系统` 查看并修改 —— 在此我修改为 `Laptop`。
+
+更新 Mac 版本后 `hostname{:bash}` 给出 `Mac.lan`。据查，在 macOS 上 `hostname{:bash}`、`scutil --get LocalHostName` 和 `scutil --get ComputerName` 是三个不同的东西 —— 分为输出 `Mac`、`HostName: not set`、`Mac-mini`。
+
+第一个我不知道。第二个是我们需要的，这也可以通过 `系统设置 > 共享` 查看并修改。第三个则是我们在 `系统设置 > 关于本机` 中看到的名称。
+
+在此 macOS 以 `scutil --get LocalHostName` 给出的结果为准，不作修改仍为 `Mac-mini`，而接续的 `.local` 是无法更改的。
+
+我们的最终结果是：
+
+| 操作系统 |    测试域名    | ping 显示域名  |    双方皆打开    |
+| :------: | :------------: | :------------: | :--------------: |
+|  macOS   |     Laptop     |   laptop.lan   |        🌕        |
+|  macOS   |   Laptop.lan   |   laptop.lan   |        🌕        |
+|  macOS   |  Laptop.local  |  laptop.local  |        🌕        |
+| Windows  |    Mac-mini    | Mac-mini.local |       🌞%9       |
+| Windows  |  Mac-mini.lan  |  Mac-mini.lan  | 198.18.0.127[^6] |
+| Windows  | Mac-mini.local | Mac-mini.local | 198.18.0.129[^6] |
+
+因而我们在 [本地域名](#本地域名) 一节中给出的结论仍然适用。
+
+补充一下，在路由器后台能看到设备列表中，Windows 设备的名称变为了 `Laptop`，而 Mac mini 的名称是 `Mac`。
+
+我们设置一下 macOS 的 `HostName` 为 `Mac-mini.local` 并重启机器看看结果又会如何 —— 答案是毫无变化，记得使用 `sudo scutil --set HostName ''{:bash}` 重新清空。
+
 ## 回到过去
 
 两台设备直接使用网线连接，这就是最简单的局域网 —— 教程可参考 [此视频](https://www.bilibili.com/video/av424790900)：
