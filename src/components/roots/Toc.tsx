@@ -3,7 +3,8 @@
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
 import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@heroui/scroll-shadow';
-import { clsx } from '@heroui/shared-utils';
+import clsx from 'clsx';
+
 import NextLink from 'next/link';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
