@@ -167,6 +167,9 @@ importers:
       '@vercel/speed-insights':
         specifier: ^1.2.0
         version: 1.2.0(next@15.1.7(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       contentlayer2:
         specifier: ^0.5.4
         version: 0.5.7(acorn@8.14.1)(esbuild@0.25.3)
