@@ -1,9 +1,8 @@
-import type { MDXComponents } from 'mdx/types';
-
 import MarkdownImage from '@/components/MarkdownImage';
 import { Alert } from '@heroui/alert';
 import { Checkbox } from '@heroui/checkbox';
 import { Kbd } from '@heroui/kbd';
+import { MDXComponents } from 'mdx/types';
 import NextLink from 'next/link';
 import { HTMLProps } from 'react';
 

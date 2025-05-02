@@ -63,6 +63,7 @@
     "@heroui/user": "2.2.7",
     "@icons-pack/react-simple-icons": "^11.2.0",
     "@tonejs/midi": "^2.0.28",
+    "@types/mdx": "^2.0.13",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
