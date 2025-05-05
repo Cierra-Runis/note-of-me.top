@@ -244,6 +244,82 @@ Wi-Fi 最大速率 $=$ 编码方式 $\times$ 码率 $\times$ 最大信道有效�
 
 尝试使用 `sudo scutil --set HostName 'Mac-mini.local'{:bash}` 并重启机器看看结果又会如何 —— 答案是测试结果毫无变化，而前一张表前两个输出都变为了 `Mac-mini.local` —— 记得使用 `sudo scutil --set HostName ''{:bash}` 重新清空。
 
+## DDNS
+
+所以为什么要局限于本地域名呢？大家好啊，我是 DDNS，今天来点大家想看的东西啊。
+
+IPv6 的解决了 IPv4 的问题，这种屁话略，首先保证光猫、路由器、设备都支持并开启 IPv6，保证能获取到 IPv6 地址。
+
+本网站 `note-of-me.top` 的域名解析服务商是 [阿里云](https://www.aliyun.com)，阿里云会附赠一个免费的域名解析服务，我们可以使用它来实现 DDNS。
+
+首先我们得先获取到阿里云的 AccessKey ID 和 AccessKey Secret，具体操作略，总之要配置完 [阿里云 CLI](https://www.alibabacloud.com/help/zh/cli/installation-guide/) 工具。
+
+<details>
+  <summary>macOS `~/.local/bin/ddns`</summary>
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+if ! command -v jq >/dev/null; then
+echo "Error: 'jq' is not installed. You can install it with 'brew install jq' on macOS."
+exit 1
+fi
+
+if ! command -v aliyun >/dev/null; then
+echo "Error: 'aliyun' CLI is not installed. See https://github.com/aliyun/aliyun-cli for installation instructions."
+exit 1
+fi
+
+# https://api.aliyun.com/document/Alidns/2015-01-09/AddDomainRecord
+
+DOMAIN_NAME="note-of-me.top"
+RR=$(scutil --get LocalHostName) # Use LocalHostName as prefix
+RECORD_TYPE="AAAA"
+
+IPV6_ADDR=$(ifconfig "$(route -n get -inet6 default | awk '/interface:/ {print $2}')" |
+awk '/inet6/ && !/fe80/ {print $2}' |
+grep -vE 'temporary|dynamic' |
+head -n1)
+
+if [ -z "$IPV6_ADDR" ]; then
+echo "[$(date '+%F %T')] No IPv6 address available"
+exit 1
+fi
+
+RECORD_INFO=$(aliyun alidns DescribeSubDomainRecords \
+  --SubDomain "$RR.$DOMAIN_NAME" \
+  --Type "$RECORD_TYPE")
+
+RECORD_ID=$(echo "$RECORD_INFO" | jq -r '.DomainRecords.Record[0].RecordId // empty')
+RECORD_IP=$(echo "$RECORD_INFO" | jq -r '.DomainRecords.Record[0].Value // empty')
+
+echo "[$(date '+%F %T')] Current DNS: $RECORD_IP"
+
+if [ -n "$RECORD_ID" ]; then
+if [ "$RECORD_IP" = "$IPV6_ADDR" ]; then
+echo "[$(date '+%F %T')] IPv6 ($IPV6_ADDR) no changed"
+    exit 0
+  fi
+  echo "[$(date '+%F %T')] Updating $RR.$DOMAIN_NAME: $RECORD_IP => $IPV6_ADDR"
+  aliyun alidns UpdateDomainRecord \
+    --RecordId "$RECORD_ID" \
+ --RR "$RR" \
+    --Type "$RECORD_TYPE" \
+ --Value "$IPV6_ADDR" >/dev/null
+else
+  echo "[$(date '+%F %T')] Creating $RR.$DOMAIN_NAME => $IPV6_ADDR"
+  aliyun alidns AddDomainRecord \
+    --DomainName "$DOMAIN_NAME" \
+ --RR "$RR" \
+    --Type "$RECORD_TYPE" \
+ --Value "$IPV6_ADDR" >/dev/null
+fi
+
+```
+
+</details>
+
 ## 回到过去
 
 两台设备直接使用网线连接，这就是最简单的局域网 —— 教程可参考 [此视频](https://www.bilibili.com/video/av424790900)：
