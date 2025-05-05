@@ -21,7 +21,7 @@ export default function PostCard(post: Post) {
           {`${post.wordCount} 字`}
         </Chip>
       </div>
-      <p className='line-clamp-3 break-all [&>*:last-child]:mb-0 [&>*]:mb-3'>
+      <p className='line-clamp-3 break-all [&>*:last-child]:mb-0 *:mb-3'>
         {post.body.raw}
       </p>
     </NextLink>
