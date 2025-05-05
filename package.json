@@ -45,6 +45,7 @@
     "@heroui/popover": "2.3.20-beta.1",
     "@heroui/progress": "2.2.16-beta.1",
     "@heroui/radio": "2.3.19-beta.1",
+    "@heroui/react": "^2.8.0-beta.4",
     "@heroui/ripple": "2.2.15-beta.1",
     "@heroui/scroll-shadow": "2.3.14-beta.1",
     "@heroui/select": "2.4.20-beta.1",
