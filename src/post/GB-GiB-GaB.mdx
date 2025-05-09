@@ -1,11 +1,12 @@
 ---
-title: 'GB? GiB~ GeB!'
+title: GB? GiB~ GeB!
 date: '2025-05-09T08:04:32+08:00'
+id: 9v6m5x68htmu
 ---
 
-# Introducing "GeB": A Clear Decimal Counterpart to GiB
+## Introducing "GeB": A Clear Decimal Counterpart to GiB
 
-# 引入“GeB”：GiB 的对称十进制搭档
+## 引入“GeB”：GiB 的对称十进制搭档
 
 We strongly recommend GeB over GB for all decimal-based contexts.
 
@@ -19,11 +20,12 @@ When measuring digital storage, we often encounter **GB** and **GiB**, but their
 
 在衡量数字存储空间时，我们常看到 **GB** 和 **GiB**，但它们实际意义大不相同：
 
-- **GiB** (Gibibyte): $2^{30} = 1,073,741,824$ Bytes — Standardized by the IEC.
-- **GiB**（Gibibyte）：$2^{30} = 1,073,741,824$ 字节 —— IEC 二进制标准单位。
-
-- **GB** (Gigabyte): $10^9 = 1,000,000,000$ Bytes — SI-defined, but ambiguously used in practice.
-- **GB**（Gigabyte）：$10^9 = 1,000,000,000$ 字节 —— SI 十进制单位，但实际使用非常混乱。
+| Abbreviation 缩写 | Fullname 全称 |       Bytes 字节数       |                                  |
+| :---------------: | :-----------: | :----------------------: | :------------------------------: |
+|        GiB        |   Gibibyte    | $2^{30} = 1,073,741,824$ |     Standardized by the IEC      |
+|        GiB        |   Gibibyte    | $2^{30} = 1,073,741,824$ |        IEC 二进制标准单位        |
+|        GB         |   Gigabyte    |  $10^9 = 1,000,000,000$  | SI-defined, but ambiguously used |
+|        GB         |   Gigabyte    |  $10^9 = 1,000,000,000$  |  SI 十进制单位，但使用非常混乱   |
 
 This leads to confusion: storage vendors use GB, but operating systems show GiB. Users often feel shortchanged when numbers don't match.
 
@@ -63,7 +65,7 @@ Abbreviations like GB, GiB, GaB, and GeB can be confusing not only in meaning bu
 
 类似 GB、GiB、GaB 和 GeB 这样的缩写，不仅意义容易混淆，发音在不同国家也存在差异。以下是一些主流语言环境的常见处理方式：
 
-|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |  ~~GaB~~   |   _GeB_    |            处理方式             |
+|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |  ~~GaB~~   |   _GeB_    |         Method 处理方式         |
 | :-----------------: | :--------: | :------------: | :--------: | :--------: | :-----------------------------: |
 |    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gɛb/    |   /gæb/    |    As Word[^1] 作为单词[^2]     |
 |     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Giga-Byte  | Gede-Byte  |     Read Fullname 念出全称      |
@@ -123,6 +125,8 @@ This symmetry improves consistency and provides a clear mental model for interpr
 > Note: In line with SI conventions, we use **k**B for $10^3$ bytes. Though **K**B is commonly seen, it's technically incorrect.
 >
 > 注：根据 SI 规范，$10^3$ 字节应写作 **k**B，虽然实际中常见写法为 **K**B，但那是不规范的。
+
+> Note: Although
 
 ## Implementation & Adoption
 

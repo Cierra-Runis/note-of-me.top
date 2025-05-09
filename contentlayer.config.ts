@@ -1,3 +1,4 @@
+import { Post as GeneratedPost } from 'contentlayer/generated';
 import {
   ComputedFields,
   defineDocumentType,
@@ -26,16 +27,28 @@ const computedFields: ComputedFields = {
 };
 
 export const Post = defineDocumentType(() => ({
+  name: 'Post',
   computedFields,
   contentType: 'mdx',
   fields: {
+    id: { required: true, type: 'string' },
     date: { required: true, type: 'date' },
     title: { required: true, type: 'string' },
     description: { type: 'string' },
   },
   filePathPattern: `**/*.mdx`,
-  name: 'Post',
 }));
+
+async function validateDuplicateIds(allDocs: GeneratedPost[]) {
+  const ids = allDocs.map((doc) => doc.id);
+
+  const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
+  if (duplicates.length) {
+    throw new Error(`[Error] Duplicate ids found: ${duplicates.join(', ')}`);
+  }
+
+  console.log('No duplicate ids found');
+}
 
 const rehypeKaTeXOptions: KatexOptions = {
   output: 'html',
@@ -73,5 +86,9 @@ export default makeSource({
       // https://github.com/remarkjs/remark-gfm
       [remarkGFM, remarkGFMOptions],
     ],
+  },
+  onSuccess: async (importData) => {
+    const { allPosts } = await importData();
+    await validateDuplicateIds(allPosts);
   },
 });

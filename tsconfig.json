@@ -1,36 +1,37 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": ".",
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noErrorTruncation": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    }
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext"
   },
+  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
-  "exclude": ["node_modules"]
+  ]
 }
