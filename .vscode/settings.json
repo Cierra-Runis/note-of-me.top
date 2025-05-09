@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["Contentlayer", "katex", "Kode", "heroui", "Noto", "saira"],
+  "cSpell.words": [
+    "Contentlayer",
+    "katex",
+    "Kode",
+    "heroui",
+    "Noto",
+    "saira"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
@@ -21,8 +28,14 @@
   },
   "i18n-ally.editor.preferEditor": true,
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": ["./src/i18n"],
+  "i18n-ally.localesPaths": [
+    "./src/i18n"
+  ],
   "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+    [
+      "clsx\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
+  ],
+  "commentTranslate.multiLineMerge": false
 }

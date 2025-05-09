@@ -1,0 +1,163 @@
+---
+title: 'GB? GiB~ GaB!'
+date: '2025-05-09T08:04:32+08:00'
+---
+
+# Introducing “GaB”: A Clear Decimal Counterpart to GiB
+
+# 引入 “GaB”：GiB 的对称十进制搭档
+
+## Background
+
+## 背景
+
+When measuring digital storage, we often encounter **GB** and **GiB**, but their meanings differ significantly:
+
+在衡量数字存储空间时，我们常看到 **GB** 和 **GiB**，但它们实际意义大不相同：
+
+- **GiB** (Gibibyte): $2^{30} = 1,073,741,824$ Bytes — standardized by the IEC.
+- **GiB**（Gibibyte）：$2^{30} = 1,073,741,824$ 字节 —— IEC 二进制标准单位。
+- **GB** (Gigabyte): $10^9 = 1,000,000,000$ Bytes — SI-defined, but ambiguously used in practice.
+- **GB**（Gigabyte）：$10^9 = 1,000,000,000$ 字节 —— SI 十进制单位，但实际使用非常混乱。
+
+This leads to confusion: storage vendors use GB, but operating systems show GiB. Users often feel shortchanged when numbers don't match.
+
+这造成了大量误解：硬盘厂商标注 **GB**，但操作系统显示的是 **GiB**，用户总感觉“买亏了”。
+
+## Proposal: Introduce **GaB**
+
+## 提案：引入 **GaB**
+
+We propose a new symbol: **GaB**, standing for **G**ig**a**byte, as a clean, unambiguous counterpart to **GiB**.
+
+我们提出一个新的缩写：**GaB**，表示 “**G**ig**a**byte”（十进制千兆字节），形成与 **GiB** 对称又清晰的一对单位。
+
+| Abbreviation | Full Name | Base | Bytes           | Use Case              |
+| ------------ | --------- | ---- | --------------- | --------------------- |
+| **GaB**      | Gigabyte  | 10   | 1,000,000,000 B | Disk sizes, marketing |
+| **GiB**      | Gibibyte  | 2    | 1,073,741,824 B | Memory, OS readouts   |
+
+| 缩写    | 全称     | 进制 | 字节数          | 推荐使用场景       |
+| ------- | -------- | ---- | --------------- | ------------------ |
+| **GaB** | Gigabyte | 10   | 1,000,000,000 B | 硬盘、市场宣传     |
+| **GiB** | Gibibyte | 2    | 1,073,741,824 B | 内存、系统工具显示 |
+
+## Why GaB (not GeB)?
+
+## 为什么选 “GaB” 而不是 “GeB”？
+
+We initially considered **GeB**, using "e" from d**e**cimal (similar to "i" in GiB from b**i**nary), but ultimately rejected it in favor of **GaB**.
+
+曾经我们也考虑过 **GeB**，e 来自 d**e**cimal —— 就像 **GiB** 的 i 来自 b**i**nary 一样 —— 但最终决定放弃它，原因如下：
+
+| Abbreviation | Derived From           | Symmetry | Pronunciation       | Familiarity | Naturalness |
+| ------------ | ---------------------- | -------- | ------------------- | ----------- | ----------- |
+| GeB          | **G**iga + d**e**cimal | Partial  | Close to GiB        | Low         | Unintuitive |
+| GaB          | **G**ig**a**           | Perfect  | **/gæb/** VS. /gɪb/ | High        | Natural     |
+
+| 缩写 | 词源                   | 对称性   | 发音清晰度              | 可接受性 | 是否自然           |
+| ---- | ---------------------- | -------- | ----------------------- | -------- | ------------------ |
+| GeB  | **G**iga + d**e**cimal | 类似 GiB | 易与 GiB 混淆           | 不高     | 不符合词根缩写习惯 |
+| GaB  | **G**iga（首尾）       | 完全对称 | **与 GiB 发音差异明显** | 高       | 自然且直观         |
+
+**GaB** is symmetric with **GiB**, uses letters from the same word, and avoids confusion in both writing and speech.
+
+**GaB** 与 **Gib** 对称，使用同一单词的字母，并避免在写作和语音中混淆。
+
+## Pronunciation Guide
+
+## 发音说明
+
+To ensure clarity in spoken conversation:
+
+为了确保口语中的清晰度：
+
+- **GiB** = /gɪb/ (“gib”), as in _give_
+- **GaB** = /gæb/ (“gab”), as in _grab_ or _gab_
+
+- **GiB**：发音为 “**gib**”（/gɪb/），类似 give
+- **GaB**：发音为 “**gab**”（/gæb/），类似 gab（v. 闲聊）
+
+## Beyond GaB: A Whole Family of Decimal Units
+
+## 延伸：MaB，TaB，PaB？
+
+The same pattern can apply to other SI-prefixed units. Here’s a proposed decimal counterpart family:
+
+有了 GaB，自然可以推广其它单位：
+
+| Binary Unit    | Traditional Decimal | Proposed Decimal Symbol |
+| -------------- | ------------------- | ----------------------- |
+| MiB (Mebibyte) | MB (Megabyte)       | MaB                     |
+| GiB (Gibibyte) | GB (Gigabyte)       | GaB                     |
+| TiB (Tebibyte) | TB (Terabyte)       | TaB                     |
+| PiB (Pebibyte) | PB (Petabyte)       | PaB                     |
+
+| 二进制单位     | 十进制单位    | 十进制缩写 |
+| -------------- | ------------- | ---------- |
+| MiB (Mebibyte) | MB (Megabyte) | MaB        |
+| GiB (Gibibyte) | GB (Gigabyte) | GaB        |
+| TiB (Tebibyte) | TB (Terabyte) | TaB        |
+| PiB (Pebibyte) | PB (Petabyte) | PaB        |
+
+This symmetry improves consistency and provides a clear mental model for interpreting storage sizes.
+
+这样一来，单位成对对称，规则清晰，记忆无压力！
+
+## Implementation & Adoption
+
+## 推广建议
+
+To encourage adoption:
+
+鼓励采用：
+
+- Use **GaB** in developer tools, file explorers, and documentation
+- Clarify unit meanings explicitly in software UIs
+- Encourage open-source libraries to support config options like:
+  `formatSize(value, { unit: 'GaB' }){:ts}`
+
+- 在开发工具、系统界面、文件管理器中使用 **GaB**
+- 项目文档中教育用户和贡献者，说明 GiB 与 GaB 的区别
+- 推动开源库支持配置项：
+  `formatSize(value, { unit: 'GaB' }){:ts}`
+
+## Why Not Just Stick with GB?
+
+## 为什么不继续用 GB？
+
+**GB** is a victim of historical ambiguity:
+
+**GB** 虽然在 SI 中是合法单位，但现实中早已变成“模糊单位”：
+
+- Storage vendors use GB as a decimal unit (because bigger numbers look better)
+- Operating systems often interpret GB as binary (causing misleading capacity displays)
+
+- 厂商用它表达十进制（大一点好卖）
+- 系统用它表达二进制（真实精确）
+
+The result? A “500 GB” hard drive shows only “465 GiB” in your OS.
+
+结果导致用户买了 500 GB 的硬盘，系统却显示只有 465 GiB。
+
+**GaB** avoids this trap by:
+
+> Providing a clear, intentional, and symmetrical decimal unit to pair with GiB.
+
+**GaB** 通过 _提供一个清晰，有意和对称的十进制单元与 **GiB** 对应_ 避免了这个陷阱。
+
+## Conclusion
+
+## 结语
+
+It’s time to clean up our units — for clarity, consistency, and communication.
+
+让我们给计算机单位一套干净、统一、可说清楚的命名方式。
+
+Let’s make **GaB** the official decimal twin of **GiB**, and stop guessing how many bytes you really got.
+
+不再被“到底是多少字节”搞晕 —— 从 **GiB VS. GaB** 开始，让人类和机器都能更清楚地交流。
+
+**Clear units. Clean minds. GaB it.**
+
+**让单位清晰，从此刻开始。**
