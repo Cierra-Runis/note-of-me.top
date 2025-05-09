@@ -3,7 +3,10 @@ import { globby } from 'globby';
 import matter from 'gray-matter';
 import { customAlphabet } from 'nanoid';
 
-const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 12);
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+/// $\sqrt{ -2 \cdot 26^6 \ln{1 - 0.01} } + 1/2 = 2492$
+/// $\sqrt{ -2 \cdot 26^6 \ln{1 - 0.001} } + 1/2 = 787$
+const nanoid = customAlphabet(alphabet, 6);
 
 async function main() {
   const files = await globby(['**/*.mdx'], { gitignore: true });
@@ -20,7 +23,7 @@ async function main() {
       await fs.writeFile(file, updated);
       console.log(`✅ Added id to ${file}`);
     } else {
-      console.log(`🟡 Skipped (already has id): ${file}`);
+      console.log(`🟡 Skipped ${id}: ${file}`);
     }
   }
 }
