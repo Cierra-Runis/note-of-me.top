@@ -1,11 +1,11 @@
 ---
-title: 'GB? GiB~ GaB!'
+title: 'GB? GiB~ GeB!'
 date: '2025-05-09T08:04:32+08:00'
 ---
 
-# Introducing “GaB”: A Clear Decimal Counterpart to GiB
+# Introducing "GeB": A Clear Decimal Counterpart to GiB
 
-# 引入 “GaB”：GiB 的对称十进制搭档
+# 引入“GeB”：GiB 的对称十进制搭档
 
 ## Background
 
@@ -15,7 +15,7 @@ When measuring digital storage, we often encounter **GB** and **GiB**, but their
 
 在衡量数字存储空间时，我们常看到 **GB** 和 **GiB**，但它们实际意义大不相同：
 
-- **GiB** (Gibibyte): $2^{30} = 1,073,741,824$ Bytes — standardized by the IEC.
+- **GiB** (Gibibyte): $2^{30} = 1,073,741,824$ Bytes — Standardized by the IEC.
 - **GiB**（Gibibyte）：$2^{30} = 1,073,741,824$ 字节 —— IEC 二进制标准单位。
 - **GB** (Gigabyte): $10^9 = 1,000,000,000$ Bytes — SI-defined, but ambiguously used in practice.
 - **GB**（Gigabyte）：$10^9 = 1,000,000,000$ 字节 —— SI 十进制单位，但实际使用非常混乱。
@@ -24,81 +24,104 @@ This leads to confusion: storage vendors use GB, but operating systems show GiB.
 
 这造成了大量误解：硬盘厂商标注 **GB**，但操作系统显示的是 **GiB**，用户总感觉“买亏了”。
 
-## Proposal: Introduce **GaB**
+## Proposal: Introduce **GeB**
 
-## 提案：引入 **GaB**
+## 提案：引入 **GeB**
 
-We propose a new symbol: **GaB**, standing for **G**ig**a**byte, as a clean, unambiguous counterpart to **GiB**.
+We propose a new symbol: **GeB**, standing for **G**id**e**byte (**G**iga-d**e**cimal Byte), as a clean, unambiguous counterpart to **GiB**, standing for **G**ib**i**byte (**G**iga-b**i**nary Byte).
 
-我们提出一个新的缩写：**GaB**，表示 “**G**ig**a**byte”（十进制千兆字节），形成与 **GiB** 对称又清晰的一对单位。
+我们提出一个新的缩写：**GeB**，表示 **G**id**e**byte（十进制千兆字节），与 **GiB** 这一表示 **G**ib**i**byte（二进制千兆字节）对称又清晰的一对单位。
 
-| Abbreviation | Full Name | Base | Bytes           | Use Case              |
-| ------------ | --------- | ---- | --------------- | --------------------- |
-| **GaB**      | Gigabyte  | 10   | 1,000,000,000 B | Disk sizes, marketing |
-| **GiB**      | Gibibyte  | 2    | 1,073,741,824 B | Memory, OS readouts   |
+| Abbreviation 缩写 | Fullname 全称 | Base 进制 |         Bytes 字节数         |
+| :---------------: | :-----------: | :-------: | :--------------------------: |
+|        GeB        |   Gidebyte    |    10     | $(10^{3})^3 = 1,000,000,000$ |
+|        GiB        |   Gibibyte    |     2     | $(2^{10})^3 = 1,073,741,824$ |
 
-| 缩写    | 全称     | 进制 | 字节数          | 推荐使用场景       |
-| ------- | -------- | ---- | --------------- | ------------------ |
-| **GaB** | Gigabyte | 10   | 1,000,000,000 B | 硬盘、市场宣传     |
-| **GiB** | Gibibyte | 2    | 1,073,741,824 B | 内存、系统工具显示 |
+## Why GeB (not GaB)?
 
-## Why GaB (not GeB)?
+## 为什么选 GeB 而不是 GaB？
 
-## 为什么选 “GaB” 而不是 “GeB”？
+We initially considered **GaB**, using "a" from Gig**a**, but ultimately rejected it in favor of **GaB**.
 
-We initially considered **GeB**, using "e" from d**e**cimal (similar to "i" in GiB from b**i**nary), but ultimately rejected it in favor of **GaB**.
+曾经我们也考虑过 **GaB**，a 来自 Gig**a**，但最终决定放弃它，原因如下：
 
-曾经我们也考虑过 **GeB**，e 来自 d**e**cimal —— 就像 **GiB** 的 i 来自 b**i**nary 一样 —— 但最终决定放弃它，原因如下：
+| Abbreviation 缩写 |  Fullname 全称   | Symmetry 对称性 |     Pronunciation 发音     | Systematicity 系统性  |
+| :---------------: | :--------------: | :-------------: | :------------------------: | :-------------------: |
+|        GeB        | **G**id**e**byte |       ✅        | [GeB VS. GaB](#geb-vs-gab) | ✅ IEC-like（类 IEC） |
+|        GaB        | **G**ig**a**byte |       ✅        | [GeB VS. GaB](#geb-vs-gab) |  ❌ Inherit（继承）   |
 
-| Abbreviation | Derived From           | Symmetry | Pronunciation       | Familiarity | Naturalness |
-| ------------ | ---------------------- | -------- | ------------------- | ----------- | ----------- |
-| GeB          | **G**iga + d**e**cimal | Partial  | Close to GiB        | Low         | Unintuitive |
-| GaB          | **G**ig**a**           | Perfect  | **/gæb/** VS. /gɪb/ | High        | Natural     |
+## Pronunciation Across Languages
 
-| 缩写 | 词源                   | 对称性   | 发音清晰度              | 可接受性 | 是否自然           |
-| ---- | ---------------------- | -------- | ----------------------- | -------- | ------------------ |
-| GeB  | **G**iga + d**e**cimal | 类似 GiB | 易与 GiB 混淆           | 不高     | 不符合词根缩写习惯 |
-| GaB  | **G**iga（首尾）       | 完全对称 | **与 GiB 发音差异明显** | 高       | 自然且直观         |
+## 不同语言的发音
 
-**GaB** is symmetric with **GiB**, uses letters from the same word, and avoids confusion in both writing and speech.
+Abbreviations like GB, GiB, GaB, and GeB can be confusing not only in meaning but also in pronunciation. Different language communities handle technical acronyms differently, which may lead to confusion when discussing storage units.
 
-**GaB** 与 **Gib** 对称，使用同一单词的字母，并避免在写作和语音中混淆。
+类似 GB、GiB、GaB 和 GeB 这样的缩写，不仅意义容易混淆，发音在不同国家也存在差异。以下是一些主流语言环境的常见处理方式：
 
-## Pronunciation Guide
+|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |  ~~GaB~~   |   _GeB_    |            处理方式             |
+| :-----------------: | :--------: | :------------: | :--------: | :--------: | :-----------------------------: |
+|    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gɛb/    |   /gæb/    |    As Word[^1] 作为单词[^2]     |
+|     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Giga-Byte  | Gede-Byte  |     Read Fullname 念出全称      |
+|    ja（日本語）     |  ジービー  |      ギブ      |    ガブ    |    ゲブ    |      Copy English 照搬英语      |
+| zh-Hans（简体中文） |    G-B     |     G-I-B      |   G-E-B    |    G-B     | A Pronounce Separately 拆开拼读 |
+| zh-Hant（繁体中文） | 吉比（特） |   吉比（特）   | 加比（特） | 格比（特） |     Remix zh-Hans 简繁混用      |
 
-## 发音说明
+[BCP 47]: https://www.rfc-editor.org/info/bcp47
 
-To ensure clarity in spoken conversation:
+[^1]: GB in [Initialism](https://simple.wikipedia.org/wiki/Initialism), others in [Acronym](https://en.wikipedia.org/wiki/Acronym).
 
-为了确保口语中的清晰度：
+[^2]: GB 是 [Initialism](https://simple.wikipedia.org/wiki/Initialism)，其他则是 [Acronym](https://simple.wikipedia.org/wiki/Acronym).
 
-- **GiB** = /gɪb/ (“gib”), as in _give_
-- **GaB** = /gæb/ (“gab”), as in _grab_ or _gab_
+### GeB VS. GaB
 
-- **GiB**：发音为 “**gib**”（/gɪb/），类似 give
-- **GaB**：发音为 “**gab**”（/gæb/），类似 gab（v. 闲聊）
+### GeB 比 GaB
+
+| 项目           | GeB                                         | GaB                                         |
+| -------------- | ------------------------------------------- | ------------------------------------------- |
+| 发音区分性     | 与 GiB 区分清晰 `/gɛb/ vs gɪb/`             | 区分更明显 `/gæb/ vs gɪb/`                  |
+| 来源解释       | "GigaByte (Decimal)" → _e_ from **decimal** | "GigaByte (Alt)" → _a_ from **Giga** itself |
+| 视觉对称性     | 与 **GiB** 更对称（i vs e）                 | 略偏离 IEC 命名规律                         |
+| 国际接受潜力   | 可能更易为 IEC/IEEE 等标准组织接受          | 更具口语吸引力，利于传播                    |
+| 中文非正式译名 | “格比”（易理解）                            | “嘎比”（发音鲜明但略显口语化）              |
+
+**总结：**
+
+- 如果强调对称性、严谨与标准化，**GeB** 是更合适的选择。
+- 如果强调口语传播、听觉辨识度，**GaB** 也有一定优势。
+
+### Our Recommendation
+
+### 我们的建议
+
+We recommend using **GeB**, for its visual harmony with **GiB**, its derivation from the word _decimal_, and its compatibility with existing IEC naming rules.
+
+我们推荐使用 **GeB**，因为它在视觉上与 **GiB** 对称，来源明确（decimal），也更符合现有的命名体系。
+
+However, **GaB** remains an interesting alternative and might be more suitable for informal or educational use.
+
+但 **GaB** 作为一种口语化方案，也可以在教学或大众场合中使用，提升听觉辨识度。
 
 ## Beyond GaB: A Whole Family of Decimal Units
 
-## 延伸：MaB，TaB，PaB？
+## 延伸：MaB？TaB？PaB？
 
 The same pattern can apply to other SI-prefixed units. Here’s a proposed decimal counterpart family:
 
 有了 GaB，自然可以推广其它单位：
 
-| Binary Unit    | Traditional Decimal | Proposed Decimal Symbol |
-| -------------- | ------------------- | ----------------------- |
-| MiB (Mebibyte) | MB (Megabyte)       | MaB                     |
-| GiB (Gibibyte) | GB (Gigabyte)       | GaB                     |
-| TiB (Tebibyte) | TB (Terabyte)       | TaB                     |
-| PiB (Pebibyte) | PB (Petabyte)       | PaB                     |
-
-| 二进制单位     | 十进制单位    | 十进制缩写 |
-| -------------- | ------------- | ---------- |
-| MiB (Mebibyte) | MB (Megabyte) | MaB        |
-| GiB (Gibibyte) | GB (Gigabyte) | GaB        |
-| TiB (Tebibyte) | TB (Terabyte) | TaB        |
-| PiB (Pebibyte) | PB (Petabyte) | PaB        |
+|      Decimal      |            |        |                 |      Binary       |           |             |
+| :---------------: | :--------: | :----: | :-------------: | :---------------: | :-------: | :---------: |
+|       Value       | Full Name  |   SI   | **Here We Are** |       Value       | Full Name | IEC 60027-2 |
+| $10^{1 \cdot 3}$  |  kilobyte  | **k**B |     K**o**B     | $2^{1 \cdot 10}$  | Kibibyte  |   K**i**B   |
+| $10^{2 \cdot 3}$  |  megabyte  |   MB   |     M**a**B     | $2^{2 \cdot 10}$  | Mebibyte  |   M**i**B   |
+| $10^{3 \cdot 3}$  |  gigabyte  |   GB   |     G**a**B     | $2^{3 \cdot 10}$  | Gibibyte  |   G**i**B   |
+| $10^{4 \cdot 3}$  |  terabyte  |   TB   |     T**a**B     | $2^{4 \cdot 10}$  | Tebibyte  |   T**i**B   |
+| $10^{5 \cdot 3}$  |  petabyte  |   PB   |     P**a**B     | $2^{5 \cdot 10}$  | Pebibyte  |   P**i**B   |
+| $10^{6 \cdot 3}$  |  exabyte   |   EB   |     E**a**B     | $2^{6 \cdot 10}$  | Exbibyte  |   E**i**B   |
+| $10^{7 \cdot 3}$  | zettabyte  |   ZB   |     Z**a**B     | $2^{7 \cdot 10}$  | Zebibyte  |   Z**i**B   |
+| $10^{8 \cdot 3}$  | yottabyte  |   YB   |     Y**a**B     | $2^{8 \cdot 10}$  | Yobibyte  |   Y**i**B   |
+| $10^{9 \cdot 3}$  | ronnabyte  |   RB   |     R**a**B     | $2^{9 \cdot 10}$  | Robibyte  |   R**i**B   |
+| $10^{10 \cdot 3}$ | quettabyte |   QB   |     Q**a**B     | $2^{10 \cdot 10}$ | Quebibyte |   Q**i**B   |
 
 This symmetry improves consistency and provides a clear mental model for interpreting storage sizes.
 
