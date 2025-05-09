@@ -54,6 +54,7 @@ const remarkGFMOptions: RemarkGFMOptions = {
   stringLength: stringWidth,
 };
 
+/// https://contentlayer.dev/docs/sources/files/mdx
 export default makeSource({
   contentDirPath: 'src/post',
   documentTypes: [Post],
