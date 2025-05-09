@@ -31,7 +31,7 @@ export function generateMetadata(): Metadata {
 
 export default function LocaleLayout({ children }: Props) {
   return (
-    <html suppressHydrationWarning>
+    <html suppressHydrationWarning className='scroll-smooth'>
       <body
         className={clsx(
           'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background',

@@ -1,4 +1,4 @@
-import { Button, ButtonGroup } from '@heroui/button';
+import { Button } from '@heroui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover';
 import { CircularProgress } from '@heroui/progress';
 import { IconDevices, IconMoon, IconSun } from '@tabler/icons-react';
@@ -45,20 +45,18 @@ export default function ThemeButton() {
           variant='light'
         />
       </PopoverTrigger>
-      <PopoverContent>
-        <ButtonGroup>
-          {Object.entries(__themes).map(([key, { icon, title }]) => (
-            <Button
-              aria-label={title}
-              isIconOnly
-              key={key}
-              onPress={() => setTheme(key)}
-              size='sm'
-              startContent={icon}
-              variant={theme === key ? 'solid' : 'light'}
-            />
-          ))}
-        </ButtonGroup>
+      <PopoverContent className='flex p-2 gap-1 flex-row'>
+        {Object.entries(__themes).map(([key, { icon, title }]) => (
+          <Button
+            aria-label={title}
+            isIconOnly
+            key={key}
+            onPress={() => setTheme(key)}
+            size='sm'
+            startContent={icon}
+            variant={theme === key ? 'faded' : 'light'}
+          />
+        ))}
       </PopoverContent>
     </Popover>
   );

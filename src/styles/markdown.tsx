@@ -33,15 +33,43 @@ export const mdxComponents: MDXComponents = {
   ),
   input: ({ checked, type, ...props }: HTMLProps<HTMLInputElement>) => {
     if (type === 'checkbox') {
-      return <Checkbox defaultSelected={checked} isDisabled />;
+      return <Checkbox defaultSelected={checked} isDisabled size='sm' />;
     }
     return <input {...props} />;
   },
-  Kbd,
-
   table: ({ children, ...props }: HTMLProps<HTMLTableElement>) => (
     <figure className='overflow-auto'>
       <table {...props}>{children}</table>
     </figure>
   ),
+  h2: HeadingWithAnchor('h2'),
+  h3: HeadingWithAnchor('h3'),
+  h4: HeadingWithAnchor('h4'),
+  h5: HeadingWithAnchor('h5'),
+  h6: HeadingWithAnchor('h6'),
+  Kbd,
 };
+
+type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+function HeadingWithAnchor(tag: HeadingTag) {
+  return ({
+    className = '',
+    children,
+    id,
+    ...props
+  }: HTMLProps<HTMLHeadingElement>) => {
+    const Tag = tag;
+    return (
+      <Tag id={id} className={`relative ${className}`} {...props}>
+        <NextLink href={`#${id}`} className='group not-prose'>
+          {children}
+          {id && (
+            <span className='ml-2 opacity-0 group-hover:opacity-100 transition-opacity'>
+              #
+            </span>
+          )}
+        </NextLink>
+      </Tag>
+    );
+  };
+}
