@@ -1,5 +1,3 @@
-'use client';
-
 import {
   DeviceTabletIcon,
   MoonIcon,
@@ -7,7 +5,9 @@ import {
 } from '@heroicons/react/24/outline';
 import { Button, ButtonGroup } from '@heroui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover';
+import { CircularProgress } from '@heroui/progress';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const __themes = {
   dark: {
@@ -28,7 +28,14 @@ const __themes = {
 type ThemeVariant = keyof typeof __themes;
 
 export default function ThemeDropdown() {
+  const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme, theme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    return <CircularProgress size='sm' />;
+  }
 
   return (
     <Popover aria-label='主题'>
