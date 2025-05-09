@@ -12,6 +12,7 @@ import {
 import rehypeSlug from 'rehype-slug';
 import remarkGFM, { Options as RemarkGFMOptions } from 'remark-gfm';
 import remarkMath from 'remark-math';
+import stringWidth from 'string-width';
 
 const computedFields: ComputedFields = {
   url: {
@@ -30,6 +31,7 @@ export const Post = defineDocumentType(() => ({
   fields: {
     date: { required: true, type: 'date' },
     title: { required: true, type: 'string' },
+    description: { type: 'string' },
   },
   filePathPattern: `**/*.mdx`,
   name: 'Post',
@@ -49,6 +51,7 @@ const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
 
 const remarkGFMOptions: RemarkGFMOptions = {
   singleTilde: false,
+  stringLength: stringWidth,
 };
 
 export default makeSource({
