@@ -1,0 +1,47 @@
+---
+title: 'GB? GiB~ GeB!'
+date: '2025-05-09T08:04:32+08:00'
+---
+
+# Introducing “GeB”: A Clear Decimal Counterpart to GiB
+
+**Author:** Cierra-Runis
+**Date:** 2025-05-09
+
+## Background
+
+When measuring digital storage, we often encounter **GB** and **GiB**, but their meanings differ significantly:
+
+- **GiB** (Gibibyte): $2^30 = 1,073,741,824$ bytes — standardized by the IEC.
+- **GB** (Gigabyte): $10^9 = 1,000,000,000$ bytes — defined by SI but ambiguously used.
+
+This creates confusion: storage manufacturers use GB, while operating systems show GiB. Users expect the numbers to match, but they don’t.
+
+## Proposal: Introduce **GeB**
+
+We propose a new symbol: **GeB** for "Gigabyte (decimal)", forming a symmetric, unambiguous pair with **GiB**.
+
+| Abbreviation | Full Name             | Base | Bytes         | Use Case              |
+|--------------|------------------------|------|----------------|------------------------|
+| GeB          | Gigabyte (decimal)     | 10   | 1,000,000,000 B | Disk sizes, marketing |
+| GiB          | Gibibyte (binary)      | 2    | 1,073,741,824 B | Memory, OS readouts   |
+
+### Why “GeB”?
+
+- **e** comes from the second letter of *decimal*, just as **i** in **GiB** comes from *binary*.
+- Clear visual symmetry: GiB vs GeB.
+- Backward-compatible: doesn’t overwrite existing GB usage.
+
+## Adoption Suggestions
+
+- Use **GeB** in developer tools, UIs, and file explorers.
+- Educate users and contributors through project documentation.
+- Encourage open source libraries to support `formatSize(value, { unit: 'GeB' })`.
+
+## Example
+
+```js
+// Example usage in TypeScript
+formatSize(1_000_000_000) // → "1 GeB"
+formatSize(1_073_741_824) // → "1 GiB"
+```
