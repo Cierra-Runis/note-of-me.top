@@ -1,3 +1,4 @@
+/// <https://contentlayer.dev/docs/sources/files/mdx>
 import { DocsToc } from '@/components/roots/Toc';
 import { mdxComponents } from '@/styles/markdown';
 import '@/styles/markdown.css';
@@ -40,10 +41,10 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
     <section className='grid grid-cols-6 gap-4'>
       <article className='prose col-span-full max-w-full dark:prose-invert md:prose-lg lg:prose-xl lg:col-span-5'>
         <div className='mb-8 text-center'>
-          <strong className='mb-1 text-secondary-600'>
+          <p className='mb-1 text-secondary-600'>
             {/* TODO: I18n */}
             {format(parseISO(post.date), 'LLLL d, yyyy')}
-          </strong>
+          </p>
           <h1>{post.title}</h1>
         </div>
         <MDXContent components={mdxComponents} />
