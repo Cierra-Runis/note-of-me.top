@@ -7,7 +7,7 @@
     "build": "pnpm build:content && next build",
     "build:content": "pnpm mermaid && pnpm script:id",
     "script:id": "tsx ./scripts/generate_global_id.ts",
-    "mermaid": "playwright install --with-deps chromium",
+    "mermaid": "playwright install --with-deps",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier ./src --write && next lint --fix --no-cache",
