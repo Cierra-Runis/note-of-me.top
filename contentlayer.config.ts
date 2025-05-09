@@ -44,10 +44,10 @@ async function validateDuplicateIds(allDocs: GeneratedPost[]) {
 
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (duplicates.length) {
-    throw new Error(`[Error] Duplicate ids found: ${duplicates.join(', ')}`);
+    throw new Error(`❌ Duplicate ids found: ${duplicates.join(', ')}`);
   }
 
-  console.log('No duplicate ids found');
+  console.log('✅ No duplicate ids found');
 }
 
 const rehypeKaTeXOptions: KatexOptions = {

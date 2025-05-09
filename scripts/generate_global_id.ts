@@ -1,4 +1,3 @@
-// generate-global-id.ts
 import fs from 'fs/promises';
 import { globby } from 'globby';
 import matter from 'gray-matter';
