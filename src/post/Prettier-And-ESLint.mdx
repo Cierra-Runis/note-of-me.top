@@ -5,17 +5,27 @@ date: '2025-05-01T22:13:14+08:00'
 
 ## 开始
 
-在写本网站时我曾对 Prettier 和 ESLint 的混合使用感到困惑，在查了相关资料后，我在项目 README.md 中这样记述：
+在写本网站时我曾对 [Prettier](https://prettier.io) 和 [ESLint](https://eslint.org) 的混合使用感到困惑，在查了相关资料后，我在项目 README.md 中这样记述：
 
 ### Is Prettier Feature Conflicting with ESLint?
 
+### Prettier 的功能和 ESLint 冲突了吗？
+
 While configuring tools to improve code quality, I was unsure whether I should use Prettier or ESLint for handling the sorting of imports, properties, and Tailwind CSS classes.
+
+在使用配置工具提高代码质量的过程中，我不太确定该使用 Prettier 还是 ESLint 来处理导入、属性和 Tailwind CSS 类名的排序。
 
 Although Prettier plugins like [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) and [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports) can address this, I don't consider them the "best practice".
 
+虽然一些 Prettier 插件如 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) 和 [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports) 能处理，但我不认为他们是“最佳实践”。
+
 As discussed in this [GitHub Issue](https://github.com/prettier/prettier/issues/2460) and this [Reddit Post](https://www.reddit.com/r/typescript/comments/15lr8p1/sorting_imports_eslint_vs_prettier), sorting can introduce side effects. Therefore, it's better to handle sorting with ESLint.
 
+据这个 [GitHub Issue](https://github.com/prettier/prettier/issues/2460) 和这个 [Reddit 帖子](https://www.reddit.com/r/typescript/comments/15lr8p1/sorting_imports_eslint_vs_prettier) 讨论的内容，排序会引入副作用，因此更适合使用 ESLint 来处理排序。
+
 Moreover, Prettier will not warn you about incorrect order, but ESLint will, as this is exactly what ES**Lint** is supposed to do.
+
+不仅如此，Prettier 不会警告你错误的排列顺序，但 ESLint 会，因为这正是一个 ES**Lint** 该做的。
 
 ## 再思考
 
