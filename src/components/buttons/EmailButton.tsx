@@ -1,8 +1,8 @@
 'use client';
 
 import { siteConfig } from '@/config';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/button';
+import { IconMail } from '@tabler/icons-react';
 import NextLink from 'next/link';
 
 export default function EmailButton() {
@@ -17,7 +17,7 @@ export default function EmailButton() {
       target='_blank'
       variant='light'
     >
-      <EnvelopeIcon className='w-5' />
+      <IconMail className='w-5' />
     </Button>
   );
 }

@@ -3,7 +3,7 @@
 |                           |                |                |                              |
 | :-----------------------: | :------------: | :------------: | :--------------------------: |
 |         [Next.js]         |    [Vercel]    |    [HeroUI]    |        [Tailwind CSS]        |
-| [Tailwind CSS Typography] |  [Hero Icons]  | [Simple Icons] | [MDX in Next.js is Easy Now] |
+| [Tailwind CSS Typography] | [Tabler Icons] | [Simple Icons] | [MDX in Next.js is Easy Now] |
 |       [Lorem Ipsum]       | [Contentlayer] |    [Shiki]     |                              |
 
 [Next.js]: https://nextjs.org/docs
@@ -11,7 +11,7 @@
 [HeroUI]: https://www.heroui.com/docs/guide/introduction
 [Tailwind CSS]: https://tailwindcss.com/docs/installation
 [Tailwind CSS Typography]: https://github.com/tailwindlabs/tailwindcss-typography
-[Hero Icons]: https://heroicons.com/
+[Tabler Icons]: https://tabler.io/icons
 [Simple Icons]: https://simpleicons.org/
 [MDX in Next.js is Easy Now]: https://www.youtube.com/watch?v=MsSUAOkepCw
 [Lorem Ipsum]: https://www.lipsum.com/

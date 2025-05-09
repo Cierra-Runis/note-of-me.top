@@ -1,26 +1,22 @@
-import {
-  DeviceTabletIcon,
-  MoonIcon,
-  SunIcon,
-} from '@heroicons/react/24/outline';
 import { Button, ButtonGroup } from '@heroui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover';
 import { CircularProgress } from '@heroui/progress';
+import { IconDevices, IconMoon, IconSun } from '@tabler/icons-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const __themes = {
   dark: {
-    icon: <MoonIcon className='w-5' />,
+    icon: <IconMoon className='w-5' />,
     title: '暗色',
   },
   light: {
-    icon: <SunIcon className='w-5' />,
+    icon: <IconSun className='w-5' />,
     title: '亮色',
   },
   system: {
     // Default theme is light
-    icon: <DeviceTabletIcon className='w-5' />,
+    icon: <IconDevices className='w-5' />,
     title: '系统',
   },
 };

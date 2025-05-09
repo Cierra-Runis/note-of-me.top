@@ -1,6 +1,5 @@
 'use client';
 
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/button';
 import { Divider } from '@heroui/divider';
 import { Input } from '@heroui/input';
@@ -12,6 +11,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@heroui/modal';
+import { IconSearch } from '@tabler/icons-react';
 import { allPosts } from 'contentlayer/generated';
 import NextLink from 'next/link';
 import { useState } from 'react';
@@ -32,7 +32,7 @@ export default function SearchButton() {
         isIconOnly
         onPress={onOpen}
         size='sm'
-        startContent={<MagnifyingGlassIcon className='w-5' />}
+        startContent={<IconSearch className='w-5' />}
         variant='light'
       />
       <Modal
@@ -49,7 +49,7 @@ export default function SearchButton() {
                 <Input
                   endContent={<Kbd keys={'escape'} />}
                   onValueChange={setSearch}
-                  startContent={<MagnifyingGlassIcon className='w-5' />}
+                  startContent={<IconSearch className='w-5' />}
                   value={search}
                   variant='faded'
                 />

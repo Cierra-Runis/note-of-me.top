@@ -1,7 +1,7 @@
 'use client';
 
-import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/button';
+import { IconArrowUp } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -27,7 +27,7 @@ export default function ScrollToTopButton() {
       transition={{ duration: 0.3 }}
     >
       <Button isIconOnly onPress={scrollToTop} size='sm' variant='ghost'>
-        <ArrowUpIcon className='w-5' />
+        <IconArrowUp className='w-5' />
       </Button>
     </motion.div>
   );
