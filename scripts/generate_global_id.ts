@@ -26,6 +26,8 @@ async function main() {
       console.log(`🟡 Skipped ${id}: ${file}`);
     }
   }
+
+  console.log();
 }
 
 main();
