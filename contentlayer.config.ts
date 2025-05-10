@@ -5,8 +5,9 @@ import {
   makeSource,
 } from 'contentlayer2/source-files';
 import { KatexOptions } from 'katex';
+
+import remarkMdxMermaid from 'mdx-mermaid';
 import rehypeKaTeX from 'rehype-katex';
-import rehypeMermaid, { RehypeMermaidOptions } from 'rehype-mermaid';
 import {
   rehypePrettyCode,
   Options as RehypePrettyCodeOptions,
@@ -55,24 +56,17 @@ const rehypeKaTeXOptions: KatexOptions = {
   output: 'html',
 };
 
-const rehypeMermaidOptions: RehypeMermaidOptions = {
-  mermaidConfig: {
-    theme: 'default',
-  },
-  dark: {
-    theme: 'dark',
-  },
-  errorFallback: () => {
-    return;
-  },
-};
-
 const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
   keepBackground: false,
   theme: {
     dark: 'one-dark-pro',
     light: 'one-light',
   },
+};
+
+/// See `MermaidProps`
+const remarkMdxMermaidConfig = {
+  output: 'svg',
 };
 
 const remarkGFMOptions: RemarkGFMOptions = {
@@ -88,14 +82,14 @@ export default makeSource({
     rehypePlugins: [
       // https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
       [rehypeKaTeX, rehypeKaTeXOptions],
-      // https://github.com/remcohaszing/rehype-mermaid
-      [rehypeMermaid, rehypeMermaidOptions],
       // https://rehype-pretty.pages.dev
       [rehypePrettyCode, rehypePrettyCodeOptions],
       // https://github.com/rehypejs/rehype-slug
       [rehypeSlug],
     ],
     remarkPlugins: [
+      // https://www.npmjs.com/package/mdx-mermaid
+      [remarkMdxMermaid, remarkMdxMermaidConfig],
       // https://github.com/remarkjs/remark-math
       [remarkMath],
       // https://github.com/remarkjs/remark-gfm
