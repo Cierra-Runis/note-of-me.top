@@ -6,7 +6,6 @@ import {
 } from 'contentlayer2/source-files';
 import { KatexOptions } from 'katex';
 
-import remarkMdxMermaid from 'mdx-mermaid';
 import rehypeKaTeX from 'rehype-katex';
 import {
   rehypePrettyCode,
@@ -64,11 +63,6 @@ const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
   },
 };
 
-/// See `MermaidProps`
-const remarkMdxMermaidConfig = {
-  output: 'svg',
-};
-
 const remarkGFMOptions: RemarkGFMOptions = {
   singleTilde: false,
   stringLength: stringWidth,
@@ -88,8 +82,6 @@ export default makeSource({
       [rehypeSlug],
     ],
     remarkPlugins: [
-      // https://www.npmjs.com/package/mdx-mermaid
-      [remarkMdxMermaid, remarkMdxMermaidConfig],
       // https://github.com/remarkjs/remark-math
       [remarkMath],
       // https://github.com/remarkjs/remark-gfm
