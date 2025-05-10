@@ -1,12 +1,12 @@
 'use client';
 
-import {
-  MegaphoneIcon,
-  SpeakerWaveIcon,
-  SpeakerXMarkIcon,
-} from '@heroicons/react/24/outline';
 import { Button, ButtonGroup } from '@heroui/button';
 import { addToast } from '@heroui/toast';
+import {
+  IconDeviceSpeaker,
+  IconDeviceSpeakerOff,
+  IconMicrophone2,
+} from '@tabler/icons-react';
 import { Midi } from '@tonejs/midi';
 import { useRef, useState } from 'react';
 import * as Tone from 'tone';
@@ -174,9 +174,9 @@ export default function MidiPlayer() {
                     size='sm'
                     startContent={
                       muteRefs.current[i] ? (
-                        <SpeakerXMarkIcon className='w-4' />
+                        <IconDeviceSpeaker className='w-4' />
                       ) : (
-                        <SpeakerWaveIcon className='w-4' />
+                        <IconDeviceSpeakerOff className='w-4' />
                       )
                     }
                     variant='ghost'
@@ -186,7 +186,7 @@ export default function MidiPlayer() {
                     isIconOnly
                     onPress={() => toggleSolo(i)}
                     size='sm'
-                    startContent={<MegaphoneIcon className='w-4' />}
+                    startContent={<IconMicrophone2 className='w-4' />}
                     variant={soloRefs.current[i] ? 'faded' : 'ghost'}
                   />
                 </ButtonGroup>
