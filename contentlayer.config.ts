@@ -1,3 +1,18 @@
+import { transformerColorizedBrackets } from '@shikijs/colorized-brackets';
+import rehypeShiki, { RehypeShikiOptions } from '@shikijs/rehype';
+import {
+  transformerCompactLineOptions,
+  transformerMetaHighlight,
+  transformerMetaWordHighlight,
+  transformerNotationDiff,
+  transformerNotationErrorLevel,
+  transformerNotationFocus,
+  transformerNotationHighlight,
+  transformerNotationWordHighlight,
+  transformerRemoveNotationEscape,
+  transformerRenderWhitespace,
+} from '@shikijs/transformers';
+import { transformerTwoslash } from '@shikijs/twoslash';
 import { Post as GeneratedPost } from 'contentlayer/generated';
 import {
   ComputedFields,
@@ -5,18 +20,6 @@ import {
   makeSource,
 } from 'contentlayer2/source-files';
 import { KatexOptions } from 'katex';
-
-import { transformerColorizedBrackets } from '@shikijs/colorized-brackets';
-import rehypeShiki, { RehypeShikiOptions } from '@shikijs/rehype';
-import {
-  transformerMetaWordHighlight,
-  transformerNotationDiff,
-  transformerNotationWordHighlight,
-  transformerRemoveNotationEscape,
-} from '@shikijs/transformers';
-
-import { transformerTwoslash } from '@shikijs/twoslash';
-
 import rehypeKaTeX from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
 import remarkGFM, { Options as RemarkGFMOptions } from 'remark-gfm';
@@ -65,13 +68,46 @@ const rehypeShikiOptions: RehypeShikiOptions = {
   },
   defaultColor: false,
   transformers: [
+    /// Common transformers
+
+    // https://shiki.style/packages/transformers#transformernotationdiff
+    transformerNotationDiff(),
+    // https://shiki.style/packages/transformers#transformernotationhighlight
+    transformerNotationHighlight(),
+    // https://shiki.style/packages/transformers#transformernotationwordhighlight
+    transformerNotationWordHighlight(),
+    // https://shiki.style/packages/transformers#transformernotationfocus
+    transformerNotationFocus(),
+    // https://shiki.style/packages/transformers#transformernotationerrorlevel
+    transformerNotationErrorLevel(),
+
+    // https://shiki.style/packages/transformers#transformerrenderwhitespace
+    transformerRenderWhitespace(),
+
+    // https://shiki.style/packages/transformers#transformermetahighlight
+    transformerMetaHighlight(),
+    // https://shiki.style/packages/transformers#transformermetawordhighlight
+    transformerMetaWordHighlight(),
+
+    // https://shiki.style/packages/transformers#transformercompactlineoptions
+    transformerCompactLineOptions(),
+
+    // https://shiki.style/packages/transformers#transformerremovelinebreak
+    // transformerRemoveLineBreak(),
+    // https://shiki.style/packages/transformers#transformerremovenotationescape
+    transformerRemoveNotationEscape(),
+
+    // https://shiki.style/packages/transformers#transformerstyletoclass
+    // TODO: transformerStyleToClass(),
+
+    /// Others
+
+    // https://shiki.style/packages/twoslash
     transformerTwoslash({
       explicitTrigger: true,
     }),
-    transformerMetaWordHighlight(),
-    transformerNotationWordHighlight(),
-    transformerNotationDiff(),
-    transformerRemoveNotationEscape(),
+
+    // https://shiki.style/packages/colorized-brackets
     transformerColorizedBrackets(),
   ],
 };
