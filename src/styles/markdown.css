@@ -1,6 +1,7 @@
 html.light .shiki,
 html.light .shiki span {
   color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
 }
 
 html.dark .shiki,

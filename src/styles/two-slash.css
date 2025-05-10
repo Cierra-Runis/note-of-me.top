@@ -50,7 +50,8 @@
   display: inline-flex;
   flex-direction: column;
   transform: translateY(1.1em);
-  background: hsl(var(--heroui-background));
+  background: hsla(var(--heroui-background), 0.6);
+  backdrop-filter: blur(10px);
   color: var(--twoslash-popup-color);
   border: 1px solid var(--twoslash-border-color);
   transition: opacity 0.3s;
