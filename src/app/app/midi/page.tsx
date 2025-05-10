@@ -174,9 +174,9 @@ export default function MidiPlayer() {
                     size='sm'
                     startContent={
                       muteRefs.current[i] ? (
-                        <IconDeviceSpeaker className='w-4' />
-                      ) : (
                         <IconDeviceSpeakerOff className='w-4' />
+                      ) : (
+                        <IconDeviceSpeaker className='w-4' />
                       )
                     }
                     variant='ghost'
