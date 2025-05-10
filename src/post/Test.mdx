@@ -76,6 +76,28 @@ console.log('highlighted'); // [!code hl]
 console.log('not highlighted');
 ```
 
+## Two Slash
+
+```ts
+// this is a normal code block
+import { createHighlighterCore } from 'shiki/core';
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
+
+const highlighter = await createHighlighterCore({
+  engine: createJavaScriptRegexEngine(),
+});
+```
+
+```ts twoslash
+// this will run Twoslash
+import { createHighlighterCore } from 'shiki/core';
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
+
+const highlighter = await createHighlighterCore({
+  engine: createJavaScriptRegexEngine(),
+});
+```
+
 ## Transformers
 
 ### `transformerNotationDiff`

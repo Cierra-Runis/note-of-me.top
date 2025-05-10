@@ -76,11 +76,11 @@ const tailwindConfig = {
             },
             code: {
               fontWeight: 600,
-              color: 'hsl(var(--heroui-primary-600) / 1);',
+              color: 'hsl(var(--heroui-primary-600));',
             },
             pre: {
               fontWeight: 500,
-              backgroundColor: 'inherit',
+              background: 'inherit',
             },
           },
         },

@@ -15,6 +15,8 @@ import {
   transformerRemoveNotationEscape,
 } from '@shikijs/transformers';
 
+import { transformerTwoslash } from '@shikijs/twoslash';
+
 import rehypeKaTeX from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
 import remarkGFM, { Options as RemarkGFMOptions } from 'remark-gfm';
@@ -63,6 +65,9 @@ const rehypeShikiOptions: RehypeShikiOptions = {
   },
   defaultColor: false,
   transformers: [
+    transformerTwoslash({
+      explicitTrigger: true,
+    }),
     transformerMetaWordHighlight(),
     transformerNotationWordHighlight(),
     transformerNotationDiff(),
