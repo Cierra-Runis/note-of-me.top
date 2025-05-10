@@ -6,11 +6,16 @@ import {
 } from 'contentlayer2/source-files';
 import { KatexOptions } from 'katex';
 
-import rehypeKaTeX from 'rehype-katex';
+import { transformerColorizedBrackets } from '@shikijs/colorized-brackets';
+import rehypeShiki, { RehypeShikiOptions } from '@shikijs/rehype';
 import {
-  rehypePrettyCode,
-  Options as RehypePrettyCodeOptions,
-} from 'rehype-pretty-code';
+  transformerMetaWordHighlight,
+  transformerNotationDiff,
+  transformerNotationWordHighlight,
+  transformerRemoveNotationEscape,
+} from '@shikijs/transformers';
+
+import rehypeKaTeX from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
 import remarkGFM, { Options as RemarkGFMOptions } from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -51,16 +56,23 @@ async function validateDuplicateIds(allDocs: GeneratedPost[]) {
   console.log('✅ No duplicate ids found');
 }
 
-const rehypeKaTeXOptions: KatexOptions = {
-  output: 'html',
+const rehypeShikiOptions: RehypeShikiOptions = {
+  themes: {
+    light: 'material-theme-lighter',
+    dark: 'one-dark-pro',
+  },
+  defaultColor: false,
+  transformers: [
+    transformerMetaWordHighlight(),
+    transformerNotationWordHighlight(),
+    transformerNotationDiff(),
+    transformerRemoveNotationEscape(),
+    transformerColorizedBrackets(),
+  ],
 };
 
-const rehypePrettyCodeOptions: RehypePrettyCodeOptions = {
-  keepBackground: false,
-  theme: {
-    dark: 'one-dark-pro',
-    light: 'one-light',
-  },
+const rehypeKaTeXOptions: KatexOptions = {
+  output: 'html',
 };
 
 const remarkGFMOptions: RemarkGFMOptions = {
@@ -74,10 +86,10 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     rehypePlugins: [
+      // https://shiki.style/packages/rehype
+      [rehypeShiki, rehypeShikiOptions],
       // https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex
       [rehypeKaTeX, rehypeKaTeXOptions],
-      // https://rehype-pretty.pages.dev
-      [rehypePrettyCode, rehypePrettyCodeOptions],
       // https://github.com/rehypejs/rehype-slug
       [rehypeSlug],
     ],

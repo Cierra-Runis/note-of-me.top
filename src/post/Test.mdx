@@ -4,357 +4,476 @@ date: '2024-12-09T03:23:45+08:00'
 id: SROWTW
 ---
 
-## 标题
+Passing your code snippet to the `codeToHtml` function with the `lang` and `theme` specified, it will return a highlighted HTML string that you can embed in your page. The generated HTML contains inline style for each token, so you don't need extra CSS to style it.
 
-在标题文字前使用 1 到 6 个 <Kbd>#</Kbd> 符号生成标题。其数量决定了标题的级别与字号大小。
+```ts twoslash
+import { codeToHtml } from 'shiki';
 
-```markdown {1-5} showLineNumbers /标题/
-# 一级标题
+const code = 'const a = 1'; // input code
+const html = await codeToHtml(code, {
+  lang: 'javascript',
+  theme: 'vitesse-dark',
+});
 
-## 二级标题
-
-### 三级标题
-
-#### 四级标题
-
-##### 五级标题
-
-###### 六级标题
+console.log(html); // highlighted html string
 ```
 
-## 文本样式
+## Meta
 
-|     样式     |       语法       |          示例          |        Output        |
-| :----------: | :--------------: | :--------------------: | :------------------: |
-|     粗体     |     `** **`      |       `**粗体**`       |       **粗体**       |
-|     斜体     |      `_ _`       |        `_斜体_`        |        _斜体_        |
-|    删除线    |     `~~ ~~`      |      `~~删除线~~`      |      ~~删除线~~      |
-| 粗体嵌套斜体 | `** **` 与 `_ _` | `**粗体 _嵌套_ 斜体**` | **粗体 _嵌套_ 斜体** |
-|    粗斜体    |    `**_ _**`     |     `**_粗斜体_**`     |     **_粗斜体_**     |
-|     下标     |  `<sub> </sub>`  |   `下<sub>标</sub>`    |   下<sub>标</sub>    |
-|     上标     |  `<sup> </sup>`  |   `上<sup>标</sup>`    |   上<sup>标</sup>    |
-|    下划线    |  `<ins> </ins>`  |  `<ins>下划线</ins>`   |  <ins>下划线</ins>   |
-
-## 引用
-
-使用 <Kbd>></Kbd> 引用文字
-
-```markdown
-> 引用的文本具有不同的样式
+```html foo=bar baz-qux="qu ux"
+<html></html>
 ```
 
-> 引用的文本具有不同的样式
+## Usage
 
-## 代码
+```ts twoslash
+// [!code highlight:5]
+import {
+  transformerNotationDiff,
+  // ...
+} from '@shikijs/transformers';
+import { codeToHtml } from 'shiki';
 
-使用一对反引号标注代码或命令行，反引号内的文本不会被格式化。
-
-```markdown
-使用 `git status` 列出所有尚未提交的新文件或修改过的文件
+const code = `console.log('hello')`;
+const html = await codeToHtml(code, {
+  lang: 'ts',
+  theme: 'nord',
+  transformers: [
+    transformerNotationDiff(), // [!code highlight]
+    // ...
+  ],
+});
 ```
 
-结果：
+## Unstyled
 
-使用 `git status` 列出所有尚未提交的新文件或修改过的文件
+Transformers only applies classes and does not come with styles; you can provide your own CSS rules to style them properly.
 
-可以在末尾如下高亮语言：
+## Matching Algorithm
 
-```markdown
-使用 `git status{:bash}` 列出所有尚未提交的新文件或修改过的文件
+We found that the algorithm for matching comments in v1 is sometime conterintuitive, where we are trying to fix it in a progressive way. Since v1.29.0, we introduced a new `matchAlgorithm` option to most of the transformer for you to toggle between different matching algorithms. Right now, the default is `v1` which is the old algorithm, and `v3` is the new algorithm. When Shiki v3 is landed, the default will be `v3`.
+
+```ts
+const html = await codeToHtml(code, {
+  lang: 'ts',
+  theme: 'nord',
+  transformers: [
+    transformerNotationDiff({
+      matchAlgorithm: 'v3', // [!code hl]
+    }),
+  ],
+});
 ```
 
-结果：
+### `matchAlgorithm: 'v3'`
 
-使用 `git status{:bash}` 列出所有尚未提交的新文件或修改过的文件
+In `v3`, the matching algorithm will start counting from the line below the comment:
 
-## 代码块
-
-使用三对反引号包裹代码块，可以在反引号后指定代码语言，以实现代码高亮。
-
-````markdown
-```bash
-git status
-git add
-git commit
-```
-````
-
-结果：
-
-```bash
-git status
-git add
-git commit
+```ts
+// [\!code highlight:2]
+console.log('highlighted'); // [!code hl]
+console.log('highlighted'); // [!code hl]
+console.log('not highlighted');
 ```
 
-若代码块内部需要包含代码块，可以使用四对反引号。
+## Transformers
 
-若需要高亮行号，可以在反引号后指定行号。
+### `transformerNotationDiff`
 
-````markdown
-```bash {1-2,3}
-git status
-git add
-git commit
+Use `[!code ++]` and `[!code --]` to mark added and removed lines.
+
+````md
+```ts
+console.log('hewwo'); // [\!code --]
+console.log('hello'); // [\!code ++]
+console.log('goodbye');
 ```
 ````
 
-结果：
+Renders (with custom CSS rules):
 
-```bash {1-2,3}
-git status
-git add
-git commit
+```ts
+console.log('hewwo'); // [!code --]
+console.log('hello'); // [!code ++]
+console.log('goodbye');
 ```
 
-若要显示行号， 可以在反引号后指定 `showLineNumbers`。
+- `// [!code ++]` outputs: `<span class="line diff add">`
+- `// [!code --]` outputs: `<span class="line diff remove">`
+- The outer `<pre>` tag is modified: `<pre class="has-diff">`
 
-````markdown
-```bash showLineNumbers
-git status
-git add
-git commit
+::: details HTML Output
+
+```html
+<!-- Output (stripped of `style` attributes for clarity) -->
+<pre class="shiki has-diff"> <!-- Notice `has-diff` -->
+  <code>
+    <span class="line"></span>
+    <span class="line"><span>function</span><span>()</span><span></span><span>{</span></span>
+    <span class="line diff remove">  <!-- Notice `diff` and `remove` -->
+      <span></span><span>console</span><span>.</span><span>log</span><span>(</span><span>&#39;</span><span>hewwo</span><span>&#39;</span><span>) </span>
+    </span>
+    <span class="line diff add">  <!-- Notice `diff` and `add` -->
+      <span></span><span>console</span><span>.</span><span>log</span><span>(</span><span>&#39;</span><span>hello</span><span>&#39;</span><span>) </span>
+    </span>
+    <span class="line"><span></span><span>}</span></span>
+    <span class="line"><span></span></span>
+  </code>
+</pre>
+```
+
+:::
+
+### `transformerNotationHighlight`
+
+Use `[!code highlight]` to highlight a line.
+
+````md
+```ts
+console.log('Not highlighted');
+console.log('Highlighted'); // [\!code highlight]
+console.log('Not highlighted');
 ```
 ````
 
-结果：
+Renders (with custom CSS rules):
 
-```bash showLineNumbers
-git status
-git add
-git commit
+```ts
+console.log('Not highlighted');
+console.log('Highlighted'); // [!code highlight]
+console.log('Not highlighted');
 ```
 
-## 链接
+- `// [!code highlight]` outputs: `<span class="line highlighted">`
+- The outer `<pre>` tag is modified: `<pre class="has-highlighted">`
 
-You can create an inline link by wrapping link text in brackets `[ ]`, and then wrapping the URL in parentheses `( )`. You can also use the keyboard shortcut <Kbd keys={'command'}>K</Kbd> to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.
+You can also highlight multiple lines with a single comment:
 
-`This site was built using [GitHub Pages](https://pages.github.com).`
-
-## 列表
-
-You can make an unordered list by preceding one or more lines of text with <Kbd>-</Kbd>, <Kbd>\*</Kbd>, or <Kbd>+</Kbd>.
-
-```markdown
-- George Washington
-
-* John Adams
-
-- Thomas Jefferson
+````md
+```ts
+// [\!code highlight:3]
+console.log('Highlighted');
+console.log('Highlighted');
+console.log('Not highlighted');
 ```
 
-- George Washington
+```ts
+console.log('Not highlighted');
+// [\!code highlight:1]
+console.log('Highlighted');
+console.log('Not highlighted');
+```
+````
 
-* John Adams
+Renders:
 
-- Thomas Jefferson
-
-To order your list, precede each line with a number.
-
-```markdown
-1. James Madison
-2. James Monroe
-3. John Quincy Adams
+```ts
+// [!code highlight:3]
+console.log('Highlighted');
+console.log('Highlighted');
+console.log('Not highlighted');
 ```
 
-1. James Madison
-2. James Monroe
-3. John Quincy Adams
-
-### 嵌套列表
-
-You can create a nested list by indenting one or more list items below another item.
-
-To create a nested list using the web editor on or a text editor that uses a monospaced font, like [Visual Studio Code](https://code.visualstudio.com), you can align your list visually. Type space characters in front of your nested list item until the list marker character (<Kbd>-</Kbd> or <Kbd>\*</Kbd>) lies directly below the first character of the text in the item above it.
-
-```markdown
-1. First list item
-   - First nested list item
-     - Second nested list item
+```ts
+console.log('Not highlighted');
+// [!code highlight:1]
+console.log('Highlighted');
+console.log('Not highlighted');
 ```
 
-1. First list item
-   - First nested list item
-     - Second nested list item
+---
 
-To create a nested list in the comment editor on , which doesn't use a monospaced font, you can look at the list item immediately above the nested list and count the number of characters that appear before the content of the item. Then type that number of space characters in front of the nested list item.
+### `transformerNotationWordHighlight`
 
-In this example, you could add a nested list item under the list item `100. First list item` by indenting the nested list item a minimum of five spaces, since there are five characters (`100. `) before `First list item`.
+Use `[!code word:Hello]` to highlight the word `Hello` in any subsequent code.
 
-```markdown
-100. First list item
-     - First nested list item
+````md
+```ts
+// [\!code word:Hello]
+const message = 'Hello World';
+console.log(message); // prints Hello World
+```
+````
+
+Renders (with custom CSS rules):
+
+```ts
+// [!code word:Hello]
+const message = 'Hello World';
+console.log(message); // prints Hello World
 ```
 
-100. First list item
-     - First nested list item
+Outputs: `<span class="highlighted-word">Hello</span>` for matched words.
 
-You can create multiple levels of nested lists using the same method. For example, because the first nested list item has seven characters (`␣␣␣␣␣-␣`) before the nested list content `First nested list item`, you would need to indent the second nested list item by at least two more characters (nine spaces minimum).
+You can also specify the number of lines to highlight words on, e.g. `[!code word:Hello:1]` will only highlight occurrences of `Hello` on the next line.
 
-```markdown
-100. First list item
-     - First nested list item
-       - Second nested list item
+````md
+```ts
+// [\!code word:Hello:1]
+const message = 'Hello World';
+console.log(message); // prints Hello World
+```
+````
+
+Renders:
+
+```ts
+// [!code word:Hello:1]
+const message = 'Hello World';
+console.log(message); // prints Hello World
 ```
 
-100. First list item
-     - First nested list item
-       - Second nested list item
+---
 
-For more examples, see the [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#example-265).
+### `transformerNotationFocus`
 
-## 任务清单
+Use `[!code focus]` to focus a line.
 
-To create a task list, preface list items with a hyphen and space followed by [ ]. To mark a task as complete, use [x].
+````md
+```ts
+console.log('Not focused');
+console.log('Focused'); // [\!code focus]
+console.log('Not focused');
+```
+````
 
-```markdown
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete 🎉
+Renders (with custom CSS rules):
+
+```ts
+console.log('Not focused');
+console.log('Focused'); // [!code focus]
+console.log('Not focused');
 ```
 
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete 🎉
+- Outputs: `<span class="line focused">`
+- The outer `<pre>` tag is modified: `<pre class="has-focused">`
 
-## 段落
+You can also focus multiple lines with a single comment:
 
-You can create a new paragraph by leaving a blank line between lines of text.
+````md
+```ts
+// [\!code focus:3]
+console.log('Focused');
+console.log('Focused');
+console.log('Not focused');
+```
+````
 
-## 脚注
+Renders:
 
-You can add footnotes to your content by using this bracket syntax:
-
-```mdx
-Here is a simple footnote[^1].
-
-A footnote can also have multiple lines[^2].
-
-[^1]: My reference.
-
-[^2]:
-    To add line breaks within a footnote, prefix new lines with 2 spaces.
-    This is a second line.
+```ts
+// [!code focus:3]
+console.log('Focused');
+console.log('Focused');
+console.log('Not focused');
 ```
 
-The footnote will render like this:
+---
 
-Here is a simple footnote[^1].
+### `transformerNotationErrorLevel`
 
-A footnote can also have multiple lines[^2].
+Use `[!code error]` and `[!code warning]` to mark a line with an error and warning levels.
 
-[^1]: My reference.
+````md
+```ts
+console.log('No errors or warnings');
+console.error('Error'); // [\!code error]
+console.warn('Warning'); // [\!code warning]
+```
+````
 
-[^2]:
-    To add line breaks within a footnote, prefix new lines with 2 spaces.
-    This is a second line.
+- Outputs: `<span class="line highlighted error">` for errors
+- Outputs: `<span class="line highlighted warning">` for warnings
+- The outer `<pre>` tag is modified: `<pre class="has-highlighted">`
 
-> The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown. Footnotes are not supported in wikis.
+With some additional CSS rules, you can make it look like this:
 
-## Alerts
-
-We using MDX NextUI component to implement Alerts.
-
-Use alerts only when they are crucial for user success and limit them to one or two per article to prevent overloading the reader. Additionally, you should avoid placing alerts consecutively. Alerts cannot be nested within other elements.
-
-To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Six types of alerts are available:
-
-```tsx
-<Alert
-  title={'Default Style'}
-  description={'Some normal information content.'}
-/>
-
-<Alert
-  color={'primary'}
-  title={'Primary Style'}
-  description={
-    'Useful information that users should know, even when skimming content.'
-  }
-/>
-
-<Alert
-  color={'secondary'}
-  title={'Secondary Style'}
-  description={'Helpful advice for doing things better or more easily.'}
-/>
-
-<Alert color={'success'} title={'Success Style'} description={'We did it!'} />
-
-<Alert
-  color={'warning'}
-  title={'Warning Style'}
-  description={
-    'Urgent info that needs immediate user attention to avoid problems.'
-  }
-/>
-
-<Alert
-  color={'danger'}
-  title={'Danger Style'}
-  description={'Advises about risks or negative outcomes of certain actions.'}
-/>
+```ts
+console.log('No errors or warnings');
+console.error('Error'); // [!code error]
+console.warn('Warning'); // [!code warning]
 ```
 
-<Alert
-  title={'Default Style'}
-  description={'Some normal information content.'}
-/>
+---
 
-<Alert
-  color={'primary'}
-  title={'Primary Style'}
-  description={
-    'Useful information that users should know, even when skimming content.'
-  }
-/>
+### `transformerRenderWhitespace`
 
-<Alert
-  color={'secondary'}
-  title={'Secondary Style'}
-  description={'Helpful advice for doing things better or more easily.'}
-/>
+Render whitespaces (tabs and spaces) as individual spans, with classes `tab` and `space`.
 
-<Alert color={'success'} title={'Success Style'} description={'We did it!'} />
+With some additional CSS rules, you can make it look like this:
 
-<Alert
-  color={'warning'}
-  title={'Warning Style'}
-  description={
-    'Urgent info that needs immediate user attention to avoid problems.'
-  }
-/>
+???
 
-<Alert
-  color={'danger'}
-  title={'Danger Style'}
-  description={'Advises about risks or negative outcomes of certain actions.'}
-/>
+::: details Example CSS
 
-## 注释
+```css
+.vp-code .tab,
+.vp-code .space {
+  position: relative;
+}
 
-You can tell to hide content from the rendered Markdown by placing the content in an HTML comment.
+.vp-code .tab::before {
+  content: '⇥';
+  position: absolute;
+  opacity: 0.3;
+}
 
-```mdx
-{/* This content will not appear in the rendered Markdown */}
+.vp-code .space::before {
+  content: '·';
+  position: absolute;
+  opacity: 0.3;
+}
 ```
 
-Result:
+:::
 
-{/* This content will not appear in the rendered Markdown */}
+---
 
-Yes, the content is hidden.
+### `transformerMetaHighlight`
 
-## Ignoring Markdown formatting
+Highlight lines based on the [meta string](/guide/transformers#meta) provided on the code snippet.
 
-You can tell to ignore (or escape) Markdown formatting by using <Kbd>\\</Kbd> before the Markdown character.
+````md
+```js {1,3-4}
+console.log('1');
+console.log('2');
+console.log('3');
+console.log('4');
+```
+````
 
-```markdown
-Let's rename \*our-new-project\* to \*our-old-project\*.
+Renders (with custom CSS rules):
+
+```js {1,3-4}
+console.log('1');
+console.log('2');
+console.log('3');
+console.log('4');
 ```
 
-Let's rename \*our-new-project\* to \*our-old-project\*.
+- Outputs: `<span class="line highlighted">` for included lines.
 
-For more information on backslashes, see Daring Fireball's "[Markdown Syntax](https://daringfireball.net/projects/markdown/syntax#backslash)."
+### `transformerMetaWordHighlight`
 
-> The Markdown formatting will not be ignored in the title of an issue or a pull request.
+Highlight words based on the meta string provided on the code snippet.
+
+````md
+```js /Hello/
+const msg = 'Hello World';
+console.log(msg);
+console.log(msg); // prints Hello World
+```
+````
+
+Renders (with custom CSS rules):
+
+```js /Hello/
+const msg = 'Hello World';
+console.log(msg); // prints Hello World
+```
+
+Outputs: `<span class="highlighted-word">Hello</span>` for matched words.
+
+---
+
+### `transformerCompactLineOptions`
+
+Support for `shiki`'s `lineOptions` that is removed in `shiki`.
+
+---
+
+### `transformerRemoveLineBreak`
+
+Remove line breaks between `<span class="line">`. Useful when you set `display: block` to `.line` in CSS.
+
+---
+
+### `transformerRemoveNotationEscape`
+
+Transform `// [\!code ...]` to `// [!code ...]`.
+Avoid rendering the escaped notation syntax as it is.
+
+---
+
+### `transformerStyleToClass`
+
+Convert Shiki's inline styles to unique classes.
+
+Class names are generated based on the hash value of the style object with the prefix/suffix you provide. You can put this transformer in multiple highlights passes and then get the CSS at the end to reuse the exact same styles. As Shiki doesn't handle CSS, it's on your integration to decide how to extract and apply/bundle the CSS.
+
+For example:
+
+```ts
+import { transformerStyleToClass } from '@shikijs/transformers';
+import { codeToHtml } from 'shiki';
+
+const toClass = transformerStyleToClass({
+  // [!code highlight:3]
+  classPrefix: '__shiki_',
+});
+
+const code = `console.log('hello')`;
+const html = await codeToHtml(code, {
+  lang: 'ts',
+  themes: {
+    dark: 'vitesse-dark',
+    light: 'vitesse-light',
+  },
+  defaultColor: false,
+  transformers: [toClass], // [!code highlight]
+});
+
+// The transformer instance exposes some methods to get the CSS
+const css = toClass.getCSS(); // [!code highlight]
+
+// use `html` and `css` in your app
+```
+
+HTML output:
+
+```html
+<pre
+  class="shiki shiki-themes vitesse-dark vitesse-light __shiki_9knfln"
+  tabindex="0"
+><code><span class="line">
+  <span class="__shiki_14cn0u">console</span>
+  <span class="__shiki_ps5uht">.</span>
+  <span class="__shiki_1zrdwt">log</span>
+  <span class="__shiki_ps5uht">(</span>
+  <span class="__shiki_236mh3">'</span>
+  <span class="__shiki_1g4r39">hello</span>
+  <span class="__shiki_236mh3">'</span>
+  <span class="__shiki_ps5uht">)</span>
+</span></code></pre>
+```
+
+CSS output:
+
+```css
+.__shiki_14cn0u {
+  --shiki-dark: #bd976a;
+  --shiki-light: #b07d48;
+}
+.__shiki_ps5uht {
+  --shiki-dark: #666666;
+  --shiki-light: #999999;
+}
+.__shiki_1zrdwt {
+  --shiki-dark: #80a665;
+  --shiki-light: #59873a;
+}
+.__shiki_236mh3 {
+  --shiki-dark: #c98a7d77;
+  --shiki-light: #b5695977;
+}
+.__shiki_1g4r39 {
+  --shiki-dark: #c98a7d;
+  --shiki-light: #b56959;
+}
+.__shiki_9knfln {
+  --shiki-dark: #dbd7caee;
+  --shiki-light: #393a34;
+  --shiki-dark-bg: #121212;
+  --shiki-light-bg: #ffffff;
+}
+```

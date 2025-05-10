@@ -1,46 +1,11 @@
-code,
-code span {
+html.light .shiki,
+html.light .shiki span {
   color: var(--shiki-light);
 }
 
-html.dark code,
-html.dark code span {
+html.dark .shiki,
+html.dark .shiki span {
   color: var(--shiki-dark);
-}
-
-code[data-line-numbers] {
-  counter-reset: line;
-}
-
-span[data-highlighted-line] {
-  background: linear-gradient(
-    to right,
-    hsl(var(--heroui-foreground-50)),
-    hsl(var(--heroui-foreground-100))
-  );
-}
-
-code[data-line-numbers] > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
-
-  /* Other styling */
-  display: inline-block;
-  width: 0.75rem;
-  margin-right: 2rem;
-  text-align: right;
-}
-
-code[data-line-numbers-max-digits='2'] > [data-line]::before {
-  width: 1.25rem;
-}
-
-code[data-line-numbers-max-digits='3'] > [data-line]::before {
-  width: 1.75rem;
-}
-
-code[data-line-numbers-max-digits='4'] > [data-line]::before {
-  width: 2.25rem;
 }
 
 .katex-display {
