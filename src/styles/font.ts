@@ -1,4 +1,4 @@
-import { Kode_Mono, Noto_Sans_SC, Saira } from 'next/font/google';
+import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
 
 /// TIPS: https://github.com/vercel/next.js/issues/49207
 /// TIPS: https://github.com/vercel/next.js/issues/53522
@@ -15,7 +15,7 @@ export const notoSansSC = Noto_Sans_SC({
 });
 
 /// Mono ////////////////////////
-export const kodeMono = Kode_Mono({
+export const firaCode = Fira_Code({
   subsets: ['latin'],
   variable: '--font-mono',
 });

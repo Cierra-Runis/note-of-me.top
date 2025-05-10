@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { kodeMono, notoSansSC, saira } from '@/styles/font';
+import { firaCode, notoSansSC, saira } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import NextTopLoader from 'nextjs-toploader';
@@ -37,7 +37,7 @@ export default function LocaleLayout({ children }: Props) {
           'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background',
           saira.variable,
           notoSansSC.variable,
-          kodeMono.variable,
+          firaCode.variable,
         )}
       >
         <Statistics />
