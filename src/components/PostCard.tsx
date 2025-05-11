@@ -8,7 +8,7 @@ import NextLink from 'next/link';
 export default function PostCard(post: Post) {
   return (
     <NextLink
-      className='prose mb-8 flex max-w-full flex-col items-start justify-center gap-2 dark:prose-invert md:prose-lg lg:prose-xl'
+      className='prose mb-8 flex max-w-full flex-col items-start justify-center gap-2 md:prose-lg lg:prose-xl'
       href={post.url}
       prefetch
     >

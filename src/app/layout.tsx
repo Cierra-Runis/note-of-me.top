@@ -51,6 +51,7 @@ export default function LocaleLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
       className={clsx(
         'scroll-smooth',
+        'overflow-x-clip',
         saira.variable,
         notoSansSC.variable,
         firaCode.variable,

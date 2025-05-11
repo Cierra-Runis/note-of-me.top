@@ -1,3 +1,4 @@
+/* Based on https://github.com/tailwindlabs/tailwindcss-typography/blob/30d6d0b942992a3feb76b82efb4a94602ca1746c/src/index.css */
 @custom-variant prose-headings (& :is(h1, h2, h3, h4, th):not(:where([class~='not-prose'], [class~='not-prose'] *)));
 @custom-variant prose-lead (& :is([class~="lead"]):not(:where([class~='not-prose'], [class~='not-prose'] *)));
 @custom-variant prose-h1 (& :is(h1):not(:where([class~='not-prose'], [class~='not-prose'] *)));
@@ -26,66 +27,27 @@
 @custom-variant prose-video (& :is(video):not(:where([class~='not-prose'], [class~='not-prose'] *)));
 @custom-variant prose-hr (& :is(hr):not(:where([class~='not-prose'], [class~='not-prose'] *)));
 
-/* Invert (for dark mode) */
-@utility prose-invert {
-  --tw-prose-body: var(--tw-prose-invert-body);
-  --tw-prose-headings: var(--tw-prose-invert-headings);
-  --tw-prose-lead: var(--tw-prose-invert-lead);
-  --tw-prose-links: var(--tw-prose-invert-links);
-  --tw-prose-bold: var(--tw-prose-invert-bold);
-  --tw-prose-counters: var(--tw-prose-invert-counters);
-  --tw-prose-bullets: var(--tw-prose-invert-bullets);
-  --tw-prose-hr: var(--tw-prose-invert-hr);
-  --tw-prose-quotes: var(--tw-prose-invert-quotes);
-  --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
-  --tw-prose-captions: var(--tw-prose-invert-captions);
-  --tw-prose-kbd: var(--tw-prose-invert-kbd);
-  --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
-  --tw-prose-code: var(--tw-prose-invert-code);
-  --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
-  --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
-  --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
-  --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+@utility prose {
+  --tw-prose-body: hsl(var(--heroui-foreground));
+  --tw-prose-bold: hsl(var(--heroui-foreground-700));
+  --tw-prose-bullets: hsl(var(--heroui-foreground));
+  --tw-prose-captions: hsl(var(--heroui-foreground));
+  --tw-prose-code: hsl(var(--heroui-secondary-600));
+  --tw-prose-counters: hsl(var(--heroui-foreground));
+  --tw-prose-headings: hsl(var(--heroui-foreground-700));
+  --tw-prose-hr: hsl(var(--heroui-foreground));
+  --tw-prose-kbd: hsl(var(--heroui-foreground));
+  --tw-prose-kdb-shadows: hsl(var(--heroui-foreground));
+  --tw-prose-lead: hsl(var(--heroui-foreground));
+  --tw-prose-links: hsl(var(--heroui-foreground));
+  --tw-prose-pre-code: hsl(var(--heroui-foreground));
+  --tw-prose-quote-borders: hsl(var(--heroui-foreground));
+  --tw-prose-quotes: hsl(var(--heroui-foreground));
+  --tw-prose-td-borders: hsl(var(--heroui-foreground));
+  --tw-prose-th-borders: hsl(var(--heroui-foreground));
 }
 
 @utility prose {
-  --tw-prose-body: --theme(--color-gray-700, initial);
-  --tw-prose-headings: --theme(--color-gray-900, initial);
-  --tw-prose-lead: --theme(--color-gray-600, initial);
-  --tw-prose-links: --theme(--color-gray-900, initial);
-  --tw-prose-bold: --theme(--color-gray-900, initial);
-  --tw-prose-counters: --theme(--color-gray-500, initial);
-  --tw-prose-bullets: --theme(--color-gray-300, initial);
-  --tw-prose-hr: --theme(--color-gray-200, initial);
-  --tw-prose-quotes: --theme(--color-gray-900, initial);
-  --tw-prose-quote-borders: --theme(--color-gray-200, initial);
-  --tw-prose-captions: --theme(--color-gray-500, initial);
-  --tw-prose-kbd: --theme(--color-gray-900, initial);
-  --tw-prose-kbd-shadows: --theme(--color-gray-900, initial);
-  --tw-prose-code: --theme(--color-gray-900, initial);
-  --tw-prose-pre-code: --theme(--color-gray-200, initial);
-  --tw-prose-pre-bg: --theme(--color-gray-800, initial);
-  --tw-prose-th-borders: --theme(--color-gray-300, initial);
-  --tw-prose-td-borders: --theme(--color-gray-200, initial);
-  --tw-prose-invert-body: --theme(--color-gray-300, initial);
-  --tw-prose-invert-headings: --theme(--color-white, initial);
-  --tw-prose-invert-lead: --theme(--color-gray-400, initial);
-  --tw-prose-invert-links: --theme(--color-white, initial);
-  --tw-prose-invert-bold: --theme(--color-white, initial);
-  --tw-prose-invert-counters: --theme(--color-gray-400, initial);
-  --tw-prose-invert-bullets: --theme(--color-gray-600, initial);
-  --tw-prose-invert-hr: --theme(--color-gray-700, initial);
-  --tw-prose-invert-quotes: --theme(--color-gray-100, initial);
-  --tw-prose-invert-quote-borders: --theme(--color-gray-700, initial);
-  --tw-prose-invert-captions: --theme(--color-gray-400, initial);
-  --tw-prose-invert-kbd: --theme(--color-white, initial);
-  --tw-prose-invert-kbd-shadows: --theme(--color-white, initial);
-  --tw-prose-invert-code: --theme(--color-white, initial);
-  --tw-prose-invert-pre-code: --theme(--color-gray-300, initial);
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: --theme(--color-gray-600, initial);
-  --tw-prose-invert-td-borders: --theme(--color-gray-700, initial);
-
   font-size: 1rem;
   line-height: 1.75;
 
@@ -199,23 +161,12 @@
     }
 
     &:where(blockquote) {
-      font-weight: 500;
-      font-style: italic;
       color: var(--tw-prose-quotes);
       border-left-width: 0.25rem;
       border-left-color: var(--tw-prose-quote-borders);
-      quotes: '\201C' '\201D' '\2018' '\2019';
       margin-top: 1.6em;
       margin-bottom: 1.6em;
       padding-left: 1em;
-    }
-
-    &:where(blockquote p:first-of-type)::before {
-      content: open-quote;
-    }
-
-    &:where(blockquote p:last-of-type)::after {
-      content: close-quote;
     }
 
     &:where(h1) {
@@ -342,9 +293,8 @@
 
     &:where(pre) {
       color: var(--tw-prose-pre-code);
-      background-color: var(--tw-prose-pre-bg);
       overflow-x: auto;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 0.875em;
       line-height: 1.7142857;
       margin-top: 1.7142857em;

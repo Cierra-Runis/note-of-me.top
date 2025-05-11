@@ -38,7 +38,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <section className='grid grid-cols-6 gap-4'>
-      <article className='prose col-span-full max-w-full dark:prose-invert md:prose-lg lg:prose-xl lg:col-span-5'>
+      <article className='prose col-span-full max-w-full md:prose-lg lg:prose-xl lg:col-span-5'>
         <div className='mb-8 text-center'>
           <p className='mb-1 text-secondary-600'>
             {/* TODO: I18n */}
