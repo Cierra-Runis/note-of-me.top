@@ -1,8 +1,6 @@
 /// <https://contentlayer.dev/docs/sources/files/mdx>
 import { DocsToc } from '@/components/roots/Toc';
 import { mdxComponents } from '@/styles/markdown';
-import '@/styles/markdown.css';
-import '@/styles/two-slash.css';
 import { getHeadings } from '@/utils/heading';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';

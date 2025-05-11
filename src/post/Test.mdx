@@ -6,7 +6,7 @@ id: SROWTW
 
 Passing your code snippet to the `codeToHtml` function with the `lang` and `theme` specified, it will return a highlighted HTML string that you can embed in your page. The generated HTML contains inline style for each token, so you don't need extra CSS to style it.
 
-```ts twoslash
+```ts
 import { codeToHtml } from 'shiki';
 
 const code = 'const a = 1'; // input code
@@ -26,7 +26,7 @@ console.log(html); // highlighted html string
 
 ## Usage
 
-```ts twoslash
+```ts
 // [!code highlight:5]
 import {
   transformerNotationDiff,
@@ -88,7 +88,7 @@ const highlighter = await createHighlighterCore({
 });
 ```
 
-```ts twoslash
+```ts
 // this will run Twoslash
 import { createHighlighterCore } from 'shiki/core';
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';

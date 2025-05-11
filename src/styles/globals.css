@@ -10,3 +10,100 @@
 @source '../../src/app/**/*.{js,ts,jsx,tsx,mdx}';
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
+
+/* https://github.com/tailwindlabs/tailwindcss-typography/issues/372#issuecomment-2616848354 */
+@utility prose {
+  --tw-prose-body: hsl(var(--heroui-foreground));
+  --tw-prose-bold: hsl(var(--heroui-foreground-700));
+  --tw-prose-bullets: hsl(var(--heroui-foreground));
+  --tw-prose-captions: hsl(var(--heroui-foreground));
+  --tw-prose-code: hsl(var(--heroui-foreground));
+  --tw-prose-counters: hsl(var(--heroui-foreground));
+  --tw-prose-headings: hsl(var(--heroui-foreground-700));
+  --tw-prose-hr: hsl(var(--heroui-foreground));
+  --tw-prose-kbd: hsl(var(--heroui-foreground));
+  --tw-prose-kdb-shadows: hsl(var(--heroui-foreground));
+  --tw-prose-lead: hsl(var(--heroui-foreground));
+  --tw-prose-links: hsl(var(--heroui-foreground));
+  --tw-prose-pre-bg: inherit;
+  --tw-prose-pre-code: hsl(var(--heroui-foreground));
+  --tw-prose-quote-borders: hsl(var(--heroui-foreground));
+  --tw-prose-quotes: hsl(var(--heroui-foreground));
+  --tw-prose-td-borders: hsl(var(--heroui-foreground));
+  --tw-prose-th-borders: hsl(var(--heroui-foreground));
+  --tw-prose-invert-body: hsl(var(--heroui-foreground));
+  --tw-prose-invert-bold: hsl(var(--heroui-foreground-700));
+  --tw-prose-invert-bullets: hsl(var(--heroui-foreground));
+  --tw-prose-invert-captions: hsl(var(--heroui-foreground));
+  --tw-prose-invert-code: hsl(var(--heroui-foreground));
+  --tw-prose-invert-counters: hsl(var(--heroui-foreground));
+  --tw-prose-invert-headings: hsl(var(--heroui-foreground-700));
+  --tw-prose-invert-hr: hsl(var(--heroui-foreground));
+  --tw-prose-invert-kbd: hsl(var(--heroui-foreground));
+  --tw-prose-invert-kdb-shadows: hsl(var(--heroui-foreground));
+  --tw-prose-invert-lead: hsl(var(--heroui-foreground));
+  --tw-prose-invert-links: hsl(var(--heroui-foreground));
+  --tw-prose-invert-pre-bg: inherit;
+  --tw-prose-invert-pre-code: hsl(var(--heroui-foreground));
+  --tw-prose-invert-quote-borders: hsl(var(--heroui-foreground));
+  --tw-prose-invert-quotes: hsl(var(--heroui-foreground));
+  --tw-prose-invert-td-borders: hsl(var(--heroui-foreground));
+  --tw-prose-invert-th-borders: hsl(var(--heroui-foreground));
+
+  code {
+    font-weight: 600;
+    color: hsl(var(--heroui-primary-600));
+  }
+
+  blockquote {
+    font-style: 'normal';
+    font-weight: 'inherit';
+  }
+
+  pre code {
+    background-color: inherit;
+    font-weight: 500;
+  }
+}
+
+html.light .shiki,
+html.light .shiki span {
+  color: var(--shiki-light);
+}
+
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark);
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.label {
+  font-family: inherit !important;
+  font-size: 15px;
+}
+
+svg {
+  font-family: inherit !important;
+}
+
+code .tab,
+code .space {
+  position: relative;
+}
+
+code .tab::before {
+  content: '⇥';
+  position: absolute;
+  opacity: 0.3;
+}
+
+code .space::before {
+  content: '·';
+  position: absolute;
+  opacity: 0.3;
+}
+
