@@ -12,7 +12,6 @@ import {
   transformerRemoveNotationEscape,
   transformerRenderWhitespace,
 } from '@shikijs/transformers';
-import { transformerTwoslash } from '@shikijs/twoslash';
 import { Post as GeneratedPost } from 'contentlayer/generated';
 import {
   ComputedFields,
@@ -67,6 +66,7 @@ const rehypeShikiOptions: RehypeShikiOptions = {
     dark: 'one-dark-pro',
   },
   defaultColor: false,
+  inline: 'tailing-curly-colon',
   transformers: [
     /// Common transformers
 
@@ -101,11 +101,6 @@ const rehypeShikiOptions: RehypeShikiOptions = {
     // TODO: transformerStyleToClass(),
 
     /// Others
-
-    // https://shiki.style/packages/twoslash
-    transformerTwoslash({
-      explicitTrigger: true,
-    }),
 
     // https://shiki.style/packages/colorized-brackets
     transformerColorizedBrackets(),
