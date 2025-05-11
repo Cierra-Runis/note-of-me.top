@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import { firaCode, notoSansSC, saira } from '@/styles/font';
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
 import NextTopLoader from 'nextjs-toploader';
@@ -12,10 +11,27 @@ import { NavBar } from '@/components/roots/NavBar';
 import { Providers } from '@/components/roots/Providers';
 import Statistics from '@/components/roots/Statistics';
 import { siteConfig } from '@/config';
+import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
 
-type Props = {
-  children: ReactNode;
-};
+/// TIPS: https://github.com/vercel/next.js/issues/49207
+/// TIPS: https://github.com/vercel/next.js/issues/53522
+
+/// Sans ////////////////////////
+export const saira = Saira({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+export const notoSansSC = Noto_Sans_SC({
+  subsets: ['latin'],
+  variable: '--font-sans-sc',
+});
+
+/// Mono ////////////////////////
+export const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 export function generateMetadata(): Metadata {
   return {
@@ -29,17 +45,18 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function LocaleLayout({ children }: Props) {
+export default function LocaleLayout({ children }: { children: ReactNode }) {
   return (
-    <html suppressHydrationWarning className='scroll-smooth'>
-      <body
-        className={clsx(
-          'min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background',
-          saira.variable,
-          notoSansSC.variable,
-          firaCode.variable,
-        )}
-      >
+    <html
+      suppressHydrationWarning
+      className={clsx(
+        'scroll-smooth',
+        saira.variable,
+        notoSansSC.variable,
+        firaCode.variable,
+      )}
+    >
+      <body className='min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background'>
         <Statistics />
         <Providers>
           <NextTopLoader

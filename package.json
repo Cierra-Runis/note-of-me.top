@@ -107,7 +107,6 @@
     "@shikijs/rehype": "^3.4.0",
     "@shikijs/transformers": "^3.4.0",
     "@tailwindcss/postcss": "^4.1.6",
-    "@tailwindcss/typography": "^0.5.16",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/katex": "^0.16.7",
     "@types/node": "^20.17.46",
