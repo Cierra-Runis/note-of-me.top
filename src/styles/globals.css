@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import './typography.css';
+
+@plugin 'tailwindcss-motion';
 @plugin './hero.ts';
 
 @source '../../src/pages/**/*.{js,ts,jsx,tsx,mdx}';

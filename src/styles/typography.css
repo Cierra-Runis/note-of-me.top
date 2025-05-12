@@ -55,6 +55,7 @@
     &:where(p) {
       margin-top: 1.25em;
       margin-bottom: 1.25em;
+      @apply motion-preset-slide-up;
     }
 
     &:where([class~='lead']) {
@@ -484,6 +485,8 @@
     &:where(figure) {
       margin-top: 2em;
       margin-bottom: 2em;
+      @apply motion-preset-slide-up;
+      @apply overflow-auto;
     }
 
     &:where(.prose > :first-child) {

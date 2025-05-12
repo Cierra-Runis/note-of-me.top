@@ -330,6 +330,9 @@ importers:
       tailwindcss:
         specifier: 4.1.6
         version: 4.1.6
+      tailwindcss-motion:
+        specifier: ^1.1.0
+        version: 1.1.0(tailwindcss@4.1.6)
       tsx:
         specifier: ^4.19.4
         version: 4.19.4
@@ -4675,6 +4678,11 @@ packages:
     engines: {node: '>=16.x', pnpm: '>=7.x'}
     peerDependencies:
       tailwindcss: '*'
+
+  tailwindcss-motion@1.1.0:
+    resolution: {integrity: sha512-0lK6rA4+367ffJdi1TtB72GlMCxJi2TP/xRiHc6An5pZSlU6WfIHhSvLxpcGilGZfBrOqc2q4woH1DEP/lCNbQ==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
 
   tailwindcss@4.1.6:
     resolution: {integrity: sha512-j0cGLTreM6u4OWzBeLBpycK0WIh8w7kSwcUsQZoGLHZ7xDTdM69lN64AgoIEEwFi0tnhs4wSykUa5YWxAzgFYg==}
@@ -10990,6 +10998,10 @@ snapshots:
   tailwind-variants@1.0.0(tailwindcss@4.1.6):
     dependencies:
       tailwind-merge: 3.0.2
+      tailwindcss: 4.1.6
+
+  tailwindcss-motion@1.1.0(tailwindcss@4.1.6):
+    dependencies:
       tailwindcss: 4.1.6
 
   tailwindcss@4.1.6: {}
