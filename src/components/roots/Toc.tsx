@@ -4,7 +4,6 @@ import { useScrollSpy } from '@/hooks/use-scroll-spy';
 import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@heroui/scroll-shadow';
 import clsx from 'clsx';
-import NextLink from 'next/link';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -75,7 +74,11 @@ export const DocsToc: FC<{
                 data-active={activeId == heading.id}
                 key={i}
               >
-                <NextLink href={`#${heading.id}`}>{heading.text}</NextLink>
+                {/*
+                  It's unnecessary to use `NextLink` from `next/link` package,
+                  which leads to unnecessary request to server.
+                */}
+                <a href={`#${heading.id}`}>{heading.text}</a>
               </li>
             ),
         )}
