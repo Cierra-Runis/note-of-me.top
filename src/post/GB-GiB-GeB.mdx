@@ -6,8 +6,6 @@ id: CWOATN
 
 ## Introducing "GeB": A Clear Decimal Counterpart to GiB
 
-## 引入“GeB”：GiB 的对称十进制搭档
-
 We strongly recommend GeB over GB for all decimal-based contexts.
 
 我们始终推荐在十进制语境中使用 GeB，而非 GB。
@@ -44,34 +42,21 @@ We propose a new symbol: **GeB**, standing for **G**id**e**byte (**G**iga-d**e**
 |        GeB        |   Gidebyte    |    10     | $(10^{3})^3 = 1,000,000,000$ |
 |        GiB        |   Gibibyte    |     2     | $(2^{10})^3 = 1,073,741,824$ |
 
-## Why GeB (not GaB)?
-
-## 为什么选 GeB 而不是 GaB？
-
-We initially considered **GaB**, using "a" from Gig**a**, but ultimately rejected it in favor of **GeB**.
-
-曾经我们也考虑过 **GaB**，a 来自 Gig**a**，但最终决定采用 **GeB**，原因如下：
-
-| Abbreviation 缩写 |  Fullname 全称   | Symmetry 对称性 | Systematicity 系统性  |
-| :---------------: | :--------------: | :-------------: | :-------------------: |
-|        GeB        | **G**id**e**byte |       ✅        | ✅ IEC-like（类 IEC） |
-|        GaB        | **G**ig**a**byte |       ✅        |  ❌ Inherit（继承）   |
-
 ## Pronunciation Across Languages
 
 ## 不同语言的发音
 
-Abbreviations like GB, GiB, GaB, and GeB can be confusing not only in meaning but also in pronunciation. Different language communities handle technical acronyms differently, which may lead to confusion when discussing storage units.
+Abbreviations like GB, GiB, and GeB can be confusing not only in meaning but also in pronunciation. Different language communities handle technical acronyms differently, which may lead to confusion when discussing storage units.
 
-类似 GB、GiB、GaB 和 GeB 这样的缩写，不仅意义容易混淆，发音在不同国家也存在差异。以下是一些主流语言环境的常见处理方式：
+类似 GB、GiB 和 GeB 这样的缩写，不仅意义容易混淆，发音在不同国家也存在差异。以下是一些主流语言环境的常见处理方式：
 
-|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |  ~~GaB~~   |   _GeB_    |         Method 处理方式         |
-| :-----------------: | :--------: | :------------: | :--------: | :--------: | :-----------------------------: |
-|    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gɛb/    |   /gæb/    |    As Word[^1] 作为单词[^2]     |
-|     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Giga-Byte  | Gede-Byte  |     Read Fullname 念出全称      |
-|    ja（日本語）     |  ジービー  |      ギブ      |    ガブ    |    ゲブ    |      Copy English 照搬英语      |
-| zh-Hans（简体中文） |    G-B     |     G-I-B      |   G-E-B    |    G-B     | A Pronounce Separately 拆开拼读 |
-| zh-Hant（繁体中文） | 吉比（特） |   吉比（特）   | 加比（特） | 格比（特） |     Remix zh-Hans 简繁混用      |
+|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |   _GeB_    |         Method 处理方式         |
+| :-----------------: | :--------: | :------------: | :--------: | :-----------------------------: |
+|    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gæb/    |    As Word[^1] 作为单词[^2]     |
+|     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Gide-Byte  |     Read Fullname 念出全称      |
+|    ja（日本語）     |  ジービー  |      ギブ      |    ゲブ    |      Copy English 照搬英语      |
+| zh-Hans（简体中文） |    G-B     |     G-I-B      |    G-B     | A Pronounce Separately 拆开拼读 |
+| zh-Hant（繁体中文） | 吉比（特） |   吉比（特）   | 格比（特） |     Remix zh-Hans 简繁混用      |
 
 [BCP 47]: https://www.rfc-editor.org/info/bcp47
 
@@ -126,8 +111,6 @@ This symmetry improves consistency and provides a clear mental model for interpr
 >
 > 注：根据 SI 规范，$10^3$ 字节应写作 **k**B，虽然实际中常见写法为 **K**B，但那是不规范的。
 
-> Note: Although
-
 ## Implementation & Adoption
 
 ## 推广建议
@@ -142,10 +125,8 @@ To encourage adoption:
 - Clarify unit meanings explicitly in software UIs
 - 项目文档中教育用户和贡献者，说明 GiB 与 GeB 的区别
 
-- Encourage open-source libraries to support config options like:
-  `formatSize(value, { unit: 'GeB' }){:ts}`
-- 推动开源库支持配置项：
-  `formatSize(value, { unit: 'GeB' }){:ts}`
+- Encourage open-source libraries to support config options like: `formatSize(value, { unit: 'GeB' }){:ts}`
+- 推动开源库支持配置项：`formatSize(value, { unit: 'GeB' }){:ts}`
 
 ## Conclusion
 
