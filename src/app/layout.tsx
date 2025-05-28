@@ -17,18 +17,18 @@ import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
 /// TIPS: https://github.com/vercel/next.js/issues/53522
 
 /// Sans ////////////////////////
-export const saira = Saira({
+const saira = Saira({
   subsets: ['latin'],
   variable: '--font-sans',
 });
 
-export const notoSansSC = Noto_Sans_SC({
+const notoSansSC = Noto_Sans_SC({
   subsets: ['latin'],
   variable: '--font-sans-sc',
 });
 
 /// Mono ////////////////////////
-export const firaCode = Fira_Code({
+const firaCode = Fira_Code({
   subsets: ['latin'],
   variable: '--font-mono',
 });
