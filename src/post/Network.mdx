@@ -324,6 +324,94 @@ fi
 
 </details>
 
+<details>
+  <summary>Windows `~\.local\bin\ddns.ps1`</summary>
+
+```powershell
+# Requires: aliyun CLI 已配置好账号
+# 修改以下参数
+$DomainName = "note-of-me.top"
+$RR = $env:COMPUTERNAME  # 或 [System.Net.Dns]::GetHostName()
+$RecordType = "AAAA"
+
+# 获取 IPv6 地址
+function Get-PreferredIPv6Address {
+    # 获取所有候选 IPv6 地址
+    $candidates = Get-NetIPAddress -AddressFamily IPv6 |
+        Where-Object {
+            $_.AddressState -eq "Preferred" -and
+            $_.IPAddress -notmatch "^fe80" -and
+            ([System.Net.IPAddress]::Parse($_.IPAddress).GetAddressBytes()[0] -band 0b11100000) -eq 0b00100000
+        }
+
+    # 优先选择 DHCP 分配的地址
+    $target = $candidates |
+        Where-Object { $_.PrefixOrigin -eq "Dhcp" -and $_.SuffixOrigin -eq "Dhcp" } |
+        Select-Object -First 1
+
+    if (-not $target) {
+        # 其次选择 RouterAdvertisement 分配但不是随机后缀的地址
+        $target = $candidates |
+            Where-Object { $_.PrefixOrigin -eq "RouterAdvertisement" -and $_.SuffixOrigin -ne "Random" } |
+            Select-Object -First 1
+    }
+
+    if (-not $target) {
+        Write-Host "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] ❌ 未找到合适的 IPv6 地址"
+        return $null
+    }
+
+    Write-Host "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] ✅ 使用 IPv6 地址: $($target.IPAddress)"
+    return $target.IPAddress
+}
+
+
+# 获取当前记录
+$ipv6Addr = Get-PreferredIPv6Address
+
+$recordInfoRaw = & aliyun alidns DescribeSubDomainRecords `
+    --SubDomain "$RR.$DomainName" `
+    --Type "$RecordType"
+
+if (-not $recordInfoRaw) {
+    Write-Host "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] Failed to get record info"
+    exit 1
+}
+
+$recordInfo = $recordInfoRaw | ConvertFrom-Json
+$record = $recordInfo.DomainRecords.Record | Select-Object -First 1
+$recordId = $record.RecordId
+$currentIP = $record.Value
+
+Write-Host "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] Current DNS: $currentIP"
+
+if ($recordId) {
+    if ($currentIP -eq $ipv6Addr) {
+        Write-Host "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] IPv6 ($ipv6Addr) no changed"
+        exit 0
+    }
+
+    Write-Host "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] Updating $RR.$DomainName\: $currentIP => $ipv6Addr"
+
+    & aliyun alidns UpdateDomainRecord `
+        --RecordId $recordId `
+        --RR $RR `
+        --Type $RecordType `
+        --Value $ipv6Addr | Out-Null
+} else {
+    Write-Host "[$(Get-Date -f 'yyyy-MM-dd HH:mm:ss')] Creating $RR.$DomainName => $ipv6Addr"
+
+    & aliyun alidns AddDomainRecord `
+        --DomainName $DomainName `
+        --RR $RR `
+        --Type $RecordType `
+        --Value $ipv6Addr | Out-Null
+}
+
+```
+
+</details>
+
 ## 回到过去
 
 两台设备直接使用网线连接，这就是最简单的局域网 —— 教程可参考 [此视频](https://www.bilibili.com/video/av424790900)：
