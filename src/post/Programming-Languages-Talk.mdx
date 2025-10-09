@@ -43,6 +43,38 @@ s = ['H', 'e', 'l', 'l', 'o']                # 定义长度为 5 的字符串
 
 先说结论：我坚决反对修改传进来的值。这种做法既不直观，也不安全，更违背了函数式编程的基本原则。
 
+```ts
+export const authOptions: NextAuthOptions = {
+  callbacks: {
+    jwt({ token, user }) {
+      // The arguments user, account, profile and isNewUser are only passed the first time this callback is called on a new session,
+      // after the user signs in. In subsequent calls, only token will be available.
+      // token : The current JSON Web Token
+      // user : The user object returned by the callback for the session (only available on first sign in)
+      if (user) {
+        token = { ...token, ...user };
+      }
+      return token;
+    },
+
+    session({ session, token }) {
+      if (session.user == undefined) {
+        session.user = {};
+        session.user.name = token.name;
+      } else {
+        session.user.name = token.name;
+      }
+      session.step = token.step;
+      session.secretCode = token.secretCode;
+      session.accessToken = token.accessToken;
+      session.refreshToken = token.refreshToken;
+      session.mfaSession = token.mfaSession;
+      return session;
+    },
+  },
+}
+```
+
 在 C 语言中，参数传递有两种方式：按值传递和按指针传递。按值传递还好，至少不会影响到原始数据。但是按指针传递就麻烦了，你永远不知道一个函数会不会偷偷地修改你传进去的参数。
 
 ```c
