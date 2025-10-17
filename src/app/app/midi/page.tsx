@@ -8,17 +8,23 @@ import {
   IconMicrophone2,
 } from '@tabler/icons-react';
 import { Midi } from '@tonejs/midi';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as Tone from 'tone';
 import { useFilePicker } from 'use-file-picker';
 
+// 88 个钢琴键 MIDI 音符编号 (A0 到 C8)
+const PIANO_KEYS = Array.from({ length: 88 }, (_, i) => i + 21);
+
 export default function MidiPlayer() {
+  console.log('MidiPlayer rendered');
   const [midi, setMidi] = useState<Midi>();
-  const [activeKeys, setActiveKeys] = useState<{ [key: string]: boolean }>({});
   const [isPlaying, setIsPlaying] = useState(false);
   const synthRefs = useRef<Tone.PolySynth[]>([]);
   const muteRefs = useRef<boolean[]>([]);
   const soloRefs = useRef<boolean[]>([]);
+  const keyElementsRef = useRef<Map<string, HTMLDivElement>>(new Map());
+  const [muteStates, setMuteStates] = useState<boolean[]>([]);
+  const [soloStates, setSoloStates] = useState<boolean[]>([]);
 
   const { loading, openFilePicker } = useFilePicker({
     multiple: false,
@@ -41,25 +47,48 @@ export default function MidiPlayer() {
 
   const resetRefs = (midiData: Midi) => {
     synthRefs.current = midiData.tracks.map(() => {
-      return new Tone.PolySynth(Tone.Synth).toDestination();
+      const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+      synth.maxPolyphony = 1024;
+      return synth;
     });
     muteRefs.current = midiData.tracks.map(() => false);
     soloRefs.current = midiData.tracks.map(() => false);
+    setMuteStates(midiData.tracks.map(() => false));
+    setSoloStates(midiData.tracks.map(() => false));
+    keyElementsRef.current.clear();
   };
 
   const toggleMute = (index: number) => {
     muteRefs.current[index] = !muteRefs.current[index];
+    setMuteStates([...muteRefs.current]);
   };
 
   const toggleSolo = (index: number) => {
     soloRefs.current[index] = !soloRefs.current[index];
+    setSoloStates([...soloRefs.current]);
+  };
+
+  const activateKey = (trackIndex: number, noteName: string) => {
+    const key = `${trackIndex}-${noteName}`;
+    const element = keyElementsRef.current.get(key);
+    if (element) {
+      element.style.backgroundColor = `hsl(${(trackIndex * 30) % 360}, 100%, 70%)`;
+    }
+  };
+
+  const deactivateKey = (trackIndex: number, noteName: string) => {
+    const key = `${trackIndex}-${noteName}`;
+    const element = keyElementsRef.current.get(key);
+    if (element) {
+      element.style.backgroundColor = '';
+    }
   };
 
   const startPlayback = async () => {
     if (isPlaying) {
       return addToast({
         color: 'warning',
-        description: '正在播放中，请稍后再试',
+        description: '正在播放中,请稍后再试',
         title: '提示',
       });
     }
@@ -96,12 +125,9 @@ export default function MidiPlayer() {
           );
 
           Tone.Draw.schedule(() => {
-            setActiveKeys((prev) => ({ ...prev, [`${i}-${note.name}`]: true }));
+            activateKey(i, note.name);
             setTimeout(() => {
-              setActiveKeys((prev) => ({
-                ...prev,
-                [`${i}-${note.name}`]: false,
-              }));
+              deactivateKey(i, note.name);
             }, note.duration * 1000);
           }, time);
         }, note.time);
@@ -113,28 +139,23 @@ export default function MidiPlayer() {
     setIsPlaying(false);
   };
 
-  const renderKeyboard = (trackIndex: number) => {
-    const keys = Array.from({ length: 88 }, (_, i) => i + 21);
-    return (
-      <div className='flex gap-0.5 lg:gap-1'>
-        {keys.map((key) => {
-          const note = Tone.Frequency(key, 'midi').toNote();
-          const isActive = activeKeys[`${trackIndex}-${note}`];
-          return (
-            <div
-              className='h-5 w-1 rounded-md bg-foreground-50 lg:h-8 lg:w-2'
-              key={note}
-              style={{
-                backgroundColor: isActive
-                  ? `hsl(${(trackIndex * 30) % 360}, 100%, 70%)`
-                  : undefined,
-              }}
-            />
-          );
-        })}
-      </div>
-    );
-  };
+  // 组件卸载时清理资源
+  useEffect(() => {
+    return () => {
+      // 停止并取消所有调度
+      Tone.Transport.stop();
+      Tone.Transport.cancel();
+
+      // 释放所有合成器
+      synthRefs.current.forEach((synth) => {
+        synth.dispose();
+      });
+
+      // 清空引用
+      synthRefs.current = [];
+      keyElementsRef.current.clear();
+    };
+  }, []);
 
   return (
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
@@ -165,15 +186,32 @@ export default function MidiPlayer() {
                   {track.name || `轨道 ${i + 1}`}
                 </span>
               </div>
-              <div className='flex gap-4'>
-                {renderKeyboard(i)}
+              <div className='flex gap-4 items-center'>
+                <div className='flex gap-0.5 lg:gap-1'>
+                  {PIANO_KEYS.map((midiNumber) => {
+                    console.log('Rendering key for midiNumber:', midiNumber);
+                    const note = Tone.Frequency(midiNumber, 'midi').toNote();
+                    const keyId = `${i}-${note}`;
+                    return (
+                      <div
+                        key={keyId}
+                        ref={(el) => {
+                          if (el) {
+                            keyElementsRef.current.set(keyId, el);
+                          }
+                        }}
+                        className='h-4 w-0.5 rounded-md bg-foreground-50 transition-colors lg:h-8 lg:w-2'
+                      />
+                    );
+                  })}
+                </div>
                 <ButtonGroup>
                   <Button
                     isIconOnly
                     onPress={() => toggleMute(i)}
                     size='sm'
                     startContent={
-                      muteRefs.current[i] ? (
+                      muteStates[i] ? (
                         <IconDeviceSpeakerOff className='w-4' />
                       ) : (
                         <IconDeviceSpeaker className='w-4' />
@@ -187,7 +225,7 @@ export default function MidiPlayer() {
                     onPress={() => toggleSolo(i)}
                     size='sm'
                     startContent={<IconMicrophone2 className='w-4' />}
-                    variant={soloRefs.current[i] ? 'faded' : 'ghost'}
+                    variant={soloStates[i] ? 'faded' : 'ghost'}
                   />
                 </ButtonGroup>
               </div>
