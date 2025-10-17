@@ -71,6 +71,7 @@ export default function MidiPlayer() {
     const element = keyElementsRef.current.get(key);
     if (element) {
       element.style.backgroundColor = `hsl(${(trackIndex * 30) % 360}, 100%, 70%)`;
+      element.style.boxShadow = `0 0 8px hsl(${(trackIndex * 30) % 360}, 100%, 70%)`;
     }
   };
 
@@ -79,6 +80,7 @@ export default function MidiPlayer() {
     const element = keyElementsRef.current.get(key);
     if (element) {
       element.style.backgroundColor = '';
+      element.style.boxShadow = '';
     }
   };
 
@@ -198,7 +200,7 @@ export default function MidiPlayer() {
                             keyElementsRef.current.set(keyId, el);
                           }
                         }}
-                        className='h-4 w-0.5 rounded-md bg-foreground-50 transition-colors lg:h-8 lg:w-2'
+                        className='h-4 w-0.5 rounded-md bg-foreground-50 transition-all lg:h-8 lg:w-2'
                       />
                     );
                   })}
