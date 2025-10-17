@@ -16,7 +16,6 @@ import { useFilePicker } from 'use-file-picker';
 const PIANO_KEYS = Array.from({ length: 88 }, (_, i) => i + 21);
 
 export default function MidiPlayer() {
-  console.log('MidiPlayer rendered');
   const [midi, setMidi] = useState<Midi>();
   const [isPlaying, setIsPlaying] = useState(false);
   const synthRefs = useRef<Tone.PolySynth[]>([]);
@@ -48,7 +47,6 @@ export default function MidiPlayer() {
   const resetRefs = (midiData: Midi) => {
     synthRefs.current = midiData.tracks.map(() => {
       const synth = new Tone.PolySynth(Tone.Synth).toDestination();
-      synth.maxPolyphony = 1024;
       return synth;
     });
     muteRefs.current = midiData.tracks.map(() => false);
@@ -103,13 +101,14 @@ export default function MidiPlayer() {
 
     setIsPlaying(true);
     await Tone.start();
-    Tone.Transport.stop();
-    Tone.Transport.cancel();
+
+    Tone.getTransport().stop();
+    Tone.getTransport().cancel();
 
     midi.tracks.forEach((track, i) => {
       const synth = synthRefs.current[i];
       track.notes.forEach((note) => {
-        Tone.Transport.schedule((time) => {
+        Tone.getTransport().schedule((time) => {
           const hasSolo = soloRefs.current.some(Boolean);
           const isSolo = soloRefs.current[i];
           if (hasSolo && !isSolo) return;
@@ -121,10 +120,10 @@ export default function MidiPlayer() {
             note.name,
             note.duration,
             time,
-            note.velocity,
+            note.velocity * 0.8, // 降低力度，避免过载
           );
 
-          Tone.Draw.schedule(() => {
+          Tone.getDraw().schedule(() => {
             activateKey(i, note.name);
             setTimeout(() => {
               deactivateKey(i, note.name);
@@ -134,7 +133,7 @@ export default function MidiPlayer() {
       });
     });
 
-    Tone.Transport.start();
+    Tone.getTransport().start();
 
     setIsPlaying(false);
   };
@@ -143,8 +142,8 @@ export default function MidiPlayer() {
   useEffect(() => {
     return () => {
       // 停止并取消所有调度
-      Tone.Transport.stop();
-      Tone.Transport.cancel();
+      Tone.getTransport().stop();
+      Tone.getTransport().cancel();
 
       // 释放所有合成器
       synthRefs.current.forEach((synth) => {
@@ -189,7 +188,6 @@ export default function MidiPlayer() {
               <div className='flex gap-4 items-center'>
                 <div className='flex gap-0.5 lg:gap-1'>
                   {PIANO_KEYS.map((midiNumber) => {
-                    console.log('Rendering key for midiNumber:', midiNumber);
                     const note = Tone.Frequency(midiNumber, 'midi').toNote();
                     const keyId = `${i}-${note}`;
                     return (
