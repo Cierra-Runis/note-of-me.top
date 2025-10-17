@@ -32,7 +32,7 @@ export default function MidiPlayer() {
       try {
         const midiData = new Midi(file.content);
         setMidi(midiData);
-        resetRefs(midiData);
+        reset(midiData);
       } catch {
         addToast({
           color: 'danger',
@@ -44,7 +44,9 @@ export default function MidiPlayer() {
     readAs: 'ArrayBuffer',
   });
 
-  const resetRefs = (midiData: Midi) => {
+  const reset = (midiData: Midi) => {
+    Tone.getTransport().stop();
+    Tone.getTransport().cancel();
     synthRefs.current = midiData.tracks.map(() => {
       const synth = new Tone.PolySynth(Tone.Synth).toDestination();
       return synth;
@@ -85,19 +87,17 @@ export default function MidiPlayer() {
   };
 
   const startPlayback = async () => {
-    if (isPlaying) {
-      return addToast({
-        color: 'warning',
-        description: '正在播放中,请稍后再试',
-        title: '提示',
-      });
-    }
-
     if (!midi) {
       return addToast({
         color: 'warning',
-        description: '请先选择 MIDI 文件',
-        title: '错误',
+        title: '请先选择 MIDI 文件',
+      });
+    }
+
+    if (isPlaying) {
+      return addToast({
+        color: 'warning',
+        title: '正在播放中,请稍后再试',
       });
     }
 
@@ -122,7 +122,7 @@ export default function MidiPlayer() {
             note.name,
             note.duration,
             time,
-            note.velocity * 0.8, // 降低力度，避免过载
+            note.velocity,
           );
 
           Tone.getDraw().schedule(() => {
@@ -165,11 +165,7 @@ export default function MidiPlayer() {
         <Button isLoading={loading} onPress={openFilePicker} variant='ghost'>
           选择
         </Button>
-        <Button
-          disabled={!midi || isPlaying}
-          onPress={startPlayback}
-          variant='ghost'
-        >
+        <Button onPress={startPlayback} variant='ghost'>
           播放
         </Button>
       </ButtonGroup>
@@ -184,7 +180,7 @@ export default function MidiPlayer() {
                     color: `hsl(${(i * 30) % 360}, 100%, 70%)`,
                   }}
                 >
-                  {track.name || `轨道 ${i + 1}`}
+                  {track.name || `未命名轨道`}
                 </span>
               </div>
               <div className='flex gap-4 items-center'>
@@ -200,16 +196,15 @@ export default function MidiPlayer() {
                             keyElementsRef.current.set(keyId, el);
                           }
                         }}
-                        className='h-4 w-0.5 rounded-md bg-foreground-50 transition-all lg:h-8 lg:w-2'
+                        className='h-4 w-0.5 rounded-md bg-default-50 transition-all duration-100 sm:h-6 sm:w-1 md:h-8 md:w-1.25 lg:w-1.5'
                       />
                     );
                   })}
                 </div>
-                <ButtonGroup>
+                <ButtonGroup size='sm'>
                   <Button
                     isIconOnly
                     onPress={() => toggleMute(i)}
-                    size='sm'
                     startContent={
                       muteStates[i] ? (
                         <IconDeviceSpeakerOff className='w-4' />
@@ -223,7 +218,6 @@ export default function MidiPlayer() {
                   <Button
                     isIconOnly
                     onPress={() => toggleSolo(i)}
-                    size='sm'
                     startContent={<IconMicrophone2 className='w-4' />}
                     variant={soloStates[i] ? 'faded' : 'ghost'}
                   />
