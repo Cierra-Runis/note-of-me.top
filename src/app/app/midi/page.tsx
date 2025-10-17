@@ -6,6 +6,8 @@ import {
   IconDeviceSpeaker,
   IconDeviceSpeakerOff,
   IconMicrophone2,
+  IconPlayerPlay,
+  IconUpload,
 } from '@tabler/icons-react';
 import { Midi } from '@tonejs/midi';
 import { useEffect, useRef, useState } from 'react';
@@ -17,7 +19,6 @@ const PIANO_KEYS = Array.from({ length: 88 }, (_, i) => i + 21);
 
 export default function MidiPlayer() {
   const [midi, setMidi] = useState<Midi>();
-  const [isPlaying, setIsPlaying] = useState(false);
   const synthRefs = useRef<Tone.PolySynth[]>([]);
   const muteRefs = useRef<boolean[]>([]);
   const soloRefs = useRef<boolean[]>([]);
@@ -25,7 +26,7 @@ export default function MidiPlayer() {
   const [muteStates, setMuteStates] = useState<boolean[]>([]);
   const [soloStates, setSoloStates] = useState<boolean[]>([]);
 
-  const { loading, openFilePicker } = useFilePicker({
+  const { loading: isPicking, openFilePicker } = useFilePicker({
     multiple: false,
     onFilesSuccessfullySelected: ({ filesContent }) => {
       const file = filesContent[0];
@@ -48,8 +49,7 @@ export default function MidiPlayer() {
     Tone.getTransport().stop();
     Tone.getTransport().cancel();
     synthRefs.current = midiData.tracks.map(() => {
-      const synth = new Tone.PolySynth(Tone.Synth).toDestination();
-      return synth;
+      return new Tone.PolySynth(Tone.Synth).toDestination();
     });
     muteRefs.current = midiData.tracks.map(() => false);
     soloRefs.current = midiData.tracks.map(() => false);
@@ -87,27 +87,12 @@ export default function MidiPlayer() {
   };
 
   const startPlayback = async () => {
-    if (!midi) {
-      return addToast({
-        color: 'warning',
-        title: '请先选择 MIDI 文件',
-      });
-    }
-
-    if (isPlaying) {
-      return addToast({
-        color: 'warning',
-        title: '正在播放中,请稍后再试',
-      });
-    }
-
-    setIsPlaying(true);
     await Tone.start();
 
     Tone.getTransport().stop();
     Tone.getTransport().cancel();
 
-    midi.tracks.forEach((track, i) => {
+    midi?.tracks.forEach((track, i) => {
       const synth = synthRefs.current[i];
       track.notes.forEach((note) => {
         Tone.getTransport().schedule((time) => {
@@ -136,8 +121,6 @@ export default function MidiPlayer() {
     });
 
     Tone.getTransport().start();
-
-    setIsPlaying(false);
   };
 
   // 组件卸载时清理资源
@@ -160,15 +143,24 @@ export default function MidiPlayer() {
 
   return (
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <h1 className='text-2xl font-bold'>MIDI 播放器</h1>
-      <ButtonGroup>
-        <Button isLoading={loading} onPress={openFilePicker} variant='ghost'>
-          选择
-        </Button>
-        <Button onPress={startPlayback} variant='ghost'>
-          播放
-        </Button>
-      </ButtonGroup>
+      <div className='flex gap-2 p-2 rounded-2xl fixed bottom-10 z-20 backdrop-blur'>
+        <Button
+          isLoading={isPicking}
+          onPress={openFilePicker}
+          variant='ghost'
+          startContent={<IconUpload className='w-4' />}
+          isIconOnly
+          size='sm'
+        />
+        <Button
+          isDisabled={!midi}
+          onPress={startPlayback}
+          variant='ghost'
+          startContent={<IconPlayerPlay className='w-4' />}
+          isIconOnly
+          size='sm'
+        />
+      </div>
 
       <div className='flex flex-col'>
         {midi &&
