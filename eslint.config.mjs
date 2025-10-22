@@ -1,5 +1,5 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
+import nextTypescript from 'eslint-config-next/typescript';
 /// [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 /// Turns off all rules that are unnecessary or might conflict with Prettier
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -9,23 +9,24 @@ import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 /// [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
 /// While you can use the official plugin for ordering, this plugin offers more than 5 other rules
 import eslintPluginTailwindCSS from 'eslint-plugin-tailwindcss';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
 
 /**  @type {import('eslint').Linter.Config[]} */
 const config = [
   js.configs.recommended,
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
   eslintConfigPrettier,
   ...eslintPluginTailwindCSS.configs['flat/recommended'],
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
+    ],
+  },
 ];
 
 export default config;
