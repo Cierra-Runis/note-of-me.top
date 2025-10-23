@@ -1,10 +1,11 @@
 'use client';
 
-import { siteConfig } from '@/config';
 import { Avatar } from '@heroui/avatar';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
 import NextLink from 'next/link';
 import { useState } from 'react';
+
+import { siteConfig } from '@/config';
 
 import SearchButton from '../buttons/SearchButton';
 import ThemeButton from '../buttons/ThemeButton';

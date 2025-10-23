@@ -1,7 +1,3 @@
-/// <https://contentlayer.dev/docs/sources/files/mdx>
-import { DocsToc } from '@/components/roots/Toc';
-import { mdxComponents } from '@/styles/markdown';
-import { getHeadings } from '@/utils/heading';
 import { allPosts } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import 'katex/dist/katex.min.css';
@@ -9,6 +5,11 @@ import { Metadata } from 'next';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
+
+/// <https://contentlayer.dev/docs/sources/files/mdx>
+import { DocsToc } from '@/components/roots/Toc';
+import { mdxComponents } from '@/styles/markdown';
+import { getHeadings } from '@/utils/heading';
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
@@ -46,6 +47,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           </p>
           <h1>{post.title}</h1>
         </div>
+        {/* eslint-disable-next-line react-hooks/static-components */}
         <MDXContent components={mdxComponents} />
       </article>
       <aside className='relative hidden lg:flex'>

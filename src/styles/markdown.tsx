@@ -1,10 +1,11 @@
-import MarkdownImage from '@/components/MarkdownImage';
 import { Alert } from '@heroui/alert';
 import { Checkbox } from '@heroui/checkbox';
 import { Kbd } from '@heroui/kbd';
 import { MDXComponents } from 'mdx/types';
 import NextLink from 'next/link';
 import { HTMLProps } from 'react';
+
+import MarkdownImage from '@/components/MarkdownImage';
 
 /**
  *  {@link React.JSX.IntrinsicElements}
@@ -26,6 +27,11 @@ export const mdxComponents: MDXComponents = {
       <Alert {...props} />
     </figure>
   ),
+  h2: HeadingWithAnchor('h2'),
+  h3: HeadingWithAnchor('h3'),
+  h4: HeadingWithAnchor('h4'),
+  h5: HeadingWithAnchor('h5'),
+  h6: HeadingWithAnchor('h6'),
   img: ({ alt, children, src }: HTMLProps<HTMLImageElement>) => (
     <MarkdownImage alt={alt} className='mx-auto' isBlurred isZoomed src={src}>
       {children}
@@ -37,31 +43,26 @@ export const mdxComponents: MDXComponents = {
     }
     return <input {...props} />;
   },
+  Kbd,
   table: ({ children, ...props }: HTMLProps<HTMLTableElement>) => (
     <figure>
       <table {...props}>{children}</table>
     </figure>
   ),
-  h2: HeadingWithAnchor('h2'),
-  h3: HeadingWithAnchor('h3'),
-  h4: HeadingWithAnchor('h4'),
-  h5: HeadingWithAnchor('h5'),
-  h6: HeadingWithAnchor('h6'),
-  Kbd,
 };
 
 type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 function HeadingWithAnchor(tag: HeadingTag) {
-  return ({
-    className = '',
+  function HeadingComponent({
     children,
+    className = '',
     id,
     ...props
-  }: HTMLProps<HTMLHeadingElement>) => {
+  }: HTMLProps<HTMLHeadingElement>) {
     const Tag = tag;
     return (
-      <Tag id={id} className={`relative ${className}`} {...props}>
-        <NextLink href={`#${id}`} className='group not-prose'>
+      <Tag className={`relative ${className}`} id={id} {...props}>
+        <NextLink className='group not-prose' href={`#${id}`}>
           {children}
           {id && (
             <span className='ml-2 opacity-0 group-hover:opacity-100 transition-opacity select-none'>
@@ -71,5 +72,6 @@ function HeadingWithAnchor(tag: HeadingTag) {
         </NextLink>
       </Tag>
     );
-  };
+  }
+  return HeadingComponent;
 }

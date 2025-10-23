@@ -1,5 +1,6 @@
-import { siteConfig } from '@/config';
 import NextLink from 'next/link';
+
+import { siteConfig } from '@/config';
 
 import EmailButton from '../buttons/EmailButton';
 import GitHubButton from '../buttons/GitHubButton';

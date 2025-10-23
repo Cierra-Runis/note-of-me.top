@@ -1,14 +1,13 @@
-'use client';
+import { Avatar } from '@heroui/avatar';
 
 import { siteConfig } from '@/config';
-import { Avatar } from '@heroui/avatar';
 
 export default function Home() {
   return (
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
       <div className='flex flex-col items-center justify-center gap-6 md:flex-row'>
         <Avatar
-          className='h-auto w-48 text-large'
+          className='h-auto text-large  w-48 '
           src={siteConfig.links.githubAvatar}
         />
         <div className='flex flex-col gap-4'>

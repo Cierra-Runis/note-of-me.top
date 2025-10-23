@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
 import { clsx } from 'clsx';
+import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
 
@@ -11,7 +12,6 @@ import { NavBar } from '@/components/roots/NavBar';
 import { Providers } from '@/components/roots/Providers';
 import Statistics from '@/components/roots/Statistics';
 import { siteConfig } from '@/config';
-import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
 
 /// TIPS: https://github.com/vercel/next.js/issues/49207
 /// TIPS: https://github.com/vercel/next.js/issues/53522
@@ -48,13 +48,13 @@ export function generateMetadata(): Metadata {
 export default function LocaleLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      suppressHydrationWarning
       className={clsx(
         'overflow-x-clip',
         saira.variable,
         notoSansSC.variable,
         firaCode.variable,
       )}
+      suppressHydrationWarning
     >
       <body className='min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background'>
         <Statistics />

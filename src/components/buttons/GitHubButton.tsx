@@ -1,9 +1,10 @@
 'use client';
 
-import { siteConfig } from '@/config';
 import { Button } from '@heroui/button';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import NextLink from 'next/link';
+
+import { siteConfig } from '@/config';
 
 export default function GitHubButton() {
   return (

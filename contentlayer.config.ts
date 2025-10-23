@@ -37,16 +37,16 @@ const computedFields: ComputedFields = {
 };
 
 export const Post = defineDocumentType(() => ({
-  name: 'Post',
   computedFields,
   contentType: 'mdx',
   fields: {
-    id: { required: true, type: 'string' },
     date: { required: true, type: 'date' },
-    title: { required: true, type: 'string' },
     description: { type: 'string' },
+    id: { required: true, type: 'string' },
+    title: { required: true, type: 'string' },
   },
   filePathPattern: `**/*.mdx`,
+  name: 'Post',
 }));
 
 async function validateDuplicateIds(allDocs: GeneratedPost[]) {
@@ -61,12 +61,12 @@ async function validateDuplicateIds(allDocs: GeneratedPost[]) {
 }
 
 const rehypeShikiOptions: RehypeShikiOptions = {
-  themes: {
-    light: 'material-theme-lighter',
-    dark: 'one-dark-pro',
-  },
   defaultColor: false,
   inline: 'tailing-curly-colon',
+  themes: {
+    dark: 'one-dark-pro',
+    light: 'material-theme-lighter',
+  },
   transformers: [
     /// Common transformers
 

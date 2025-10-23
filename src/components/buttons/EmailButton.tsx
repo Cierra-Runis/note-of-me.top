@@ -1,9 +1,10 @@
 'use client';
 
-import { siteConfig } from '@/config';
 import { Button } from '@heroui/button';
 import { IconMail } from '@tabler/icons-react';
 import NextLink from 'next/link';
+
+import { siteConfig } from '@/config';
 
 export default function EmailButton() {
   return (

@@ -1,11 +1,12 @@
 'use client';
 
-import { useScrollSpy } from '@/hooks/use-scroll-spy';
-import { Heading } from '@/utils/heading';
 import { ScrollShadow } from '@heroui/scroll-shadow';
 import clsx from 'clsx';
 import { FC, useEffect, useRef } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
+
+import { useScrollSpy } from '@/hooks/use-scroll-spy';
+import { Heading } from '@/utils/heading';
 
 const paddingLeftByLevel: Record<number, string> = {
   1: 'pl-0',

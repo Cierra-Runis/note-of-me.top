@@ -125,6 +125,7 @@ export default function MidiPlayer() {
 
   // 组件卸载时清理资源
   useEffect(() => {
+    const keyElements = keyElementsRef.current;
     return () => {
       // 停止并取消所有调度
       Tone.getTransport().stop();
@@ -137,7 +138,7 @@ export default function MidiPlayer() {
 
       // 清空引用
       synthRefs.current = [];
-      keyElementsRef.current.clear();
+      keyElements.clear();
     };
   }, []);
 
@@ -145,20 +146,20 @@ export default function MidiPlayer() {
     <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
       <div className='flex gap-2 p-2 rounded-2xl fixed bottom-10 z-20 backdrop-blur'>
         <Button
+          isIconOnly
           isLoading={isPicking}
           onPress={openFilePicker}
-          variant='ghost'
-          startContent={<IconUpload className='w-4' />}
-          isIconOnly
           size='sm'
+          startContent={<IconUpload className='w-4' />}
+          variant='ghost'
         />
         <Button
           isDisabled={!midi}
-          onPress={startPlayback}
-          variant='ghost'
-          startContent={<IconPlayerPlay className='w-4' />}
           isIconOnly
+          onPress={startPlayback}
           size='sm'
+          startContent={<IconPlayerPlay className='w-4' />}
+          variant='ghost'
         />
       </div>
 
@@ -182,13 +183,13 @@ export default function MidiPlayer() {
                     const keyId = `${i}-${note}`;
                     return (
                       <div
+                        className='h-4 w-0.5 rounded-md bg-default-50 transition-all duration-100 sm:h-6 sm:w-1 md:h-8 md:w-1.25 lg:w-1.5'
                         key={keyId}
                         ref={(el) => {
                           if (el) {
                             keyElementsRef.current.set(keyId, el);
                           }
                         }}
-                        className='h-4 w-0.5 rounded-md bg-default-50 transition-all duration-100 sm:h-6 sm:w-1 md:h-8 md:w-1.25 lg:w-1.5'
                       />
                     );
                   })}

@@ -1,8 +1,9 @@
 'use client';
 
-import { Technical } from '@/config';
 import { Button, ButtonProps } from '@heroui/button';
 import NextLink from 'next/link';
+
+import { Technical } from '@/config';
 
 type TechnicalButtonProps = { technical: Technical } & ButtonProps;
 
