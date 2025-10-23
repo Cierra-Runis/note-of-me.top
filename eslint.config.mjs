@@ -6,27 +6,19 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 /// [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist)
 /// ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
-/// [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
-/// While you can use the official plugin for ordering, this plugin offers more than 5 other rules
-import eslintPluginTailwindCSS from 'eslint-plugin-tailwindcss';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-/**  @type {import('eslint').Linter.Config[]} */
-const config = [
-  js.configs.recommended,
+export default defineConfig([
+  globalIgnores([
+    'node_modules/**',
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+  ]),
   ...nextCoreWebVitals,
   ...nextTypescript,
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
   eslintConfigPrettier,
-  ...eslintPluginTailwindCSS.configs['flat/recommended'],
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'next-env.d.ts',
-    ],
-  },
-];
-
-export default config;
+  // ...eslintPluginTailwindCSS.configs['flat/recommended'],
+]);
