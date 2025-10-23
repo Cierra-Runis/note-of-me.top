@@ -47,6 +47,10 @@
   --tw-prose-th-borders: hsl(var(--heroui-foreground));
 }
 
+@utility not-prose {
+  all: unset;
+}
+
 @utility prose {
   font-size: 1rem;
   line-height: 1.75;

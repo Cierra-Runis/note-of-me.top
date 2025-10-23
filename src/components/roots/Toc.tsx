@@ -45,19 +45,25 @@ export const DocsToc: FC<{
 
   return (
     <ScrollShadow
-      className='fixed flex h-3/4 flex-col gap-4 overflow-y-scroll overscroll-contain text-left'
+      className={`
+        fixed flex h-3/4 flex-col gap-4 overflow-y-scroll overscroll-contain
+        text-left
+      `}
       hideScrollBar
       ref={tocRef}
     >
       <h2 className='text-lg font-medium'>您将看到</h2>
-      <ul className='flex flex-col gap-2 scrollbar-hide'>
+      <ul className='scrollbar-hide flex flex-col gap-2'>
         {headings.map(
           (heading, i) =>
             heading.level > 1 && (
               <li
                 className={clsx(
                   'transition-colors',
-                  'flex items-center text-tiny font-normal text-default-500 dark:text-default-300',
+                  `
+                    flex items-center text-tiny font-normal text-default-500
+                    dark:text-default-300
+                  `,
                   'data-[active=true]:text-foreground',
                   'dark:data-[active=true]:text-foreground',
                   "before:content-['']",

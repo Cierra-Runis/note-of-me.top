@@ -39,7 +39,11 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <section className='grid grid-cols-6 gap-4'>
-      <article className='prose col-span-full max-w-full md:prose-lg lg:prose-xl lg:col-span-5'>
+      <article className={`
+        col-span-full prose max-w-full
+        md:prose-lg
+        lg:col-span-5 lg:prose-xl
+      `}>
         <div className='mb-8 text-center'>
           <p className='mb-1 text-secondary-600'>
             {/* TODO: I18n */}
@@ -50,7 +54,10 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         {/* eslint-disable-next-line react-hooks/static-components */}
         <MDXContent components={mdxComponents} />
       </article>
-      <aside className='relative hidden lg:flex'>
+      <aside className={`
+        relative hidden
+        lg:flex
+      `}>
         <DocsToc headings={headings} />
       </aside>
     </section>

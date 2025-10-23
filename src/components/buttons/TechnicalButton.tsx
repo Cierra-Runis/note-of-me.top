@@ -14,7 +14,10 @@ export default function TechnicalButton({
   return (
     <Button
       as={NextLink}
-      className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
+      className={`
+        col-span-2 max-h-12 w-full object-contain
+        lg:col-span-1
+      `}
       href={technical.url}
       prefetch
       startContent={technical.icon}

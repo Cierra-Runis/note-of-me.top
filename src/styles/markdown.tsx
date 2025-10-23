@@ -61,11 +61,17 @@ function HeadingWithAnchor(tag: HeadingTag) {
   }: HTMLProps<HTMLHeadingElement>) {
     const Tag = tag;
     return (
-      <Tag className={`relative ${className}`} id={id} {...props}>
+      <Tag className={`
+        relative
+        ${className}
+      `} id={id} {...props}>
         <NextLink className='group not-prose' href={`#${id}`}>
           {children}
           {id && (
-            <span className='ml-2 opacity-0 group-hover:opacity-100 transition-opacity select-none'>
+            <span className={`
+              ml-2 opacity-0 transition-opacity select-none
+              group-hover:opacity-100
+            `}>
               #
             </span>
           )}

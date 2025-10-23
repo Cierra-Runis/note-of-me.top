@@ -22,7 +22,7 @@ export default function ScrollToTopButton() {
         opacity: showButton ? 1 : 0,
         visibility: showButton ? 'visible' : 'hidden',
       }}
-      className='fixed bottom-12 right-6'
+      className='fixed right-6 bottom-12'
       initial={{ opacity: 0, visibility: 'hidden' }}
       transition={{ duration: 0.3 }}
     >

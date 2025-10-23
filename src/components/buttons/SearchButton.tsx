@@ -63,7 +63,10 @@ export default function SearchButton() {
                 ) : (
                   filteredPosts.map((post) => (
                     <NextLink
-                      className='prose mb-8 flex max-w-full flex-col items-start justify-center gap-2'
+                      className={`
+                        prose mb-8 flex max-w-full flex-col items-start
+                        justify-center gap-2
+                      `}
                       href={post.url}
                       key={post.url}
                       onClick={onClose}

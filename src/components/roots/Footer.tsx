@@ -7,7 +7,9 @@ import GitHubButton from '../buttons/GitHubButton';
 
 export default function Footer() {
   return (
-    <footer className='flex w-full items-center justify-between p-6 py-3 text-sm'>
+    <footer className={`
+      flex w-full items-center justify-between p-6 py-3 text-sm
+    `}>
       <NextLink
         className='flex items-center gap-2'
         href={siteConfig.author.url}

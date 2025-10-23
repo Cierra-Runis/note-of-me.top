@@ -15,7 +15,7 @@ async function main() {
     const raw = await fs.readFile(file, 'utf8');
     const parsed = matter(raw);
 
-    const id = parsed.data.id as string | undefined | null;
+    const id = parsed.data.id as null | string | undefined;
 
     if (!id) {
       parsed.data.id = nanoid();

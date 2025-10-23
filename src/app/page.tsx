@@ -4,10 +4,16 @@ import { siteConfig } from '@/config';
 
 export default function Home() {
   return (
-    <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <div className='flex flex-col items-center justify-center gap-6 md:flex-row'>
+    <section className={`
+      flex h-full flex-col items-center justify-center gap-4 py-8
+      md:py-10
+    `}>
+      <div className={`
+        flex flex-col items-center justify-center gap-6
+        md:flex-row
+      `}>
         <Avatar
-          className='h-auto text-large  w-48 '
+          className='h-auto w-48 text-large'
           src={siteConfig.links.githubAvatar}
         />
         <div className='flex flex-col gap-4'>

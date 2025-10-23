@@ -27,6 +27,7 @@ export default function ThemeButton() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme, theme } = useTheme();
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
@@ -45,7 +46,7 @@ export default function ThemeButton() {
           variant='light'
         />
       </PopoverTrigger>
-      <PopoverContent className='flex p-2 gap-1 flex-row'>
+      <PopoverContent className='flex flex-row gap-1 p-2'>
         {Object.entries(__themes).map(([key, { icon, title }]) => (
           <Button
             aria-label={title}

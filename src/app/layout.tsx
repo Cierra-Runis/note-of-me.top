@@ -56,7 +56,12 @@ export default function LocaleLayout({ children }: { children: ReactNode }) {
       )}
       suppressHydrationWarning
     >
-      <body className='min-h-screen bg-background font-sans text-foreground antialiased selection:bg-secondary/80 selection:text-background'>
+      <body
+        className={`
+          min-h-screen bg-background font-sans text-foreground antialiased
+          selection:bg-secondary/80 selection:text-background
+        `}
+      >
         <Statistics />
         <Providers>
           <NextTopLoader

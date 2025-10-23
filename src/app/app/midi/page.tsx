@@ -143,8 +143,13 @@ export default function MidiPlayer() {
   }, []);
 
   return (
-    <section className='flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <div className='flex gap-2 p-2 rounded-2xl fixed bottom-10 z-20 backdrop-blur'>
+    <section className={`
+      flex h-full flex-col items-center justify-center gap-4 py-8
+      md:py-10
+    `}>
+      <div className={`
+        fixed bottom-10 z-20 flex gap-2 rounded-2xl p-2 backdrop-blur
+      `}>
         <Button
           isIconOnly
           isLoading={isPicking}
@@ -176,14 +181,23 @@ export default function MidiPlayer() {
                   {track.name || `未命名轨道`}
                 </span>
               </div>
-              <div className='flex gap-4 items-center'>
-                <div className='flex gap-0.5 lg:gap-1'>
+              <div className='flex items-center gap-4'>
+                <div className={`
+                  flex gap-0.5
+                  lg:gap-1
+                `}>
                   {PIANO_KEYS.map((midiNumber) => {
                     const note = Tone.Frequency(midiNumber, 'midi').toNote();
                     const keyId = `${i}-${note}`;
                     return (
                       <div
-                        className='h-4 w-0.5 rounded-md bg-default-50 transition-all duration-100 sm:h-6 sm:w-1 md:h-8 md:w-1.25 lg:w-1.5'
+                        className={`
+                          h-4 w-0.5 rounded-md bg-default-50 transition-all
+                          duration-100
+                          sm:h-6 sm:w-1
+                          md:h-8 md:w-1.25
+                          lg:w-1.5
+                        `}
                         key={keyId}
                         ref={(el) => {
                           if (el) {

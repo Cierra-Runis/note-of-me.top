@@ -8,7 +8,11 @@ import NextLink from 'next/link';
 export default function PostCard(post: Post) {
   return (
     <NextLink
-      className='prose mb-8 flex max-w-full flex-col items-start justify-center gap-2 md:prose-lg lg:prose-xl'
+      className={`
+        prose mb-8 flex max-w-full flex-col items-start justify-center gap-2
+        md:prose-lg
+        lg:prose-xl
+      `}
       href={post.url}
       prefetch
     >
@@ -21,7 +25,11 @@ export default function PostCard(post: Post) {
           {`${post.wordCount} 字`}
         </Chip>
       </div>
-      <p className='line-clamp-3 break-all [&>*:last-child]:mb-0 *:mb-3'>
+      <p className={`
+        line-clamp-3 break-all
+        *:mb-3
+        [&>*:last-child]:mb-0
+      `}>
         {post.body.raw}
       </p>
     </NextLink>
