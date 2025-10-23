@@ -68,8 +68,8 @@ export const technicalStack: Technical[] = [
   },
   {
     icon: <SiNextui className='w-5' />,
-    name: 'NextUI',
-    url: 'https://nextui.org',
+    name: 'HeroUI',
+    url: 'https://www.heroui.com',
   },
   {
     icon: <SiYarn className='w-5' color={SiYarnHex} />,
@@ -88,7 +88,7 @@ export const technicalStack: Technical[] = [
   },
   {
     icon: <SiEslint className='w-5' color={SiEslintHex} />,
-    name: 'EsLint',
+    name: 'ESLint',
     url: 'https://eslint.org',
   },
   {
