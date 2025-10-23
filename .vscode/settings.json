@@ -19,11 +19,9 @@
     "**/node_modules": true,
     "**/yarn.lock": true
   },
-  "i18n-ally.editor.preferEditor": true,
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": ["./src/i18n"],
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "commentTranslate.multiLineMerge": false
+  "commentTranslate.multiLineMerge": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
