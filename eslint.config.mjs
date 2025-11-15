@@ -1,7 +1,7 @@
 /// https://nextjs.org/docs/app/api-reference/config/eslint#reference
 import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
 /// https://nextjs.org/docs/app/api-reference/config/eslint#reference
-import nextTypescript from 'eslint-config-next/typescript';
+import nextTypeScript from 'eslint-config-next/typescript';
 /// https://github.com/schoero/eslint-plugin-better-tailwindcss
 /// ESLint plugin to help you write better tailwindcss by improving readability with formatting rules and enforcing best practices with linting rules.
 import eslintPluginBetterTailwindCss from 'eslint-plugin-better-tailwindcss';
@@ -29,24 +29,24 @@ const eslintPluginBetterTailwindCssConfig = {
   },
   settings: {
     'better-tailwindcss': {
-      entryPoint: 'src/styles/globals.css',
+      entryPoint: 'src/app/globals.css',
     },
   },
 };
 
 export default defineConfig([
-  ...nextTypescript,
   ...nextCoreWebVitals,
+  ...nextTypeScript,
+  // Override default ignores of eslint-config-next.
   globalIgnores([
-    'node_modules/**',
+    // Default ignores of eslint-config-next:
     '.contentlayer/**',
     '.next/**',
     'out/**',
     'build/**',
     'next-env.d.ts',
+    'src/components/ui/**',
   ]),
-
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
-  // eslintConfigPrettier,
   eslintPluginBetterTailwindCssConfig,
 ]);

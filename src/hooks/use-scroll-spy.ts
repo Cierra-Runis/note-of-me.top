@@ -1,15 +1,15 @@
-import * as React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function useScrollSpy(
   selectors: string[],
-  options?: IntersectionObserverInit,
+  options?: IntersectionObserverInit
 ) {
-  const [activeId, setActiveId] = React.useState<null | string>();
-  const observer = React.useRef<IntersectionObserver>(null);
+  const [activeId, setActiveId] = useState<null | string>();
+  const observer = useRef<IntersectionObserver>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const elements = selectors.map((selector) =>
-      document.querySelector(selector),
+      document.querySelector(selector)
     );
 
     if (observer.current) {

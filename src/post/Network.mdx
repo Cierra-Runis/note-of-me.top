@@ -70,11 +70,8 @@ id: PFVARR
 |  Wi-Fi 8   | [802.11bn] | ~~2028~~ |   12.5 GB/s   | 2.4、5、6 |
 
 [^2]: Wi-Fi 5 仅指定在 5 GHz 频段的操作，2.4 GHz 频段的操作由 Wi-Fi 4 指定
-
 [^3]: Wi-Fi 6E 是指在 6 GHz 频段运行的 Wi-Fi 设备的行业名称，其提供了 Wi-Fi 6 的功能和特性并扩展到 6 GHz 频段
-
 [^4]: Wi-Fi 联盟在 2024 年开始认证 Wi-Fi 7 设备，但截至 2025 年 1 月，Wi-Fi 7 尚未被正式批准
-
 [^5]: 中文维基百科给出的数值已经过时，以英文维基百科为准
 
 [802.11n]: https://zh.wikipedia.org/wiki/IEEE_802.11n
@@ -84,7 +81,7 @@ id: PFVARR
 [802.11bn]: https://zh.wikipedia.org/wiki/IEEE_802.11bn
 
 - 在此注意 Wi-Fi 6 即我们目前最常用的 Wi-Fi 世代即可，而 Wi-Fi 7 的就属于战未来的了
-- 且在中国大陆，6 GHz 的频段尚未开放 —— 也有可能永远不会开放🤗
+- 且在中国大陆，6 GHz 的频段尚未开放 —— 也有可能永远不会开放 🤗
 
 ### Wi-Fi 速率
 
@@ -258,8 +255,10 @@ IPv6 的解决了 IPv4 的问题，这种屁话略，首先保证光猫、路由
 
 首先我们得先获取到阿里云的 AccessKey ID 和 AccessKey Secret，具体操作略，总之要配置完 [阿里云 CLI](https://www.alibabacloud.com/help/zh/cli/installation-guide/) 工具。
 
-<details>
-  <summary>macOS `~/.local/bin/ddns`</summary>
+<Accordion type='single' collapsible>
+<AccordionItem value='macos-ddns'>
+<AccordionTrigger>macOS `~/.local/bin/ddns`</AccordionTrigger>
+<AccordionContent>
 
 ```bash
 #!/bin/bash
@@ -308,24 +307,25 @@ echo "[$(date '+%F %T')] IPv6 ($IPV6_ADDR) no changed"
   echo "[$(date '+%F %T')] Updating $RR.$DOMAIN_NAME: $RECORD_IP => $IPV6_ADDR"
   aliyun alidns UpdateDomainRecord \
     --RecordId "$RECORD_ID" \
- --RR "$RR" \
+    --RR "$RR" \
     --Type "$RECORD_TYPE" \
- --Value "$IPV6_ADDR" >/dev/null
+    --Value "$IPV6_ADDR" >/dev/null
 else
   echo "[$(date '+%F %T')] Creating $RR.$DOMAIN_NAME => $IPV6_ADDR"
   aliyun alidns AddDomainRecord \
     --DomainName "$DOMAIN_NAME" \
- --RR "$RR" \
+    --RR "$RR" \
     --Type "$RECORD_TYPE" \
- --Value "$IPV6_ADDR" >/dev/null
+    --Value "$IPV6_ADDR" >/dev/null
 fi
 
 ```
 
-</details>
-
-<details>
-  <summary>Windows `~\.local\bin\ddns.ps1`</summary>
+</AccordionContent>
+</AccordionItem>
+<AccordionItem value='windows-ddns'>
+<AccordionTrigger>Windows `~\.local\bin\ddns.ps1`</AccordionTrigger>
+<AccordionContent>
 
 ```powershell
 # Requires: aliyun CLI 已配置好账号
@@ -410,7 +410,9 @@ if ($recordId) {
 
 ```
 
-</details>
+</AccordionContent>
+</AccordionItem>
+</Accordion>
 
 ## 回到过去
 
@@ -443,8 +445,10 @@ graph LR
 
 在 Mac mini 使用 `iperf3 -s{:bash}` 开启服务器，在笔记本电脑上使用 `iperf3 -c 192.168.1.2{:bash}` 连接服务器，测试结果如下：
 
-<details>
-  <summary>点击显示测试结果</summary>
+<Accordion type='single' collapsible>
+<AccordionItem value='iperf3-test'>
+<AccordionTrigger>正向测试</AccordionTrigger>
+<AccordionContent>
 
 ```powershell
 PS > iperf3 -c 192.168.1.2
@@ -469,7 +473,11 @@ Connecting to host 192.168.1.2, port 5201
 iperf Done.
 ```
 
-反向测试如下：
+</AccordionContent>
+</AccordionItem>
+<AccordionItem value='iperf3-reverse-test'>
+<AccordionTrigger>反向测试</AccordionTrigger>
+<AccordionContent>
 
 ```powershell
 PS > iperf3 -c 192.168.1.2 -R
@@ -497,9 +505,11 @@ Reverse mode, remote host 192.168.1.2 is sending
 iperf Done.
 ```
 
-</details>
+</AccordionContent>
+</AccordionItem>
+</Accordion>
 
-双向网速都在 936 Mb/s = 117 MB/s 以上，非常完美🥵，而且不得不说，Wi-Fi 比双绞线复杂太多了，双绞线一插就能近乎满速，Wi-Fi 就 ……
+双向网速都在 936 Mb/s = 117 MB/s 以上，非常完美 🥵，而且不得不说，Wi-Fi 比双绞线复杂太多了，双绞线一插就能近乎满速，Wi-Fi 就 ……
 
 ## 推荐软件
 

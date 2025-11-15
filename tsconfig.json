@@ -10,10 +10,8 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "noErrorTruncation": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
@@ -34,6 +32,6 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     ".next/dev/types/**/*.ts",
-    ".next\\dev/types/**/*.ts"
+    "**/*.mts"
   ]
 }

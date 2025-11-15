@@ -1,22 +1,30 @@
-import { Button } from '@heroui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover';
-import { CircularProgress } from '@heroui/progress';
-import { IconDevices, IconMoon, IconSun } from '@tabler/icons-react';
+'use client';
+
+import { MonitorSmartphoneIcon, MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
+import { Button } from '@/components/ui/button';
+import { ButtonGroup } from '@/components/ui/button-group';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import { Spinner } from '@/components/ui/spinner';
+
 const __themes = {
   dark: {
-    icon: <IconMoon className='w-5' />,
+    icon: <MoonIcon className='w-5' />,
     title: '暗色',
   },
   light: {
-    icon: <IconSun className='w-5' />,
+    icon: <SunIcon className='w-5' />,
     title: '亮色',
   },
   system: {
     // Default theme is light
-    icon: <IconDevices className='w-5' />,
+    icon: <MonitorSmartphoneIcon className='w-5' />,
     title: '系统',
   },
 };
@@ -31,33 +39,38 @@ export default function ThemeButton() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <CircularProgress size='sm' />;
+    return (
+      <Popover aria-label='主题'>
+        <PopoverTrigger asChild>
+          <Button size='icon' variant='ghost'>
+            <Spinner />
+          </Button>
+        </PopoverTrigger>
+      </Popover>
+    );
   }
 
   return (
     <Popover aria-label='主题'>
-      <PopoverTrigger>
-        <Button
-          isIconOnly
-          size='sm'
-          startContent={
-            __themes[(resolvedTheme || 'system') as ThemeVariant].icon
-          }
-          variant='light'
-        />
+      <PopoverTrigger asChild>
+        <Button size='icon' variant='ghost'>
+          {__themes[(resolvedTheme || 'system') as ThemeVariant].icon}
+        </Button>
       </PopoverTrigger>
-      <PopoverContent className='flex flex-row gap-1 p-2'>
-        {Object.entries(__themes).map(([key, { icon, title }]) => (
-          <Button
-            aria-label={title}
-            isIconOnly
-            key={key}
-            onPress={() => setTheme(key)}
-            size='sm'
-            startContent={icon}
-            variant={theme === key ? 'faded' : 'light'}
-          />
-        ))}
+      <PopoverContent className='m-0 w-fit p-0'>
+        <ButtonGroup>
+          {Object.entries(__themes).map(([key, { icon, title }]) => (
+            <Button
+              aria-label={title}
+              key={key}
+              onClick={() => setTheme(key)}
+              size='icon'
+              variant={theme === key ? 'secondary' : 'ghost'}
+            >
+              {icon}
+            </Button>
+          ))}
+        </ButtonGroup>
       </PopoverContent>
     </Popover>
   );

@@ -1,95 +1,83 @@
 'use client';
 
-import { ScrollShadow } from '@heroui/scroll-shadow';
-import clsx from 'clsx';
-import { FC, useEffect, useRef } from 'react';
-import scrollIntoView from 'scroll-into-view-if-needed';
+import Link from 'next/link';
+import { useMemo, useRef } from 'react';
 
-import { useScrollSpy } from '@/hooks/use-scroll-spy';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+  SidebarRail,
+} from '@/components/ui/sidebar';
 import { Heading } from '@/utils/heading';
 
-const paddingLeftByLevel: Record<number, string> = {
-  1: 'pl-0',
-  2: 'pl-0',
-  3: 'pl-3',
-  4: 'pl-6',
-};
-export const DocsToc: FC<{
-  headings: Heading[];
-}> = ({ headings }) => {
+// paddingLeftByLevel was used for plain list; SidebarMenu handles hierarchy now.
+
+export function TocSidebar({ headings }: { headings: Heading[] }) {
   const tocRef = useRef<HTMLDivElement>(null);
 
-  const activeId = useScrollSpy(
-    headings.map(({ id }) => `[id="${id}"]`),
-    {
-      rootMargin: '0% 0% -80% 0%',
-    },
-  );
-
-  const activeIndex = headings.findIndex(({ id }) => id == activeId);
-
-  useEffect(() => {
-    if (!activeId || activeIndex < 2) return;
-    const anchor = tocRef.current?.querySelector(`li > a[href="#${activeId}"]`);
-
-    if (anchor) {
-      scrollIntoView(anchor, {
-        behavior: 'smooth',
-        block: 'center',
-        boundary: tocRef.current,
-        inline: 'center',
-        scrollMode: 'always',
-      });
+  type TocItem = { children: Heading[]; id: string; text: string };
+  const items: TocItem[] = useMemo(() => {
+    const list: TocItem[] = [];
+    let current: null | TocItem = null;
+    const filtered = headings.filter((h) => h.level > 1);
+    for (const h of filtered) {
+      if (h.level <= 2) {
+        if (current) list.push(current);
+        current = { children: [], id: h.id, text: h.text };
+      } else if (current) {
+        current.children.push(h);
+      } else {
+        // Edge case: no preceding h2, treat as top-level without children
+        list.push({ children: [], id: h.id, text: h.text });
+      }
     }
-  }, [activeId, activeIndex]);
+    if (current) list.push(current);
+    return list;
+  }, [headings]);
 
   return (
-    <ScrollShadow
-      className={`
-        fixed flex h-3/4 flex-col gap-4 overflow-y-scroll overscroll-contain
-        text-left
-      `}
-      hideScrollBar
-      ref={tocRef}
-    >
-      <h2 className='text-lg font-medium'>您将看到</h2>
-      <ul className='scrollbar-hide flex flex-col gap-2'>
-        {headings.map(
-          (heading, i) =>
-            heading.level > 1 && (
-              <li
-                className={clsx(
-                  'transition-colors',
-                  `
-                    flex items-center text-tiny font-normal text-default-500
-                    dark:text-default-300
-                  `,
-                  'data-[active=true]:text-foreground',
-                  'dark:data-[active=true]:text-foreground',
-                  "before:content-['']",
-                  'before:opacity-0',
-                  'data-[active=true]:before:opacity-100',
-                  'before:transition-opacity',
-                  'before:-ml-3',
-                  'before:absolute',
-                  'before:bg-default-400',
-                  'before:w-1',
-                  'before:h-1',
-                  'before:rounded-full',
-                  paddingLeftByLevel[heading.level],
-                )}
-                data-active={activeId == heading.id}
-                key={i}
-              >
-                {/*
-                  It's unnecessary to use `NextLink` from `next/link` package,
-                  which leads to unnecessary request to server.
-                */}
-                <a href={`#${heading.id}`}>{heading.text}</a>
-              </li>
-            ),
-        )}
-      </ul>
-    </ScrollShadow>
+    <Sidebar ref={tocRef} side='right'>
+      <SidebarRail />
+      <SidebarHeader>
+        <h2 className='text-lg font-medium'>您将看到</h2>
+      </SidebarHeader>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => (
+                <SidebarMenuItem key={item.id}>
+                  <SidebarMenuButton asChild>
+                    <Link href={`#${item.id}`}>
+                      <span>{item.text}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                  {item.children.length > 0 && (
+                    <SidebarMenuSub>
+                      {item.children.map((child) => (
+                        <SidebarMenuSubItem key={child.id}>
+                          <SidebarMenuSubButton asChild>
+                            <Link href={`#${child.id}`}>{child.text}</Link>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  )}
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
   );
-};
+}

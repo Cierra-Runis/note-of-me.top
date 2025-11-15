@@ -25,7 +25,11 @@ id: KNJISM
 
 本网站为实现居中省略号，特地使用了字形为居中样式的字体。
 
-<Alert color={'warning'} title={'注意'} description={'暂未实装'} />
+<Alert variant='destructive'>
+  <AlertCircleIcon />
+  <AlertTitle>注意</AlertTitle>
+  <AlertDescription>暂未实装</AlertDescription>
+</Alert>
 
 ## 使用标准的专有名词
 
@@ -91,9 +95,9 @@ Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
 这也带来了一个好处，让我说明白一些：
 
-我们在编辑一段文本的时候，经常使用 <Kbd keys={'left'} /> 或 <Kbd keys={'right'} /> 来跳转光标，但是这过于的不方便。
+我们在编辑一段文本的时候，经常使用 <Kbd>←</Kbd> 或 <Kbd>→</Kbd> 来跳转光标，但是这过于的不方便。
 
-而我们可以使用 <Kbd keys={['ctrl', 'left']} /> 或 <Kbd keys={['ctrl', 'right']} /> 进行快速跳转，对于像 Microsoft Word 这样的编辑器，其会智能的将中文词汇分段，所以在跳转时会跳到词的开头或结尾，而不是整个句子的开头或结尾。
+而我们可以使用 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> 或 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> 进行快速跳转，对于像 Microsoft Word 这样的编辑器，其会智能的将中文词汇分段，所以在跳转时会跳到词的开头或结尾，而不是整个句子的开头或结尾。
 
 而对于未实现中文分词的编辑器，加上的空格就作为了一个“跳板”，更加方便跳转。
 

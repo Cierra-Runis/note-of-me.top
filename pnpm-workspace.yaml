@@ -1,7 +1,7 @@
-onlyBuiltDependencies:
-  - '@heroui/shared-utils'
-  - '@tailwindcss/oxide'
+ignoredBuiltDependencies:
   - '@vercel/speed-insights'
+
+onlyBuiltDependencies:
   - contentlayer2
   - esbuild
   - protobufjs

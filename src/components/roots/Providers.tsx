@@ -1,24 +1,23 @@
 'use client';
-
-import { HeroUIProvider } from '@heroui/system';
-import { ToastProvider } from '@heroui/toast';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { useRouter } from 'next/navigation';
-import React from 'react';
+import { ReactNode } from 'react';
 
-export interface ProvidersProps {
-  children: React.ReactNode;
+import { Toaster } from '@/components/ui/sonner';
+
+import Statistics from './Statistics';
+
+interface ProvidersProps {
+  children: ReactNode;
 }
 
 export function Providers({ children }: ProvidersProps) {
-  const router = useRouter();
-
   return (
-    <HeroUIProvider navigate={router.push}>
-      <ToastProvider />
+    <>
+      <Toaster />
+      <Statistics />
       <NextThemesProvider attribute='class' enableSystem>
         {children}
       </NextThemesProvider>
-    </HeroUIProvider>
+    </>
   );
 }

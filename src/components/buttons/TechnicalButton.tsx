@@ -1,11 +1,13 @@
 'use client';
 
-import { Button, ButtonProps } from '@heroui/button';
 import NextLink from 'next/link';
 
+import { Button } from '@/components/ui/button';
 import { Technical } from '@/config';
 
-type TechnicalButtonProps = { technical: Technical } & ButtonProps;
+type TechnicalButtonProps = { technical: Technical } & React.ComponentProps<
+  typeof Button
+>;
 
 export default function TechnicalButton({
   technical,
@@ -13,18 +15,18 @@ export default function TechnicalButton({
 }: TechnicalButtonProps) {
   return (
     <Button
-      as={NextLink}
-      className={`
-        col-span-2 max-h-12 w-full object-contain
-        lg:col-span-1
-      `}
-      href={technical.url}
-      prefetch
-      startContent={technical.icon}
-      variant='light'
+      asChild
+      // className={`
+      //   col-span-2 max-h-12 w-full object-contain
+      //   lg:col-span-1
+      // `}
+      variant='ghost'
       {...props}
     >
-      {technical.name}
+      <NextLink href={technical.url} prefetch>
+        {technical.icon}
+        {technical.name}
+      </NextLink>
     </Button>
   );
 }

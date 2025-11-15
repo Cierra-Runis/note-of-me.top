@@ -40,7 +40,7 @@ Lint 提示确实还是不太好，有些属性名和原来的 CSS 属性名还�
 
 ### Navigation 导航
 
-我草死你的妈啊😅，难用一匹 —— 我现在使用的是 [@react-navigation](https://reactnavigation.org/docs/getting-started) 这个包。
+我草死你的妈啊 😅，难用一匹 —— 我现在使用的是 [@react-navigation](https://reactnavigation.org/docs/getting-started) 这个包。
 
 首先，我还是不喜欢命名路由，对 Flutter 来说一样。第一这意味着路由名称是硬编码的字符串，一旦重构会很麻烦；第二传参变得毫无类型可言，我该怎么判断它有没有我要的参数，我难道要每个需要传参的页面（路由、提示框）里都写 `as{:tsx}`？而且我如果修改了参数类型，在 `navigation.navigate{:tsx}` 这边是不会有任何提示的。
 
@@ -56,7 +56,7 @@ Lint 提示确实还是不太好，有些属性名和原来的 CSS 属性名还�
 
 我是使用 VSCode 和 React Native Cli 进行开发的，还使用了 Microsoft 开发的一个插件。
 
-首先恶心人的地方是启动，不能 <Kbd>F5</Kbd> 启动（或者说我不知道怎么配置），要 <Kbd keys={['ctrl','shift']}>P</Kbd> 在面板里选择。这还行，但接下来我人晕了，VSCode 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VSCode Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
+首先恶心人的地方是启动，不能 <Kbd>F5</Kbd> 启动（或者说我不知道怎么配置），要 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Shift</Kbd><span>+</span><Kbd>P</Kbd></KbdGroup> 在面板里选择。这还行，但接下来我人晕了，VSCode 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VSCode Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
 
 我出错了不知道具体错误在哪，鼠标不会自动跳到出问题的代码去，
 

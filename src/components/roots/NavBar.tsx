@@ -1,63 +1,45 @@
-'use client';
+import Link from 'next/link';
 
-import { Avatar } from '@heroui/avatar';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
-import NextLink from 'next/link';
-import { useState } from 'react';
-
+import ThemeButton from '@/components/buttons/ThemeButton';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { siteConfig } from '@/config';
 
-import SearchButton from '../buttons/SearchButton';
-import ThemeButton from '../buttons/ThemeButton';
+const routes = [
+  { href: '/post', title: '文章' },
+  { href: '/app', title: '应用' },
+  { href: '/about', title: '关于' },
+  { href: '/friend', title: '友链' },
+];
 
-export const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export default function Navbar() {
   return (
-    <Navbar
-      isBordered
-      isMenuOpen={isMenuOpen}
-      maxWidth='xl'
-      onMenuOpenChange={setIsMenuOpen}
-      shouldHideOnScroll
-    >
-      <NavbarBrand className='max-w-fit gap-3'>
-        <NextLink
-          className='flex items-center justify-start gap-1'
-          href='/'
-          prefetch
-        >
-          <Avatar size='sm' src={siteConfig.links.githubAvatar} />
-        </NextLink>
-        <ul className='ml-2 flex justify-start gap-6'>
-          <NavbarItem key='/post'>
-            <NextLink href='/post' prefetch>
-              文章
-            </NextLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NextLink href='/app' prefetch>
-              应用
-            </NextLink>
-          </NavbarItem>
-          <NavbarItem key='/about'>
-            <NextLink href='/about' prefetch>
-              关于
-            </NextLink>
-          </NavbarItem>
-          <NavbarItem key='/friend'>
-            <NextLink href='/friend' prefetch>
-              友链
-            </NextLink>
-          </NavbarItem>
-        </ul>
-      </NavbarBrand>
-      <NavbarContent className='basis-full' justify='end'>
-        <NavbarItem className='flex gap-2'>
-          <SearchButton />
+    <header className={`sticky top-0 z-10 w-full border-b backdrop-blur-2xl`}>
+      <div className={`mx-auto flex h-16 w-full items-center gap-3 px-4`}>
+        <Link className='flex items-center gap-2' href='/'>
+          <Avatar className='h-8 w-8'>
+            <AvatarImage alt='Logo' src={siteConfig.links.githubAvatar} />
+          </Avatar>
+        </Link>
+
+        <nav className={`ml-6 flex items-center gap-4`}>
+          {routes.map((r) => (
+            <Link
+              className={`
+                text-sm text-muted-foreground transition-colors
+                hover:text-foreground
+              `}
+              href={r.href}
+              key={r.href}
+            >
+              {r.title}
+            </Link>
+          ))}
+        </nav>
+
+        <div className='ml-auto flex items-center gap-1'>
           <ThemeButton />
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+        </div>
+      </div>
+    </header>
   );
-};
+}

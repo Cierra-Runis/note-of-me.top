@@ -1,16 +1,21 @@
-import { Avatar } from '@heroui/avatar';
-import NextLink from 'next/link';
+import Link from 'next/link';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
 export default function Page() {
   return (
-    <section className={`
-      flex h-full flex-col items-center justify-center gap-4 py-8
-      md:py-10
-    `}>
+    <section
+      className={`
+        flex h-full flex-col items-center justify-center gap-4 py-8
+        md:py-10
+      `}
+    >
       <div className='flex gap-4'>
-        <NextLink href='https://www.kablog.top' prefetch>
-          <Avatar name='咖酱' src='/avatar/ka.jpg' />
-        </NextLink>
+        <Link href='https://www.kablog.top' prefetch>
+          <Avatar>
+            <AvatarImage alt='Ka Blog' src='/avatar/ka.jpg' />
+          </Avatar>
+        </Link>
       </div>
     </section>
   );

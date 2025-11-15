@@ -1,27 +1,22 @@
 import type { Metadata } from 'next';
 
-import '@/styles/globals.css';
+import '@/app/globals.css';
 import { clsx } from 'clsx';
 import { Fira_Code, Noto_Sans_SC, Saira } from 'next/font/google';
-import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
 
 import ScrollToTopButton from '@/components/buttons/ScrollToTopButton';
-import Footer from '@/components/roots/Footer';
-import { NavBar } from '@/components/roots/NavBar';
+import Navbar from '@/components/roots/NavBar';
 import { Providers } from '@/components/roots/Providers';
-import Statistics from '@/components/roots/Statistics';
 import { siteConfig } from '@/config';
 
 /// TIPS: https://github.com/vercel/next.js/issues/49207
 /// TIPS: https://github.com/vercel/next.js/issues/53522
 
-/// Sans ////////////////////////
 const saira = Saira({
   subsets: ['latin'],
   variable: '--font-sans',
 });
-
 const notoSansSC = Noto_Sans_SC({
   subsets: ['latin'],
   variable: '--font-sans-sc',
@@ -45,38 +40,25 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function LocaleLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html
-      className={clsx(
-        'overflow-x-clip',
-        saira.variable,
-        notoSansSC.variable,
-        firaCode.variable,
-      )}
+      className={clsx(saira.variable, notoSansSC.variable, firaCode.variable)}
+      lang='zh-CN'
       suppressHydrationWarning
     >
       <body
         className={`
-          min-h-screen bg-background font-sans text-foreground antialiased
-          selection:bg-secondary/80 selection:text-background
+          relative flex min-h-svh flex-col bg-background text-foreground
+          antialiased
+          selection:bg-primary selection:text-background
         `}
       >
-        <Statistics />
         <Providers>
-          <NextTopLoader
-            color='hsl(var(--heroui-secondary))'
-            shadow={false}
-            showSpinner={false}
-          />
-
-          <div className='relative flex h-screen flex-col'>
-            <NavBar />
-            <main className='container mx-auto max-w-7xl grow px-6 pt-16'>
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <Navbar />
+          <main className='flex flex-1 flex-col'>{children}</main>
           <ScrollToTopButton />
         </Providers>
       </body>

@@ -1,13 +1,17 @@
 import { allPosts } from 'contentlayer/generated';
-import { format, parseISO } from 'date-fns';
 import 'katex/dist/katex.min.css';
 import { Metadata } from 'next';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
 
+import { TocSidebar } from '@/components/roots/Toc';
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from '@/components/ui/sidebar';
 /// <https://contentlayer.dev/docs/sources/files/mdx>
-import { DocsToc } from '@/components/roots/Toc';
 import { mdxComponents } from '@/styles/markdown';
 import { getHeadings } from '@/utils/heading';
 
@@ -38,28 +42,52 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const headings = getHeadings(post.body.raw);
 
   return (
-    <section className='grid grid-cols-6 gap-4'>
-      <article className={`
-        col-span-full prose max-w-full
-        md:prose-lg
-        lg:col-span-5 lg:prose-xl
-      `}>
-        <div className='mb-8 text-center'>
-          <p className='mb-1 text-secondary-600'>
-            {/* TODO: I18n */}
-            {format(parseISO(post.date), 'LLLL d, yyyy')}
-          </p>
-          <h1>{post.title}</h1>
+    <SidebarProvider>
+      <SidebarInset>
+        <header
+          className={`
+            sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 border-y
+            px-4 backdrop-blur-2xl
+          `}
+        >
+          <h1 className='text-lg font-bold'>{post.title}</h1>
+          <div className='flex flex-1 items-center justify-end gap-2 px-3'>
+            <SidebarTrigger />
+          </div>
+        </header>
+        <div className='flex flex-1 flex-col gap-4 p-4'>
+          {/* eslint-disable-next-line react-hooks/static-components */}
+          <MDXContent components={mdxComponents} />
         </div>
-        {/* eslint-disable-next-line react-hooks/static-components */}
-        <MDXContent components={mdxComponents} />
-      </article>
-      <aside className={`
-        relative hidden
-        lg:flex
-      `}>
-        <DocsToc headings={headings} />
-      </aside>
-    </section>
+      </SidebarInset>
+      <TocSidebar headings={headings} />
+    </SidebarProvider>
+
+    // <section className='grid grid-cols-6 gap-4'>
+    //   <article
+    //     className={`
+    //       col-span-full max-w-full
+    //       lg:col-span-5
+    //     `}
+    //   >
+    //     <div className='mb-8 text-center'>
+    //       <h1 className='mb-1 text-4xl font-bold text-primary'>{post.title}</h1>
+    //       <p className='mb-1'>
+    //         {/* TODO: I18n */}
+    //         {format(parseISO(post.date), 'LLLL d, yyyy')}
+    //       </p>
+    //     </div>
+    //     {/* eslint-disable-next-line react-hooks/static-components */}
+    //     <MDXContent components={mdxComponents} />
+    //   </article>
+    //   <aside
+    //     className={`
+    //       relative hidden
+    //       lg:flex
+    //     `}
+    //   >
+    //     <DocsToc headings={headings} />
+    //   </aside>
+    // </section>
   );
 }

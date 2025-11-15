@@ -1,9 +1,10 @@
 'use client';
 
-import { Button } from '@heroui/button';
-import { IconArrowUp } from '@tabler/icons-react';
-import { motion } from 'framer-motion';
+import { ArrowUpIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 export default function ScrollToTopButton() {
   const [showButton, setShowButton] = useState(false);
@@ -17,18 +18,18 @@ export default function ScrollToTopButton() {
   const scrollToTop = () => window.scrollTo({ behavior: 'smooth', top: 0 });
 
   return (
-    <motion.div
-      animate={{
-        opacity: showButton ? 1 : 0,
-        visibility: showButton ? 'visible' : 'hidden',
-      }}
-      className='fixed right-6 bottom-12'
-      initial={{ opacity: 0, visibility: 'hidden' }}
-      transition={{ duration: 0.3 }}
+    <div
+      aria-hidden={!showButton}
+      className={cn(
+        'fixed right-6 bottom-6 z-10 transition-all duration-300',
+        showButton
+          ? 'pointer-events-auto translate-y-0 opacity-100'
+          : 'pointer-events-none translate-y-3 opacity-0'
+      )}
     >
-      <Button isIconOnly onPress={scrollToTop} size='sm' variant='ghost'>
-        <IconArrowUp className='w-5' />
+      <Button onClick={scrollToTop} size='icon' variant='outline'>
+        <ArrowUpIcon />
       </Button>
-    </motion.div>
+    </div>
   );
 }

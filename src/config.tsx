@@ -4,11 +4,12 @@ import {
   SiGit,
   SiGitHex,
   SiGithub,
+  SiLucide,
   SiMdx,
   SiNextdotjs,
-  SiNextui,
   SiReact,
   SiReactHex,
+  SiShadcnui,
   SiSimpleicons,
   SiTailwindcss,
   SiTailwindcssHex,
@@ -18,7 +19,6 @@ import {
   SiYarn,
   SiYarnHex,
 } from '@icons-pack/react-simple-icons';
-import { IconBrandTabler } from '@tabler/icons-react';
 import { ReactElement } from 'react';
 
 export const port = process.env.PORT || 3000;
@@ -47,68 +47,68 @@ export type Technical = {
 
 export const technicalStack: Technical[] = [
   {
-    icon: <SiReact className='w-5' color={SiReactHex} />,
+    icon: <SiReact color={SiReactHex} />,
     name: 'React',
     url: 'https://react.dev',
   },
   {
-    icon: <SiNextdotjs className='w-5' />,
+    icon: <SiNextdotjs />,
     name: 'Next.js',
     url: 'https://nextjs.org',
   },
   {
-    icon: <SiVercel className='w-5' />,
+    icon: <SiVercel />,
     name: 'Vercel',
     url: 'https://vercel.com',
   },
   {
-    icon: <SiTailwindcss className='w-5' color={SiTailwindcssHex} />,
+    icon: <SiTailwindcss color={SiTailwindcssHex} />,
     name: 'TailwindCSS',
     url: 'https://tailwindcss.com',
   },
   {
-    icon: <SiNextui className='w-5' />,
-    name: 'HeroUI',
-    url: 'https://www.heroui.com',
+    icon: <SiShadcnui />,
+    name: 'Shadcn UI',
+    url: 'https://shadcn.com/ui',
   },
   {
-    icon: <SiYarn className='w-5' color={SiYarnHex} />,
+    icon: <SiYarn color={SiYarnHex} />,
     name: 'Yarn',
     url: 'https://yarnpkg.com',
   },
   {
-    icon: <SiMdx className='w-5' />,
+    icon: <SiMdx />,
     name: 'MDX',
     url: 'https://mdxjs.com',
   },
   {
-    icon: <SiTypescript className='w-5' color={SiTypescriptHex} />,
+    icon: <SiTypescript color={SiTypescriptHex} />,
     name: 'TypeScript',
     url: 'https://www.typescriptlang.org',
   },
   {
-    icon: <SiEslint className='w-5' color={SiEslintHex} />,
+    icon: <SiEslint color={SiEslintHex} />,
     name: 'ESLint',
     url: 'https://eslint.org',
   },
   {
-    icon: <SiGit className='w-5' color={SiGitHex} />,
+    icon: <SiGit color={SiGitHex} />,
     name: 'Git',
     url: 'https://git-scm.com',
   },
   {
-    icon: <SiGithub className='w-5' />,
+    icon: <SiGithub />,
     name: 'GitHub',
     url: 'https://github.com',
   },
   {
-    icon: <SiSimpleicons className='w-5' />,
+    icon: <SiSimpleicons />,
     name: 'Simple Icons',
     url: 'https://simpleicons.org',
   },
   {
-    icon: <IconBrandTabler className='w-5' />,
-    name: 'Tabler Icons',
-    url: 'https://tabler.io/icons',
+    icon: <SiLucide />,
+    name: 'Lucide Icons',
+    url: 'https://lucide.dev/icons',
   },
 ];

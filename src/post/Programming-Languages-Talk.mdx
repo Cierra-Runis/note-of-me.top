@@ -4,11 +4,11 @@ date: '2025-09-14T00:05:13+08:00'
 id: BXMDGI
 ---
 
-<Alert
-  color={'warning'}
-  title={'注意'}
-  description={'本文暂未组织完善，仅作为草稿'}
-/>
+<Alert variant='destructive'>
+  <AlertCircleIcon />
+  <AlertTitle>注意</AlertTitle>
+  <AlertDescription>本文暂未组织完善，仅作为草稿</AlertDescription>
+</Alert>
 
 大家好啊，今天来点大家想看的东西啊。
 
@@ -72,7 +72,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-}
+};
 ```
 
 在 C 语言中，参数传递有两种方式：按值传递和按指针传递。按值传递还好，至少不会影响到原始数据。但是按指针传递就麻烦了，你永远不知道一个函数会不会偷偷地修改你传进去的参数。

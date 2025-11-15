@@ -1,18 +1,21 @@
 'use client';
 
-import { Button, ButtonGroup } from '@heroui/button';
-import { addToast } from '@heroui/toast';
-import {
-  IconDeviceSpeaker,
-  IconDeviceSpeakerOff,
-  IconMicrophone2,
-  IconPlayerPlay,
-  IconUpload,
-} from '@tabler/icons-react';
 import { Midi } from '@tonejs/midi';
+import {
+  MegaphoneIcon,
+  MegaphoneOffIcon,
+  MicVocalIcon,
+  PlayIcon,
+  UploadIcon,
+} from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { toast } from 'sonner';
 import * as Tone from 'tone';
 import { useFilePicker } from 'use-file-picker';
+
+import { Button } from '@/components/ui/button';
+import { ButtonGroup } from '@/components/ui/button-group';
+import { Spinner } from '@/components/ui/spinner';
 
 // 88 个钢琴键 MIDI 音符编号 (A0 到 C8)
 const PIANO_KEYS = Array.from({ length: 88 }, (_, i) => i + 21);
@@ -35,11 +38,14 @@ export default function MidiPlayer() {
         setMidi(midiData);
         reset(midiData);
       } catch {
-        addToast({
-          color: 'danger',
-          description: '不合法的 MIDI 文件，请选择正确的文件',
-          title: '错误',
-        });
+        toast(
+          '不合法的 MIDI 文件，请选择正确的文件'
+          // {
+          // color: 'danger',
+          // description: '不合法的 MIDI 文件，请选择正确的文件',
+          // title: '错误',
+          // }
+        );
       }
     },
     readAs: 'ArrayBuffer',
@@ -72,8 +78,12 @@ export default function MidiPlayer() {
     const key = `${trackIndex}-${noteName}`;
     const element = keyElementsRef.current.get(key);
     if (element) {
-      element.style.backgroundColor = `hsl(${(trackIndex * 30) % 360}, 100%, 70%)`;
-      element.style.boxShadow = `0 0 8px hsl(${(trackIndex * 30) % 360}, 100%, 70%)`;
+      element.style.backgroundColor = `hsl(${
+        (trackIndex * 30) % 360
+      }, 100%, 70%)`;
+      element.style.boxShadow = `0 0 8px hsl(${
+        (trackIndex * 30) % 360
+      }, 100%, 70%)`;
     }
   };
 
@@ -107,7 +117,7 @@ export default function MidiPlayer() {
             note.name,
             note.duration,
             time,
-            note.velocity,
+            note.velocity
           );
 
           Tone.getDraw().schedule(() => {
@@ -143,29 +153,30 @@ export default function MidiPlayer() {
   }, []);
 
   return (
-    <section className={`
-      flex h-full flex-col items-center justify-center gap-4 py-8
-      md:py-10
-    `}>
-      <div className={`
-        fixed bottom-10 z-20 flex gap-2 rounded-2xl p-2 backdrop-blur
-      `}>
+    <section
+      className={`
+        flex h-full flex-col items-center justify-center gap-4 py-8
+        md:py-10
+      `}
+    >
+      <div
+        className={`
+          fixed bottom-10 z-20 flex gap-2 rounded-2xl p-2 backdrop-blur
+        `}
+      >
+        <Button onClick={openFilePicker} size='icon' variant='ghost'>
+          {isPicking && <Spinner />}
+          <UploadIcon />
+        </Button>
         <Button
-          isIconOnly
-          isLoading={isPicking}
-          onPress={openFilePicker}
-          size='sm'
-          startContent={<IconUpload className='w-4' />}
+          disabled={!midi}
+          onClick={startPlayback}
+          size='icon'
+          // startContent={}
           variant='ghost'
-        />
-        <Button
-          isDisabled={!midi}
-          isIconOnly
-          onPress={startPlayback}
-          size='sm'
-          startContent={<IconPlayerPlay className='w-4' />}
-          variant='ghost'
-        />
+        >
+          <PlayIcon />
+        </Button>
       </div>
 
       <div className='flex flex-col'>
@@ -182,17 +193,19 @@ export default function MidiPlayer() {
                 </span>
               </div>
               <div className='flex items-center gap-4'>
-                <div className={`
-                  flex gap-0.5
-                  lg:gap-1
-                `}>
+                <div
+                  className={`
+                    flex gap-0.5
+                    lg:gap-1
+                  `}
+                >
                   {PIANO_KEYS.map((midiNumber) => {
                     const note = Tone.Frequency(midiNumber, 'midi').toNote();
                     const keyId = `${i}-${note}`;
                     return (
                       <div
                         className={`
-                          h-4 w-0.5 rounded-md bg-default-50 transition-all
+                          h-4 w-0.5 rounded-md bg-muted transition-all
                           duration-100
                           sm:h-6 sm:w-1
                           md:h-8 md:w-1.25
@@ -208,26 +221,23 @@ export default function MidiPlayer() {
                     );
                   })}
                 </div>
-                <ButtonGroup size='sm'>
+                <ButtonGroup>
                   <Button
-                    isIconOnly
-                    onPress={() => toggleMute(i)}
-                    startContent={
-                      muteStates[i] ? (
-                        <IconDeviceSpeakerOff className='w-4' />
-                      ) : (
-                        <IconDeviceSpeaker className='w-4' />
-                      )
-                    }
+                    onClick={() => toggleMute(i)}
+                    size='icon'
                     variant='ghost'
-                  />
+                  >
+                    {muteStates[i] ? <MegaphoneOffIcon /> : <MegaphoneIcon />}
+                  </Button>
 
                   <Button
-                    isIconOnly
-                    onPress={() => toggleSolo(i)}
-                    startContent={<IconMicrophone2 className='w-4' />}
-                    variant={soloStates[i] ? 'faded' : 'ghost'}
-                  />
+                    onClick={() => toggleSolo(i)}
+                    size='icon'
+                    // startContent={}
+                    variant={soloStates[i] ? 'secondary' : 'ghost'}
+                  >
+                    <MicVocalIcon />
+                  </Button>
                 </ButtonGroup>
               </div>
             </div>
