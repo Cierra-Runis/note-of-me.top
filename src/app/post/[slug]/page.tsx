@@ -53,7 +53,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         >
           <h1 className='text-lg font-bold'>{post.title}</h1>
           <div className='flex flex-1 items-center justify-end gap-2 px-3'>
-            <CopyPageButton code={post.body.code} />
+            <CopyPageButton code={post.body.raw} />
             <SidebarTrigger variant='outline' />
           </div>
         </header>
