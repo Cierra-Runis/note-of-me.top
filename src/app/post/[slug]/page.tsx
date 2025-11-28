@@ -5,6 +5,7 @@ import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
 
+import { CopyPageButton } from '@/components/buttons/CopyPageButton';
 import { TocSidebar } from '@/components/roots/Toc';
 import {
   SidebarInset,
@@ -52,7 +53,8 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         >
           <h1 className='text-lg font-bold'>{post.title}</h1>
           <div className='flex flex-1 items-center justify-end gap-2 px-3'>
-            <SidebarTrigger />
+            <CopyPageButton code={post.body.code} />
+            <SidebarTrigger variant='outline' />
           </div>
         </header>
         <div className='flex flex-1 flex-col gap-4 p-4'>
@@ -62,32 +64,5 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
       </SidebarInset>
       <TocSidebar headings={headings} />
     </SidebarProvider>
-
-    // <section className='grid grid-cols-6 gap-4'>
-    //   <article
-    //     className={`
-    //       col-span-full max-w-full
-    //       lg:col-span-5
-    //     `}
-    //   >
-    //     <div className='mb-8 text-center'>
-    //       <h1 className='mb-1 text-4xl font-bold text-primary'>{post.title}</h1>
-    //       <p className='mb-1'>
-    //         {/* TODO: I18n */}
-    //         {format(parseISO(post.date), 'LLLL d, yyyy')}
-    //       </p>
-    //     </div>
-    //     {/* eslint-disable-next-line react-hooks/static-components */}
-    //     <MDXContent components={mdxComponents} />
-    //   </article>
-    //   <aside
-    //     className={`
-    //       relative hidden
-    //       lg:flex
-    //     `}
-    //   >
-    //     <DocsToc headings={headings} />
-    //   </aside>
-    // </section>
   );
 }
