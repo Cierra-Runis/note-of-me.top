@@ -10,30 +10,6 @@ import eslintPluginBetterTailwindCss from 'eslint-plugin-better-tailwindcss';
 import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
-const eslintPluginBetterTailwindCssConfig = {
-  files: ['**/*.{jsx,tsx}'],
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
-  name: 'better-tailwindcss/',
-  plugins: {
-    'better-tailwindcss': eslintPluginBetterTailwindCss,
-  },
-  rules: {
-    ...eslintPluginBetterTailwindCss.configs['recommended-warn'].rules,
-    ...eslintPluginBetterTailwindCss.configs['recommended-error'].rules,
-  },
-  settings: {
-    'better-tailwindcss': {
-      entryPoint: 'src/app/globals.css',
-    },
-  },
-};
-
 export default defineConfig([
   ...nextCoreWebVitals,
   ...nextTypeScript,
@@ -48,5 +24,12 @@ export default defineConfig([
     'src/components/ui/**',
   ]),
   eslintPluginPerfectionist.configs['recommended-alphabetical'],
-  eslintPluginBetterTailwindCssConfig,
+  {
+    extends: [eslintPluginBetterTailwindCss.configs.recommended],
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: 'src/app/globals.css',
+      },
+    },
+  },
 ]);
