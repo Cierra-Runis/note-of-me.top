@@ -1,0 +1,40 @@
+/* https://vitepress.yiov.top/style.html#%E4%BB%A3%E7%A0%81%E5%9D%97 */
+
+:root {
+  .vp-doc div[class*='language-'] {
+    padding-top: 1.25em;
+  }
+
+  /* 代码块：添加macOS风格的小圆点 */
+  .vp-doc div[class*='language-']::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.75em;
+    left: 0.75em;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 1.25em 0 0 #ffbd2e, 2.5em 0 0 #27c93f;
+    z-index: 1;
+  }
+
+  .vp-doc .line-numbers-wrapper {
+    padding-top: 2.5em;
+    border-right: none;
+  }
+
+  .vp-doc .line-numbers-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    border-right: 1px solid var(--vp-code-block-divider-color);
+    height: calc(100% - 3.75em);
+  }
+
+  .vp-doc div[class*='language-'].line-numbers-mode {
+    margin-bottom: 1.25em;
+  }
+}

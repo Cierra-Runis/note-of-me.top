@@ -1,0 +1,34 @@
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #f8c455,
+    #f5efda
+  );
+
+  --vp-home-hero-image-background-image: url('https://avatars.githubusercontent.com/u/29329988');
+  --vp-home-hero-image-filter: blur(50px);
+
+  .VPContent {
+    flex: inherit;
+    margin: auto;
+  }
+
+  .VPHero .VPImage {
+    border-radius: 50%;
+    height: auto;
+  }
+
+  .vp-doc p:has(img):not(:has(:only-child)) img {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+
+  .vp-doc p img {
+    margin: auto;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

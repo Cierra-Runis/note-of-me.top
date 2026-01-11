@@ -1,0 +1,11 @@
+.vp-doc a[href*='bilibili.com']:before {
+  content: '';
+  background-image: url(https://api.iconify.design/simple-icons/bilibili.svg?color=%2300A1D6);
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.2em;
+  position: relative;
+  background-size: cover;
+  margin-right: 0.25em;
+}
