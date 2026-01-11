@@ -12,5 +12,6 @@
     "jsx": "preserve",
     "lib": ["esnext", "dom", "dom.iterable"]
   },
+  "include": ["docs/.vitepress/**/*"],
   "exclude": ["**/node_modules/**", "**/dist/**"]
 }
