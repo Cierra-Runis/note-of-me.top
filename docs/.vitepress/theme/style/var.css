@@ -26,6 +26,12 @@
 
   .vp-doc p img {
     margin: auto;
+    border-radius: 0.5em;
+  }
+
+  .vp-doc table {
+    display: table;
+    width: 100%;
   }
 
   body {
