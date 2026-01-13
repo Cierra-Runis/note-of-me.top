@@ -11,7 +11,7 @@ const members = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/100991984',
     name: 'KagurazakaAsahi',
-    org: '咖酱的博客',
+    org: '咖酱のブログ',
     orgLink: 'https://www.kablog.top',
     links: [
       { icon: 'github', link: 'https://github.com/KagurazakaAsahi' },

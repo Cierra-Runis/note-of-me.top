@@ -1,6 +1,3 @@
 {
-  "markdownlint.config": {
-    "MD028": false
-  },
   "vue.server.includeLanguages": ["vue", "markdown"]
 }
