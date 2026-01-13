@@ -29,11 +29,6 @@
     border-radius: 0.5em;
   }
 
-  .vp-doc table {
-    display: table;
-    width: 100%;
-  }
-
   body {
     -webkit-tap-highlight-color: transparent;
   }
