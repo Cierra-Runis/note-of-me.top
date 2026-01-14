@@ -1,1 +1,0 @@
-../../zh-CN/post/ArkUI-Report-2.md

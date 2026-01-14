@@ -1,1 +1,0 @@
-../../zh-CN/post/Prettier-And-ESLint.md

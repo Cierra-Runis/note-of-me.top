@@ -1,1 +1,0 @@
-../../zh-CN/post/How-To-Learning-Programming-Language.md
