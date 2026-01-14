@@ -12,7 +12,7 @@
     "jsx": "preserve",
     "lib": ["esnext", "dom", "dom.iterable"]
   },
-  "include": ["docs/**/*"],
+  "include": ["docs/**/*", "docs/.vitepress/**/*"],
   "exclude": ["**/node_modules/**", "**/dist/**"],
   "vueCompilerOptions": {
     "vitePressExtensions": [".md"]
