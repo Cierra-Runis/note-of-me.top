@@ -1,1 +1,0 @@
-../../zh-CN/post/Python-Package-With-Email-Notification.md

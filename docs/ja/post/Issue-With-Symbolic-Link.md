@@ -1,1 +1,0 @@
-../../zh-CN/post/Issue-With-Symbolic-Link.md

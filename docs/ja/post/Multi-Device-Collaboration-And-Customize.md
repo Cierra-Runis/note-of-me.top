@@ -1,1 +1,0 @@
-../../zh-CN/post/Multi-Device-Collaboration-And-Customize.md

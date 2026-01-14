@@ -1,1 +1,0 @@
-../../zh-CN/post/React-Native-Report.md
