@@ -32,11 +32,173 @@ export default {
         disableAnimation: true,
         defaultMode: LayoutMode.FullWidth,
       },
+      // https://github.com/nolebase/integrations/tree/main/packages/vitepress-plugin-enhanced-readabilities/src/locales
       locales: {
         'zh-CN': {
           title: {
-            title: '阅读模式',
-            titleAriaLabel: '阅读模式',
+            title: '阅读增强',
+            titleAriaLabel: '阅读增强',
+          },
+          layoutSwitch: {
+            title: '布局切换',
+            titleAriaLabel: '布局切换',
+            titleHelpMessage:
+              '调整 VitePress 的布局样式，以适配不同的阅读习惯和屏幕环境',
+            titleScreenNavWarningMessage:
+              'モバイル端末ではレイアウト切り替えはサポートされていません',
+            optionFullWidth: '全部展开',
+            optionFullWidthAriaLabel: '全部展开',
+            optionFullWidthHelpMessage:
+              '使侧边栏和内容区域占据整个屏幕的全部宽度',
+            optionSidebarWidthAdjustableOnly: '全部展开，但侧边栏宽度可调',
+            optionSidebarWidthAdjustableOnlyAriaLabel:
+              '全部展开，但侧边栏宽度可调',
+            optionSidebarWidthAdjustableOnlyHelpMessage:
+              '侧边栏宽度可调，但内容区域宽度不变，调整后的侧边栏将可以占据整个屏幕的最大宽度',
+            optionBothWidthAdjustable: '全部展开，且侧边栏和内容区域宽度均可调',
+            optionBothWidthAdjustableAriaLabel:
+              '全部展开，且侧边栏和内容区域宽度均可调',
+            optionBothWidthAdjustableHelpMessage:
+              '侧边栏和内容区域宽度均可调，调整后的侧边栏和内容区域将可以占据整个屏幕的最大宽度',
+            optionOriginalWidth: '原始宽度',
+            optionOriginalWidthAriaLabel: '原始宽度',
+            optionOriginalWidthHelpMessage: '原始的 VitePress 默认布局宽度',
+            contentLayoutMaxWidth: {
+              title: '内容最大宽度',
+              titleAriaLabel: '内容最大宽度',
+              titleHelpMessage:
+                '调整 VitePress 布局中内容区域的宽度，以适配不同的阅读习惯和屏幕环境',
+              titleScreenNavWarningMessage: '移动端暂不支持调整内容最大宽度',
+              slider: '调整内容最大宽度',
+              sliderAriaLabel: '调整内容最大宽度',
+              sliderHelpMessage:
+                '一个可调整的滑块，用于选择和自定义内容最大宽度',
+            },
+            pageLayoutMaxWidth: {
+              title: '页面最大宽度',
+              titleAriaLabel: '页面最大宽度',
+              titleHelpMessage:
+                '调整 VitePress 布局中页面的宽度，以适配不同的阅读习惯和屏幕环境',
+              titleScreenNavWarningMessage: '移动端暂不支持调整页面最大宽度',
+              slider: '调整页面最大宽度',
+              sliderAriaLabel: '调整页面最大宽度',
+              sliderHelpMessage:
+                '一个可调整的滑块，用于选择和自定义页面最大宽度',
+            },
+          },
+          spotlight: {
+            title: '聚光灯',
+            titleAriaLabel: '聚光灯',
+            titleHelpMessage:
+              '支持在正文中高亮当前鼠标悬停的行和元素，以优化阅读和专注困难的用户的阅读体验',
+            titleScreenNavWarningMessage: '移动端暂不支持聚光灯',
+            optionOn: '开启',
+            optionOnAriaLabel: '开启',
+            optionOnHelpMessage: '开启聚光灯',
+            optionOff: '关闭',
+            optionOffAriaLabel: '关闭',
+            optionOffHelpMessage: '关闭聚光灯',
+            styles: {
+              title: '聚光灯样式',
+              titleAriaLabel: '聚光灯样式',
+              titleHelpMessage: '调整聚光灯的样式',
+              titleScreenNavWarningMessage: '移动端暂不支持调整聚光灯样式',
+              optionUnder: '置于底部',
+              optionUnderAriaLabel: '置于底部',
+              optionUnderHelpMessage:
+                '在当前鼠标悬停的元素下方添加一个纯色背景以突出显示当前鼠标悬停的位置',
+              optionAside: '置于侧边',
+              optionAsideAriaLabel: '置于侧边',
+              optionAsideHelpMessage:
+                '在当前鼠标悬停的元素旁边添加一条固定的纯色线以突出显示当前鼠标悬停的位置',
+            },
+          },
+        },
+        ja: {
+          title: {
+            title: 'リーディングエンハンスメント',
+            titleAriaLabel: 'リーディングエンハンスメント',
+          },
+          layoutSwitch: {
+            title: 'レイアウト切り替え',
+            titleAriaLabel: 'レイアウト切り替え',
+            titleHelpMessage:
+              'VitePressのレイアウトスタイルを調整して、さまざまな読書習慣や画面環境に適応します',
+            titleScreenNavWarningMessage:
+              'モバイル端末ではレイアウト切り替えはサポートされていません',
+            optionFullWidth: '全幅表示',
+            optionFullWidthAriaLabel: '全幅表示',
+            optionFullWidthHelpMessage:
+              'サイドバーとコンテンツエリアが画面全体の幅を占めるようにします',
+            optionSidebarWidthAdjustableOnly:
+              '全幅表示、サイドバーの幅のみ調整可能',
+            optionSidebarWidthAdjustableOnlyAriaLabel:
+              '全幅表示、サイドバーの幅のみ調整可能',
+            optionSidebarWidthAdjustableOnlyHelpMessage:
+              'サイドバーの幅のみ調整可能で、コンテンツエリアの幅は変わりません。調整後のサイドバーは画面全体の最大幅を占めることができます',
+            optionBothWidthAdjustable:
+              '全幅表示、サイドバーとコンテンツエリアの幅を両方調整可能',
+            optionBothWidthAdjustableAriaLabel:
+              '全幅表示、サイドバーとコンテンツエリアの幅を両方調整可能',
+            optionBothWidthAdjustableHelpMessage:
+              'サイドバーとコンテンツエリアの幅を両方調整可能で、調整後のサイドバーとコンテンツエリアは画面全体の最大幅を占めることができます',
+            optionOriginalWidth: '元の幅',
+            optionOriginalWidthAriaLabel: '元の幅',
+            optionOriginalWidthHelpMessage:
+              'VitePressのデフォルトのレイアウト幅',
+            contentLayoutMaxWidth: {
+              title: 'コンテンツの最大幅',
+              titleAriaLabel: 'コンテンツの最大幅',
+              titleHelpMessage:
+                'VitePressレイアウトのコンテンツエリアの幅を調整して、さまざまな読書習慣や画面環境に適応します',
+              titleScreenNavWarningMessage:
+                'モバイル端末ではコンテンツの最大幅を調整できません',
+              slider: 'コンテンツの最大幅を調整する',
+              sliderAriaLabel: 'コンテンツの最大幅を調整する',
+              sliderHelpMessage:
+                'コンテンツの最大幅を選択およびカスタマイズするための調整可能なスライダー',
+            },
+            pageLayoutMaxWidth: {
+              title: 'ページの最大幅',
+              titleAriaLabel: 'ページの最大幅',
+              titleHelpMessage:
+                'VitePressレイアウトのページの幅を調整して、さまざまな読書習慣や画面環境に適応します',
+              titleScreenNavWarningMessage:
+                'モバイル端末ではページの最大幅を調整できません',
+              slider: 'ページの最大幅を調整する',
+              sliderAriaLabel: 'ページの最大幅を調整する',
+              sliderHelpMessage:
+                'ページの最大幅を選択およびカスタマイズするための調整可能なスライダー',
+            },
+          },
+          spotlight: {
+            title: 'スポットライト',
+            titleAriaLabel: 'スポットライト',
+            titleHelpMessage:
+              '本文中で現在マウスオーバーしている行と要素をハイライト表示して、読書や集中力に問題のあるユーザーの読書体験を最適化します',
+            titleScreenNavWarningMessage:
+              'モバイル端末ではスポットライトはサポートされていません',
+            optionOn: 'オン',
+            optionOnAriaLabel: 'オン',
+            optionOnHelpMessage: 'スポットライトをオンにする',
+            optionOff: 'オフ',
+            optionOffAriaLabel: 'オフ',
+            optionOffHelpMessage: 'スポットライトをオフにする',
+            styles: {
+              title: 'スポットライトスタイル',
+              titleAriaLabel: 'スポットライトスタイル',
+              titleHelpMessage: 'スポットライトのスタイルを調整します',
+              titleScreenNavWarningMessage:
+                'モバイル端末ではスポットライトスタイルは調整できません',
+              optionUnder: '下に配置',
+              optionUnderAriaLabel: '下に配置',
+              optionUnderHelpMessage:
+                '現在マウスオーバーしている要素の下に単色の背景を追加して、現在マウスオーバーしている位置を強調表示します',
+              optionAside: '横に配置',
+              optionAsideAriaLabel: '横に配置',
+              optionAsideHelpMessage:
+                '現在マウスオーバーしている要素の横に固定された単色の線を追加して、現在マウスオーバーしている位置を強調表示します',
+            },
           },
         },
       },
