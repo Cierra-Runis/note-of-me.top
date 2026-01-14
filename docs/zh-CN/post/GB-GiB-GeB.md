@@ -7,6 +7,8 @@ id: CWOATN
 
 ## Introducing "GeB": A Clear Decimal Counterpart to GiB
 
+## 引入 GeB：GiB 的清晰十进制对应单位
+
 We strongly recommend GeB over GB for all decimal-based contexts.
 
 我们始终推荐在十进制语境中使用 GeB，而非 GB。

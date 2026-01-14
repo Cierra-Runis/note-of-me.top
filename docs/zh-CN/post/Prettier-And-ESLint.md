@@ -25,9 +25,9 @@ As discussed in this [GitHub Issue](https://github.com/prettier/prettier/issues/
 
 据这个 [GitHub Issue](https://github.com/prettier/prettier/issues/2460) 和这个 [Reddit 帖子](https://www.reddit.com/r/typescript/comments/15lr8p1/sorting_imports_eslint_vs_prettier) 讨论的内容，排序会引入副作用，因此更适合使用 ESLint 来处理排序。
 
-Moreover, Prettier will not warn you about incorrect order, but ESLint will, as this is exactly what ES**Lint** is supposed to do.
+Moreover, Prettier will not warn you about incorrect order, but ESLint will, as this is exactly what **Linter** is supposed to do.
 
-不仅如此，Prettier 不会警告你错误的排列顺序，但 ESLint 会，因为这正是一个 ES**Lint** 该做的。
+不仅如此，Prettier 不会警告你错误的排列顺序，但 ESLint 会，因为这正是一个 **Linter** 该做的。
 
 ## 再思考
 
