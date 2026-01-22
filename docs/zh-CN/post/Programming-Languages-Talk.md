@@ -106,3 +106,50 @@ int length = str.length(); // 这里会抛出 NullPointerException
 ```
 
 NPE 的问题在于它通常是在运行时才被发现的，这使得调试变得非常困难。更糟糕的是，NPE 可能会在程序的任何地方发生，导致程序崩溃或产生不可预期的行为。
+
+## 提前结束
+
+我直接拿一段 [真实的代码](https://github.com/vuejs/vitepress/issues/3093#issuecomment-2840860942)，然后把改完的版本贴出来吧，自己看看区别就懂了。
+
+原版：
+
+```ts
+export const inlineHighlightPlugin = (md) => {
+  const codeRender = md.renderer.rules.code_inline;
+  md.renderer.rules.code_inline = (...args) => {
+    const [tokens, idx, options] = args;
+    const token = tokens[idx];
+    if (token.attrs == null) {
+      return codeRender(...args);
+    } else {
+      const lang = token.attrs[0][0];
+      if (options.highlight) {
+        const htmlStr = options.highlight(token.content, lang, '');
+        return htmlStr
+          .replace(/^<pre class="/, '<span class="inline-code-highlight ')
+          .replace(/<\/pre>$/, '</span>');
+      } else {
+        return codeRender(...args);
+      }
+    }
+  };
+};
+```
+
+改版：
+
+```ts
+export const inlineHighlightPlugin = (md) => {
+  const codeRender = md.renderer.rules.code_inline;
+  md.renderer.rules.code_inline = (...args) => {
+    const [tokens, idx, options] = args;
+    const token = tokens[idx];
+    if (token.attrs == null || !options.highlight) return codeRender(...args);
+    const lang = token.attrs[0][0];
+    const htmlStr = options.highlight(token.content, lang, '');
+    return htmlStr
+      .replace(/^<pre class="/, '<span class="inline-code-highlight ')
+      .replace(/<\/pre>$/, '</span>');
+  };
+};
+```
