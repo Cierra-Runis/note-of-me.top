@@ -33,6 +33,12 @@ export default defineConfig({
   title: 'ノート of 我',
   titleTemplate: ':title - ノート of 我',
   description: '一个简单的笔记',
+  head: [
+    [
+      'link',
+      { rel: 'icon', href: 'https://avatars.githubusercontent.com/u/29329988' },
+    ],
+  ],
   lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
