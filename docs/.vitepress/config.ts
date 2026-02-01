@@ -79,6 +79,10 @@ export default defineConfig({
       label: '简体中文 (zh-CN)',
       lang: 'zh-CN',
     },
+    en: {
+      label: 'English (en)',
+      lang: 'en',
+    },
     ja: {
       label: '日本語 (ja)',
       lang: 'ja',
