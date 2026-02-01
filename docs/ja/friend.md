@@ -21,6 +21,6 @@ const members = [
 ]
 </script>
 
-# 友链
+# 友だち
 
 <VPTeamMembers :members="members" />
