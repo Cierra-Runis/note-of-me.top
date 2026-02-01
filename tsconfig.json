@@ -13,8 +13,5 @@
     "lib": ["esnext", "dom", "dom.iterable"]
   },
   "include": ["docs/**/*", "docs/.vitepress/**/*"],
-  "exclude": ["**/node_modules/**", "**/dist/**"],
-  "vueCompilerOptions": {
-    "vitePressExtensions": [".md"]
-  }
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }
