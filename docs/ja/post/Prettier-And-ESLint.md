@@ -21,6 +21,6 @@ id: WKQYMU
 
 ## 再考
 
-[このブログ](https://antfu.me/posts/why-not-prettier-zh) の記述によれば、Prettier と ESLint は確かに「生活を簡単にしてくれない」。むしろ、それらの競合を処理するために、より多くの時間を費やして設定する必要がある。
+[なぜ Prettier を使わないのか](https://antfu.me/posts/why-not-prettier-zh) の記述によれば、Prettier と ESLint は確かに「生活を簡単にしてくれない」。むしろ、それらの競合を処理するために、より多くの時間を費やして設定する必要がある。
 
 だから今後は、すべてのコードフォーマットの問題を ESLint で処理することを考えている。
