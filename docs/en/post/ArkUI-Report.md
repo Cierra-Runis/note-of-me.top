@@ -22,7 +22,7 @@ id: LVYMSF
 1. 必须使用 DevEco Studio 才能使用 ArkTS 语言
 2. DevEco Studio 自带的代码格式化结果一坨：
 
-   ```ts
+   ```TypeScript
    .toolBar({ items: [
      { value: "Plunger", icon: "house", action: () => {
      } },
@@ -69,13 +69,13 @@ id: LVYMSF
 
 我看到有 `Symbol` 啦，但是一样，示例代码呢？后面是找到了示例代码，但现在要我再去找一次，那我真不知道在哪里翻出来的示例代码。
 
-```ts
+```TypeScript
 SymbolGlyph($r('sys.symbol.ohos_trash'))
   .fontWeight(FontWeight.Lighter)
   .fontSize(96);
 ```
 
-```ts
+```TypeScript
 Text() {
   SymbolSpan($r('sys.symbol.ohos_trash'))
     .fontWeight(FontWeight.Normal)

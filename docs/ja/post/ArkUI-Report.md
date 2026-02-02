@@ -15,14 +15,14 @@ id: LVYMSF
 >
 > 同時に、宣言的 UI パラダイム、状態管理サポートなどの機能を提供し、開発者がより簡潔で自然な方法で高性能アプリケーションを開発できるようにします。
 
-公式サイトではこう言っているが、僕はただ「うえぇ...」としか言えない。おそらく Huawei には独自の言語を作る能力がないのだろう、結局 TypeScript を Swift や Kotlin と継ぎ接ぎした継ぎ接ぎモンスターにしてしまった。僕が嫌いな書き方、例えば無名関数の `.bind(this)` や、テンプレート文字列でバッククォート `` const str = `Show: ${another} value` `` を使う時も `this` を付けなければならない、これは絶対に言語実装の制限によるものだろう。
+公式サイトではこう言っているが、僕はただ「うえぇ...」としか言えない。おそらく HUAWEI には独自の言語を作る能力がないのだろう、結局 TypeScript を Swift や Kotlin と継ぎ接ぎした継ぎ接ぎモンスターにしてしまった。僕が嫌いな書き方、例えば無名関数の `.bind(this)` や、テンプレート文字列でバッククォート `` const str = `Show: ${another} value` `` を使う時も `this` を付けなければならない、これは絶対に言語実装の制限によるものだろう。
 
-同様に、僕は ArkTS が好きではない:
+同様に、僕は ArkTS が好きではない：
 
 1. ArkTS 言語を使用するには DevEco Studio を使わなければならない
-2. DevEco Studio に内蔵されているコードフォーマットの結果がひどい:
+2. DevEco Studio に内蔵されているコードフォーマットの結果がひどい：
 
-   ```ts
+   ```TypeScript
    .toolBar({ items: [
      { value: "Plunger", icon: "house", action: () => {
      } },
@@ -51,7 +51,7 @@ id: LVYMSF
 
 プラグインが少なすぎる、僕が最もよく使うコードエディタは VSCode なので —— 実は僕の心の中ではこれは IDE と同等の存在だと言える —— だからキーバインドももちろん VSCode に合わせたい、IntelliJ IDEA と Android Studio には VSCode KeyMap のプラグインがあって VSCode からキーバインドをインポートできるが、Dev Studio にはない。
 
-まさか Huawei は完全に VSCode を使っていないのか……おい、Xcode もないのか、これで謎が解けた。
+まさか HUAWEI は完全に VSCode を使っていないのか……おい、Xcode もないのか、これで謎が解けた。
 
 コード補完がひどい、これは極めて出来が悪い。コード補完が全く文脈に基づいていない感じ、つまりカーソルが現在いる場所にどんなタイプのものを入力すべきか、デフォルトで何を入力できるかを考慮して補完内容を提示していない —— オリジナルの TypeScript の VSCode 上でのコード補完は真逆の極端で、文脈に過度に依存しすぎて、時々欲しい結果が補完結果に含まれていないこともある。
 
@@ -69,13 +69,13 @@ id: LVYMSF
 
 `Symbol` があるのは見たよ、でも同じく、サンプルコードは？後でサンプルコードを見つけたけど、今もう一度探せと言われたら、どこから掘り出したサンプルコードなのか本当に分からない。
 
-```ts
+```TypeScript
 SymbolGlyph($r('sys.symbol.ohos_trash'))
   .fontWeight(FontWeight.Lighter)
   .fontSize(96);
 ```
 
-```ts
+```TypeScript
 Text() {
   SymbolSpan($r('sys.symbol.ohos_trash'))
     .fontWeight(FontWeight.Normal)
