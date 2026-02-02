@@ -40,7 +40,7 @@ YouTube 视频 [The worst programming language of all time](https://www.youtube.
 
 先说结论：我坚决反对修改传进来的值。这种做法既不直观，也不安全，更违背了函数式编程的基本原则。
 
-```ts
+```TypeScript
 export const authOptions: NextAuthOptions = {
   callbacks: {
     jwt({ token, user }) {
@@ -113,7 +113,7 @@ NPE 的问题在于它通常是在运行时才被发现的，这使得调试变�
 
 原版：
 
-```ts
+```TypeScript
 export const inlineHighlightPlugin = (md) => {
   const codeRender = md.renderer.rules.code_inline;
   md.renderer.rules.code_inline = (...args) => {
@@ -138,7 +138,7 @@ export const inlineHighlightPlugin = (md) => {
 
 改版：
 
-```ts
+```TypeScript
 export const inlineHighlightPlugin = (md) => {
   const codeRender = md.renderer.rules.code_inline;
   md.renderer.rules.code_inline = (...args) => {

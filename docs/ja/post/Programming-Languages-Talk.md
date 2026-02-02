@@ -40,7 +40,7 @@ YouTube の動画 [The worst programming language of all time](https://www.youtu
 
 まず結論から言うと：僕は渡された値を変更することに断固反対です。このやり方は直感的でもなく、安全でもなく、さらに関数型プログラミングの基本原則に反しています。
 
-```ts
+```TypeScript
 export const authOptions: NextAuthOptions = {
   callbacks: {
     jwt({ token, user }) {
@@ -109,56 +109,11 @@ NPE の問題は、通常実行時に初めて発見されることで、これ�
 
 ## 早期リターン
 
-<!-- 我直接拿一段 [真实的代码](https://github.com/vuejs/vitepress/issues/3093#issuecomment-2840860942)，然后把改完的版本贴出来吧，自己看看区别就懂了。
-
-原版：
-
-```ts
-export const inlineHighlightPlugin = (md) => {
-  const codeRender = md.renderer.rules.code_inline;
-  md.renderer.rules.code_inline = (...args) => {
-    const [tokens, idx, options] = args;
-    const token = tokens[idx];
-    if (token.attrs == null) {
-      return codeRender(...args);
-    } else {
-      const lang = token.attrs[0][0];
-      if (options.highlight) {
-        const htmlStr = options.highlight(token.content, lang, '');
-        return htmlStr
-          .replace(/^<pre class="/, '<span class="inline-code-highlight ')
-          .replace(/<\/pre>$/, '</span>');
-      } else {
-        return codeRender(...args);
-      }
-    }
-  };
-};
-```
-
-改版：
-
-```ts
-export const inlineHighlightPlugin = (md) => {
-  const codeRender = md.renderer.rules.code_inline;
-  md.renderer.rules.code_inline = (...args) => {
-    const [tokens, idx, options] = args;
-    const token = tokens[idx];
-    if (token.attrs == null || !options.highlight) return codeRender(...args);
-    const lang = token.attrs[0][0];
-    const htmlStr = options.highlight(token.content, lang, '');
-    return htmlStr
-      .replace(/^<pre class="/, '<span class="inline-code-highlight ')
-      .replace(/<\/pre>$/, '</span>');
-  };
-};
-``` -->
-
 では、[実際のコード](https://github.com/vuejs/vitepress/issues/3093#issuecomment-2840860942)を取り、その修正版を貼り付けてみましょう。違いはすぐにわかると思います。
 
 オリジナル：
 
-```ts
+```TypeScript
 export const inlineHighlightPlugin = (md) => {
   const codeRender = md.renderer.rules.code_inline;
   md.renderer.rules.code_inline = (...args) => {
@@ -183,7 +138,7 @@ export const inlineHighlightPlugin = (md) => {
 
 修正版：
 
-```ts
+```TypeScript
 export const inlineHighlightPlugin = (md) => {
   const codeRender = md.renderer.rules.code_inline;
   md.renderer.rules.code_inline = (...args) => {
