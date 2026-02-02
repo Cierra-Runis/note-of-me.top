@@ -1,0 +1,76 @@
+---
+date: '2024-01-05T03:54:54+08:00'
+id: HZKMCH
+---
+
+# 杂货
+
+## 怎么这么多东西
+
+![meme](./image/meme.jpg)
+
+|            名称             |                 介绍                 |         名称         |            介绍             |
+| :-------------------------: | :----------------------------------: | :------------------: | :-------------------------: |
+|          [GitLab]           |             代码托管平台             |  [JetBrains 全家桶]  |          一堆 IDE           |
+|       [JetBairns AI]        |             AI 代码生成              | [Visual Studio Code] |   微软的轻量级代码编辑器    |
+|       [Visual Studio]       |         适用于大型项目的 IDE         |  [JetBrains Fleet]   |         AI 代码生成         |
+|      [GitHub Copilot]       |             AI 代码生成              |       [GitHub]       |    全球最大代码托管平台     |
+|            [Vue]            |             网页开发框架             |        [Vite]        |        一款构建工具         |
+|      [Android Studio]       |               安卓开发               |       [XCode]        |     Apple 生态下的 IDE      |
+|       [DevEco Studio]       |          HarmonyOS 应用 IDE          |       [Unity]        |          游戏引擎           |
+|         [团结引擎]          |             Unity 中国版             |         [Qt]         |     C++ 跨平台开发框架      |
+|         [Electron]          |       基于网页的跨平台开发框架       |       [Tauri]        |  基于网页的跨平台开发框架   |
+|           [React]           |        网页开发 JavaScript 库        |       [Cocos]        |        国产游戏引擎         |
+|       [Unreal Engine]       |               游戏引擎               |        [.NET]        |     .NET 跨平台开发框架     |
+|          [七牛云]           |          云储存、云计算服务          |      [Codeberg]      |        代码托管平台         |
+|      [Stack Overflow]       |           开发问答求助网站           |      [Node.js]       |     JavaScript 后端技术     |
+|          [Angular]          |    与 React、Vue 并列的第三类方案    |     [Bitbucket]      |        代码托管平台         |
+|        [微信小程序]         |              微信小程序              |      [Chromium]      |       开源浏览器内核        |
+| [Firefox Developer Edition] |         火狐浏览器开发者版本         |       [NervJS]       | 京东的类 React 网页开发框架 |
+|           [Taro]            | 支持 React/Vue/Nerv 等用于小程序开发 |      [Reqable]       |   类 Postman API 调试应用   |
+|           [Gitee]           |    幽默国产类 GitHub 代码托管平台    |      [Flutter]       |   Dart 跨平台应用开发框架   |
+|            [npm]            |       Node 包管理器，处理依赖        |      [Firebase]      |     谷歌一站式后端服务      |
+|          [Gradle]           |  构建工具，用于 Java/Kotlin/Android  |      [CODEPEN]       |  网页前端代码设计分享网站   |
+|          [eclipse]          |       一款已经不怎么好用的 IDE       |                      |                             |
+
+[GitLab]: https://about.gitlab.com/
+[JetBrains 全家桶]: https://www.jetbrains.com/ides/
+[JetBairns AI]: https://www.jetbrains.com/ai/
+[Visual Studio Code]: https://code.visualstudio.com/
+[Visual Studio]: https://visualstudio.microsoft.com/
+[JetBrains Fleet]: https://www.jetbrains.com/fleet/
+[GitHub Copilot]: https://github.com/features/copilot/
+[GitHub]: https://github.com/
+[Vue]: https://vuejs.org/
+[Vite]: https://vitejs.dev/
+[Android Studio]: https://developer.android.com/studio
+[XCode]: https://developer.apple.com/xcode/
+[DevEco Studio]: https://developer.huawei.com/consumer/cn/deveco-studio/
+[Unity]: https://unity.com/
+[团结引擎]: https://unity.cn/tuanjie/tuanjieyinqing
+[Qt]: https://www.qt.io/
+[Electron]: https://www.electronjs.org/
+[Tauri]: https://tauri.app/
+[React]: https://react.dev/
+[Cocos]: https://www.cocos.com/
+[Unreal Engine]: https://www.unrealengine.com/
+[.NET]: https://dotnet.microsoft.com/
+[七牛云]: https://www.qiniu.com/
+[Codeberg]: https://codeberg.org/
+[Stack Overflow]: https://stackoverflow.com/
+[Node.js]: https://nodejs.org/
+[Angular]: https://angular.io/
+[Bitbucket]: https://bitbucket.org/
+[微信小程序]: https://developers.weixin.qq.com/miniprogram/dev/framework/
+[Chromium]: https://www.chromium.org/
+[Firefox Developer Edition]: https://www.mozilla.org/en-US/firefox/developer/
+[NervJS]: https://github.com/NervJS
+[Taro]: https://taro-ui.jd.com/
+[Reqable]: https://reqable.com/
+[Gitee]: https://gitee.com/
+[Flutter]: https://flutter.dev/
+[npm]: https://www.npmjs.com/
+[Firebase]: https://firebase.google.com/
+[Gradle]: https://gradle.org/
+[CODEPEN]: https://codepen.io/
+[eclipse]: https://www.eclipse.org/
