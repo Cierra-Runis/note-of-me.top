@@ -73,13 +73,13 @@ Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
 比如接下来的这句话：
 
-```plaintext
+```text
 我喜欢吃apple，不喜欢吃peach和orange。
 ```
 
 加入空格：
 
-```plaintext
+```text
 我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
 ```
 
@@ -87,7 +87,7 @@ Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
 但这里实际上 apple 和 orange 后面接续的是一个全角的标点符号，且这个标点符号视觉上可以看作一个半角符号和一个空格，所以我们可以把后面的空格删去。
 
-```plaintext
+```text
 我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 

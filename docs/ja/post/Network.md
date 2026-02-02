@@ -71,8 +71,11 @@ id: PFVARR
 |  Wi-Fi 8   | [802.11bn] | ~~2028~~ |   12.5 GB/s   |  2.4、5、6   |
 
 [^2]: Wi-Fi 5 は 5 GHz 帯での動作のみを規定しており、2.4 GHz 帯での動作は Wi-Fi 4 で規定されている
+
 [^3]: Wi-Fi 6E は 6 GHz 帯で動作する Wi-Fi デバイスの業界名称で、Wi-Fi 6 の機能と特性を提供し、6 GHz 帯に拡張したもの
+
 [^4]: Wi-Fi アライアンスは 2024 年に Wi-Fi 7 デバイスの認証を開始したが、2025 年 1 月時点で Wi-Fi 7 はまだ正式に承認されていない
+
 [^5]: 中国語版ウィキペディアの値は古くなっており、英語版ウィキペディアを基準とする
 
 [802.11n]: https://zh.wikipedia.org/wiki/IEEE_802.11n
@@ -258,7 +261,7 @@ IPv6 は IPv4 の問題を解決した、というようなたわごとは省略
 
 ::: code-group
 
-```bash [$HOME/.local/bin/ddns ~vscode-icons:file-type-agents~]
+```Bash [$HOME/.local/bin/ddns ~vscode-icons:file-type-agents~]
 #!/bin/bash
 set -euo pipefail
 
@@ -319,7 +322,7 @@ fi
 
 ```
 
-```powershell [$HOME/.local/bin/ddns.ps1]
+```PowerShell [$HOME/.local/bin/ddns.ps1]
 # 必要条件: aliyun CLI がアカウント設定済み
 # 以下のパラメータを変更してください
 $DomainName = "note-of-me.top"
@@ -440,7 +443,7 @@ Mac mini で `iperf3 -s` を使ってサーバーを起動し、ノート PC で
 <AccordionTrigger>正方向テスト</AccordionTrigger>
 <AccordionContent>
 
-```powershell
+```PowerShell
 PS > iperf3 -c 192.168.1.2
 Connecting to host 192.168.1.2, port 5201
 [  5] local 192.168.1.1 port 55591 connected to 192.168.1.2 port 5201
@@ -469,7 +472,7 @@ iperf Done.
 <AccordionTrigger>逆方向テスト</AccordionTrigger>
 <AccordionContent>
 
-```powershell
+```PowerShell
 PS > iperf3 -c 192.168.1.2 -R
 Connecting to host 192.168.1.2, port 5201
 Reverse mode, remote host 192.168.1.2 is sending

@@ -45,7 +45,7 @@ id: XGMTLY
 
 在我刚学习 Java 的时候，写了一个模拟 Minecraft 命令的 Java 程序，我使用的还是字符串切割：
 
-```java
+```Java
 // 匹配指令
 public void match(String input) {
 

@@ -41,8 +41,8 @@ Google Drive 因为一些懂得都懂的原因，是不能直接访问的，那�
 
 兜兜转转还得是微软的 OneDrive，在 cmd 使用：
 
-```bash
-mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
+```PowerShell
+cmd /c mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"
 ```
 
 创建链接使 `D:\OneDrive` 这个我个人设定的 OneDrive 文件夹（默认在哪来着不记得了）里出现一个 `Songs` 文件夹，进去一看好家伙是 `D:\osu\Songs` 里的东西，这样 Windows 方面成功。

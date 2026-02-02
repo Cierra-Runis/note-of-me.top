@@ -34,7 +34,7 @@ id: TYHGCR
 - `fix: Fix Login Button Alignment`
 - `feat: Add User Model`
 
-```plaintext
+```text
 refactor: Extract Authentication Logic into Middleware
 
 This makes the authentication logic reusable across multiple routes
@@ -57,20 +57,20 @@ and reduces duplication of code.
 
 1. コミットメッセージの修正
 
-   ```bash
+   ```Bash
    git commit --amend
    ```
 
 2. コミット忘れのファイルを追加
 
-   ```bash
+   ```Bash
    git add <missing_file>
    git commit --amend
    ```
 
 3. 誤ってコミットしたファイルを削除
 
-   ```bash
+   ```Bash
    git rm --cached <wrong_file>
    git commit --amend
    ```

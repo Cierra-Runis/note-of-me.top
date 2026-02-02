@@ -11,7 +11,7 @@ id: TELMXD
 
 Swift と [Kotlin](https://kotlinlang.org) は非常に似ており、かなり奇妙な構文をいくつか革新している。例えば:
 
-```dart
+```Dart
 // Dart
 callFunction(parma1, (value) {
   final value2 = value * 2;
@@ -21,7 +21,7 @@ callFunction(parma1, (value) {
 
 このように最後のパラメータが関数の場合、次のように書ける:
 
-```swift
+```Swift
 // Swift
 callFunction(parma1) { value in
   let value2 = value * 2
@@ -70,7 +70,7 @@ Flutter のような [コンポーネント Gallery](https://flutter.github.io/s
 
 称賛すべき点は `Text` コンポーネントだ。Markdown を直接書いて URL リンクに変換できる:
 
-```swift
+```Swift
 Text("[byrdsaron@gmail.com](mailto:byrdsaron@gmail.com)")
 ```
 

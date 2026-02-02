@@ -11,7 +11,7 @@ id: GHDYWL
 
 > 兜兜转转还得是微软的 OneDrive，在 cmd 使用：
 >
-> ```bash
+> ```Bash
 > mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
 > ```
 >

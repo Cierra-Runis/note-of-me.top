@@ -41,8 +41,8 @@ Google Drive はよく知られた理由で直接アクセスできないから�
 
 あれこれ試して、やっぱり Microsoft の OneDrive に落ち着いた。cmd で次のコマンドを実行:
 
-```bash
-mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
+```PowerShell
+cmd /c mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"
 ```
 
 リンクを作成して、`D:\OneDrive` という僕が個人的に設定した OneDrive フォルダ（デフォルトがどこだったか忘れた）に `Songs` フォルダを出現させる。中を見たら、なんと `D:\osu\Songs` の中身じゃないか。これで Windows 側は成功。

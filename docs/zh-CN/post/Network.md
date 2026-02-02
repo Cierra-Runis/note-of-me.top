@@ -71,8 +71,11 @@ id: PFVARR
 |  Wi-Fi 8   | [802.11bn] | ~~2028~~ |   12.5 GB/s   | 2.4、5、6 |
 
 [^2]: Wi-Fi 5 仅指定在 5 GHz 频段的操作，2.4 GHz 频段的操作由 Wi-Fi 4 指定
+
 [^3]: Wi-Fi 6E 是指在 6 GHz 频段运行的 Wi-Fi 设备的行业名称，其提供了 Wi-Fi 6 的功能和特性并扩展到 6 GHz 频段
+
 [^4]: Wi-Fi 联盟在 2024 年开始认证 Wi-Fi 7 设备，但截至 2025 年 1 月，Wi-Fi 7 尚未被正式批准
+
 [^5]: 中文维基百科给出的数值已经过时，以英文维基百科为准
 
 [802.11n]: https://zh.wikipedia.org/wiki/IEEE_802.11n
@@ -258,7 +261,7 @@ IPv6 的解决了 IPv4 的问题，这种屁话略，首先保证光猫、路由
 
 ::: code-group
 
-```bash [$HOME/.local/bin/ddns ~vscode-icons:file-type-agents~]
+```Bash [$HOME/.local/bin/ddns ~vscode-icons:file-type-agents~]
 #!/bin/bash
 set -euo pipefail
 
@@ -325,7 +328,7 @@ fi
 <AccordionTrigger>Windows `~\.local\bin\ddns.ps1`</AccordionTrigger>
 <AccordionContent> -->
 
-```powershell [$HOME/.local/bin/ddns.ps1]
+```PowerShell [$HOME/.local/bin/ddns.ps1]
 # Requires: aliyun CLI 已配置好账号
 # 修改以下参数
 $DomainName = "note-of-me.top"
@@ -446,7 +449,7 @@ graph LR
 <AccordionTrigger>正向测试</AccordionTrigger>
 <AccordionContent>
 
-```powershell
+```PowerShell
 PS > iperf3 -c 192.168.1.2
 Connecting to host 192.168.1.2, port 5201
 [  5] local 192.168.1.1 port 55591 connected to 192.168.1.2 port 5201
@@ -475,7 +478,7 @@ iperf Done.
 <AccordionTrigger>反向测试</AccordionTrigger>
 <AccordionContent>
 
-```powershell
+```PowerShell
 PS > iperf3 -c 192.168.1.2 -R
 Connecting to host 192.168.1.2, port 5201
 Reverse mode, remote host 192.168.1.2 is sending

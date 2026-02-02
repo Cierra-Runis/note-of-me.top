@@ -34,7 +34,7 @@ id: QWZRNF
 
 同时当要引入外部包时，只要在 `lib/index.dart` 文件内导入即可，当然，有时会出现不同包之间的类名冲突，此时在需要使用到该包的地方单独 `import` 即可，或者使用 `hide` 或 `show` 语法限制，具体例子如下：
 
-```dart
+```Dart
 /// 各路由下的 index.dart
 export 'main.dart';
 export 'pages/index.dart';
@@ -69,7 +69,7 @@ Flutter 使用 `android/app/build.gradle` 来打包 APK, 且其引入了 `flutte
 
 约在 `flutter.groovy` 的 `993` 行：
 
-```groovy
+```Groovy
 if (shouldSplitPerAbi()) {
     variant.outputs.each { output ->
         def abiVersionCode = ABI_VERSION.get(output.getFilter(OutputFile.ABI))
@@ -85,7 +85,7 @@ if (shouldSplitPerAbi()) {
 
 我们只需修改 `ABI_VERSION map` 如下：
 
-```groovy
+```Groovy
 private static final Map ABI_VERSION = [
     (ARCH_ARM32)        : 0,
     (ARCH_ARM64)        : 0,
@@ -111,7 +111,7 @@ Vivo 系列手机升至 Origin3 后发现调试 Flutter 应用卡在启动页，
 
 这是个怪问题，release 版本正常运行，解决方法如下：
 
-```dart
+```Dart
 AlertDialog(
   title: (...),
   content: SizedBox(

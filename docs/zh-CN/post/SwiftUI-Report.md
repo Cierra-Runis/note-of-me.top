@@ -11,7 +11,7 @@ id: TELMXD
 
 Swift 和 [Kotlin](https://kotlinlang.org) 非常相似，创新了一些比较奇妙的语法比如：
 
-```dart
+```Dart
 // Dart
 callFunction(parma1, (value) {
   final value2 = value * 2;
@@ -21,7 +21,7 @@ callFunction(parma1, (value) {
 
 这种最后一个参数是函数时，可以写作：
 
-```swift
+```Swift
 // Swift
 callFunction(parma1) { value in
   let value2 = value * 2
@@ -70,7 +70,7 @@ callFunction(parma1) { value in
 
 要称赞的一点就是它的 `Text` 组件，能直接写 Markdown 转 URL 链接：
 
-```swift
+```Swift
 Text("[byrdsaron@gmail.com](mailto:byrdsaron@gmail.com)")
 ```
 

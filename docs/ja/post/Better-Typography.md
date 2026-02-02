@@ -73,22 +73,22 @@ Xcode も同様で、c は小文字だが、VSCode では C が大文字であ�
 
 例えば、次の文：
 
-```plaintext
-僕は apple が好きで、peach と orange は嫌いだ。
+```text
+僕が好きなのはapple、嫌いのはpeachとorange。
 ```
 
 スペースを追加：
 
-```plaintext
-僕は apple が好きで、 peach と orange は嫌いだ。
+```text
+僕が好きなのは apple 、嫌いのは peach と orange 。
 ```
 
 ここでは各単語の左右両側にスペースを追加した。
 
 しかし、実際には apple と orange の後に続くのは全角の句読点であり、この句読点は視覚的に半角記号とスペースと見なすことができるので、後ろのスペースを削除できる。
 
-```plaintext
-僕は apple が好きで、peach と orange は嫌いだ。
+```text
+僕が好きなのは apple、嫌いのは peach と orange。
 ```
 
 しかし、「——」「……」のような全幅を占める句読点の場合、今見ると確かに少し詰まっているので、スペースを追加することをお勧めする。
@@ -123,7 +123,7 @@ Xcode も同様で、c は小文字だが、VSCode では C が大文字であ�
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
-こんにちは、僕たちは `"` `"` `'` `'` `"` `'` `「` `」` `『` `』` です。今日はみんなが見たいものをお届けします。
+こんにちは、僕たちは `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』` です。今日はみんなが見たいものをお届けします。
 
 ## 「または」
 

@@ -34,7 +34,7 @@ id: QWZRNF
 
 同時に外部パッケージを導入する際も、`lib/index.dart` ファイル内でインポートするだけでよい。もちろん、時には異なるパッケージ間でクラス名の衝突が発生することもあるが、その場合は該当パッケージを使用する場所で個別に `import` するか、`hide` または `show` 構文で制限すればよい。具体例は以下の通り：
 
-```dart
+```Dart
 /// 各ルート配下の index.dart
 export 'main.dart';
 export 'pages/index.dart';
@@ -69,7 +69,7 @@ Flutter は `android/app/build.gradle` を使用して APK をパッケージ化
 
 `flutter.groovy` の約 `993` 行目：
 
-```groovy
+```Groovy
 if (shouldSplitPerAbi()) {
     variant.outputs.each { output ->
         def abiVersionCode = ABI_VERSION.get(output.getFilter(OutputFile.ABI))
@@ -85,7 +85,7 @@ if (shouldSplitPerAbi()) {
 
 僕たちは `ABI_VERSION map` を以下のように修正するだけでよい：
 
-```groovy
+```Groovy
 private static final Map ABI_VERSION = [
     (ARCH_ARM32)        : 0,
     (ARCH_ARM64)        : 0,
@@ -111,7 +111,7 @@ Vivo シリーズのスマホが Origin3 にアップグレードした後、Flu
 
 これは変な問題で、release 版では正常に動作する。解決方法は以下の通り：
 
-```dart
+```Dart
 AlertDialog(
   title: (...),
   content: SizedBox(

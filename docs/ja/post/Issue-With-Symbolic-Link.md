@@ -11,7 +11,7 @@ id: GHDYWL
 
 > あれこれ試した結果、やはりマイクロソフトの OneDrive に戻ってきた。cmd で次のコマンドを使用する：
 >
-> ```bash
+> ```Bash
 > mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
 > ```
 >

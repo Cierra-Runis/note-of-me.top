@@ -41,7 +41,7 @@ React 和 React Native 都会搞出一个极大的 `node_modules` 文件夹，�
 
 那 Flutter 的包是放在哪的呢？如果使用 Windows，则在 `%LOCALAPPDATA%\Pub\Cache\hosted` 下，它按源的不同，分多个文件夹，一般来说是 `pub.dev` 文件夹和 `pub.flutter-io.cn` 文件夹，进 `pub.dev` 文件夹能看到很多包的不同版本的文件夹，就统计下来连 2 GB 都没有。
 
-```powershell
+```PowerShell
 PS > "{0} MB" -f [math]::round((Get-ChildItem -Path "$env:LOCALAPPDATA\Pub\" -Recurse | Measure-Object -Property Length -Sum).Sum / 1MB, 2)
 1301.09 MB
 ```

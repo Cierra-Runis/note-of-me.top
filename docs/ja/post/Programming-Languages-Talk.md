@@ -17,7 +17,7 @@ C 言語そのものに話を戻すと、今からいくつかの欠点につい
 
 C 言語における文字列の定義はこうなっています：
 
-```c
+```C
 char s[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; // 定義長度為 6 的字符串
 char s2[5] = {'H', 'e', 'l', 'l', 'o'};      // 定義長度為 5 的字符串，未以 '\0' 結尾
 ```
@@ -26,7 +26,7 @@ C 言語を学んでいた時、僕は文字列の処理が本当に面倒だと
 
 Python で `list` を使って文字列をシミュレートする例と比較してみましょう：
 
-```python
+```Python
 s = ['H', 'e', 'l', 'l', 'o']                # 定義長度為 5 的字符串
 ```
 
@@ -74,7 +74,7 @@ export const authOptions: NextAuthOptions = {
 
 C 言語では、引数の渡し方には 2 つの方法があります：値渡しとポインタ渡しです。値渡しはまだいいですが、少なくとも元のデータには影響しません。しかしポインタ渡しは厄介で、関数が渡された引数をこっそり変更するかどうか、永遠にわかりません。
 
-```c
+```C
 void mysterious_function(int *arr, int size) {
     // この関数は何をするの？
     // 配列の内容を変更するの？
@@ -100,7 +100,7 @@ JavaScript/TypeScript では、`undefined` と `null` がありますが、彼�
 
 Java 言語では、`NullPointerException`（略して NPE）は最も一般的なランタイムエラーの一つです。NPE は通常、`null` であるオブジェクトのメンバーやメソッドにアクセスしようとした時に発生します。
 
-```java
+```Java
 String str = null;
 int length = str.length(); // ここでNullPointerExceptionが投げられる
 ```

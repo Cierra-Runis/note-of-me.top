@@ -55,7 +55,7 @@ Windows と macOS の SSH サービスを設定した後、Windows から macOS 
 
 そうなんです。Windows から macOS にアクセスして `ls/ll` コマンドで中国語ファイル名を含むフォルダの内容をリストすると、以下のような文字化けが発生します：
 
-```bash
+```Bash
 ➜  mods git:(main) ✗ ll
 total 80440
 -rw-r--r--  1 cierra_runis  staff   2.0M Oct 28 04:33 ???Fabric API???fabric-api-0.92.2+1.20.1.jar
@@ -66,7 +66,7 @@ total 80440
 
 解決策は `.zsh_rc` で以下のコメントを解除して、`LANG` を `en_US.UTF-8` に固定することです：
 
-```bash
+```Bash
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 ```

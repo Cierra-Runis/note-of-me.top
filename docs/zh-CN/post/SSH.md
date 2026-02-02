@@ -55,7 +55,7 @@ SSH 支持免密登录，总之使用 [GPG](https://gnupg.org) 的非对称加�
 
 是的，从 Windows 访问 macOS 使用 `ls/ll` 命令列出含有中文文件的文件夹内容时，会有如下的乱码：
 
-```bash
+```Bash
 ➜  mods git:(main) ✗ ll
 total 80440
 -rw-r--r--  1 cierra_runis  staff   2.0M Oct 28 04:33 ???Fabric API???fabric-api-0.92.2+1.20.1.jar
@@ -66,7 +66,7 @@ total 80440
 
 答案是去 `.zsh_rc` 里取消如下的注释，使 `LANG` 得以固定为 `en_US.UTF-8`：
 
-```bash
+```Bash
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 ```

@@ -17,7 +17,7 @@ id: BXMDGI
 
 C 语言中字符串的定义是这样的：
 
-```c
+```C
 char s[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; // 定义长度为 6 的字符串
 char s2[5] = {'H', 'e', 'l', 'l', 'o'};      // 定义长度为 5 的字符串，未以 '\0' 结尾
 ```
@@ -26,7 +26,7 @@ char s2[5] = {'H', 'e', 'l', 'l', 'o'};      // 定义长度为 5 的字符串�
 
 我们来对比一下 Python 中用 `list` 来模拟字符串的例子：
 
-```python
+```Python
 s = ['H', 'e', 'l', 'l', 'o']                # 定义长度为 5 的字符串
 ```
 
@@ -74,7 +74,7 @@ export const authOptions: NextAuthOptions = {
 
 在 C 语言中，参数传递有两种方式：按值传递和按指针传递。按值传递还好，至少不会影响到原始数据。但是按指针传递就麻烦了，你永远不知道一个函数会不会偷偷地修改你传进去的参数。
 
-```c
+```C
 void mysterious_function(int *arr, int size) {
     // 这个函数做了什么？
     // 它会修改数组内容吗？
@@ -100,7 +100,7 @@ void mysterious_function(int *arr, int size) {
 
 Java 语言中，`NullPointerException`（简称 NPE）是最常见的运行时错误之一。NPE 通常发生在你试图访问一个为 `null` 的对象的成员或方法时。
 
-```java
+```Java
 String str = null;
 int length = str.length(); // 这里会抛出 NullPointerException
 ```

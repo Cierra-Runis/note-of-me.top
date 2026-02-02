@@ -41,7 +41,7 @@ React と React Native は両方とも巨大な `node_modules` フォルダを�
 
 では Flutter のパッケージはどこに置かれるのか? Windows を使用している場合、`%LOCALAPPDATA%\Pub\Cache\hosted` の下にある。ソースごとに複数のフォルダに分かれており、一般的には `pub.dev` フォルダと `pub.flutter-io.cn` フォルダだ。`pub.dev` フォルダに入ると、多くのパッケージの異なるバージョンのフォルダが見られるが、統計してみても 2 GB にも満たない。
 
-```powershell
+```PowerShell
 PS > "{0} MB" -f [math]::round((Get-ChildItem -Path "$env:LOCALAPPDATA\Pub\" -Recurse | Measure-Object -Property Length -Sum).Sum / 1MB, 2)
 1301.09 MB
 ```

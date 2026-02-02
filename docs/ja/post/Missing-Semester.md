@@ -45,7 +45,7 @@ Bash は Unix システムのデフォルトの Shell で、そのスクリプ�
 
 Java を学び始めたばかりの頃、Minecraft のコマンドを模倣する Java プログラムを書いたのですが、まだ文字列の切り取りを使っていました:
 
-```java
+```Java
 // コマンドをマッチング
 public void match(String input) {
 

@@ -39,10 +39,10 @@ Google Drive 因为一些懂得都懂的原因，是不能直接访问的，那�
 
 在这里其实有另一套方案，这里我没有继续下去的原因就是有点晕人，再就是速度有点慢，但姑且也作一个记录。在 bilibili 里也能看见有介绍 [Syncthing](https://syncthing.net) 这款软件的视频，特点是 [P2P](https://en.wikipedia.org/wiki/Peer-to-peer) 安全迅速（存疑），设定双设备相互加对方好友并都设置目标文件夹后，只要连接成功就会开始同步，只可惜我这边连接不稳定 —— 仔细想想这也并不是很符合我的使用场景，这要求俩者都在线且成功连接，所以也就放弃了。
 
-兜兜转转还得是微软的 OneDrive，在 cmd 使用：
+兜兜转转还得是微软的 OneDrive，在 PowerShell 使用：
 
-```bash
-mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
+```PowerShell
+cmd /c mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"
 ```
 
 创建链接使 `D:\OneDrive` 这个我个人设定的 OneDrive 文件夹（默认在哪来着不记得了）里出现一个 `Songs` 文件夹，进去一看好家伙是 `D:\osu\Songs` 里的东西，这样 Windows 方面成功。
