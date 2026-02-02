@@ -44,8 +44,7 @@ export default {
             titleAriaLabel: '布局切换',
             titleHelpMessage:
               '调整 VitePress 的布局样式，以适配不同的阅读习惯和屏幕环境',
-            titleScreenNavWarningMessage:
-              'モバイル端末ではレイアウト切り替えはサポートされていません',
+            titleScreenNavWarningMessage: '移动端暂不支持布局切换',
             optionFullWidth: '全部展开',
             optionFullWidthAriaLabel: '全部展开',
             optionFullWidthHelpMessage:
@@ -111,6 +110,93 @@ export default {
               optionAsideAriaLabel: '置于侧边',
               optionAsideHelpMessage:
                 '在当前鼠标悬停的元素旁边添加一条固定的纯色线以突出显示当前鼠标悬停的位置',
+            },
+          },
+        },
+        en: {
+          title: {
+            title: 'Enhanced Readabilities',
+            titleAriaLabel: 'Enhanced Readabilities',
+          },
+          layoutSwitch: {
+            title: 'Layout Switch',
+            titleAriaLabel: 'Layout Switch',
+            titleHelpMessage:
+              "Adjust VitePress's layout styles to adapt to different reading habits and screen environments",
+            titleScreenNavWarningMessage:
+              'Layout switch is not supported on mobile devices',
+            optionFullWidth: 'Full Width',
+            optionFullWidthAriaLabel: 'Full Width',
+            optionFullWidthHelpMessage:
+              'Make the sidebar and content area occupy the full width of the entire screen',
+            optionSidebarWidthAdjustableOnly:
+              'Full Width, Sidebar Width Adjustable Only',
+            optionSidebarWidthAdjustableOnlyAriaLabel:
+              'Full Width, Sidebar Width Adjustable Only',
+            optionSidebarWidthAdjustableOnlyHelpMessage:
+              'Only the sidebar width is adjustable, while the content area width remains unchanged. The adjusted sidebar can occupy the maximum width of the entire screen',
+            optionBothWidthAdjustable:
+              'Full Width, Both Sidebar and Content Area Widths Adjustable',
+            optionBothWidthAdjustableAriaLabel:
+              'Full Width, Both Sidebar and Content Area Widths Adjustable',
+            optionBothWidthAdjustableHelpMessage:
+              'Both the sidebar and content area widths are adjustable. The adjusted sidebar and content area can occupy the maximum width of the entire screen',
+            optionOriginalWidth: 'Original Width',
+            optionOriginalWidthAriaLabel: 'Original Width',
+            optionOriginalWidthHelpMessage:
+              'The original VitePress default layout width',
+            contentLayoutMaxWidth: {
+              title: 'Content Max Width',
+              titleAriaLabel: 'Content Max Width',
+              titleHelpMessage:
+                'Adjust the width of the content area in the VitePress layout to adapt to different reading habits and screen environments',
+              titleScreenNavWarningMessage:
+                'Content max width adjustment is not supported on mobile devices',
+              slider: 'Adjust Content Max Width',
+              sliderAriaLabel: 'Adjust Content Max Width',
+              sliderHelpMessage:
+                'An adjustable slider for selecting and customizing the content max width',
+            },
+            pageLayoutMaxWidth: {
+              title: 'Page Max Width',
+              titleAriaLabel: 'Page Max Width',
+              titleHelpMessage:
+                'Adjust the width of the page in the VitePress layout to adapt to different reading habits and screen environments',
+              titleScreenNavWarningMessage:
+                'Page max width adjustment is not supported on mobile devices',
+              slider: 'Adjust Page Max Width',
+              sliderAriaLabel: 'Adjust Page Max Width',
+              sliderHelpMessage:
+                'An adjustable slider for selecting and customizing the page max width',
+            },
+          },
+          spotlight: {
+            title: 'Spotlight',
+            titleAriaLabel: 'Spotlight',
+            titleHelpMessage:
+              'Support highlighting the line and element currently hovered by the mouse in the main text to optimize the reading experience for users with reading and concentration difficulties',
+            titleScreenNavWarningMessage:
+              'Spotlight is not supported on mobile devices',
+            optionOn: 'On',
+            optionOnAriaLabel: 'On',
+            optionOnHelpMessage: 'Turn on the spotlight',
+            optionOff: 'Off',
+            optionOffAriaLabel: 'Off',
+            optionOffHelpMessage: 'Turn off the spotlight',
+            styles: {
+              title: 'Spotlight Style',
+              titleAriaLabel: 'Spotlight Style',
+              titleHelpMessage: 'Adjust the style of the spotlight',
+              titleScreenNavWarningMessage:
+                'Spotlight style adjustment is not supported on mobile devices',
+              optionUnder: 'Under',
+              optionUnderAriaLabel: 'Under',
+              optionUnderHelpMessage:
+                'Add a solid color background under the element currently hovered by the mouse to highlight the current mouse hover position',
+              optionAside: 'Aside',
+              optionAsideAriaLabel: 'Aside',
+              optionAsideHelpMessage:
+                'Add a fixed solid color line beside the element currently hovered by the mouse to highlight the current mouse hover position',
             },
           },
         },
