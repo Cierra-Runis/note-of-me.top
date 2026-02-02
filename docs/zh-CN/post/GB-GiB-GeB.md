@@ -5,143 +5,86 @@ id: CWOATN
 
 # GB? GiB~ GeB!
 
-## Introducing "GeB": A Clear Decimal Counterpart to GiB
-
 ## 引入 GeB：GiB 的清晰十进制对应单位
-
-We strongly recommend GeB over GB for all decimal-based contexts.
 
 我们始终推荐在十进制语境中使用 GeB，而非 GB。
 
-## Background
-
 ## 背景
-
-When measuring digital storage, we often encounter **GB** and **GiB**, but their meanings differ significantly:
 
 在衡量数字存储空间时，我们常看到 **GB** 和 **GiB**，但它们实际意义大不相同：
 
-| Abbreviation 缩写 | Fullname 全称 |      Bytes 字节数      |                                  |
-| :---------------: | :-----------: | :--------------------: | :------------------------------: |
-|        GiB        |   Gibibyte    | $2^30 = 1,073,741,824$ |     Standardized by the IEC      |
-|        GiB        |   Gibibyte    | $2^30 = 1,073,741,824$ |        IEC 二进制标准单位        |
-|        GB         |   Gigabyte    | $10^9 = 1,000,000,000$ | SI-defined, but ambiguously used |
-|        GB         |   Gigabyte    | $10^9 = 1,000,000,000$ |  SI 十进制单位，但使用非常混乱   |
-
-This leads to confusion: storage vendors use GB, but operating systems show GiB. Users often feel shortchanged when numbers don't match.
+| 缩写 |   全称   |         字节数         |                               |
+| :--: | :------: | :--------------------: | :---------------------------: |
+| GiB  | Gibibyte | $2^30 = 1,073,741,824$ |      IEC 二进制标准单位       |
+|  GB  | Gigabyte | $10^9 = 1,000,000,000$ | SI 十进制单位，但使用非常混乱 |
 
 这造成了大量误解：硬盘厂商标注 **GB**，但操作系统显示的是 **GiB**，用户总感觉“买亏了”。
 
-## Proposal: Introduce **GeB**
-
 ## 提案：引入 **GeB**
-
-We propose a new symbol: **GeB**, standing for **G**id**e**byte (**G**iga-d**e**cimal Byte), as a clean, unambiguous counterpart to **GiB**, standing for **G**ib**i**byte (**G**iga-b**i**nary Byte).
 
 为了消除 GB 和 GiB 之间的混乱，我们提出一个新的缩写：**GeB**，表示 **G**id**e**byte（十进制千兆字节），与 **GiB** 这一表示 **G**ib**i**byte（二进制千兆字节）对称又清晰的一对单位。
 
-| Abbreviation 缩写 | Fullname 全称 | Base 进制 |        Bytes 字节数        |
-| :---------------: | :-----------: | :-------: | :------------------------: |
-|        GeB        |   Gidebyte    |    10     | $(10^3)^3 = 1,000,000,000$ |
-|        GiB        |   Gibibyte    |     2     | $(2^10)^3 = 1,073,741,824$ |
-
-## Pronunciation Across Languages
+| 缩写 |   全称   | 进制 |           字节数           |
+| :--: | :------: | :--: | :------------------------: |
+| GeB  | Gidebyte |  10  | $(10^3)^3 = 1,000,000,000$ |
+| GiB  | Gibibyte |  2   | $(2^10)^3 = 1,073,741,824$ |
 
 ## 不同语言的发音
 
-Abbreviations like GB, GiB, and GeB can be confusing not only in meaning but also in pronunciation. Different language communities handle technical acronyms differently, which may lead to confusion when discussing storage units.
-
 类似 GB、GiB 和 GeB 这样的缩写，不仅意义容易混淆，发音在不同国家也存在差异。以下是一些主流语言环境的常见处理方式：
 
-|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |   _GeB_    |         Method 处理方式         |
-| :-----------------: | :--------: | :------------: | :--------: | :-----------------------------: |
-|    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gæb/    |    As Word[^1] 作为单词[^2]     |
-|     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Gide-Byte  |     Read Fullname 念出全称      |
-|    ja（日本語）     |  ジービー  |      ギブ      |    ゲブ    |      Copy English 照搬英语      |
-| zh-Hans（简体中文） |    G-B     |     G-I-B      |    G-B     | A Pronounce Separately 拆开拼读 |
-| zh-Hant（繁体中文） | 吉比（特） |   吉比（特）   | 格比（特） |     Remix zh-Hans 简繁混用      |
+|      [BCP 47]       |   ~~GB~~   | <ins>GiB</ins> |   _GeB_    |   处理方式   |
+| :-----------------: | :--------: | :------------: | :--------: | :----------: |
+|    en (English)     | /dʒiːbiː/  |     /gɪb/      |   /gæb/    | 作为单词[^1] |
+|     ge (Germân)     | Giga-Byte  |   Gibi-Byte    | Gide-Byte  |   念出全称   |
+|    ja（日本語）     |  ジービー  |      ギブ      |    ゲブ    |   照搬英语   |
+| zh-Hans（简体中文） |    G-B     |     G-I-B      |    G-B     |   拆开拼读   |
+| zh-Hant（繁体中文） | 吉比（特） |   吉比（特）   | 格比（特） |   简繁混用   |
 
 [BCP 47]: https://www.rfc-editor.org/info/bcp47
 
-[^1]: GB in [Initialism](https://simple.wikipedia.org/wiki/Initialism), others in [Acronym](https://en.wikipedia.org/wiki/Acronym).
-[^2]: GB 是 [Initialism](https://simple.wikipedia.org/wiki/Initialism)，其他则是 [Acronym](https://simple.wikipedia.org/wiki/Acronym).
+[^1]: GB 是 [Initialism](https://simple.wikipedia.org/wiki/Initialism)，其他则是 [Acronym](https://simple.wikipedia.org/wiki/Acronym).
 
-### Our Recommendation
+### 我们的建议我们建议开发者、技术文档作者及系统设计者：
 
-### 我们的建议
-
-We recommend that developers, technical writers, and system designers:
-
-我们建议开发者、技术文档作者及系统设计者：
-
-- Replace ambiguous "GB" with **GeB** wherever decimal values are intended
 - 遇到十进制值时，统一使用 **GeB**，避免 GB 歧义
-
-- Educate users through UI tooltips or documentation: 1 GeB = $10^9$ Bytes
 - 通过界面提示或文档解释 1 GeB = $10^9$ Bytes
-
-- Align with the GiB/Geb pair in APIs and interfaces for better clarity
 - 在 API 和用户界面中采用 GiB/GeB 成对呈现，提高一致性
-
-## Beyond GeB: A Whole Family of Decimal Units
 
 ## 延伸 GeB：十进制单位家族
 
-The same pattern can apply to other SI-prefixed units. Here’s a proposed decimal units family:
-
 相同的模式可以适用于其他 SI 单位。这是一个拟议十进制单位家族：
 
-| Decimal 十进制 |               |        |                   | Binary 二进制 |               |                 |
-| :------------: | :-----------: | :----: | :---------------: | :-----------: | :-----------: | :-------------: |
-|    Value 值    | Fullname 全称 |   SI   | **Proposal 提案** |   Value 值    | Fullname 全称 | **IEC 60027-2** |
-|   $(10^3)^1$   |   Kilobyte    | **k**B |      K**e**B      |  $(2^10)^1$   |   Kibibyte    |     K**i**B     |
-|   $(10^3)^2$   |   Megabyte    |   MB   |      M**e**B      |  $(2^10)^2$   |   Mebibyte    |     M**i**B     |
-|   $(10^3)^3$   |   Gigabyte    |   GB   |      G**e**B      |  $(2^10)^3$   |   Gibibyte    |     G**i**B     |
-|   $(10^3)^4$   |   Terabyte    |   TB   |      T**e**B      |  $(2^10)^4$   |   Tebibyte    |     T**i**B     |
-|   $(10^3)^5$   |   Petabyte    |   PB   |      P**e**B      |  $(2^10)^5$   |   Pebibyte    |     P**i**B     |
-|   $(10^3)^6$   |    Exabyte    |   EB   |      E**e**B      |  $(2^10)^6$   |   Exbibyte    |     E**i**B     |
-|   $(10^3)^7$   |   Zettabyte   |   ZB   |      Z**e**B      |  $(2^10)^7$   |   Zebibyte    |     Z**i**B     |
-|   $(10^3)^8$   |   Yottabyte   |   YB   |      Y**e**B      |  $(2^10)^8$   |   Yobibyte    |     Y**i**B     |
-|   $(10^3)^9$   |   Ronnabyte   |   RB   |      R**e**B      |  $(2^10)^9$   |   Robibyte    |     R**i**B     |
-|  $(10^3)^10$   |  Quettabyte   |   QB   |      Q**e**B      |  $(2^10)^10$  |   Quebibyte   |     Q**i**B     |
-
-This symmetry improves consistency and provides a clear mental model for interpreting storage sizes.
+|   十进制    |            |        |          |   二进制    |           |                 |
+| :---------: | :--------: | :----: | :------: | :---------: | :-------: | :-------------: |
+|     值      |    全称    |   SI   | **提案** |     值      |   全称    | **IEC 60027-2** |
+| $(10^3)^1$  |  Kilobyte  | **k**B | K**e**B  | $(2^10)^1$  | Kibibyte  |     K**i**B     |
+| $(10^3)^2$  |  Megabyte  |   MB   | M**e**B  | $(2^10)^2$  | Mebibyte  |     M**i**B     |
+| $(10^3)^3$  |  Gigabyte  |   GB   | G**e**B  | $(2^10)^3$  | Gibibyte  |     G**i**B     |
+| $(10^3)^4$  |  Terabyte  |   TB   | T**e**B  | $(2^10)^4$  | Tebibyte  |     T**i**B     |
+| $(10^3)^5$  |  Petabyte  |   PB   | P**e**B  | $(2^10)^5$  | Pebibyte  |     P**i**B     |
+| $(10^3)^6$  |  Exabyte   |   EB   | E**e**B  | $(2^10)^6$  | Exbibyte  |     E**i**B     |
+| $(10^3)^7$  | Zettabyte  |   ZB   | Z**e**B  | $(2^10)^7$  | Zebibyte  |     Z**i**B     |
+| $(10^3)^8$  | Yottabyte  |   YB   | Y**e**B  | $(2^10)^8$  | Yobibyte  |     Y**i**B     |
+| $(10^3)^9$  | Ronnabyte  |   RB   | R**e**B  | $(2^10)^9$  | Robibyte  |     R**i**B     |
+| $(10^3)^10$ | Quettabyte |   QB   | Q**e**B  | $(2^10)^10$ | Quebibyte |     Q**i**B     |
 
 这样一来，单位对称统一，规则明确，便于理解与记忆。
 
-> Note: In line with SI conventions, we use **k**B for $10^3$ bytes. Though **K**B is commonly seen, it's technically incorrect.
->
 > 注：根据 SI 规范，$10^3$ 字节应写作 **k**B，虽然实际中常见写法为 **K**B，但那是不规范的。
-
-## Implementation & Adoption
 
 ## 推广建议
 
-To encourage adoption:
-
 鼓励采用：
 
-- Use **GeB** in developer tools, file explorers, and documentation
 - 在开发工具、系统界面、文件管理器中使用 **GeB**
-
-- Clarify unit meanings explicitly in software UIs
 - 项目文档中教育用户和贡献者，说明 GiB 与 GeB 的区别
-
-- Encourage open-source libraries to support config options like: `formatSize(value, { unit: 'GeB' })`
 - 推动开源库支持配置项：`formatSize(value, { unit: 'GeB' })`
-
-## Conclusion
 
 ## 结语
 
-It’s time to clean up our units — for clarity, consistency, and communication.
-
 是时候给计算机单位一套干净、统一、可说清楚的命名方式了。
 
-Let’s make **GeB** the official decimal twin of **GiB**, and stop guessing how many bytes you really got.
-
 让我们将 GeB 定为 GiB 的官方十进制“孪生兄弟”，别再猜自己到底得到了多少字节了，
-
-**Clear units. Clean minds. GeB it.**
 
 **让单位清晰，从此刻开始。**
