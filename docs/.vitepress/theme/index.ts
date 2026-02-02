@@ -209,7 +209,7 @@ export default {
             title: 'レイアウト切り替え',
             titleAriaLabel: 'レイアウト切り替え',
             titleHelpMessage:
-              'VitePressのレイアウトスタイルを調整して、さまざまな読書習慣や画面環境に適応します',
+              'VitePress のレイアウトスタイルを調整して、さまざまな読書習慣や画面環境に適応します',
             titleScreenNavWarningMessage:
               'モバイル端末ではレイアウト切り替えはサポートされていません',
             optionFullWidth: '全幅表示',
@@ -231,12 +231,12 @@ export default {
             optionOriginalWidth: '元の幅',
             optionOriginalWidthAriaLabel: '元の幅',
             optionOriginalWidthHelpMessage:
-              'VitePressのデフォルトのレイアウト幅',
+              'VitePress のデフォルトのレイアウト幅',
             contentLayoutMaxWidth: {
               title: 'コンテンツの最大幅',
               titleAriaLabel: 'コンテンツの最大幅',
               titleHelpMessage:
-                'VitePressレイアウトのコンテンツエリアの幅を調整して、さまざまな読書習慣や画面環境に適応します',
+                'VitePress レイアウトのコンテンツエリアの幅を調整して、さまざまな読書習慣や画面環境に適応します',
               titleScreenNavWarningMessage:
                 'モバイル端末ではコンテンツの最大幅を調整できません',
               slider: 'コンテンツの最大幅を調整する',
@@ -248,7 +248,7 @@ export default {
               title: 'ページの最大幅',
               titleAriaLabel: 'ページの最大幅',
               titleHelpMessage:
-                'VitePressレイアウトのページの幅を調整して、さまざまな読書習慣や画面環境に適応します',
+                'VitePress レイアウトのページの幅を調整して、さまざまな読書習慣や画面環境に適応します',
               titleScreenNavWarningMessage:
                 'モバイル端末ではページの最大幅を調整できません',
               slider: 'ページの最大幅を調整する',
