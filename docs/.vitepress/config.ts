@@ -99,7 +99,6 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
       { text: '文章', link: retrieveInitialLink(sidebarConfig, '/post') },
       { text: '应用', link: '/app' },
       { text: '友链', link: '/friend' },

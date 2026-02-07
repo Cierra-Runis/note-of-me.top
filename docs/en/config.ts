@@ -26,7 +26,6 @@ export default defineAdditionalConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/en/' },
       {
         text: 'Post',
         link: retrieveInitialLink(sidebarConfig, '/en/post'),

@@ -26,7 +26,6 @@ export default defineAdditionalConfig({
 
   themeConfig: {
     nav: [
-      { text: 'ホムペ', link: '/ja/' },
       {
         text: 'ポスト',
         link: retrieveInitialLink(sidebarConfig, '/ja/post'),
