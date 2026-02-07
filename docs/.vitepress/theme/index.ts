@@ -4,6 +4,9 @@ import '@lowmst/markdown-it-typst-math/dist/index.css';
 import {
   NolebaseEnhancedReadabilitiesMenu as EnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu as EnhancedReadabilitiesScreenMenu,
+  InjectionKey,
+  LayoutMode,
+  type Options,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import 'virtual:group-icons.css';
@@ -12,11 +15,6 @@ import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import './style/index.css';
 
-import {
-  InjectionKey,
-  LayoutMode,
-  type Options,
-} from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 export default {
   extends: DefaultTheme,
   Layout: () => {
