@@ -32,4 +32,8 @@
   body {
     -webkit-tap-highlight-color: transparent;
   }
+
+  .typst-text {
+    fill: var(--vp-c-text-1) !important;
+  }
 }
