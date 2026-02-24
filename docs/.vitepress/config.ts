@@ -27,6 +27,17 @@ const sidebarConfig = generateSidebar([
     sortMenusOrderByDescending: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusorderbydescending
     followSymlinks: true, /// https://vitepress-sidebar.cdget.com/guide/options#followsymlinks
   },
+  {
+    basePath: '/',
+    resolvePath: '/spec',
+    useTitleFromFileHeading: true,
+    includeRootIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    documentRootPath: '/docs/zh-CN',
+    sortMenusByFrontmatterOrder: true,
+    scanStartPath: '/spec',
+    followSymlinks: true,
+  },
 ]) as SidebarMulti;
 
 // https://vitepress.dev/reference/site-config
@@ -100,6 +111,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '文章', link: retrieveInitialLink(sidebarConfig, '/post') },
+      { text: '规范', link: '/spec/' },
       { text: '应用', link: '/app' },
       { text: '友链', link: '/friend' },
     ],

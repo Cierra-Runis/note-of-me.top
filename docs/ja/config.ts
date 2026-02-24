@@ -18,6 +18,17 @@ const sidebarConfig = generateSidebar([
     sortMenusOrderByDescending: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusorderbydescending
     followSymlinks: true, /// https://vitepress-sidebar.cdget.com/guide/options#followsymlinks
   },
+  {
+    basePath: '/ja/',
+    resolvePath: '/ja/spec',
+    useTitleFromFileHeading: true,
+    includeRootIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    documentRootPath: '/docs/ja',
+    sortMenusByFrontmatterOrder: true,
+    scanStartPath: '/spec',
+    followSymlinks: true,
+  },
 ]) as SidebarMulti;
 
 // https://vitepress.dev/reference/default-theme-config
@@ -30,6 +41,7 @@ export default defineAdditionalConfig({
         text: 'ポスト',
         link: retrieveInitialLink(sidebarConfig, '/ja/post'),
       },
+      { text: '仕様', link: '/ja/spec/' },
       { text: 'アプリ', link: '/ja/app' },
       { text: '友だち', link: '/ja/friend' },
     ],
