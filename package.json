@@ -6,7 +6,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@catppuccin/vitepress": "^0.1.2",
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
     "@lowmst/markdown-it-typst-math": "^1.1.0",
     "@nolebase/ui": "^2.18.2",
