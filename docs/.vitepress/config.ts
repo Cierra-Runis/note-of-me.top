@@ -80,6 +80,10 @@ export default defineConfig({
       md.use(markdownFootnote);
     },
     codeCopyButtonTitle: '复制',
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha',
+    },
   },
   router: { prefetchLinks: true },
   locales: {

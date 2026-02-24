@@ -16,7 +16,9 @@
     height: 0.75em;
     background-color: #ff5f56;
     border-radius: 50%;
-    box-shadow: 1.25em 0 0 #ffbd2e, 2.5em 0 0 #27c93f;
+    box-shadow:
+      1.25em 0 0 #ffbd2e,
+      2.5em 0 0 #27c93f;
     z-index: 1;
   }
 
