@@ -1,9 +1,10 @@
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme';
+import { withBase, useData } from 'vitepress'
 
 const members = [
   {
-    avatar: '/assets/iso-logo.svg',
+    avatar: '/iso-logo.svg',
     name: 'ISO 8601-1:2019',
     org: "International Organization for Standardization",
   },
