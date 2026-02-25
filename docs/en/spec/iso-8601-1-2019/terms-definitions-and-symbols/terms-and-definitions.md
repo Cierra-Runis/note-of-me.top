@@ -259,47 +259,160 @@ base unit of [duration](#duration) measurement in the International System of Un
 
 ### clock second
 
+[time scale unit](#time-scale-unit) whose [duration](#duration) is one [second](#second)
+
+> [!NOTE] NOTE
+>
+> 1. Clock second is in common parlance often referred to as second, however in this document clock second and second have different definitions.
+
 ### minute
+
+[duration](#duration) of 60 [seconds](#second)
+
+> [!NOTE] NOTE
+>
+> 1. See also ISO 80000-3.
+> 2. The duration of a minute is 60 seconds except if modified by the insertion or deletion of a [leap second](#leap-second).
 
 ### clock minute
 
+[time scale unit](#time-scale-unit) whose [duration](#duration) is one [minute](#minute)
+
+> [!NOTE] NOTE
+>
+> 1. Clock minute is in common parlance often referred to as minute, however in this document clock minute and minute have different definitions.
+
 ### hour
+
+[duration](#duration) of 60 [minutes](#minute)
+
+> [!NOTE] NOTE
+>
+> 1. See also ISO 80000-3.
 
 ### clock hour
 
+[time scale unit](#time-scale-unit) whose [duration](#duration) is one [hour](#hour)
+
+> [!NOTE] NOTE
+>
+> 1. Clock hour is in common parlance often referred to as hour, however in this document clock hour and hour have different definitions.
+
 ### calendar date
+
+particular [calendar day](#calendar-day) represented by its [calendar year](#calendar-year), its [calendar month](#calendar-month) and its [calendar day of month](#calendar-day-of-month)
 
 ### ordinal date
 
+particular [calendar day](#calendar-day) represented by its [calendar year](#calendar-year) and its [calendar day of year](#calendar-day-of-year)
+
 ### week date
+
+particular [calendar day](#calendar-day) represented by its [calendar year](#calendar-year) to which its [calendar week](#calendar-week) belongs, its [calendar week of year](#calendar-week-of-year) and its [calendar day of week](#calendar-day-of-week)
 
 ### day
 
+[duration](#duration) of a [calendar day](#calendar-day)
+
+> [!NOTE] NOTE
+>
+> 1. The term "day" applies also to the duration of any [time interval](#time-interval) which starts at a certain [time of day](#time-of-day) on a certain [calendar day](#calendar-day) and ends at the same time of day on the next calendar day.
+> 2. See also ISO 80000-3.
+
 ### calendar day
+
+[time scale unit](#time-scale-unit) starting at the beginning of the day and ending with the beginning of the next day, the latter being the starting [instant](#instant) of the next calendar day
+
+> [!NOTE] NOTE
+>
+> 1. Calendar day is in common referred to as day, however in this document calendar day and day have different definitions.
+> 2. The [duration](#duration) of a calendar day using the [24-hour clock](#24-hour-clock) is 24 [hours](#hour); except if modified by
+>    - the insertion or deletion of [leap seconds](#leap-second), by decision of the IERS, or
+>    - the insertion or deletion of other time intervals, as may be prescribed by local authorities to alter the [time scale](#time-scale) of local time.
 
 ### calendar day of week
 
+day amongst the sequence of [week calendar](#week-calendar) days, namely, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday
+
+> [!NOTE] NOTE
+>
+> 1. The week calendar is defined in 4.2.2.
+
+<!-- TODO: Add link to 4.2.2 -->
+
 ### calendar day of month
+
+ordinal number of a [calendar day](#calendar-day) within a [calendar month](#calendar-month)
 
 ### calendar day of year
 
+ordinal number of a [calendar day](#calendar-day) within a [calendar year](#calendar-year)
+
 ### week
+
+[duration](#duration) of a [calendar week](#calendar-week)
+
+> [!NOTE] NOTE
+>
+> 1. The term "week" applies also to the duration of any [time interval](#time-interval) which starts at a certain [time of day](#time-of-day) on a certain [calendar day](#calendar-day) and ends at the same time of day at the same calendar day of the next calendar week.
 
 ### calendar week
 
+[time scale unit](#time-scale-unit) of seven [calendar days](#calendar-day) which begins on Monday and ends on Sunday, according to the [week calendar](#week-calendar)
+
 ### calendar week of year
+
+ordinal number of a [calendar week](#calendar-week) within a [calendar year](#calendar-year) of the [week calendar](#week-calendar)
 
 ### month
 
+[duration](#duration) of a [calendar month](#calendar-month)
+
+> [!NOTE] NOTE
+>
+> 1. The term "month" applies also to the duration of any [time interval](#time-interval) which starts at a certain [time of day](#time-of-day) on a certain [calendar day](#calendar-day) of the calendar month and ends at the same time of day on the same calendar day of the next calendar month, if it exists.
+> 2. In certain applications a month is considered as a duration of 30 calendar days.
+
 ### calendar month
+
+[time scale unit](#time-scale-unit) resulting from a defined division of a [calendar year](#calendar-year), each containing a specified number of [calendar days](#calendar-day)
+
+> [!NOTE] NOTE
+>
+> 1. A calendar month is in common parlance often referred to as month, however in this document calendar month and month have different definitions.
 
 ### year
 
+[duration](#duration) of a [calendar year](#calendar-year)
+
+> [!NOTE] NOTE
+>
+> 1. In the [Gregorian calendar](#gregorian-calendar), a year has 365 or 366 days. The duration is 366 days if the corresponding [time interval](#time-interval) begins February 28 or earlier in a [leap year](#leap-year) or March 2 or later in a year immediately preceding a leap year. If the interval begins February 29 (on a leap year), or March 1 of a year preceding a leap year, the end date has to be agreed on. Otherwise the duration is 365 days.
+> 2. The term "year" applies also to the duration of any [time interval](#time-interval) which starts at a certain [time of day](#time-of-day) on a certain [calendar date](#calendar-date) of the calendar year and ends at the same time of day at the same calendar date of the next calendar year with the exception noted in Note 1 to entry.
+
 ### calendar year
+
+[time scale unit](#time-scale-unit) defined by the [calendar](#calendar) system
 
 ### decade
 
+[time scale unit](#time-scale-unit) of 10 [calendar years](#calendar-year), beginning with a year whose year number is divisible without remainder by ten
+
+> [!NOTE] NOTE
+>
+> 1. Decade is also used to refer to an arbitrary [duration](#duration) of 10 years, however decade is not used as such in this document.
+
 ### century
+
+[time scale unit](#time-scale-unit) of 100 [calendar years](#calendar-year) [duration](#duration), beginning with a year whose year number is divisible without remainder by 100
+
+> [!NOTE] EXAMPLE
+>
+> The 19th century covers the years 1800 through 1899.
+
+> [!NOTE] NOTE
+>
+> 1. Century is also used to refer to an arbitrary [duration](#duration) of 100 years, however century is not used as such in this document.
 
 ## Representations and formats
 
