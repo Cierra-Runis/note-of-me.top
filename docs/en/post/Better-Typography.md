@@ -3,136 +3,134 @@ date: '2024-05-05T22:03:56+08:00'
 id: KNJISM
 ---
 
-# 更好的排版
+# Better Typography
 
-自写日记开始，自己就越来越注重文字排版。
+Since I started keeping a diary, I've paid more and more attention to text typography.
 
-我是希望自己编写出来的东西是被精心设计过的，被别人看到时别人会感到舒适的，所以会去了解、学习一些相关知识。
+I hope that what I write is carefully designed and feels comfortable to others when they read it, so I've been learning about related knowledge.
 
-故在此摘录并补充如下来源的一些规则：
+Therefore, I excerpt and supplement some rules from the following sources:
 
 - [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
 - [Requirements for Chinese Text Layout - 中文排版需求](https://www.w3.org/International/clreq)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
-## 使用居中的省略号
+## Using Centered Ellipsis
 
-> 其呈现上占两个汉字空间、包含六个省略点且在水平和垂直方向均位于字面正中，通常使用两个连续的 `U+2026 HORIZONTAL ELLIPSIS […]` 来实现。
+> In its presentation, it occupies two Chinese character spaces, contains six ellipsis points, and is centered both horizontally and vertically on the glyph. This is typically achieved using two consecutive `U+2026 HORIZONTAL ELLIPSIS […]`.
 >
-> 在 Unicode 标准第 14 版的 6.2 章中，也推荐使用 `U+22EF MIDLINE HORIZONTAL ELLIPSIS [⋯]` 作为省略号。
+> In Chapter 6.2 of Unicode Standard Version 14, it also recommends using `U+22EF MIDLINE HORIZONTAL ELLIPSIS [⋯]` as the ellipsis.
 >
-> 此符号配合适当的转向与取代机制，在显示上无论直横排，省略点皆居中，更符合排版需求。
+> This symbol, combined with appropriate rotation and replacement mechanisms, keeps the ellipsis points centered regardless of horizontal or vertical layout, better meeting typographic needs.
 
-但据 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) 指出，后者是隶属于数学符号的 —— 应该就是 LaTeX 里 `\cdots` 对应的字符 —— 加之 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) 指出 <Kbd>^</Kbd> 默认映射为前者，我个人还是会使用前者的。
+However, according to [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405), the latter belongs to mathematical symbols - presumably the character corresponding to `\cdots` in LaTeX - and considering [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) points out that <Kbd>^</Kbd> is mapped to the former by default, I personally still use the former.
 
-本网站为实现居中省略号，特地使用了字形为居中样式的字体。
-
-> [!WARNING] 注意
+> [!WARNING] WIP
 >
-> 暂未实装
+> To achieve centered ellipsis, this website specifically uses fonts with centered glyph styles.
 
-## 使用标准的专有名词
+## Using Standard Proper Nouns
 
-例如 GitHub，官方使用该词时都是 **G**it**H**ub，从来不会使用什么 github、gitHub。
+For example, GitHub - when officially used, it's always **G**it**H**ub, never github or gitHub.
 
-Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
+Xcode as well, the c is lowercase, while VSCode has an uppercase C.
 
-当然，编程里有 `camelCase` 这样的命名规范，那么这时 GitHub 对应什么？是 `github` 还是 `gitHub` 呢？
+Of course, in programming there's a naming convention like `camelCase`, so what would GitHub correspond to? Is it `github` or `gitHub`?
 
-有兴趣的读者可参见 [camelCase 英文维基百科](https://en.m.wikipedia.org/wiki/Camel_case) 中的 Programming and coding 一节。
+Interested readers can refer to the Programming and coding section in the [camelCase Wikipedia article](https://en.m.wikipedia.org/wiki/Camel_case).
 
-我是这样想的，人家既然这样设计了，必然保留人家的特征是最好的。
+My thinking is that since they designed it that way, preserving their characteristics is naturally the best approach.
 
-在此列表列出个人会最终采用的命名：
+Here's a list of naming conventions I ultimately adopt:
 
-|     类别     |    命名法     |                   例                   |
-| :----------: | :-----------: | :------------------------------------: |
-|   专有名词   |       -       |      GitHub、SurviRed、API、JSON       |
-| 变量、函数名 |   camelCase   |  `gitHub`、`surviRed`、`api`、`json`   |
-|     类名     |  PascalCase   | `GitHubAPI`、`SurviRedJSON`、`APIJSON` |
-|    常量名    | CONSTANT_CASE |             `SURVIRED_API`             |
-| 文件名、URL  |  kebab-case   |             `github-json`              |
+|       Category       | Naming Convention |                Examples                |
+| :------------------: | :---------------: | :------------------------------------: |
+|     Proper Nouns     |         -         |      GitHub、SurviRed、API、JSON       |
+| Variables, Functions |     camelCase     |  `gitHub`、`surviRed`、`api`、`json`   |
+|     Class Names      |    PascalCase     | `GitHubAPI`、`SurviRedJSON`、`APIJSON` |
+|    Constant Names    |   CONSTANT_CASE   |             `SURVIRED_API`             |
+|   Filenames, URLs    |    kebab-case     |             `github-json`              |
 
-## 不再过分使用括号
+## Stop Overusing Parentheses
 
-括号一层一层嵌套会使得意思极其“扭曲”，理解起来需要绕弯子，同时存在一堆右括号连在一起的情况，这很不美观。特别是如果存在括号内多重括号完后接下句，其所指的前文是很难很快找到的。
+Layer upon layer of nested parentheses can extremely "twist" the meaning, requiring mental gymnastics to understand, and the sight of multiple closing parentheses strung together is very unsightly. Especially when multiple parentheses within parentheses are followed by the next sentence, it's very difficult to quickly find what preceding text they refer to.
 
-例文：
+Example:
 
-> 我是知道但没心思听（我一向屏蔽东西还算厉害（不过上次周测理综（语文（？））考试时外面在办丧事，丧乐把我人搞没了）的），旁边的同学倒是听得津津有味。
+> I knew but wasn't in the mood to listen (I'm usually pretty good at blocking things out (though during the last weekly comprehensive science (Chinese language (?)) exam, there was a funeral outside, and the funeral music completely destroyed me)), while my classmate beside me was listening with great interest.
 
-更好的做法当然是尽可能不使用括号，将想要表达的内容尽可能展开（flatten）来，出现跳跃性的句子可以使用破折号。
+A better approach is to avoid using parentheses as much as possible, flatten the content you want to express as much as possible, and use em dashes for abrupt sentences.
 
-修改：
+Revised:
 
-> 我是知道但没心思听 —— 我一向屏蔽东西还算厉害的，不过上次周测理综（语文？）考试时外面在办丧事，丧乐把我人搞没了 —— 旁边的同学倒是听得津津有味。
+> I knew but wasn't in the mood to listen - I'm usually pretty good at blocking things out, though during the last weekly comprehensive science (Chinese language?) exam, there was a funeral outside, and the funeral music completely destroyed me - while my classmate beside me was listening with great interest.
 
-## 中英文混排时添加空格
+## Adding Spaces When Mixing Chinese and English
 
-在绝大多数情况下，在半角字符和全角字符直接加入空格就能给人一种文章没那么挤的感受。
+In most cases, adding spaces between half-width and full-width characters gives the impression that the text isn't so cramped.
 
-比如接下来的这句话：
+Take this sentence for example:
 
 ```text
 我喜欢吃apple，不喜欢吃peach和orange。
 ```
 
-加入空格：
+Adding spaces:
 
 ```text
 我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
 ```
 
-这里在每个单词左右两边都加了空格。
+Here, spaces are added on both sides of each word.
 
-但这里实际上 apple 和 orange 后面接续的是一个全角的标点符号，且这个标点符号视觉上可以看作一个半角符号和一个空格，所以我们可以把后面的空格删去。
+However, in reality, after apple and orange, there's a full-width punctuation mark, and this punctuation mark can visually be seen as a half-width symbol plus a space, so we can remove the trailing space.
 
 ```text
 我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 
-但像“——”“……”这种会占满整个宽度的标点符号，现在看来它们确实有点挤，建议加上空格。
+But for punctuation marks like "——" and "……" that occupy the full width, they do look a bit cramped now, so it's recommended to add spaces.
 
-这也带来了一个好处，让我说明白一些：
+This also brings an advantage, let me explain:
 
-我们在编辑一段文本的时候，经常使用 <Kbd>←</Kbd> 或 <Kbd>→</Kbd> 来跳转光标，但是这过于的不方便。
+When editing text, we often use <Kbd>←</Kbd> or <Kbd>→</Kbd> to move the cursor, but this is very inconvenient.
 
-而我们可以使用 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> 或 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> 进行快速跳转，对于像 Microsoft Word 这样的编辑器，其会智能的将中文词汇分段，所以在跳转时会跳到词的开头或结尾，而不是整个句子的开头或结尾。
+We can use <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> or <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> for quick navigation. For editors like Microsoft Word, they intelligently segment Chinese words, so when jumping, you'll jump to the beginning or end of a word, not the entire sentence.
 
-而对于未实现中文分词的编辑器，加上的空格就作为了一个“跳板”，更加方便跳转。
+For editors that haven't implemented Chinese word segmentation, the added spaces act as a "springboard", making navigation more convenient.
 
-### 计量单位
+### Units of Measurement
 
-1 kg，1 m，1 s。在数字和单位之间需要空格 —— 这实际上就是英文排版要求 —— 而类似 100%，百（千）分号不需要。
+1 kg, 1 m, 1 s. Spaces are needed between numbers and units - this is actually an English typographic requirement - but for things like 100%, the percentage sign doesn't need a space.
 
-类似 4G（第四代移动通信技术）这样的词，它本身是一个专业名词，所以之间不需要空格，但 4 G 确实可以表示类似“四倍重力”“四个金币”的意思，所以这就得看上下文了。
+For terms like 4G (fourth-generation mobile communication technology), it's a proper noun itself, so no space is needed, but 4 G can indeed express meanings like "four times gravity" or "four gold coins", so it depends on the context.
 
-同时说说苹果在这方面的细节，他们会如上细微调整半角和全角字符之间的间隔（kerning），看上去和加了空格差不多，反而因为自己加了空格可能会显得间隔过大。
+Also, let's talk about Apple's attention to detail in this regard. They subtly adjust the spacing (kerning) between half-width and full-width characters, which looks similar to adding spaces, but adding your own spaces might actually make the spacing too large.
 
-但考虑到不是所有的设备都有这样的特性，自己加上空格还是更普适的。
+However, considering not all devices have this feature, adding your own spaces is still more universal.
 
-### 斜杠
+### Slashes
 
-在英文排版中，表示“或”的斜杠两边不需要空格，相当于将其认为 26 个英文字母中的一个（大雾）。
+In English typography, slashes representing "or" don't need spaces on either side, essentially treating it as one of the 26 English letters (joke).
 
-但在代码中，斜杠一般表示除法，两边需要空格，以提供更好的可读性。
+However, in code, slashes typically represent division and need spaces on both sides for better readability.
 
-## 引号
+## Quotation Marks
 
 - [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
-大家好 ，我们是 `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`，今天来点大家想看的东西啊。
+Hello everyone, we are `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`, today let's give you what you want to see.
 
-## 「或」
+## "Or"
 
-「A 或 B」是二选一？还是二者其一即可？
+Does "A or B" mean choose one of the two? Or either one is acceptable?
 
-如果在数学、程序或逻辑学，那么「或（OR）」默认是后者，严谨来说叫「逻辑或」，而要表示前者，则会使用「异或（XOR）」来表示。
+In mathematics, programming, or logic, "or (OR)" defaults to the latter, strictly speaking it's called "logical or", while to express the former, "exclusive or (XOR)" is used.
 
-自然语言里，更加倾向于异或，但是具体还是得看上下文，比如上文的「在数学、程序或逻辑学」这句话，就表达的是逻辑或。
+In natural language, it leans more toward exclusive or, but it still depends on the context. For example, the phrase "in mathematics, programming, or logic" above expresses logical or.
 
-那么 A/B 呢？这实际上不强调二选一还是二者其一即可，甚至可能表达两者都必须要出现，表达的是 A ∧ B，比如 I/O。
+What about A/B? This doesn't actually emphasize choosing one or either being acceptable, it might even express that both must appear, expressing A ∧ B, like I/O.
 
-总之，使用 OR 和 XOR 就能避免这种问题。
+In short, using OR and XOR can avoid this kind of problem.

@@ -3,29 +3,29 @@ date: '2023-01-03T16:37:23+08:00'
 id: QGHCIF
 ---
 
-# 新主页，新气象
+# New Blog, New Life
 
-> [!WARNING] 2025-01-05 22:08:10 补充
+> [!WARNING] 2025-01-05 22:08:10 Supplement
 >
-> 本文内容已不合时宜
+> The content of this article is outdated
 
-## 旧版的不适应之处
+## In-adaptability of the old version
 
-首先，原先的主题已经很久很久没有实质性更新了，而且自己在自定义方面处处碰壁，于是开始寻找其他博客主题。
+First of all, the original theme has not been substantially updated for a long time, and I have encountered obstacles in customization everywhere, so I started looking for other blog themes.
 
-## 新版的好处
+## Benefits of the new version
 
-首先，好看多了，很多地方也能进行自定义。自己还花了一点小钱在 [阿里云](https://www.aliyun.com) 买了个域名，现在这个网站既可以通过 [https://cierra-runis.github.io/](https://cierra-runis.github.io) 访问，也可以通过 [https://note-of-me.top](https://note-of-me.top) 进行访问。
+First of all, it looks much better, and many places can be customized. I also spent a little money on [Alibaba Cloud](https://www.aliyun.com) to buy a domain name. Now this website can be accessed through both [https://cierra-runis.github.io/](https://cierra-runis.github.io) and [https://note-of-me.top](https://note-of-me.top).
 
-当然，经过配置之后，现在：
+Of course, after configuration, now:
 
 - [https://cierra-runis.github.io](https://cierra-runis.github.io)
 - [https://www.note-of-me.top](https://www.note-of-me.top)
 
-都是重定向到了 [https://note-of-me.top](https://note-of-me.top) 的，有时前面 `www` 没被隐去的情况也存在就是了
+both redirect to [https://note-of-me.top](https://note-of-me.top), and sometimes the `www` in front is not hidden.
 
-除此之外，还使用了 [去不图床](https://7bu.top) 作为网站图片的图床，价格也是特别的亲民，对于大陆用户的速度有一定提升。
+In addition, I also used [去不 Image Hosting](https://7bu.top) as the image hosting for the website, which is particularly affordable and has certain speed improvements for users in mainland China.
 
-## 需要解决的问题
+## Problems to be solved
 
-因为自己也有使用 Obsidian 进行博客编辑的习惯，那么在 iPad 上编辑时上传图片就略显复杂，试着寻找插件解决问题罢。
+Since I also have the habit of using Obsidian for blog editing, uploading images when editing on iPad is a bit complicated. I will try to find plugins to solve the problem.

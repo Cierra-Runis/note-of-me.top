@@ -3,16 +3,16 @@ date: '2025-06-27T23:00:35+08:00'
 id: RAZSBR
 ---
 
-# 如何学习编程语言
+# How To Learning Programming Language
 
-经常有人问我该怎么学习编程语言，我的评价是：**从项目开始**。如果你不知道该做什么项目，就去学一门编程语言的话，只能是写一些无聊、枯燥的小的代码块，有的时候还会用一些莫名其妙的例子来举例。你说对学习有没有作用？当然有，但我并不认为这能为你以后做更大的项目有什么帮助。因为你以后写项目的时候自然会使用到需要学的语法，不如直接从项目开始。
+There are often people asking me how to learn programming languages, and my evaluation is: **start from projects**. If you don't know what project to do, and just go to learn a programming language, you can only write some boring, tedious small code blocks, and sometimes use some inexplicable examples to illustrate. Do you think it has any effect on learning? Of course it does, but I don't think this can help you with doing bigger projects in the future. Because when you write projects in the future, you will naturally use the syntax that needs to be learned, so it's better to start directly from projects.
 
-话虽如此，这也是对已经有编程经验的人说的。如果你是一个完全没有编程经验的人，直接从项目开始可能会让你感到无从下手。对于这种情况，我建议先学习一些基础知识，很多编程语言都有自己的入门教程，或者可以参考一些在线课程。对语法有了大致了解之后，再去写项目。
+That being said, this is also for people who already have programming experience. If you are a complete beginner with no programming experience, starting directly from projects may make you feel at a loss. For this situation, I suggest first learning some basic knowledge, many programming languages have their own introductory tutorials, or you can refer to some online courses. After having a general understanding of the syntax, then go to write projects.
 
-对于更加进阶的设计模式（最常用的如单例模式）、变量不变性什么的，也都是各个项目总结出来的最佳实践。你可以在写项目的过程中逐渐体会到这些内容。不要急于求成，编程语言的学习是一个循序渐进的过程。
+For more advanced design patterns (the most commonly used ones like singleton pattern), variable immutability and so on, they are all best practices summarized from various projects. You can gradually experience these contents in the process of writing projects. Don't rush, learning programming languages is a gradual process.
 
-多使用搜索引擎和社区资源，如 Stack Overflow、GitHub 等，寻找解决方案和灵感。参与开源项目也是一个很好的学习方式，可以让你接触到真实的代码和项目结构。
+Use search engines and community resources like Stack Overflow, GitHub, etc. to find solutions and inspiration. Participating in open source projects is also a great way to learn, as it allows you to get in touch with real code and project structures.
 
-对了，请务必保证“网络通畅”，你都学习编程语言了，怎么能没有科学工具呢？
+Oh, please make sure to have "smooth internet connection", how can you learn programming languages without VPNs?
 
-最后，请务必学会使用版本控制系统（如 Git），它可以帮助你管理代码的变更，记录项目的进展，并且在遇到问题时可以轻松回退到之前的版本 —— [计算机教育中缺失的一课](./Missing-Semester)，或者应该说是第零课，也有提到。
+Finally, please make sure to learn how to use version control systems (like Git), it can help you manage code changes, record project progress, and easily roll back to previous versions when you encounter problems - [A Missing Semester of Computer Science](./Missing-Semester), or should I say the zero-th lesson, also mentioned.

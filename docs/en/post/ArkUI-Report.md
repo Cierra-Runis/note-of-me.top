@@ -3,24 +3,24 @@ date: '2024-07-01T19:31:29+08:00'
 id: LVYMSF
 ---
 
-# ArkUI 使用报告
+# ArkUI Report
 
-大家好啊，今天来点大家不想看的东西啊。
+Hello everyone, today let's talk about something you might not want to read.
 
-## ArkTS 语言
+## ArkTS Language
 
-> [ArkTS](https://developer.huawei.com/consumer/cn/arkts) 是鸿蒙生态的应用开发语言。
+> [ArkTS](https://developer.huawei.com/consumer/cn/arkts) is the application development language for the Harmony ecosystem.
 >
-> 它在保持 [TypeScript](https://www.typescriptlang.org) 基本语法风格的基础上，进一步通过规范强化静态检查和分析，使得在程序运行之前的开发期能检测更多错误，提升代码健壮性，并实现更好的运行性能。
+> Building on the basic syntax of [TypeScript](https://www.typescriptlang.org), ArkTS further strengthens static checks and analysis. This allows for the detection of more errors during the development phase prior to program execution, thereby enhancing code robustness and achieving better runtime performance.
 >
-> 同时，提供了声明式 UI 范式、状态管理支持等相应的能力，让开发者可以以更简洁、更自然的方式开发高性能应用。
+> It also offers capabilities such as a declarative UI paradigm and state management, helping you boost productivity and develop applications faster.
 
-官网是这样说的，但我只能呃呃。可能是华为没有那样的能力去创建一门属于自己的语言吧，最后把 TypeScript 变成了与 Swift 或者说是 Kotlin 缝合的缝合怪。一些令我厌烦的写法，如匿名函数 `.bind(this)`、模板字符串要用反引号 `` const str = `Show: ${another} value` `` 时也要带上 `this`，这肯定是受到语言实现的限制吧。
+This is what the official website says, but I can only say uh uh. Maybe HUAWEI doesn't have the capability to create its own language, so they ended up turning TypeScript into a Frankenstein's monster stitched together with Swift or Kotlin. Some of the syntax that annoy me, such as anonymous functions with `.bind(this)` and template strings that require backticks `` const str = `Show: ${another} value` `` also require `this`, which must be due to limitations in the language implementation.
 
-同样的，我不喜欢 ArkTS：
+Similarly, I don't like ArkTS:
 
-1. 必须使用 DevEco Studio 才能使用 ArkTS 语言
-2. DevEco Studio 自带的代码格式化结果一坨：
+1. You must use DevEco Studio to use the ArkTS language.
+2. DevEco Studio's built-in code formatting results just SHIT:
 
    ```TypeScript
    .toolBar({ items: [
@@ -36,38 +36,38 @@ id: LVYMSF
    })
    ```
 
-   真看不下去吧，这都和 Xcode 学一样？
+   I really can’t stand it. Is this all the same as copying Xcode?
 
-3. 格式化风格不统一，和 Swift 一样，加几个回车和空格格式化结果就不一样了，多人协同我不敢想会是怎么样的
-4. 没有热更新，但和 SwiftUI 一样提供了 `Preview` 功能 —— 因为如果连 `Preview` 功能都没有的话，对于连模拟器都不支持的 DevEco Studio 来说，没有鸿蒙设备就别想搞鸿蒙开发了
+3. Inconsistent formatting style, just like Swift. Add a few line breaks and spaces and the formatting result changes. I can't even imagine what it would be like for team collaboration.
+4. No hot reload, but it does provide a `Preview` feature like SwiftUI - because if there wasn't even a `Preview` feature, with DevEco Studio not even supporting emulators, you wouldn't be able to do Harmony development without a HarmonyOS device.
 
 ## DevEco Studio
 
-我去，这不是我们 Android Studio 吗，啊不对，这不是我们 IntelliJ IDEA 吗？下次发布记得标注。
+Holy crap, isn't this just Android Studio? Wait no, isn't this just IntelliJ IDEA? Remember to label it next time you release.
 
-其实就是没能力自研 IDE 啦，所以选择“基于 IntelliJ IDEA Community 开源版本打造”。这个选择是正确的，但结果只能说不尽人意。
+The truth is they just don't have the capability to develop their own IDE, so they chose to "build upon the IntelliJ IDEA Community open source version". This choice is correct, but the result can only be described as unsatisfactory.
 
-首先是代码格式化的问题，这个上面讲过了，那么接下来说点别的。
+First is the code formatting issue, which I've already covered above, so let me talk about something else.
 
-插件未免太少了，因为自己最常用的代码编辑器是 VSCode 嘛 —— 其实在我心目中这玩意可以说是和 IDE 一样的存在了 —— 所以键位肯定也想按 VSCode 的来，在 IntelliJ IDEA 和 Android Studio 上都有 VSCode KeyMap 的插件可以从 VSCode 导入键位，但 Dev Studio 上就是没有。
+There are way too few plugins. Since my most commonly used code editor is VSCode - actually in my mind this thing is pretty much equivalent to an IDE - I naturally want to use VSCode keybindings. Both IntelliJ IDEA and Android Studio have VSCode KeyMap plugins that can import keybindings from VSCode, but DevEco Studio just doesn't have it.
 
-难道说华为就完全没有在使用 VSCode 的吗 …… 我去，Xcode 也没有，这下破案了。
+Does HUAWEI not have anyone using VSCode at all... Wait, Xcode doesn't have it either. Case solved.
 
-代码补全一坨，这是做的极差的。感觉代码补全完全没有根据上下文，也就是光标目前所处的地方该填什么类型的东西、默认能填什么东西，来提示补全内容 —— 原版 TypeScript 在 VSCode 上的代码补全可谓是反向的极端，过度依赖上下文以至于有时我想要的结果反而不在补全结果里。
+Code completion is a mess, absolutely terrible. It feels like the code completion doesn't consider the context at all - that is, what type of thing should be filled at the cursor's current position, what can be filled by default - to suggest completion content. In contrast, original TypeScript's code completion in VSCode is the opposite extreme, overly dependent on context to the point where sometimes the result I want isn't in the completion suggestions.
 
-本地化做的不到位，照理说这还是国内公司的软件本地化应该做的更好，但很多地方都没有翻译到 —— 有人可能会说全英文界面更好，开发者就应该多接触英文，可，~~我不懂英文~~ 我更喜欢待在一个更熟悉的环境里啦。
+Localization is inadequate. Logically speaking, this is a domestic company's software and localization should be done better, but many places aren't translated - some might say an all-English interface is better, developers should get more exposure to English, but, ~~I don't understand English~~ I prefer to stay in a more familiar environment.
 
 ## ArkUI
 
-你们的文档也是和 Apple 学的？ArkUI、SwiftUI、Jetpack Compose 以及基于 XML 视图的 Android 文档怎么都是一个样子？
+Did you also copy your documentation from Apple? Why do ArkUI, SwiftUI, Jetpack Compose, and XML-based Android documentation all look the same?
 
-这样才有教程书的生存空间是吧。
+This is how tutorial books maintain their survival space, right?
 
-官方入门教程里的界面也太丑了吧，还是说 Harmony Design 就是这样的？实际上，我都不知道这算不算的上 Harmony Design，因为真的很丑。
+The UI in the official getting started tutorial is way too ugly, or is this just what Harmony Design is? Actually, I don't even know if this counts as Harmony Design, because it's really ugly.
 
-我该怎么使用图标呢？我真的得将一堆 SVG 下载下来然后再作为资源文件使用吗？鸿蒙是有自己的图标库的，能否像 Flutter 或者 SwiftUI 那样更加和 ArkTS 结合起来呢？
+How am I supposed to use icons? Do I really have to download a bunch of SVGs and then use them as resource files? HarmonyOS has its own icon library, so can it be better integrated with ArkTS like Flutter or SwiftUI?
 
-我看到有 `Symbol` 啦，但是一样，示例代码呢？后面是找到了示例代码，但现在要我再去找一次，那我真不知道在哪里翻出来的示例代码。
+I see there's `Symbol`, but likewise, where's the sample code? I did find the sample code later, but if you ask me to find it again now, I really don't know where I dug up that sample code from.
 
 ```TypeScript
 SymbolGlyph($r('sys.symbol.ohos_trash'))
@@ -83,10 +83,10 @@ Text() {
 }
 ```
 
-我去，我怎么没有 `SymbolGlyph` 和 `SymbolSpan`，有版本要求吗？下次记得标注。
+What the hell, why don't I have `SymbolGlyph` and `SymbolSpan`? Are there version requirements? Remember to label it next time.
 
-一样没有组件 Gallery 展示 Harmony Design 的默认组件样式，别学 Apple 啊，你能做的更好的啊。
+There's also no component Gallery to showcase the default component styles of Harmony Design. Don't copy Apple, you can do better!
 
-## 总结
+## Conclusion
 
-累人。
+Exhausting.
