@@ -42,8 +42,8 @@ export default defineAdditionalConfig({
         link: retrieveInitialLink(sidebarConfig, '/en/post'),
       },
       { text: 'Spec', link: '/en/spec/' },
-      { text: 'App', link: '/en/app' },
       { text: 'Friend', link: '/en/friend' },
+      { text: 'App', link: 'https://app.note-of-me.top' },
     ],
     sidebar: sidebarConfig,
 

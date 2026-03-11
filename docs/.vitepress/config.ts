@@ -112,8 +112,8 @@ export default defineConfig({
     nav: [
       { text: '文章', link: retrieveInitialLink(sidebarConfig, '/post') },
       { text: '规范', link: '/spec/' },
-      { text: '应用', link: '/app' },
       { text: '友链', link: '/friend' },
+      { text: '应用', link: 'https://app.note-of-me.top' },
     ],
     sidebar: sidebarConfig,
 
