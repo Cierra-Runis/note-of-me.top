@@ -418,20 +418,62 @@ ordinal number of a [calendar week](#calendar-week) within a [calendar year](#ca
 
 ### date and time expression
 
+expression indicating a [time](#time), [time interval](#time-interval) or [recurring time interval](#recurring-time-interval)
+
+> [!NOTE] EXAMPLE
+>
+> `2018-08-01` is a date and time expression that indicates the first day of August of 2018 in the [Gregorian calendar](#gregorian-calendar).
+
 ### date and time representation
+
+representation of the form of one or more [date and time expressions](#date-and-time-expression)
+
+> [!NOTE] EXAMPLE
+>
+> `[date]` is a date and time representation that can be expanded as `[year][month][day]`, which itself can be expanded into `[YYYY][MM][DD]`; `20180801` is a date and time expression that conforms to this representation.
 
 ### time scale component
 
+representation of a [time scale unit](#time-scale-unit) within a [date and time expression](#date-and-time-expression) or [representation](#date-and-time-representation)
+
+> [!NOTE] EXAMPLE
+>
+> 1. [calendar year](#calendar-year), [calendar month](#calendar-month), [calendar day](#calendar-day), [clock hour](#clock-hour), [clock minute](#clock-minute), [clock second](#clock-second) are time scale components of a [complete representation](#complete-representation).
+> 2. The calendar year time scale component is considered of a higher order than the calendar month time scale component, which is turn of a higher order than the calendar day time scale component.
+
+> [!NOTE] NOTE
+>
+> 1. A time scale component is considered of a higher order of another, if the time scale unit it represents has a strictly larger [time interval](#time-interval) than that of another; the latter time scale component is therefore considered to be of a lower order.
+> 2. Common usage of this term often omits the leading phrase "time scale", such as representing a "time scale component calendar year" by just "calendar year component". This usage is deemed accepted in this document.
+
 ### basic format
+
+[date and time representation](#date-and-time-representation) that does not include separators between its [time scale components](#time-scale-component)
 
 ### extended format
 
+extension of the [basic format](#basic-format) that includes separators between its [time scale components](#time-scale-component)
+
 ### complete representation
+
+[date and time representation](#date-and-time-representation) that includes all the [time scale components](#time-scale-component) associated with the [expression](#date-and-time-expression)
 
 ### representation with reduced precision
 
+abbreviation of a [date and time representation](#date-and-time-representation) by omission of lower order [time scale components](#time-scale-component)
+
 ### representation with decimal fraction
+
+expansion of a [date and time representation](#date-and-time-representation) by addition of a decimal fraction to the lowest order [time scale component](#time-scale-component)
 
 ### decimal sign
 
+character used in a [representation with decimal fraction](#representation-with-decimal-fraction) to separate the integer part from the decimal fraction of a number
+
+> [!NOTE] NOTE
+>
+> 1. The representations of the decimal signs (period or comma) and their usage rules are specified in ISO 80000-1.
+
 ### expanded representation
+
+expansion of a [date and time representation](#date-and-time-representation) to allow identification of [calendar dates](#calendar-date) where the ordinal number identifying the [calendar year](#calendar-year) exceeds four digits
