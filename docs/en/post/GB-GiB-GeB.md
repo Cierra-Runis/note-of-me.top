@@ -85,7 +85,7 @@ To encourage adoption:
 
 ## Conclusion
 
-It’s time to clean up our units — for clarity, consistency, and communication.
+It’s time to clean up our units - for clarity, consistency, and communication.
 
 Let’s make **GeB** the official decimal twin of **GiB**, and stop guessing how many bytes you really got.
 
