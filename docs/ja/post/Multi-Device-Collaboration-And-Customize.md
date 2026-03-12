@@ -78,7 +78,7 @@ id: EBGSQV
 
 なぜか分かりませんが、ディスプレイの入力ソースを DP から USB-C に切り替えると、USB-C が USB-B のアップストリーム権限を奪ってしまいます。つまり、この USB-C ケーブルは映像信号と USB 信号の両方を同時に伝送しているんです。
 
-とにかく、これでキーボードとマウスがノート PC と Mac の間を自由に切り替えられるようになりました。しかも、キーボードには Android、Windows、macOS、iOS の 4 つのモードがあり、<KbdGroup><Kbd>Fn</Kbd><span>+</span><Kbd>Q/W/E/R</Kbd></KbdGroup> のショートカットキーで切り替えられるので、とても便利です。
+とにかく、これでキーボードとマウスがノート PC と Mac の間を自由に切り替えられるようになりました。しかも、キーボードには Android、Windows、macOS、iOS の 4 つのモードがあり、<KbdGroup><kbd>Fn</kbd><span>+</span><kbd>Q/W/E/R</kbd></KbdGroup> のショートカットキーで切り替えられるので、とても便利です。
 
 ### Mac mini M4
 
@@ -150,15 +150,15 @@ Logicool マウスはボタンマクロプログラミングをサポートし�
 
 Windows では [PowerToys](https://github.com/microsoft/PowerToys) の [PowerToys Run](https://learn.microsoft.com/zh-cn/windows/powertoys/run) をお勧めします。macOS では [Raycast](https://www.raycast.com) をお勧めします。
 
-クイックランチャーを呼び出すショートカットキーは何を使うか？Windows では <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Win</Kbd><span>+</span><Kbd>Alt</Kbd><span>+</span><Kbd>␣</Kbd></KbdGroup> です。macOS では……
+クイックランチャーを呼び出すショートカットキーは何を使うか？Windows では <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Win</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>␣</kbd></KbdGroup> です。macOS では……
 
-僕が知るわけないでしょう。macOS のキー配置は変だし、キーボードを macOS モードに切り替えると <Kbd>Win</Kbd> と <Kbd>Alt</Kbd> が入れ替わって、さらに macOS の設定で <Kbd>Command</Kbd> と <Kbd>Ctrl</Kbd> を入れ替えて、やっと macOS のキー配置が Windows と一致しました。
+僕が知るわけないでしょう。macOS のキー配置は変だし、キーボードを macOS モードに切り替えると <kbd>Win</kbd> と <kbd>Alt</kbd> が入れ替わって、さらに macOS の設定で <kbd>Command</kbd> と <kbd>Ctrl</kbd> を入れ替えて、やっと macOS のキー配置が Windows と一致しました。
 
 ![macOS_shortcut](./image/macOS_shortcut.png)
 
 ここでは、macOS の方がより良い仕事をしています。拡張が多い —— 翻訳、辞書、ChatGPT 対話など、ただし一部の機能はサブスクリプション課金が必要 —— 各機能にグローバルショートカットキーをカスタマイズでき、インターフェースも快適 —— 比較して、Windows の最初のスタイルは醜すぎて全く使いたくなかった —— macOS に本来あるべき多くの機能を補完しています。
 
-例えば：Windows の <KbdGroup><Kbd>Win</Kbd><span>+</span><Kbd>V</Kbd></KbdGroup> クリップボード、QQ が提供する <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Alt</Kbd><span>+</span><Kbd>A</Kbd></KbdGroup> スクリーンショット機能、Windows の Everything グローバル検索機能。
+例えば：Windows の <KbdGroup><kbd>Win</kbd><span>+</span><kbd>V</kbd></KbdGroup> クリップボード、QQ が提供する <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>A</kbd></KbdGroup> スクリーンショット機能、Windows の Everything グローバル検索機能。
 
 そうそう、[Everything](https://www.voidtools.com/support/everything) について話しましょう。これは Windows 上の非常に強力なグローバル検索ソフトで、瞬時に結果を検索でき、正規表現もサポートしています。
 

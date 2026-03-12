@@ -12,8 +12,23 @@ import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import 'virtual:group-icons.css';
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import { h } from 'vue';
+import { defineComponent, h } from 'vue';
 import './style/index.css';
+
+const KbdGroup = defineComponent({
+  name: 'KbdGroup',
+  setup(_, { slots, attrs }) {
+    return () =>
+      h(
+        'span',
+        {
+          ...attrs,
+          class: ['vp-kbd-group', attrs.class],
+        },
+        slots.default?.(),
+      );
+  },
+});
 
 export default {
   extends: DefaultTheme,
@@ -25,6 +40,7 @@ export default {
   },
   enhanceApp({ app }) {
     ImageViewer(app);
+    app.component('KbdGroup', KbdGroup);
     app.provide(InjectionKey, {
       layoutSwitch: {
         disableAnimation: true,

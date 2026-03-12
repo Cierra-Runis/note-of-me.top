@@ -23,7 +23,7 @@ id: KNJISM
 >
 > 此符号配合适当的转向与取代机制，在显示上无论直横排，省略点皆居中，更符合排版需求。
 
-但据 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) 指出，后者是隶属于数学符号的 —— 应该就是 LaTeX 里 `\cdots` 对应的字符 —— 加之 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) 指出 <Kbd>^</Kbd> 默认映射为前者，我个人还是会使用前者的。
+但据 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) 指出，后者是隶属于数学符号的 —— 应该就是 LaTeX 里 `\cdots` 对应的字符 —— 加之 [此评论](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) 指出 <kbd>^</kbd> 默认映射为前者，我个人还是会使用前者的。
 
 本网站为实现居中省略号，特地使用了字形为居中样式的字体。
 
@@ -95,9 +95,9 @@ Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
 
 这也带来了一个好处，让我说明白一些：
 
-我们在编辑一段文本的时候，经常使用 <Kbd>←</Kbd> 或 <Kbd>→</Kbd> 来跳转光标，但是这过于的不方便。
+我们在编辑一段文本的时候，经常使用 <kbd>←</kbd> 或 <kbd>→</kbd> 来跳转光标，但是这过于的不方便。
 
-而我们可以使用 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> 或 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> 进行快速跳转，对于像 Microsoft Word 这样的编辑器，其会智能的将中文词汇分段，所以在跳转时会跳到词的开头或结尾，而不是整个句子的开头或结尾。
+而我们可以使用 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>←</kbd></KbdGroup> 或 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>→</kbd></KbdGroup> 进行快速跳转，对于像 Microsoft Word 这样的编辑器，其会智能的将中文词汇分段，所以在跳转时会跳到词的开头或结尾，而不是整个句子的开头或结尾。
 
 而对于未实现中文分词的编辑器，加上的空格就作为了一个“跳板”，更加方便跳转。
 

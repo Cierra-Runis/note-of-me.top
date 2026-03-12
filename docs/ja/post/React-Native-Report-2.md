@@ -57,7 +57,7 @@ Lint の提示は正直あまり良くない。いくつかの属性名は元の
 
 僕は VSCode と React Native Cli で開発していて、Microsoft が開発したプラグインも使っている。
 
-まず嫌なところは起動だ。<Kbd>F5</Kbd> で起動できない(というか設定方法が分からない)。<KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Shift</Kbd><span>+</span><Kbd>P</Kbd></KbdGroup> でパネルから選択しなければならない。これはまだいいとして、次に僕は困惑した。VSCode がデバッグモードに入らない —— つまり下のステータスバーが黄色にならない。これは VSCode Debugger がないということだ。これは?(ちょうど VSCode Debugger を使えるプラグインがあるという [記事](https://blog.logrocket.com/debugging-react-native-vs-code) を見つけた。使ってみてから補足する)
+まず嫌なところは起動だ。<kbd>F5</kbd> で起動できない(というか設定方法が分からない)。<KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> でパネルから選択しなければならない。これはまだいいとして、次に僕は困惑した。VSCode がデバッグモードに入らない —— つまり下のステータスバーが黄色にならない。これは VSCode Debugger がないということだ。これは?(ちょうど VSCode Debugger を使えるプラグインがあるという [記事](https://blog.logrocket.com/debugging-react-native-vs-code) を見つけた。使ってみてから補足する)
 
 エラーが出ても具体的にどこでエラーが起きているのか分からない。マウスが自動的に問題のあるコードにジャンプしてくれない。
 

@@ -78,7 +78,7 @@ id: EBGSQV
 
 不知道为什么，当显示器从 DP 信号源调转至 USB-C 信号源时，USB-C 会夺走 USB-B 上行身份，也就是这根 USB-C 线同时传输了视频信号和 USB 信号。
 
-总之这样键盘和鼠标就能自如的在笔记本电脑和 Mac 之间切换了，更何况键盘还有 Android、Windows、macOS、iOS 四种模式，使用 <KbdGroup><Kbd>Fn</Kbd><span>+</span><Kbd>Q/W/E/R</Kbd></KbdGroup> 快捷键即可切换，非常方便。
+总之这样键盘和鼠标就能自如的在笔记本电脑和 Mac 之间切换了，更何况键盘还有 Android、Windows、macOS、iOS 四种模式，使用 <KbdGroup><kbd>Fn</kbd><span>+</span><kbd>Q/W/E/R</kbd></KbdGroup> 快捷键即可切换，非常方便。
 
 ### Mac mini M4
 
@@ -150,15 +150,15 @@ macOS 上有程序坞，Windows 有任务栏，但我可不想把程序全“固
 
 在 Windows 上推荐 [PowerToys](https://github.com/microsoft/PowerToys) 的 [PowerToys Run](https://learn.microsoft.com/zh-cn/windows/powertoys/run)，macOS 上推荐 [Raycast](https://www.raycast.com)。
 
-使用什么快捷键来呼出快捷栏呢？在 Windows 上我是 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Win</Kbd><span>+</span><Kbd>Alt</Kbd><span>+</span><Kbd>␣</Kbd></KbdGroup>，在 macOS 上 ……
+使用什么快捷键来呼出快捷栏呢？在 Windows 上我是 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Win</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>␣</kbd></KbdGroup>，在 macOS 上 ……
 
-我哪知道，macOS 的键位好奇怪，我键盘切换到 macOS 模式后把 <Kbd>Win</Kbd> 和 <Kbd>Alt</Kbd> 互调了，然后我又在 macOS 设置里将 <Kbd>Command</Kbd> 和 <Kbd>Ctrl</Kbd> 对调了，这样才使得 macOS 的键位和 Windows 一致。
+我哪知道，macOS 的键位好奇怪，我键盘切换到 macOS 模式后把 <kbd>Win</kbd> 和 <kbd>Alt</kbd> 互调了，然后我又在 macOS 设置里将 <kbd>Command</kbd> 和 <kbd>Ctrl</kbd> 对调了，这样才使得 macOS 的键位和 Windows 一致。
 
 ![macOS_shortcut](./image/macOS_shortcut.png)
 
 在此，macOS 上的要做的更好，扩展多 —— 翻译、词典、ChatGPT 对话等等，不过有些功能要订阅制付费 —— 能给每个功能自定义全局快捷键，界面还挺舒适 —— 相比之下 Windows 一开始的样式丑的我根本不想用 —— 补足了很多 macOS 本应该有的功能。
 
-如：Windows 上 <KbdGroup><Kbd>Win</Kbd><span>+</span><Kbd>V</Kbd></KbdGroup> 的剪切板，QQ 提供的 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Alt</Kbd><span>+</span><Kbd>A</Kbd></KbdGroup> 截图功能，Windows 上的 Everything 全局搜索功能。
+如：Windows 上 <KbdGroup><kbd>Win</kbd><span>+</span><kbd>V</kbd></KbdGroup> 的剪切板，QQ 提供的 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>A</kbd></KbdGroup> 截图功能，Windows 上的 Everything 全局搜索功能。
 
 对了，讲讲 [Everything](https://www.voidtools.com/support/everything)，这是 Windows 上很强力的一款全局搜索软件，能秒搜出结果，还支持正则表达式。
 

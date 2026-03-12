@@ -57,7 +57,7 @@ Lint 提示确实还是不太好，有些属性名和原来的 CSS 属性名还�
 
 我是使用 VSCode 和 React Native Cli 进行开发的，还使用了 Microsoft 开发的一个插件。
 
-首先恶心人的地方是启动，不能 <Kbd>F5</Kbd> 启动（或者说我不知道怎么配置），要 <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>Shift</Kbd><span>+</span><Kbd>P</Kbd></KbdGroup> 在面板里选择。这还行，但接下来我人晕了，VSCode 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VSCode Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
+首先恶心人的地方是启动，不能 <kbd>F5</kbd> 启动（或者说我不知道怎么配置），要 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> 在面板里选择。这还行，但接下来我人晕了，VSCode 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VSCode Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
 
 我出错了不知道具体错误在哪，鼠标不会自动跳到出问题的代码去，
 

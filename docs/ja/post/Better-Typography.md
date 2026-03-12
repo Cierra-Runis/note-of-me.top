@@ -23,7 +23,7 @@ id: KNJISM
 >
 > この記号は適切な方向転換と置換メカニズムと組み合わせることで、表示上は縦書き横書きに関わらず、省略点が中央に配置され、より組版の要求に適合する。
 
-しかし、[このコメント](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) によると、後者は数学記号に属する —— おそらく LaTeX の `\cdots` に対応する文字だろう —— さらに [このコメント](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) では <Kbd>^</Kbd> がデフォルトで前者にマッピングされると指摘されているので、僕個人としては前者を使用することにしている。
+しかし、[このコメント](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405) によると、後者は数学記号に属する —— おそらく LaTeX の `\cdots` に対応する文字だろう —— さらに [このコメント](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) では <kbd>^</kbd> がデフォルトで前者にマッピングされると指摘されているので、僕個人としては前者を使用することにしている。
 
 本ウェブサイトでは、中央揃えの省略記号を実現するために、字形が中央揃えスタイルのフォントを特別に使用している。
 
@@ -95,9 +95,9 @@ Xcode も同様で、c は小文字だが、VSCode では C が大文字であ�
 
 これにはもう一つの利点がある。少し詳しく説明しよう：
 
-テキストを編集する際、<Kbd>←</Kbd> または <Kbd>→</Kbd> を使ってカーソルを移動することがよくあるが、これは非常に不便である。
+テキストを編集する際、<kbd>←</kbd> または <kbd>→</kbd> を使ってカーソルを移動することがよくあるが、これは非常に不便である。
 
-そこで、<KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> または <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> を使用して高速ジャンプを行うことができる。Microsoft Word のようなエディタの場合、中国語の単語を賢く分割するので、ジャンプ時には単語の先頭または末尾にジャンプし、文全体の先頭または末尾にはジャンプしない。
+そこで、<KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>←</kbd></KbdGroup> または <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>→</kbd></KbdGroup> を使用して高速ジャンプを行うことができる。Microsoft Word のようなエディタの場合、中国語の単語を賢く分割するので、ジャンプ時には単語の先頭または末尾にジャンプし、文全体の先頭または末尾にはジャンプしない。
 
 一方、中国語の分かち書きを実装していないエディタの場合、追加されたスペースが「踏み台」として機能し、ジャンプがより便利になる。
 

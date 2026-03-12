@@ -37,3 +37,34 @@
     fill: var(--vp-c-text-1) !important;
   }
 }
+
+/* https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-into-the-theme-options-of-vitepress */
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid var(--vp-c-divider);
+  border-bottom-width: 2px;
+  border-radius: 0.45rem;
+  font-size: 0.875em;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.vp-doc .vp-kbd-group {
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.vp-doc .vp-kbd-group *:not(:first-child) {
+  margin-left: 0.18rem;
+  line-height: 1;
+}
+
+.vp-doc .vp-kbd-group *:not(:last-child) {
+  margin-right: 0.18rem;
+  line-height: 1;
+}

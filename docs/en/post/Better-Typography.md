@@ -23,7 +23,7 @@ Therefore, I excerpt and supplement some rules from the following sources:
 >
 > This symbol, combined with appropriate rotation and replacement mechanisms, keeps the ellipsis points centered regardless of horizontal or vertical layout, better meeting typographic needs.
 
-However, according to [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405), the latter belongs to mathematical symbols - presumably the character corresponding to `\cdots` in LaTeX - and considering [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) points out that <Kbd>^</Kbd> is mapped to the former by default, I personally still use the former.
+However, according to [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-355893405), the latter belongs to mathematical symbols - presumably the character corresponding to `\cdots` in LaTeX - and considering [this comment](https://github.com/sparanoid/chinese-copywriting-guidelines/issues/58#issuecomment-356473325) points out that <kbd>^</kbd> is mapped to the former by default, I personally still use the former.
 
 > [!WARNING] WIP
 >
@@ -93,9 +93,9 @@ But for punctuation marks like "——" and "……" that occupy the full width,
 
 This also brings an advantage, let me explain:
 
-When editing text, we often use <Kbd>←</Kbd> or <Kbd>→</Kbd> to move the cursor, but this is very inconvenient.
+When editing text, we often use <kbd>←</kbd> or <kbd>→</kbd> to move the cursor, but this is very inconvenient.
 
-We can use <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>←</Kbd></KbdGroup> or <KbdGroup><Kbd>Ctrl</Kbd><span>+</span><Kbd>→</Kbd></KbdGroup> for quick navigation. For editors like Microsoft Word, they intelligently segment Chinese words, so when jumping, you'll jump to the beginning or end of a word, not the entire sentence.
+We can use <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>←</kbd></KbdGroup> or <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>→</kbd></KbdGroup> for quick navigation. For editors like Microsoft Word, they intelligently segment Chinese words, so when jumping, you'll jump to the beginning or end of a word, not the entire sentence.
 
 For editors that haven't implemented Chinese word segmentation, the added spaces act as a "springboard", making navigation more convenient.
 
