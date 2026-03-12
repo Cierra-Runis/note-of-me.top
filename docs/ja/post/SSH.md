@@ -23,7 +23,7 @@ macOS では、デフォルトのターミナルはそれほど「美しく」�
 
 Mac mini を購入した後、[SwiftUI](https://developer.apple.com/xcode/swiftui) を書く以外にも、Mac mini で何か別のことをしたいと思いました――僕は macOS を使いこなせないんです。操作の論理が Windows と比べて違和感がある部分が多すぎて、僕はやはり Windows を主な開発環境として使い続けると思います。
 
-そこで動画を見て、Mac mini が [ソフトルーター](https://bulianglin.com/archives/openwrt.html)、[NAS](https://en.wikipedia.org/wiki/Network-attached_storage)、サーバー……などとして使えることを知りました。おっ、サーバー。
+そこで動画を見て、Mac mini が [ソフトルーター](https://bulianglin.com/archives/openwrt.html)、[NAS](https://en.wikipedia.org/wiki/Network-attached_storage)、サーバー…… などとして使えることを知りました。おっ、サーバー。
 
 ちょうど最近 Minecraft で遊んでいて、Mac mini は Minecraft サーバーの立ち上げに完全に適しています――実は試してみたかっただけなんですけど、とにかく僕の Windows ノートパソコンの負担を少し軽減できるでしょう。Mac mini に論理処理を専念させて、Windows ノートパソコンにはレンダリングを専念させるんです。
 

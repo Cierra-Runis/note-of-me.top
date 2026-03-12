@@ -23,7 +23,7 @@ Zsh 相比 Bash 能提供命令行历史补全的功能，在 Windows 上，这�
 
 在购入了 Mac mini 后，除了写 [SwiftUI](https://developer.apple.com/xcode/swiftui) 外，也想用 Mac mini 做些别的什么 —— 我是用不来 macOS，操作逻辑相比 Windows 总是有太多别扭的地方，我是应该还会把 Windows 作为主要的开发环境的。
 
-于是看视频，了解到 Mac mini 可以作为 [软路由](https://bulianglin.com/archives/openwrt.html)、[NAS](https://en.wikipedia.org/wiki/Network-attached_storage)、服务器 …… 诶，服务器。
+于是看视频，了解到 Mac mini 可以作为 [软路由](https://bulianglin.com/archives/openwrt.html)、[NAS](https://en.wikipedia.org/wiki/Network-attached_storage)、服务器…… 诶，服务器。
 
 正好最近在玩 Minecraft，而 Mac mini 完全适合 Minecraft 开服 —— 其实就是我想试试看，总之能分担一下我这台 Windows 笔记本的压力吧，让 Mac mini 专心逻辑处理，Windows 笔记本专心渲染。
 

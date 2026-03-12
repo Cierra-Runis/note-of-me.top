@@ -33,9 +33,9 @@ Vercel 还提供了 [Analytics](https://vercel.com/docs/analytics) 和 [Speed In
 
 ## 字体
 
-前面的国际化同样会带来一个问题，如何对字体进行国际化。要知道汉字在不同的国家和地区会有不同的字形 ……
+前面的国际化同样会带来一个问题，如何对字体进行国际化。要知道汉字在不同的国家和地区会有不同的字形……
 
-总之先摸鱼了，优先度比较低的 Issue 总是这样，被忽略，被拖延 ……
+总之先摸鱼了，优先度比较低的 Issue 总是这样，被忽略，被拖延……
 
 ## NextUI
 
@@ -49,13 +49,13 @@ Vercel 还提供了 [Analytics](https://vercel.com/docs/analytics) 和 [Speed In
 
 对于背景色，我直接抄的 [One Dark Pro](https://binaryify.github.io/OneDark-Pro) 的颜色，这真的好看吧。
 
-还有一点，我已经很久没使用亮色模式了，所以对于设计出的亮色模式下的配色，我是极度的感到不适应 ……
+还有一点，我已经很久没使用亮色模式了，所以对于设计出的亮色模式下的配色，我是极度的感到不适应……
 
 其实博客只想支持暗色模式的，但 ~~挑战自己，逆境翻盘~~ 这就当作是学习了 —— 实际上还不应该拘泥于 light 和 dark 两种模式，多主题不是更好？
 
 ## 包管理器
 
-目前我使用的是 [yarn v4](https://yarnpkg.com) 版本，目前我还是挺喜欢这个包管理器的，但像是 [pnpm](https://pnpm.io)、[bun](https://bun.sh) 我也非常想尝试，什么时候会转向 pnpm 或者 bun 也说不定，特别是 bun，一个挺厉害的 JavaScript 运行时，还加了很多好东西 ……
+目前我使用的是 [yarn v4](https://yarnpkg.com) 版本，目前我还是挺喜欢这个包管理器的，但像是 [pnpm](https://pnpm.io)、[bun](https://bun.sh) 我也非常想尝试，什么时候会转向 pnpm 或者 bun 也说不定，特别是 bun，一个挺厉害的 JavaScript 运行时，还加了很多好东西……
 
 但我之前在 Windows 安装后升级出了一点问题来着，也就暂时搁置了。
 

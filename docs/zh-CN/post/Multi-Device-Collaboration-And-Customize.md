@@ -84,7 +84,7 @@ id: EBGSQV
 
 在更换 Mac mini M4 版本后，原先的 HDMI 2.0 接口变成了 HDMI 2.1，那么这个接口就能解决我们之前的问题了，在此使用一根海贝思的支持 8K@60（向下兼容 4K@240）的双 HDMI 公口线将 Mac mini 连接显示器，显示器能以 4K@144 的模式显示画面。
 
-是的，如果使用这根线连接笔记本电脑的话，显示器并不能以 4K@144 的模式显示画面，只能支持到 4K@120，貌似是 [DSC 显示流压缩技术](https://en.wikipedia.org/wiki/Display_Stream_Compression) 并没起作用 …… 虽然说这也是挺高的刷新率了，但我就是希望顶满 144 Hz，因而笔记本电脑和显示器只能用 USB-C 转 DP 的线连接。
+是的，如果使用这根线连接笔记本电脑的话，显示器并不能以 4K@144 的模式显示画面，只能支持到 4K@120，貌似是 [DSC 显示流压缩技术](https://en.wikipedia.org/wiki/Display_Stream_Compression) 并没起作用…… 虽然说这也是挺高的刷新率了，但我就是希望顶满 144 Hz，因而笔记本电脑和显示器只能用 USB-C 转 DP 的线连接。
 
 此外，显示器在切换信号源时并不会出现“夺走上行身份”这种事，而是显示器为每个信号源各自记忆上行接口，笔记本电脑仍使用 USB-B 作为上行，而 Mac mini 使用 USB-C 作为上行 —— 这里要注意的一点是，与 Mac mini 连接的这根双 USB-C 的线只能是充电线，不能是数据线，否则 Mac mini 既会从 HDMI 2.1 接口输出视频信号，又会从 USB-C 接口输出视频信号，就挺幽默的。
 
@@ -118,7 +118,7 @@ id: EBGSQV
 
 ### Android 投屏至电脑
 
-非常推荐 [scrcpy](https://github.com/Genymobile/scrcpy) 喵！其是一款特别厉害的投屏软件，支持有线连接 —— 好像也能无线？因为我第一次用这个的时候感觉它和 [ADB](https://developer.android.com/tools/adb) 挺像的 —— 以及鼠标控制、高刷 ……
+非常推荐 [scrcpy](https://github.com/Genymobile/scrcpy) 喵！其是一款特别厉害的投屏软件，支持有线连接 —— 好像也能无线？因为我第一次用这个的时候感觉它和 [ADB](https://developer.android.com/tools/adb) 挺像的 —— 以及鼠标控制、高刷……
 
 具体的不多说了，稍微有点门槛的就是这是个没有 GUI 的软件，当然也可以去找人家包的 GUI。
 
@@ -150,7 +150,7 @@ macOS 上有程序坞，Windows 有任务栏，但我可不想把程序全“固
 
 在 Windows 上推荐 [PowerToys](https://github.com/microsoft/PowerToys) 的 [PowerToys Run](https://learn.microsoft.com/zh-cn/windows/powertoys/run)，macOS 上推荐 [Raycast](https://www.raycast.com)。
 
-使用什么快捷键来呼出快捷栏呢？在 Windows 上我是 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Win</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>␣</kbd></KbdGroup>，在 macOS 上 ……
+使用什么快捷键来呼出快捷栏呢？在 Windows 上我是 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Win</kbd><span>+</span><kbd>Alt</kbd><span>+</span><kbd>␣</kbd></KbdGroup>，在 macOS 上……
 
 我哪知道，macOS 的键位好奇怪，我键盘切换到 macOS 模式后把 <kbd>Win</kbd> 和 <kbd>Alt</kbd> 互调了，然后我又在 macOS 设置里将 <kbd>Command</kbd> 和 <kbd>Ctrl</kbd> 对调了，这样才使得 macOS 的键位和 Windows 一致。
 

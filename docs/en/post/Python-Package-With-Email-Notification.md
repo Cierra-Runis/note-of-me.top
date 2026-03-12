@@ -34,6 +34,6 @@ id: WKYXGD
 
 答案是国内资源太少，姑且把包 [listener_email](https://github.com/Cierra-Runis/listener_email) 上传使用了。
 
-但我想着一般包都是 `import listener_email` 然后 `listener_email.sent_email()` 来使用函数，而不是 `from listener_email import sent_email, ListenerEmail` 然后 `sent_email()` 来使用函数 ……
+但我想着一般包都是 `import listener_email` 然后 `listener_email.sent_email()` 来使用函数，而不是 `from listener_email import sent_email, ListenerEmail` 然后 `sent_email()` 来使用函数……
 
 不懂，暂且懒了 ——
