@@ -1,31 +1,29 @@
 ---
-date: '2023-01-03T16:37:23+08:00'
+date: '2026-03-12T21:01:11+08:00'
 id: QGHCIF
 ---
 
 # 新しいホームページ、新しい気分
 
-> [!WARNING] 2025-01-05 22:08:10 補足
->
-> 本文の内容は時代遅れになっています
+## 開発の歴史
 
-## 旧バージョンの不適切な点
+最初のブログは GitHub Pages をベースに構築され、[Hexo](https://hexo.io) フレームワークを使用していたが、テーマは覚えていない。「元のテーマは長い間実質的な更新がなく、カスタマイズする際にあちこちで壁にぶつかったので、他のブログテーマを探し始めた。」次のテーマは [Butterfly](https://butterfly.js.org) で、確かにとても良い。
 
-まず、以前のテーマはもうずっと実質的なアップデートがなく、しかも自分でカスタマイズする際にあちこちで壁にぶつかったので、他のブログテーマを探し始めた。
+新しいバージョンのブログのテーマははるかに見栄えが良く、多くの場所でカスタマイズできるようになった。僕は少しお金をかけて [阿里云](https://www.aliyun.com) でドメインを購入したので、当時は GitHub にホストされていたため、ウェブサイトは [https://cierra-runis.github.io/](https://cierra-runis.github.io) と [https://www.note-of-me.top](https://www.note-of-me.top) の両方からアクセスでき、どちらも [https://note-of-me.top](https://note-of-me.top) にリダイレクトされていた。
 
-## 新バージョンの利点
+さらに、当時は [去不画像ホスティング](https://7bu.top) をウェブサイトの画像ホスティングサービスとして使用しており、価格も特に手頃で、中国本土のユーザーにとって速度が一定程度向上している。
 
-まず、ずっと良い見た目になったし、多くの箇所でカスタマイズもできるようになった。僕は少しお金をかけて [阿里云](https://www.aliyun.com) でドメインを購入したので、今このウェブサイトは [https://cierra-runis.github.io/](https://cierra-runis.github.io) からもアクセスできるし、[https://note-of-me.top](https://note-of-me.top) からもアクセスできる。
+その後、Hexo と Butterfly はどちらもあまり面白く感じられなくなり、その当時は Next.js を学ぶためだったと思うが、ブログを [リファクタリング](https://github.com/Cierra-Runis/note-of-me.top/commit/5ae42b8f8fd08ad89c71b6fb1bfdac6709a58c87) して、非常にスムーズに動作し、Vercel にデプロイできるようになり、非常に素晴らしいと感じた。
 
-もちろん、設定を行った後、現在は：
+最近では、Next.js はこの種のブログプロジェクトには少し重すぎると感じており、いくつかの問題に直面している：
 
-- [https://cierra-runis.github.io](https://cierra-runis.github.io)
-- [https://www.note-of-me.top](https://www.note-of-me.top)
+1. ビルド速度が遅い
+2. 多言語サポートがあまり良くない
+3. [Contentlayer](https://contentlayer.dev) の更新停滞
+4. Markdown のホットアップデートが無効になっており、解決策が見つかっていない
 
-これらはすべて [https://note-of-me.top](https://note-of-me.top) にリダイレクトされているが、たまに前の `www` が隠されていない状況もある。
+より軽量なフレームワークに切り替えたいと思い、一度は [Docusaurus](https://docusaurus.io) を考えたが、インターフェースが少し醜い …… いろいろ回ってみて、最終的に [VitePress](https://vitepress.dev) を選択した。インターフェースは非常にシンプルで、ビルド速度も非常に速く、更新停滞も気にせず、多言語サポートも良好だ。
 
-それに加えて、[去不图床](https://7bu.top) をウェブサイトの画像ホスティングサービスとして使っており、価格も特に手頃で、中国本土のユーザーにとって速度が一定程度向上している。
+元のブログの MIDI アプリケーションも別のプロジェクトに移動され、別のサイト [https://app.note-of-me.top](https://app.note-of-me.top) でアクセスできるようになり、このサイトはブログコンテンツに専念することになる。
 
-## 解決すべき問題
-
-僕は Obsidian を使ってブログを編集する習慣もあるので、iPad で編集する際に画像をアップロードするのが少し複雑になる。プラグインを探して問題を解決してみよう。
+とにかく、そんな感じです。
