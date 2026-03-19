@@ -91,6 +91,8 @@ However, in reality, after apple and orange, there's a full-width punctuation ma
 
 But for punctuation marks like "——" and "……" that occupy the full width, they do look a bit cramped now, so it's recommended to add spaces.
 
+In particular, "——" should have spaces on both sides, while "……" only needs a space after it - of course, just like with mixing Chinese and English, there should be some compression of the whitespace.
+
 This also brings an advantage, let me explain:
 
 When editing text, we often use <kbd>←</kbd> or <kbd>→</kbd> to move the cursor, but this is very inconvenient.
