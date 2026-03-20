@@ -90,6 +90,7 @@ export default defineConfig({
       });
       md.use(markdownFootnote);
     },
+
     codeCopyButtonTitle: '复制',
   },
   router: { prefetchLinks: true },

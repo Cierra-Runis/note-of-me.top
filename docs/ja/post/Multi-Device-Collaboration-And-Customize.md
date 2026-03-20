@@ -16,7 +16,8 @@ id: EBGSQV
 |      デバイス      |                  型番                   |                                                             簡単な備考                                                              |
 | :----------------: | :-------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
 |       スマホ       |               [Redmi K70]               |                                                       USB-C×1；Bluetooth 5.4                                                        |
-|     タブレット     |         [iPad Pro 2021 11 inch]         |                                            Thunderbolt 4×1（DP 1.4 対応）；Bluetooth 5.0                                            |
+|   ~~タブレット~~   |      ~~[iPad Pro 11-inch (3rd)]~~       |                                          ~~Thunderbolt 4×1（DP 1.4 対応）；Bluetooth 5.0~~                                          |
+|     タブレット     |         [iPad Pro 11-inch (M5)]         |                                             Thunderbolt 4×1（DP 1.4 対応）；Bluetooth 6                                             |
 |      ~~Mac~~       |            ~~[Mac mini M2]~~            |                               ~~Thunderbolt 4×2（DP 1.4 対応）；USB-A×2；HDMI 2.0×1；Bluetooth 5.3~~                                |
 |        Mac         |              [Mac mini M4]              |                        正面 USB-C 10 Gb/s×2；背面 Thunderbolt 4×3（DP 1.4 対応）；HDMI 2.1×1；Bluetooth 5.3                         |
 |     ノート PC      |       [Lenovo Legion R7000P 2021]       |                HDMI 2.1×1；USB-C 10 Gb/s×2（DP 1.4 対応、うち 1 つは PD 100 W 対応）；USB-A 5 Gb/s×4；Bluetooth 5.1                 |
@@ -26,7 +27,8 @@ id: EBGSQV
 |       マウス       |           Logicool G502 HERO            |                                      ボタンマクロプログラミング；デュアルモード高速スクロール                                       |
 
 [Redmi K70]: https://www.mi.com/redmi-k70/specs
-[iPad Pro 2021 11 inch]: https://support.apple.com/zh-cn/111897
+[iPad Pro 11-inch (3rd)]: https://support.apple.com/zh-cn/111897
+[iPad Pro 11-inch (M5)]: https://support.apple.com/zh-cn/125406
 [AirPods Pro II]: https://support.apple.com/zh-cn/111834
 [Mac mini M2]: https://support.apple.com/zh-cn/111837
 [Mac mini M4]: https://support.apple.com/zh-cn/121555
@@ -184,7 +186,7 @@ Windows では [PowerToys](https://github.com/microsoft/PowerToys) の [PowerToy
 ```mermaid
 flowchart TD
     P("Redmi K70")
-    T("iPad Pro 2021 11 inch")
+    T("iPad Pro 11-inch (M5)")
     L("Lenovo Legion R7000P 2021")
     M4("Mac mini M4")
 

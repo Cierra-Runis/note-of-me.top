@@ -36,6 +36,10 @@
   .typst-text {
     fill: var(--vp-c-text-1) !important;
   }
+
+  s {
+    text-decoration: double line-through var(--vp-c-red-1);
+  }
 }
 
 /* https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-into-the-theme-options-of-vitepress */

@@ -5,7 +5,6 @@ import {
   NolebaseEnhancedReadabilitiesMenu as EnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu as EnhancedReadabilitiesScreenMenu,
   InjectionKey,
-  LayoutMode,
   type Options,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
@@ -44,7 +43,6 @@ export default {
     app.provide(InjectionKey, {
       layoutSwitch: {
         disableAnimation: true,
-        defaultMode: LayoutMode.FullWidth,
       },
       // https://github.com/nolebase/integrations/tree/main/packages/vitepress-plugin-enhanced-readabilities/src/locales
       locales: {

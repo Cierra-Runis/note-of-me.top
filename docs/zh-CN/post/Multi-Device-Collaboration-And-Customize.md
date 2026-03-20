@@ -13,20 +13,22 @@ id: EBGSQV
 
 ## 设备清单
 
-|    设备    |          型号           |                                            简要备注                                             |
-| :--------: | :---------------------: | :---------------------------------------------------------------------------------------------: |
-|    手机    |       [Redmi K70]       |                                       单 USB-C；蓝牙 5.4                                        |
-|    平板    | [iPad Pro 2021 11 inch] |                                  单雷雳 4 可 DP 1.4；蓝牙 5.0                                   |
-|  ~~Mac~~   |    ~~[Mac mini M2]~~    |                     ~~双雷雳 4 可 DP 1.4；双 USB-A；单 HDMI 2.0；蓝牙 5.3~~                     |
-|    Mac     |      [Mac mini M4]      |                 正双 USB-C 10 Gb/s；反三雷雳 4 可 DP 1.4；单 HDMI 2.1；蓝牙 5.3                 |
-| 笔记本电脑 |  [拯救者 R7000P 2021]   |        单 HDMI 2.1；双 USB-C 10 Gb/s 可 DP 1.4，其一 PD 100 W；四 USB-A 5 Gb/s；蓝牙 5.1        |
-|  蓝牙耳机  |    [AirPods Pro II]     |                                       单 USB-C；蓝牙 5.3                                        |
-|   显示器   | 泰坦军团 P2SA2V 4K@144  | 单 DP 1.4 双 HDMI 2.1 均 DSC；单 USB-C 可 DP 1.2、PD 65 W，单 USB-B，其一作双 USB-A 5 Gb/s 上行 |
-|    键盘    | 狼蛛客制化旗舰 F99 系列 |   单 USB-C，回报率 1000 Hz；蓝牙 5.0，回报率 125 Hz；无线 2.4G，回报率 1000 Hz；电池 8000 mAh   |
-|    鼠标    |     罗技 G502 HERO      |                                   按键宏编程；双模式疾速滚轮                                    |
+|    设备    |             型号             |                                            简要备注                                             |
+| :--------: | :--------------------------: | :---------------------------------------------------------------------------------------------: |
+|    手机    |         [Redmi K70]          |                                       单 USB-C；蓝牙 5.4                                        |
+|  ~~平板~~  | ~~[iPad Pro 11-inch (3rd)]~~ |                                ~~单雷雳 4 可 DP 1.4；蓝牙 5.0~~                                 |
+|    平板    |   [iPad Pro 11-inch (M5)]    |                                   单雷雳 4 可 DP 1.4；蓝牙 6                                    |
+|  ~~Mac~~   |      ~~[Mac mini M2]~~       |                     ~~双雷雳 4 可 DP 1.4；双 USB-A；单 HDMI 2.0；蓝牙 5.3~~                     |
+|    Mac     |        [Mac mini M4]         |                 正双 USB-C 10 Gb/s；反三雷雳 4 可 DP 1.4；单 HDMI 2.1；蓝牙 5.3                 |
+| 笔记本电脑 |     [拯救者 R7000P 2021]     |        单 HDMI 2.1；双 USB-C 10 Gb/s 可 DP 1.4，其一 PD 100 W；四 USB-A 5 Gb/s；蓝牙 5.1        |
+|  蓝牙耳机  |       [AirPods Pro II]       |                                       单 USB-C；蓝牙 5.3                                        |
+|   显示器   |    泰坦军团 P2SA2V 4K@144    | 单 DP 1.4 双 HDMI 2.1 均 DSC；单 USB-C 可 DP 1.2、PD 65 W，单 USB-B，其一作双 USB-A 5 Gb/s 上行 |
+|    键盘    |   狼蛛客制化旗舰 F99 系列    |   单 USB-C，回报率 1000 Hz；蓝牙 5.0，回报率 125 Hz；无线 2.4G，回报率 1000 Hz；电池 8000 mAh   |
+|    鼠标    |        罗技 G502 HERO        |                                   按键宏编程；双模式疾速滚轮                                    |
 
 [Redmi K70]: https://www.mi.com/redmi-k70/specs
-[iPad Pro 2021 11 inch]: https://support.apple.com/zh-cn/111897
+[iPad Pro 11-inch (3rd)]: https://support.apple.com/zh-cn/111897
+[iPad Pro 11-inch (M5)]: https://support.apple.com/zh-cn/125406
 [AirPods Pro II]: https://support.apple.com/zh-cn/111834
 [Mac mini M2]: https://support.apple.com/zh-cn/111837
 [Mac mini M4]: https://support.apple.com/zh-cn/121555
@@ -184,7 +186,7 @@ macOS 上有程序坞，Windows 有任务栏，但我可不想把程序全“固
 ```mermaid
 flowchart TD
     P("Redmi K70")
-    T("iPad Pro 2021 11 inch")
+    T("iPad Pro 11-inch (M5)")
     L("拯救者 R7000P 2021")
     M4("Mac mini M4")
 
