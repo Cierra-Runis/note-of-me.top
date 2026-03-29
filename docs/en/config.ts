@@ -29,6 +29,38 @@ const sidebarConfig = generateSidebar([
     scanStartPath: '/spec',
     followSymlinks: true,
   },
+  {
+    basePath: '/en/',
+    resolvePath: '/en/Minecraft',
+    collapsed: true,
+    useTitleFromFrontmatter: true,
+    documentRootPath: '/docs/en',
+    scanStartPath: '/Minecraft',
+    manualSortFileNameByPriority: ['Introduction.md', 'chapter-1.md'],
+    followSymlinks: true,
+    useFolderTitleFromIndexFile: true,
+    useTitleFromFileHeading: true,
+  },
+  {
+    basePath: '/en/',
+    resolvePath: '/en/The-Island',
+    collapsed: true,
+    useTitleFromFrontmatter: true,
+    documentRootPath: '/docs/en',
+    scanStartPath: '/The-Island',
+    manualSortFileNameByPriority: [
+      'cover.md',
+      'copyright.md',
+      'introduction.md',
+      'chapters',
+      'lessons-from-minecraft.md',
+      'dedication.md',
+      'acknowledgments.md',
+      'about-the-author.md',
+    ],
+    useFolderTitleFromIndexFile: true,
+    useTitleFromFileHeading: true,
+  },
 ]) as SidebarMulti;
 
 // https://vitepress.dev/reference/default-theme-config
@@ -43,6 +75,14 @@ export default defineAdditionalConfig({
       },
       { text: 'Spec', link: '/en/spec/' },
       { text: 'Friend', link: '/en/friend' },
+      {
+        text: 'Minecraft',
+        link: retrieveInitialLink(sidebarConfig, '/en/Minecraft'),
+      },
+      {
+        text: 'The Island',
+        link: retrieveInitialLink(sidebarConfig, '/en/The-Island'),
+      },
       { text: 'App', link: 'https://app.note-of-me.top' },
     ],
     sidebar: sidebarConfig,

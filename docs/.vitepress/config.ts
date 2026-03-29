@@ -38,6 +38,38 @@ const sidebarConfig = generateSidebar([
     scanStartPath: '/spec',
     followSymlinks: true,
   },
+  {
+    basePath: '/',
+    resolvePath: '/Minecraft',
+    collapsed: true,
+    useTitleFromFrontmatter: true,
+    documentRootPath: '/docs/zh-CN',
+    scanStartPath: '/Minecraft',
+    manualSortFileNameByPriority: ['Introduction.md', 'chapter-1.md'],
+    followSymlinks: true,
+    useFolderTitleFromIndexFile: true,
+    useTitleFromFileHeading: true,
+  },
+  {
+    basePath: '/',
+    resolvePath: '/The-Island',
+    collapsed: true,
+    useTitleFromFrontmatter: true,
+    documentRootPath: '/docs/zh-CN',
+    scanStartPath: '/The-Island',
+    manualSortFileNameByPriority: [
+      'cover.md',
+      'copyright.md',
+      'introduction.md',
+      'chapters',
+      'lessons-from-minecraft.md',
+      'dedication.md',
+      'acknowledgments.md',
+      'about-the-author.md',
+    ],
+    useFolderTitleFromIndexFile: true,
+    useTitleFromFileHeading: true,
+  },
 ]) as SidebarMulti;
 
 // https://vitepress.dev/reference/site-config
@@ -114,6 +146,14 @@ export default defineConfig({
       { text: '文章', link: retrieveInitialLink(sidebarConfig, '/post') },
       { text: '规范', link: '/spec/' },
       { text: '友链', link: '/friend' },
+      {
+        text: 'Minecraft',
+        link: retrieveInitialLink(sidebarConfig, '/Minecraft'),
+      },
+      {
+        text: 'The Island',
+        link: retrieveInitialLink(sidebarConfig, '/The-Island'),
+      },
       { text: '应用', link: 'https://app.note-of-me.top' },
     ],
     sidebar: sidebarConfig,
