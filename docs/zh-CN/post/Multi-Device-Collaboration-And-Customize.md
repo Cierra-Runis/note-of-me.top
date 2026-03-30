@@ -34,6 +34,20 @@ id: EBGSQV
 [Mac mini M4]: https://support.apple.com/zh-cn/121555
 [拯救者 R7000P 2021]: https://item.lenovo.com.cn/product/1013207.html
 
+### DIY Desktop
+
+| 配件 |                     型号                     |
+| :--: | :------------------------------------------: |
+| CPU  |                 AMD 9800X3D                  |
+| 主板 |        华硕 TUF GAMING X870-PLUS WIFI        |
+| 散热 |             瓦尔基里 B360-GT VK              |
+| 内存 | 阿斯加特 16 GB×2 女武神瓦尔基里 II 代 极夜黑 |
+| 硬盘 |    西部数据 M.2 接口 SN7100 PCIe 4.0 1TB     |
+| 显卡 |       华硕 TUF GAMING RTX 5070Ti O16G        |
+| 机箱 |             先马 境界 Lite 黑色              |
+| 电源 |           华硕 ATS850G 巨齿鲨金牌            |
+| 风扇 |    橘击手 棱镜 4 代 PRO MAX 黑色 三反一正    |
+
 ## 参考信息
 
 ![DisplayPort-HDMI](./image/DisplayPort_HDMI.png)
@@ -45,7 +59,7 @@ id: EBGSQV
 | USB 2.0 High-Speed |                USB 2.0                | 480 Mb/s |
 |     USB 5 Gb/s     | USB 3.0、USB 3.1 Gen 1、USB 3.2 Gen 1 |  5 Gb/s  |
 |    USB 10 Gb/s     | USB 3.1、USB 3.1 Gen 2、USB 3.2 Gen 2 | 10 Gb/s  |
-|    USB 20 Gb/s     |            USB 3.2 Gen 2x2            | 20 Gb/s  |
+|    USB 20 Gb/s     |            USB 3.2 Gen 2×2            | 20 Gb/s  |
 |    USB 40 Gb/s     |              USB 4 V1.0               | 40 Gb/s  |
 |    USB 80 Gb/s     |              USB 4 V2.0               | 80 Gb/s  |
 

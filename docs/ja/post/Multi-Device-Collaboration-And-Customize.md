@@ -16,6 +16,7 @@ id: EBGSQV
 |      デバイス      |                  型番                   |                                                             簡単な備考                                                              |
 | :----------------: | :-------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
 |       スマホ       |               [Redmi K70]               |                                                       USB-C×1；Bluetooth 5.4                                                        |
+|       スマホ       |           [iPhone 16 Pro Max]           |                                                   USB-C 10 Gb/s×1；Bluetooth 5.3                                                    |
 |   ~~タブレット~~   |      ~~[iPad Pro 11-inch (3rd)]~~       |                                          ~~Thunderbolt 4×1（DP 1.4 対応）；Bluetooth 5.0~~                                          |
 |     タブレット     |         [iPad Pro 11-inch (M5)]         |                                             Thunderbolt 4×1（DP 1.4 対応）；Bluetooth 6                                             |
 |      ~~Mac~~       |            ~~[Mac mini M2]~~            |                               ~~Thunderbolt 4×2（DP 1.4 対応）；USB-A×2；HDMI 2.0×1；Bluetooth 5.3~~                                |
@@ -27,12 +28,27 @@ id: EBGSQV
 |       マウス       |           Logicool G502 HERO            |                                      ボタンマクロプログラミング；デュアルモード高速スクロール                                       |
 
 [Redmi K70]: https://www.mi.com/redmi-k70/specs
+[iPhone 16 Pro Max]: https://support.apple.com/zh-cn/121032
 [iPad Pro 11-inch (3rd)]: https://support.apple.com/zh-cn/111897
 [iPad Pro 11-inch (M5)]: https://support.apple.com/zh-cn/125406
 [AirPods Pro II]: https://support.apple.com/zh-cn/111834
 [Mac mini M2]: https://support.apple.com/zh-cn/111837
 [Mac mini M4]: https://support.apple.com/zh-cn/121555
 [Lenovo Legion R7000P 2021]: https://item.lenovo.com.cn/product/1013207.html
+
+### DIY Desktop
+
+| 配件 |                     型号                     |
+| :--: | :------------------------------------------: |
+| CPU  |                 AMD 9800X3D                  |
+| 主板 |        华硕 TUF GAMING X870-PLUS WIFI        |
+| 散热 |             瓦尔基里 B360-GT VK              |
+| 内存 | 阿斯加特 16 GB×2 女武神瓦尔基里 II 代 极夜黑 |
+| 硬盘 |    西部数据 M.2 接口 SN7100 PCIe 4.0 1TB     |
+| 显卡 |       华硕 TUF GAMING RTX 5070Ti O16G        |
+| 机箱 |             先马 境界 Lite 黑色              |
+| 电源 |           华硕 ATS850G 巨齿鲨金牌            |
+| 风扇 |    橘击手 棱镜 4 代 PRO MAX 黑色 三反一正    |
 
 ## 参考情報
 
@@ -45,7 +61,7 @@ id: EBGSQV
 | USB 2.0 High-Speed |                USB 2.0                | 480 Mb/s |
 |     USB 5 Gb/s     | USB 3.0、USB 3.1 Gen 1、USB 3.2 Gen 1 |  5 Gb/s  |
 |    USB 10 Gb/s     | USB 3.1、USB 3.1 Gen 2、USB 3.2 Gen 2 | 10 Gb/s  |
-|    USB 20 Gb/s     |            USB 3.2 Gen 2x2            | 20 Gb/s  |
+|    USB 20 Gb/s     |            USB 3.2 Gen 2×2            | 20 Gb/s  |
 |    USB 40 Gb/s     |              USB 4 V1.0               | 40 Gb/s  |
 |    USB 80 Gb/s     |              USB 4 V2.0               | 80 Gb/s  |
 
