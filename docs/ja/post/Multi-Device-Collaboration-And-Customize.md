@@ -36,19 +36,21 @@ id: EBGSQV
 [Mac mini M4]: https://support.apple.com/zh-cn/121555
 [Lenovo Legion R7000P 2021]: https://item.lenovo.com.cn/product/1013207.html
 
-### DIY Desktop
+### 自作 PC
 
-| 配件 |                     型号                     |
-| :--: | :------------------------------------------: |
-| CPU  |                 AMD 9800X3D                  |
-| 主板 |        华硕 TUF GAMING X870-PLUS WIFI        |
-| 散热 |             瓦尔基里 B360-GT VK              |
-| 内存 | 阿斯加特 16 GB×2 女武神瓦尔基里 II 代 极夜黑 |
-| 硬盘 |    西部数据 M.2 接口 SN7100 PCIe 4.0 1TB     |
-| 显卡 |       华硕 TUF GAMING RTX 5070Ti O16G        |
-| 机箱 |             先马 境界 Lite 黑色              |
-| 电源 |           华硕 ATS850G 巨齿鲨金牌            |
-| 风扇 |    橘击手 棱镜 4 代 PRO MAX 黑色 三反一正    |
+|       パーツ       |                     型番                     |
+| :----------------: | :------------------------------------------: |
+|        CPU         |                 AMD 9800X3D                  |
+|    マザーボード    |        华硕 TUF GAMING X870-PLUS WIFI        |
+|    CPU クーラー    |             瓦尔基里 B360-GT VK              |
+|       メモリ       | 阿斯加特 16 GB×2 女武神瓦尔基里 II 代 极夜黑 |
+|     ストレージ     |    西部数据 M.2 接口 SN7100 PCIe 4.0 1TB     |
+| グラフィックボード |      华硕 TUF GAMING [RTX 5070Ti] O16G       |
+|       ケース       |             先马 境界 Lite 黒色              |
+|    電源ユニット    |           华硕 ATS850G 巨齿鲨金牌            |
+|    ケースファン    |    橘击手 棱镜 4 代 PRO MAX 黒色 三反一正    |
+
+[RTX 5070Ti]: https://www.nvidia.com/ja-jp/geforce/graphics-cards/compare/#compare-50
 
 ## 参考情報
 
