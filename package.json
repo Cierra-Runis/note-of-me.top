@@ -1,22 +1,22 @@
 {
-  "type": "module",
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
   "devDependencies": {
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
     "@lowmst/markdown-it-typst-math": "^1.1.0",
     "@nolebase/ui": "^2.18.2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
     "@types/markdown-it-footnote": "^3.0.4",
-    "@vueuse/core": "^14.2.1",
-    "@vueuse/shared": "^14.2.1",
+    "@vueuse/core": "^14.3.0",
+    "@vueuse/shared": "^14.3.0",
     "markdown-it-footnote": "^4.0.0",
     "vitepress": "2.0.0-alpha.17",
-    "vitepress-plugin-group-icons": "^1.7.3",
-    "vitepress-sidebar": "^1.33.1",
-    "vue": "^3.5.32"
-  }
+    "vitepress-plugin-group-icons": "^1.7.5",
+    "vitepress-sidebar": "^1.36.1",
+    "vue": "^3.5.38"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "type": "module"
 }
