@@ -9,9 +9,22 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
+    "types": [
+      "vite/client"
+    ],
     "jsx": "preserve",
-    "lib": ["esnext", "dom", "dom.iterable"]
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
   },
-  "include": ["docs/**/*", "docs/.vitepress/**/*"],
-  "exclude": ["**/node_modules/**", "**/dist/**"]
+  "include": [
+    "docs/**/*",
+    "docs/.vitepress/**/*"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**"
+  ],
 }
