@@ -140,12 +140,12 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 
 |   規格   | 通常シールドモード | 通常線規 AWG | 帯域幅 MHz | 100 Mb/s | 1 Gb/s | 2.5 Gb/s | 5 Gb/s | 10 Gb/s |
 | :------: | :----------------: | :----------: | :--------: | :------: | :----: | :------: | :----: | :-----: |
-| [CAT-5]  |        UTP         |      24      |    100     |    🉑    |        |          |        |         |
-| [CAT-5e] |        UTP         |      24      |    125     |    🉑    |   🉑   |  不安定  | 不安定 |         |
-| [CAT-6]  |   UTP または STP   |      23      |    250     |    🉑    |   🉑   |    🉑    | 不安定 |  55 m   |
-| [CAT-6A] |        STP         |      23      |    500     |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
-| [CAT-7]  |       S/FTP        |      23      |    600     |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
-| [CAT-7A] |       S/FTP        |      22      |    1000    |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
+| [CAT-5]  |        UTP         |      24      |    100     |    🉑     |        |          |        |         |
+| [CAT-5e] |        UTP         |      24      |    125     |    🉑     |   🉑    |  不安定  | 不安定 |         |
+| [CAT-6]  |   UTP または STP   |      23      |    250     |    🉑     |   🉑    |    🉑     | 不安定 |  55 m   |
+| [CAT-6A] |        STP         |      23      |    500     |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
+| [CAT-7]  |       S/FTP        |      23      |    600     |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
+| [CAT-7A] |       S/FTP        |      22      |    1000    |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
 
 [CAT-5]: https://zh.wikipedia.org/wiki/CAT-5
 [CAT-5e]: https://zh.wikipedia.org/wiki/CAT-5#Category_5e
@@ -168,7 +168,7 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 
 まず注意すべき点は、ドメインを使用してローカルに接続する際は `localhost` を使用すること。ほぼすべてのデバイスがこれを IPv4 の `127.0.0.1` または IPv6 の `::1` と自動的にバインドする。
 
-[マルチデバイス連携とカスタマイズ](./Multi-Device-Collaboration-And-Customize#デスクトップカスタマイズ) でも言及したが、IP の変化は不快なものだ。固定 IP はこの問題を解決できるが、一つはルーターへの管理権限が必要で、二つ目はルーターが IP を固定できる機能を持っている必要があり、さらに別の LAN に変わると、また再設定しなければならない。しかし、ローカルドメインにはこれらの問題がない。
+[マルチデバイス連携とカスタマイズ](./Multi-Device-Collaboration-And-Customize#ファイル転送) でも言及したが、IP の変化は不快なものだ。固定 IP はこの問題を解決できるが、一つはルーターへの管理権限が必要で、二つ目はルーターが IP を固定できる機能を持っている必要があり、さらに別の LAN に変わると、また再設定しなければならない。しかし、ローカルドメインにはこれらの問題がない。
 
 ローカルドメインはどうやって取得するのか？ macOS と Windows はともに `hostname` コマンドを使えばよく、結果はそれぞれ `Mac-mini.local` と `Cierra_Runis` だ。
 
@@ -176,8 +176,8 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 
 下表は `ifconfig` と `ipconfig /all` コマンドから引用：
 
-|      デバイス      |                IP                 |           タイプ            |
-| :----------------: | :-------------------------------: | :-------------------------: |
+|      デバイス      |                IP                |           タイプ            |
+| :----------------: | :------------------------------: | :-------------------------: |
 |      Mac mini      |         ☀️192.168.2.69/24         |  IPv4 LAN プライベート IP   |
 |      Mac mini      | 🌞fe80::8bc:15d5:9bc3:9771%en1/64 | IPv6 リンクローカルアドレス |
 | 拯救者 R7000P 2021 |         🌕192.168.2.75/24         |  IPv4 LAN プライベート IP   |
@@ -187,26 +187,26 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 
 僕自身、Mac mini と拯救者 R7000P 2021 に Clash Verge 仮想ネットワークカードを起動および停止した状態で、`ping` コマンドを使用して以下の結果を得た：
 
-|     OS      |     テストドメイン     | ping 表示ドメイン  | 両方とも閉じる |  両方とも開く   | 結果 |
-| :---------: | :--------------------: | :----------------: | :------------: | :-------------: | :--: |
-|    macOS    |         _Mac_          |      mac.lan       |  198.18.1.87   |   198.18.1.87   |  💢  |
-|    macOS    |       _Mac.lan_        |      mac.lan       |  198.18.1.87   |   198.18.1.87   |  💢  |
-|    macOS    |      _Mac.local_       |         -          |       -        |        -        |  💩  |
-|   Windows   |         _Mac_          |      Mac.lan       |       ☀️       |       ☀️        |  💔  |
-|   Windows   |       _Mac.lan_        |      Mac.lan       |       ☀️       | 198.18.0.69[^6] | 💢💢 |
-|   Windows   |      _Mac.local_       |     Mac.local      |       -        | 198.18.0.70[^6] | 💢💢 |
-|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    |  198.18.1.83   |   198.18.1.83   |  💢  |
-|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    |  198.18.1.83   |   198.18.1.83   |  💢  |
-|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |   127.0.0.1    |    127.0.0.1    |  😄  |
-|   Windows   |      **Mac-mini**      |   Mac-mini.local   |      🌞%9      |      🌞%9       |  🚀  |
-|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |       -        | 198.18.0.71[^6] | 💢💢 |
-| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |      🌞%9      | 198.18.0.72[^6] | 💢💢 |
-|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  |  198.18.1.82   |   198.18.1.82   |  💢  |
-|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  |  198.18.1.82   |   198.18.1.82   |  💢  |
-|    macOS    | **Cierra_Runis.local** | cierra_runis.local |       🌕       |       🌕        |  🚀  |
-|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |     🌝%18      |      🌝%18      |  😄  |
-|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |       🌕       | 198.18.0.73[^6] | 💢💢 |
-|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |     🌝%18      |      🌝%18      |  😄  |
+|     OS      |     テストドメイン     | ping 表示ドメイン  | 両方とも閉じる |  両方とも開く   | 結果  |
+| :---------: | :--------------------: | :----------------: | :------------: | :-------------: | :---: |
+|    macOS    |         _Mac_          |      mac.lan       |  198.18.1.87   |   198.18.1.87   |   💢   |
+|    macOS    |       _Mac.lan_        |      mac.lan       |  198.18.1.87   |   198.18.1.87   |   💢   |
+|    macOS    |      _Mac.local_       |         -          |       -        |        -        |   💩   |
+|   Windows   |         _Mac_          |      Mac.lan       |       ☀️        |        ☀️        |   💔   |
+|   Windows   |       _Mac.lan_        |      Mac.lan       |       ☀️        | 198.18.0.69[^6] |  💢💢   |
+|   Windows   |      _Mac.local_       |     Mac.local      |       -        | 198.18.0.70[^6] |  💢💢   |
+|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    |  198.18.1.83   |   198.18.1.83   |   💢   |
+|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    |  198.18.1.83   |   198.18.1.83   |   💢   |
+|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |   127.0.0.1    |    127.0.0.1    |   😄   |
+|   Windows   |      **Mac-mini**      |   Mac-mini.local   |      🌞%9       |       🌞%9       |   🚀   |
+|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |       -        | 198.18.0.71[^6] |  💢💢   |
+| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |      🌞%9       | 198.18.0.72[^6] |  💢💢   |
+|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  |  198.18.1.82   |   198.18.1.82   |   💢   |
+|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  |  198.18.1.82   |   198.18.1.82   |   💢   |
+|    macOS    | **Cierra_Runis.local** | cierra_runis.local |       🌕        |        🌕        |   🚀   |
+|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |      🌝%18      |      🌝%18       |   😄   |
+|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |       🌕        | 198.18.0.73[^6] |  💢💢   |
+|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |      🌝%18      |      🌝%18       |   😄   |
 
 [^6]: Clash Verge による連続的な IP アドレスの変化
 
@@ -240,10 +240,10 @@ Mac のバージョンを更新後、`hostname` は `Mac.lan` を返す。調査
 
 |   OS    | テストドメイン | ping 表示ドメイン |   両方とも開く   |
 | :-----: | :------------: | :---------------: | :--------------: |
-|  macOS  |     Laptop     |    laptop.lan     |        🌕        |
-|  macOS  |   Laptop.lan   |    laptop.lan     |        🌕        |
-|  macOS  |  Laptop.local  |   laptop.local    |        🌕        |
-| Windows |    Mac-mini    |  Mac-mini.local   |       🌞%9       |
+|  macOS  |     Laptop     |    laptop.lan     |        🌕         |
+|  macOS  |   Laptop.lan   |    laptop.lan     |        🌕         |
+|  macOS  |  Laptop.local  |   laptop.local    |        🌕         |
+| Windows |    Mac-mini    |  Mac-mini.local   |       🌞%9        |
 | Windows |  Mac-mini.lan  |   Mac-mini.lan    | 198.18.0.127[^6] |
 | Windows | Mac-mini.local |  Mac-mini.local   | 198.18.0.129[^6] |
 

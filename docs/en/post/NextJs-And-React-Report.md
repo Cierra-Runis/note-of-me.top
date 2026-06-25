@@ -55,7 +55,7 @@ React 本身有带 [状态管理](https://react.dev/learn/passing-data-deeply-wi
 
 具体深造还是得靠写项目的，原理可以不清楚，但总不可以不会用吗 —— 虽然说面试可能也会问到就是了。
 
-和 Flutter 有社区的状态管理方案一样，React 也有其它的状态管理方案 —— [Redux](https://redux.js.org)（实际上 Flutter 社区就有 [同名包](https://docs.flutter.dev/data-and-backend/state-mgmt/options#redux)），但我不会用。
+和 Flutter 有社区的状态管理方案一样，React 也有其它的状态管理方案 —— [Redux](https://redux.js.org)（实际上 Flutter 社区就有 [同名包](https://pub.dev/packages/redux)），但我不会用。
 
 而且据谢佬说这东西太复杂了，给我推荐了 [zustand](https://github.com/pmndrs/zustand)，到时候都学学看就是了。
 

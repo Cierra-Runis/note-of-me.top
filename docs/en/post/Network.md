@@ -95,10 +95,10 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 以 Wi-Fi 6 与 Wi-Fi 7 为例，其最大速率计算如下：
 
-| Wi-Fi 世代 | 调制方式 | 编码方式 | 码率 |  带宽   | 单位时间符号传输数量 | 空间流数量 | 最大速率  |
-| :--------: | :------: | :------: | :--: | :-----: | :------------------: | :--------: | :-------: |
-|  Wi-Fi 6   | 1024-QAM |    10    | 5/6  | 160 MHz |        73529         |  MIMO 8×8  | 1.2 GB/s  |
-|  Wi-Fi 7   | 4096-QAM |    12    | 5/6  | 320 MHz |        73529         |  MIMO 8×8  | 2.88 GB/s |
+| Wi-Fi 世代 | 调制方式 | 编码方式 | 码率  |  带宽   | 单位时间符号传输数量 | 空间流数量 | 最大速率  |
+| :--------: | :------: | :------: | :---: | :-----: | :------------------: | :--------: | :-------: |
+|  Wi-Fi 6   | 1024-QAM |    10    |  5/6  | 160 MHz |        73529         |  MIMO 8×8  | 1.2 GB/s  |
+|  Wi-Fi 7   | 4096-QAM |    12    |  5/6  | 320 MHz |        73529         |  MIMO 8×8  | 2.88 GB/s |
 
 - 大多数设备为 MIMO 2×2，也即对应 300 MB/s 和 720 MB/s
 - 有关调制方式参见 [此视频](https://www.bilibili.com/video/av113683137041105)
@@ -136,12 +136,12 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 |   规格   | 常规屏蔽模式 | 常规线规 AWG | 带宽 MHz | 100 Mb/s | 1 Gb/s | 2.5 Gb/s | 5 Gb/s | 10 Gb/s |
 | :------: | :----------: | :----------: | :------: | :------: | :----: | :------: | :----: | :-----: |
-| [CAT-5]  |     UTP      |      24      |   100    |    🉑    |        |          |        |         |
-| [CAT-5e] |     UTP      |      24      |   125    |    🉑    |   🉑   |  不稳定  | 不稳定 |         |
-| [CAT-6]  |  UTP 或 STP  |      23      |   250    |    🉑    |   🉑   |    🉑    | 不稳定 |  55 m   |
-| [CAT-6A] |     STP      |      23      |   500    |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
-| [CAT-7]  |    S/FTP     |      23      |   600    |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
-| [CAT-7A] |    S/FTP     |      22      |   1000   |    🉑    |   🉑   |    🉑    |   🉑   |   🉑    |
+| [CAT-5]  |     UTP      |      24      |   100    |    🉑     |        |          |        |         |
+| [CAT-5e] |     UTP      |      24      |   125    |    🉑     |   🉑    |  不稳定  | 不稳定 |         |
+| [CAT-6]  |  UTP 或 STP  |      23      |   250    |    🉑     |   🉑    |    🉑     | 不稳定 |  55 m   |
+| [CAT-6A] |     STP      |      23      |   500    |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
+| [CAT-7]  |    S/FTP     |      23      |   600    |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
+| [CAT-7A] |    S/FTP     |      22      |   1000   |    🉑     |   🉑    |    🉑     |   🉑    |    🉑    |
 
 [CAT-5]: https://zh.wikipedia.org/wiki/CAT-5
 [CAT-5e]: https://zh.wikipedia.org/wiki/CAT-5#Category_5e
@@ -164,7 +164,7 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 首先要注意的一点是，在使用域名连接到本地时，请使用 `localhost`，几乎所有设备都会将其自动与 IPv4 下的 `127.0.0.1` 或 IPv6 下的 `::1` 绑定。
 
-在 [多设备协同与自定义](./Multi-Device-Collaboration-And-Customize#桌面自定义) 中也有提到，IP 的变化是会令人难受的，固定 IP 虽然能解决该问题，但一是这要求你对路由器有管理权，二是路由器要具备能固定 IP 的功能，再就是一旦换到另一个局域网，就又得重新设置。而本地域名则不会有这些问题。
+在 [多设备协同与自定义](./Multi-Device-Collaboration-And-Customize#文件传输) 中也有提到，IP 的变化是会令人难受的，固定 IP 虽然能解决该问题，但一是这要求你对路由器有管理权，二是路由器要具备能固定 IP 的功能，再就是一旦换到另一个局域网，就又得重新设置。而本地域名则不会有这些问题。
 
 本地域名怎么获取呢？macOS 和 Windows 均使用 `hostname` 命令即可，结果分别是 `Mac-mini.local` 和 `Cierra_Runis`。
 
@@ -172,8 +172,8 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 下表来自 `ifconfig` 和 `ipconfig /all` 命令：
 
-|        设备        |                IP                 |        类型        |
-| :----------------: | :-------------------------------: | :----------------: |
+|        设备        |                IP                |        类型        |
+| :----------------: | :------------------------------: | :----------------: |
 |      Mac mini      |         ☀️192.168.2.69/24         | IPv4 局域网私有 IP |
 |      Mac mini      | 🌞fe80::8bc:15d5:9bc3:9771%en1/64 | IPv6 链路本地地址  |
 | 拯救者 R7000P 2021 |         🌕192.168.2.75/24         | IPv4 局域网私有 IP |
@@ -183,26 +183,26 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 就我自己，在 Mac mini 和拯救者 R7000P 2021 搭配 Clash Verge 虚拟网卡开启及关闭时，使用 `ping` 命令得到以下结果：
 
-|  操作系统   |        测试域名        |   ping 显示域名    | 双方皆关闭  |   双方皆打开    | 结果 |
-| :---------: | :--------------------: | :----------------: | :---------: | :-------------: | :--: |
-|    macOS    |         _Mac_          |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
-|    macOS    |       _Mac.lan_        |      mac.lan       | 198.18.1.87 |   198.18.1.87   |  💢  |
-|    macOS    |      _Mac.local_       |         -          |      -      |        -        |  💩  |
-|   Windows   |         _Mac_          |      Mac.lan       |     ☀️      |       ☀️        |  💔  |
-|   Windows   |       _Mac.lan_        |      Mac.lan       |     ☀️      | 198.18.0.69[^6] | 💢💢 |
-|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^6] | 💢💢 |
-|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
-|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |  💢  |
-|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |  127.0.0.1  |    127.0.0.1    |  😄  |
-|   Windows   |      **Mac-mini**      |   Mac-mini.local   |    🌞%9     |      🌞%9       |  🚀  |
-|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^6] | 💢💢 |
-| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |    🌞%9     | 198.18.0.72[^6] | 💢💢 |
-|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
-|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |  💢  |
-|    macOS    | **Cierra_Runis.local** | cierra_runis.local |     🌕      |       🌕        |  🚀  |
-|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
-|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |     🌕      | 198.18.0.73[^6] | 💢💢 |
-|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |    🌝%18    |      🌝%18      |  😄  |
+|  操作系统   |        测试域名        |   ping 显示域名    | 双方皆关闭  |   双方皆打开    | 结果  |
+| :---------: | :--------------------: | :----------------: | :---------: | :-------------: | :---: |
+|    macOS    |         _Mac_          |      mac.lan       | 198.18.1.87 |   198.18.1.87   |   💢   |
+|    macOS    |       _Mac.lan_        |      mac.lan       | 198.18.1.87 |   198.18.1.87   |   💢   |
+|    macOS    |      _Mac.local_       |         -          |      -      |        -        |   💩   |
+|   Windows   |         _Mac_          |      Mac.lan       |      ☀️      |        ☀️        |   💔   |
+|   Windows   |       _Mac.lan_        |      Mac.lan       |      ☀️      | 198.18.0.69[^6] |  💢💢   |
+|   Windows   |      _Mac.local_       |     Mac.local      |      -      | 198.18.0.70[^6] |  💢💢   |
+|    macOS    |      ~~Mac-mini~~      |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |   💢   |
+|    macOS    |    ~~Mac-mini.lan~~    |    mac-mini.lan    | 198.18.1.83 |   198.18.1.83   |   💢   |
+|    macOS    |   ~~Mac-mini.local~~   |   mac-mini.local   |  127.0.0.1  |    127.0.0.1    |   😄   |
+|   Windows   |      **Mac-mini**      |   Mac-mini.local   |     🌞%9     |       🌞%9       |   🚀   |
+|   Windows   |    **Mac-mini.lan**    |    Mac-mini.lan    |      -      | 198.18.0.71[^6] |  💢💢   |
+| **Windows** |   **Mac-mini.local**   |   Mac-mini.local   |     🌞%9     | 198.18.0.72[^6] |  💢💢   |
+|  **macOS**  |    **Cierra_Runis**    |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |   💢   |
+|    macOS    |  **Cierra_Runis.lan**  |  cierra_runis.lan  | 198.18.1.82 |   198.18.1.82   |   💢   |
+|    macOS    | **Cierra_Runis.local** | cierra_runis.local |      🌕      |        🌕        |   🚀   |
+|   Windows   |    ~~Cierra_Runis~~    |    Cierra_Runis    |    🌝%18     |      🌝%18       |   😄   |
+|   Windows   |  ~~Cierra_Runis.lan~~  |  Cierra_Runis.lan  |      🌕      | 198.18.0.73[^6] |  💢💢   |
+|   Windows   | ~~Cierra_Runis.local~~ |    Cierra_Runis    |    🌝%18     |      🌝%18       |   😄   |
 
 [^6]: Clash Verge 导致连续的 IP 地址变化
 
@@ -236,10 +236,10 @@ Wi-Fi 最大速率 = 编码方式 × 码率 × 最大信道有效子载波数量
 
 | 操作系统 |    测试域名    | ping 显示域名  |    双方皆打开    |
 | :------: | :------------: | :------------: | :--------------: |
-|  macOS   |     Laptop     |   laptop.lan   |        🌕        |
-|  macOS   |   Laptop.lan   |   laptop.lan   |        🌕        |
-|  macOS   |  Laptop.local  |  laptop.local  |        🌕        |
-| Windows  |    Mac-mini    | Mac-mini.local |       🌞%9       |
+|  macOS   |     Laptop     |   laptop.lan   |        🌕         |
+|  macOS   |   Laptop.lan   |   laptop.lan   |        🌕         |
+|  macOS   |  Laptop.local  |  laptop.local  |        🌕         |
+| Windows  |    Mac-mini    | Mac-mini.local |       🌞%9        |
 | Windows  |  Mac-mini.lan  |  Mac-mini.lan  | 198.18.0.127[^6] |
 | Windows  | Mac-mini.local | Mac-mini.local | 198.18.0.129[^6] |
 

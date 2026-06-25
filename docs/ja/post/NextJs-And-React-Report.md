@@ -55,7 +55,7 @@ React 自体が [状態管理](https://react.dev/learn/passing-data-deeply-with-
 
 具体的な深堀りはやっぱりプロジェクトを書くことに頼らないとね。原理は分からなくてもいいけど、使い方が分からないってのはダメでしょ —— まあ面接で聞かれるかもしれないけどね。
 
-Flutter にコミュニティの状態管理ソリューションがあるように、React にも他の状態管理ソリューションがある —— [Redux](https://redux.js.org)(実際 Flutter コミュニティにも [同名パッケージ](https://docs.flutter.dev/data-and-backend/state-mgmt/options#redux) がある)けど、僕は使えない。
+Flutter にコミュニティの状態管理ソリューションがあるように、React にも他の状態管理ソリューションがある —— [Redux](https://redux.js.org)(実際 Flutter コミュニティにも [同名パッケージ](https://pub.dev/packages/redux) がある)けど、僕は使えない。
 
 それに謝さんによるとこれは複雑すぎるらしく、[zustand](https://github.com/pmndrs/zustand) を勧めてくれた。その時が来たら色々学んでみるつもりだ。
 
