@@ -1,92 +1,19 @@
-import { defineAdditionalConfig } from 'vitepress';
 /// https://github.com/jooy2/vitepress-sidebar
 /// VitePress auto sidebar generator plugin. Easy to use and supports advanced customization.
-import { generateSidebar } from 'vitepress-sidebar';
-import type { SidebarMulti } from 'vitepress-sidebar/types';
-import { retrieveInitialLink } from '../.vitepress/lib';
-
-/// https://vitepress-sidebar.cdget.com/advanced-usage/multiple-sidebars-how-to
-const sidebarConfig = generateSidebar([
-  {
-    basePath: '/ja/', /// https://vitepress-sidebar.cdget.com/guide/options#basepath
-    resolvePath: '/ja/post', /// https://vitepress-sidebar.cdget.com/guide/options#resolvepath
-    collapsed: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#collapsed
-    useTitleFromFileHeading: true, /// https://vitepress-sidebar.cdget.com/guide/options#usetitlefromfileheading
-    documentRootPath: '/docs/ja', /// https://vitepress-sidebar.cdget.com/guide/options#documentrootpath
-    scanStartPath: '/post', /// https://vitepress-sidebar.cdget.com/guide/options#scanstartpath
-    sortMenusByFrontmatterDate: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusbyfrontmatterdate
-    sortMenusOrderByDescending: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusorderbydescending
-    followSymlinks: true, /// https://vitepress-sidebar.cdget.com/guide/options#followsymlinks
-  },
-  {
-    basePath: '/ja/',
-    resolvePath: '/ja/spec',
-    useTitleFromFileHeading: true,
-    includeRootIndexFile: true,
-    useFolderTitleFromIndexFile: true,
-    documentRootPath: '/docs/ja',
-    sortMenusByFrontmatterOrder: true,
-    scanStartPath: '/spec',
-    followSymlinks: true,
-  },
-  {
-    basePath: '/ja/',
-    resolvePath: '/ja/Minecraft',
-    collapsed: true,
-    useTitleFromFrontmatter: true,
-    documentRootPath: '/docs/ja',
-    scanStartPath: '/Minecraft',
-    manualSortFileNameByPriority: ['Introduction.md', 'chapter-1.md'],
-    followSymlinks: true,
-    useFolderTitleFromIndexFile: true,
-    useTitleFromFileHeading: true,
-  },
-  {
-    basePath: '/ja/',
-    resolvePath: '/ja/The-Island',
-    collapsed: true,
-    useTitleFromFrontmatter: true,
-    documentRootPath: '/docs/ja',
-    scanStartPath: '/The-Island',
-    manualSortFileNameByPriority: [
-      'cover.md',
-      'copyright.md',
-      'introduction.md',
-      'chapters',
-      'lessons-from-minecraft.md',
-      'dedication.md',
-      'acknowledgments.md',
-      'about-the-author.md',
-    ],
-    followSymlinks: true,
-    useFolderTitleFromIndexFile: true,
-    useTitleFromFileHeading: true,
-  },
-]) as SidebarMulti;
+import { withSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/default-theme-config
-export default defineAdditionalConfig({
+export default withSidebar({
   lang: 'ja',
 
   themeConfig: {
     nav: [
-      {
-        text: 'ポスト',
-        link: retrieveInitialLink(sidebarConfig, '/ja/post'),
-      },
+      { text: 'ポスト', link: '/ja/post/NuxtJs-And-Vue-Report' },
       { text: '仕様', link: '/ja/spec/' },
       { text: '友だち', link: '/ja/friend' },
-      {
-        text: 'Minecraft',
-        link: retrieveInitialLink(sidebarConfig, '/ja/Minecraft'),
-      },
-      {
-        text: 'The Island',
-        link: retrieveInitialLink(sidebarConfig, '/ja/The-Island'),
-      },
+      { text: 'Minecraft', link: '/ja/Minecraft' },
       { text: 'アプリ', link: 'https://app.note-of-me.top' },
     ],
-    sidebar: sidebarConfig,
 
     socialLinks: [
       {
@@ -126,4 +53,41 @@ export default defineAdditionalConfig({
     darkModeSwitchTitle: 'ダークモードに切り替え',
     skipToContentLabel: 'コンテンツにスキップ',
   },
-});
+}, [
+  {
+    basePath: '/ja/', /// https://vitepress-sidebar.cdget.com/guide/options#basepath
+    resolvePath: '/ja/post', /// https://vitepress-sidebar.cdget.com/guide/options#resolvepath
+    collapsed: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#collapsed
+    useTitleFromFileHeading: true, /// https://vitepress-sidebar.cdget.com/guide/options#usetitlefromfileheading
+    documentRootPath: '/docs/ja', /// https://vitepress-sidebar.cdget.com/guide/options#documentrootpath
+    scanStartPath: '/post', /// https://vitepress-sidebar.cdget.com/guide/options#scanstartpath
+    sortMenusByFrontmatterDate: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusbyfrontmatterdate
+    sortMenusOrderByDescending: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#sortmenusorderbydescending
+    followSymlinks: true, /// https://vitepress-sidebar.cdget.com/guide/options#followsymlinks
+  },
+  {
+    basePath: '/ja/',
+    resolvePath: '/ja/spec',
+    useTitleFromFileHeading: true,
+    includeRootIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    documentRootPath: '/docs/ja',
+    sortMenusByFrontmatterOrder: true,
+    scanStartPath: '/spec',
+    followSymlinks: true,
+  },
+  {
+    basePath: '/ja/',
+    resolvePath: '/ja/Minecraft',
+    useTitleFromFileHeading: true,
+    includeRootIndexFile: true,
+    useFolderLinkFromSameNameSubFile: true,
+    useFolderTitleFromIndexFile: true,
+    documentRootPath: '/docs/ja',
+    sortMenusByFrontmatterOrder: true,
+    scanStartPath: '/Minecraft',
+    followSymlinks: true,
+    collapsed: true,
+    collapseFromLevel: 2,
+  },
+]);
