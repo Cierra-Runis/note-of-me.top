@@ -78,7 +78,7 @@ kbd {
   line-height: 1;
 }
 
-:lang(ja){
-  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif, "M PLUS 2", 'Source Han Sans',
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+:root:lang(ja){
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "M PLUS 2", 'Source Han Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
