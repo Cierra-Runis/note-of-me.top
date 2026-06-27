@@ -85,7 +85,7 @@ Text() {
 
 おい、僕には `SymbolGlyph` と `SymbolSpan` がないんだけど、バージョン要件があるの？次回は明記してね。
 
-同じくコンポーネント Gallery もなくて Harmony Design のデフォルトコンポーネントスタイルを展示していない、Apple を真似るのはやめてよ、君たちはもっと良くできるはずだよ。
+同じく Component Gallery もなくて Harmony Design のデフォルト Component スタイルを展示していない、Apple を真似るのはやめてよ、君たちはもっと良くできるはずだよ。
 
 ## まとめ
 

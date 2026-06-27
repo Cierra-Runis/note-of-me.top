@@ -60,15 +60,15 @@ Xcode も Android Studio と同じようにプロジェクトビューがある�
 
 ## SwiftUI
 
-君たちのドキュメントには文句を言いたい。例を載せるのが惜しいのか？テキストの説明だけでは、このコンポーネント、関数、クラスをどう使えばいいのかわからないじゃないか？
+君たちのドキュメントには文句を言いたい。例を載せるのが惜しいのか？テキストの説明だけでは、この Component、関数、クラスをどう使えばいいのかわからないじゃないか？
 
-`List` も不可解だ。ドキュメントには子コンポーネントに自動的に背景と区切り線を追加することが説明されていない。僕は考え込んでしまった。
+`List` も不可解だ。ドキュメントには子 Component に自動的に背景と区切り線を追加することが説明されていない。僕は考え込んでしまった。
 
-`LabeledContent` というこんなに良いコンポーネントがあるのに、よくもまあ放置しておけるものだ。僕は最初ずっと `HStack { Label() Space() Text() }` のように書いて、Flutter の `ListTile` コンポーネントのようなものを実現していた。
+`LabeledContent` というこんなに良い Component があるのに、よくもまあ放置しておけるものだ。僕は最初ずっと `HStack { Label() Space() Text() }` のように書いて、Flutter の `ListTile` Component のようなものを実現していた。
 
-Flutter のような [コンポーネント Gallery](https://flutter.github.io/samples/web/material_3_demo) があって展示してくれればいいのに、でもそれがない。
+Flutter のような [Component Gallery](https://flutter.github.io/samples/web/material_3_demo) があって展示してくれればいいのに、でもそれがない。
 
-称賛すべき点は `Text` コンポーネントだ。Markdown を直接書いて URL リンクに変換できる:
+称賛すべき点は `Text` Component だ。Markdown を直接書いて URL リンクに変換できる:
 
 ```Swift
 Text("[byrdsaron@gmail.com](mailto:byrdsaron@gmail.com)")
