@@ -29,6 +29,11 @@
     border-radius: 0.5em;
   }
 
+  .avatar-img {
+    margin: auto;
+    aspect-ratio: 1 / 1;
+  }
+
   body {
     -webkit-tap-highlight-color: transparent;
   }
@@ -71,4 +76,9 @@ kbd {
 .vp-doc .vp-kbd-group *:not(:last-child) {
   margin-right: 0.18rem;
   line-height: 1;
+}
+
+:lang(ja){
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif, "M PLUS 2", 'Source Han Sans',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
 }
