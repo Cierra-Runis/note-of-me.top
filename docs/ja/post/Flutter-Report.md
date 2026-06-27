@@ -3,7 +3,7 @@ date: '2022-11-19T13:13:13+08:00'
 id: QWZRNF
 ---
 
-# Flutter 使用レポート
+# Flutter 使用報告
 
 ## Flutter の紹介
 

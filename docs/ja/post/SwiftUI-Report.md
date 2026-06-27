@@ -3,7 +3,7 @@ date: '2024-05-25T22:56:46+08:00'
 id: TELMXD
 ---
 
-# SwiftUI 使用レポート
+# SwiftUI 使用報告
 
 ## Swift 言語
 

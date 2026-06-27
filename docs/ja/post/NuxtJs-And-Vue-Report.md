@@ -3,9 +3,9 @@ date: '2026-05-31T17:34:56+09:00'
 id: AEBGAK
 ---
 
-# Nuxt.js と Vue 使用レポート
+# Nuxt.js と Vue 使用報告
 
-使用レポートシリーズ、ついに [Nuxt.js](https://nuxt.com) と [Vue](https://nuxt.com) に到達したぞ。ちょっと使い心地と [Next.js と React](./NextJs-And-React-Report.md) との比較について話してみる。
+使用報告シリーズ、ついに [Nuxt.js](https://nuxt.com) と [Vue](https://nuxt.com) に到達したぞ。ちょっと使い心地と [Next.js と React](./NextJs-And-React-Report.md) との比較について話してみる。
 
 ## Vue
 
