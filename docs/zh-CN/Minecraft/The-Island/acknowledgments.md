@@ -1,3 +1,7 @@
+---
+order: 5
+---
+
 # 致谢
 
 致 Jack Swartz，是他第一次将 Minecraft 介绍给 Brooks 一家。

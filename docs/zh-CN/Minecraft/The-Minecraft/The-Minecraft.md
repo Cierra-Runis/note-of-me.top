@@ -1,4 +1,4 @@
-# Minecraft 引言
+# The Minecraft
 
 此同人小说根据 [Minecraft Theories](https://www.youtube.com/playlist?list=PLOl4b517qn8jvCcjb6Bmi7EcK_MnmtPFl) 系列视频改编，讲述 Minecraft 背后所藏的故事。
 

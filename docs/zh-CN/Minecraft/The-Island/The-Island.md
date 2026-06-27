@@ -1,6 +1,4 @@
----
-title: 封面
----
+# Minecraft: The Island
 
 ![封面](./img/cover.jpg)
 

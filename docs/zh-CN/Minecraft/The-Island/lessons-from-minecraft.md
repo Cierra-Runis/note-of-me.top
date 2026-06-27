@@ -1,3 +1,7 @@
+---
+order: 3
+---
+
 # 我从 Minecraft 中学到了什么
 
 1. 继续前进，[永不放弃](./chapters/chapter-01)

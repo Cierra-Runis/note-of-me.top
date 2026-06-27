@@ -1,3 +1,7 @@
+---
+order: 5
+---
+
 # Acknowledgments
 
 To Jack Swartz, who first introduced the Brooks family to Minecraft.

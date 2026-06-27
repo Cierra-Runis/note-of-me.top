@@ -1,6 +1,4 @@
----
-title: Cover
----
+# Minecraft: The Island
 
 ![Cover](./img/cover.jpg)
 

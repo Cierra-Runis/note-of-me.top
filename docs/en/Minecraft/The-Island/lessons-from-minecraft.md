@@ -1,3 +1,7 @@
+---
+order: 3
+---
+
 # What I've Learned from the World of Minecraft
 
 1. Keep going, [never give up](./chapters/chapter-01)

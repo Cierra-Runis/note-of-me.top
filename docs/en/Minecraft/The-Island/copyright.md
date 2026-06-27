@@ -1,3 +1,7 @@
+---
+order: 0
+---
+
 # Copyright
 
 _Minecraft: The Island_ is a work of fiction. Names, places, characters, and incidents either are the product of the author's imagination or are used fictitiously. Any resemblance to actual persons, living or dead, events, or locales is entirely coincidental.
