@@ -11,7 +11,7 @@ id: YRJEQM
 
 ## 言語がダメ？
 
-数ヶ月経って、[TypeScript](https://www.typescriptlang.org) への理解が深まり、基本的に TypeScript を使えるようになった。例えば分割代入なんかは結構面白い。自分でも TypeScript で [VSCode プラグイン](https://github.com/Cierra-Runis/based_vscode_extension)を開発したが、このプロジェクトを経てようやく TypeScript に好感を持つようになったと言える。
+数ヶ月経って、[TypeScript](https://www.typescriptlang.org) への理解が深まり、基本的に TypeScript を使えるようになった。例えば分割代入なんかは結構面白い。自分でも TypeScript で [VS Code プラグイン](https://github.com/Cierra-Runis/based_vscode_extension)を開発したが、このプロジェクトを経てようやく TypeScript に好感を持つようになったと言える。
 
 型に関しては、まだあまり理解できていない。特にある型が実際にどうなっているのかを知りたい時、つまりソースコードを掘る時に、多くの Union Type の間をジャンプしなければならず、これは結構面倒だ。以前も話したが、[Dart](https://dart.dev) は非常に直感的で、こんなに回りくどくない —— とはいえ、Dart にも Union Type を追加してほしいとは思っているけど。
 
@@ -55,13 +55,13 @@ Lint の提示は正直あまり良くない。いくつかの属性名は元の
 
 そう、今日は第三節を開いて React Native を愚痴り続ける。
 
-僕は VSCode と React Native Cli で開発していて、Microsoft が開発したプラグインも使っている。
+僕は VS Code と React Native Cli で開発していて、Microsoft が開発したプラグインも使っている。
 
-まず嫌なところは起動だ。<kbd>F5</kbd> で起動できない（というか設定方法が分からない）。<KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> でパネルから選択しなければならない。これはまだいいとして、次に僕は困惑した。VSCode がデバッグモードに入らない —— つまり下のステータスバーが黄色にならない。これは VSCode Debugger がないということだ。これは？（ちょうど VSCode Debugger を使えるプラグインがあるという [記事](https://blog.logrocket.com/debugging-react-native-vs-code) を見つけた。使ってみてから補足する）
+まず嫌なところは起動だ。<kbd>F5</kbd> で起動できない（というか設定方法が分からない）。<KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> でパネルから選択しなければならない。これはまだいいとして、次に僕は困惑した。VS Code がデバッグモードに入らない —— つまり下のステータスバーが黄色にならない。これは VS Code Debugger がないということだ。これは？（ちょうど VS Code Debugger を使えるプラグインがあるという [記事](https://blog.logrocket.com/debugging-react-native-vs-code) を見つけた。使ってみてから補足する）
 
 エラーが出ても具体的にどこでエラーが起きているのか分からない。マウスが自動的に問題のあるコードにジャンプしてくれない。
 
-それに、これはホットリスタートができない。僕は VSCode をリロードしてから起動するしかない —— ホットリロードも同じで、多くの場合それが更新されたかどうかが分からない。特にバグが出た後、黒い画面のまま。自分で再起動しなければならない。
+それに、これはホットリスタートができない。僕は VS Code をリロードしてから起動するしかない —— ホットリロードも同じで、多くの場合それが更新されたかどうかが分からない。特にバグが出た後、黒い画面のまま。自分で再起動しなければならない。
 
 ## 終わりに
 

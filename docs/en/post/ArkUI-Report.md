@@ -49,11 +49,11 @@ The truth is they just don't have the capability to develop their own IDE, so th
 
 First is the code formatting issue, which I've already covered above, so let me talk about something else.
 
-There are way too few plugins. Since my most commonly used code editor is VSCode - actually in my mind this thing is pretty much equivalent to an IDE - I naturally want to use VSCode keybindings. Both IntelliJ IDEA and Android Studio have VSCode KeyMap plugins that can import keybindings from VSCode, but DevEco Studio just doesn't have it.
+There are way too few plugins. Since my most commonly used code editor is VS Code - actually in my mind this thing is pretty much equivalent to an IDE - I naturally want to use VS Code keybindings. Both IntelliJ IDEA and Android Studio have VS Code KeyMap plugins that can import keybindings from VS Code, but DevEco Studio just doesn't have it.
 
-Does HUAWEI not have anyone using VSCode at all... Wait, Xcode doesn't have it either. Case solved.
+Does HUAWEI not have anyone using VS Code at all... Wait, Xcode doesn't have it either. Case solved.
 
-Code completion is a mess, absolutely terrible. It feels like the code completion doesn't consider the context at all - that is, what type of thing should be filled at the cursor's current position, what can be filled by default - to suggest completion content. In contrast, original TypeScript's code completion in VSCode is the opposite extreme, overly dependent on context to the point where sometimes the result I want isn't in the completion suggestions.
+Code completion is a mess, absolutely terrible. It feels like the code completion doesn't consider the context at all - that is, what type of thing should be filled at the cursor's current position, what can be filled by default - to suggest completion content. In contrast, original TypeScript's code completion in VS Code is the opposite extreme, overly dependent on context to the point where sometimes the result I want isn't in the completion suggestions.
 
 Localization is inadequate. Logically speaking, this is a domestic company's software and localization should be done better, but many places aren't translated - some might say an all-English interface is better, developers should get more exposure to English, but, ~~I don't understand English~~ I prefer to stay in a more familiar environment.
 

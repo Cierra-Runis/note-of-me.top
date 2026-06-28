@@ -70,20 +70,20 @@ public void match(String input) {
 
 If we use regular expressions, this program could be more concise - of course, for command-line programs like this, there are corresponding libraries such as [Picocli](https://github.com/remkop/picocli), [JCommander](https://github.com/cbeust/jcommander), and Kotlin-only [Clikt](https://ajalt.github.io/clikt), etc.
 
-<!-- 后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。 -->
+<!-- 后来发现，VS Code 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。 -->
 
-I later found that VSCode also supports regular expressions, and I used regular expressions to clean up the content I wanted when writing Python web scrapers. Now, [Mercurius](https://github.com/Cierra-Runis/mercurius) also supports using regular expressions to search diary content. I have to say that regular expressions are very powerful.
+I later found that VS Code also supports regular expressions, and I used regular expressions to clean up the content I wanted when writing Python web scrapers. Now, [Mercurius](https://github.com/Cierra-Runis/mercurius) also supports using regular expressions to search diary content. I have to say that regular expressions are very powerful.
 
 But regular expressions can also have some pitfalls. For example, in the video [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531), a small regular expression `.*.*=.*` caused the entire Cloudflare to crash.
 
 ## Vim
 
-I'm still using VSCode for now, and it's quite difficult for me to fully switch to Vim:
+I'm still using VS Code for now, and it's quite difficult for me to fully switch to Vim:
 
 1. Vim has a steep learning curve.
 2. Vim runs in the shell, so how would I operate some of my real-time preview content, such as PDFs, web pages, and apps?
 
-Giving up the mouse is still not very realistic, but I do want to speed up my programming, so maybe the Vim plugin for VSCode can help?
+Giving up the mouse is still not very realistic, but I do want to speed up my programming, so maybe the Vim plugin for VS Code can help?
 
 But how different would it be from using real Vim? Do I need to learn Vim before using the Vim plugin?
 

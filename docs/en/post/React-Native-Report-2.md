@@ -11,7 +11,7 @@ id: YRJEQM
 
 ## 语言不行？
 
-几个月下来，对 [TypeScript](https://www.typescriptlang.org) 的了解更深了，能基本使用 TypeScript 了，像是它的解构，挺有趣的。自己也用 TypeScript 开发了一个 [VSCode 插件](https://github.com/Cierra-Runis/based_vscode_extension)，可以说是这个项目后才对 TypeScript 有了好感。
+几个月下来，对 [TypeScript](https://www.typescriptlang.org) 的了解更深了，能基本使用 TypeScript 了，像是它的解构，挺有趣的。自己也用 TypeScript 开发了一个 [VS Code 插件](https://github.com/Cierra-Runis/based_vscode_extension)，可以说是这个项目后才对 TypeScript 有了好感。
 
 有关它的类型，我还是不太能看懂，特别是我想要知道一个类型到底是怎样的时候，也就是翻源码的时候，要在很多联合类型直接跳转，这挺麻烦的。而之前也谈过，[Dart](https://dart.dev) 很直观，没有这么绕 —— 但我也确实想要 Dart 加入联合类型就是了。
 
@@ -55,13 +55,13 @@ Lint 提示确实还是不太好，有些属性名和原来的 CSS 属性名还�
 
 对，今天开个第三节继续吐槽 React Native。
 
-我是使用 VSCode 和 React Native Cli 进行开发的，还使用了 Microsoft 开发的一个插件。
+我是使用 VS Code 和 React Native Cli 进行开发的，还使用了 Microsoft 开发的一个插件。
 
-首先恶心人的地方是启动，不能 <kbd>F5</kbd> 启动（或者说我不知道怎么配置），要 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> 在面板里选择。这还行，但接下来我人晕了，VSCode 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VSCode Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
+首先恶心人的地方是启动，不能 <kbd>F5</kbd> 启动（或者说我不知道怎么配置），要 <KbdGroup><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></KbdGroup> 在面板里选择。这还行，但接下来我人晕了，VS Code 没有进入调试模式 —— 就是底下状态条没黄，这说明它没有 VS Code Debugger，这？（刚找到篇 [文章](https://blog.logrocket.com/debugging-react-native-vs-code) 说有插件能，等我用了之后再补充）
 
 我出错了不知道具体错误在哪，鼠标不会自动跳到出问题的代码去，
 
-而且我这玩意不能热重启，我只能重载 VSCode 再启动 —— 而热更新也是，很多时候我都不知道它有没有更新，特别是在出 bug 后，保持黑屏，还得自己重启。
+而且我这玩意不能热重启，我只能重载 VS Code 再启动 —— 而热更新也是，很多时候我都不知道它有没有更新，特别是在出 bug 后，保持黑屏，还得自己重启。
 
 ## 结尾
 

@@ -33,7 +33,7 @@ However, according to [this comment](https://github.com/sparanoid/chinese-copywr
 
 For example, GitHub - when officially used, it's always **G**it**H**ub, never github or gitHub.
 
-Xcode as well, the c is lowercase, while VSCode has an uppercase C.
+Xcode as well, the c is lowercase, while VS Code has an uppercase C.
 
 Of course, in programming there's a naming convention like `camelCase`, so what would GitHub correspond to? Is it `github` or `gitHub`?
 

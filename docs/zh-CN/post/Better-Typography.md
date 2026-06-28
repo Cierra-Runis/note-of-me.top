@@ -35,7 +35,7 @@ id: KNJISM
 
 例如 GitHub，官方使用该词时都是 **G**it**H**ub，从来不会使用什么 github、gitHub。
 
-Xcode 也是，c 是小写的，而 VSCode，C 是大写的。
+Xcode 也是，c 是小写的，而 VS Code，C 是大写的。
 
 当然，编程里有 `camelCase` 这样的命名规范，那么这时 GitHub 对应什么？是 `github` 还是 `gitHub` 呢？
 

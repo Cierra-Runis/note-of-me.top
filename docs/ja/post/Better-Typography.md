@@ -35,7 +35,7 @@ id: KNJISM
 
 例えば GitHub の場合、公式がこの言葉を使用する際は常に **G**it**H**ub であり、github や gitHub などを使用することは決してない。
 
-Xcode も同様で、c は小文字だが、VSCode では C が大文字である。
+Xcode も同様で、c は小文字だが、VS Code では C が大文字である。
 
 もちろん、Programming には `camelCase` のような命名規則があるが、その場合 GitHub は何に対応するのか？`github` なのか、それとも `gitHub` なのか？
 

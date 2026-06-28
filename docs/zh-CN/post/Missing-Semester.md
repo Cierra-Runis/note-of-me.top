@@ -70,18 +70,18 @@ public void match(String input) {
 
 如果使用正则表达式，那么这个程序可能会更加简洁 —— 当然，像这种命令行程序都是有对应的包的，如 [Picocli](https://github.com/remkop/picocli)、[JCommander](https://github.com/cbeust/jcommander) 以及 Kotlin Only 的 [Clikt](https://ajalt.github.io/clikt) 等。
 
-后来发现，VSCode 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
+后来发现，VS Code 也支持正则表达式，自己也在写 Python 爬虫时用正则表达式来清洗出想要的内容，到现在 [Mercurius](https://github.com/Cierra-Runis/mercurius) 也支持使用正则表达式搜索日记内容，不得不说正则表达式非常强大。
 
 但正则表达式有时也有一些坑，比如 [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531) 这个视频，一个小小的 `.*.*=.*` 的正则表达式干烂了整个 Cloudflare。
 
 ## Vim
 
-我目前还是使用 VSCode 的啦，让我完全转向 Vim 还是挺困难的：
+我目前还是使用 VS Code 的啦，让我完全转向 Vim 还是挺困难的：
 
 1. Vim 的上手难度高
 2. Vim 跑在 Shell 里，那我一些实时预览的内容，如 PDF、网页、APP 该如何操作？
 
-丢掉鼠标还是不那么现实的，但我确实想加快自己的编程速度，可能 VSCode 的 Vim 插件能帮忙？
+丢掉鼠标还是不那么现实的，但我确实想加快自己的编程速度，可能 VS Code 的 Vim 插件能帮忙？
 
 但这和真正的 Vim 又会有多大的区别呢？是否需要先学习 Vim 在使用 Vim 插件呢？
 

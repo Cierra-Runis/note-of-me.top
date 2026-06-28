@@ -70,18 +70,18 @@ public void match(String input) {
 
 正規表現を使えば、この Program はもっと簡潔になるかもしれません —— もちろん、こういったコマンドライン Program 用のパッケージはちゃんとあります。例えば [Picocli](https://github.com/remkop/picocli)、[JCommander](https://github.com/cbeust/jcommander)、Kotlin 専用の [Clikt](https://ajalt.github.io/clikt) などです。
 
-その後、VSCode も正規表現をサポートしていることに気づき、Python のクローラーを書くときも正規表現を使って欲しい内容を抽出しました。今では [Mercurius](https://github.com/Cierra-Runis/mercurius) も正規表現を使って日記の内容を検索できます。正規表現は本当に強力だと言わざるを得ません。
+その後、VS Code も正規表現をサポートしていることに気づき、Python のクローラーを書くときも正規表現を使って欲しい内容を抽出しました。今では [Mercurius](https://github.com/Cierra-Runis/mercurius) も正規表現を使って日記の内容を検索できます。正規表現は本当に強力だと言わざるを得ません。
 
 ただ、正規表現には時々落とし穴もあります。例えば [「熟肉」非常慢代码来自 Cloudflare, 使整个公司瘫痪](https://www.bilibili.com/video/av1350874531) というビデオでは、小さな `.*.*=.*` の正規表現が Cloudflare 全体をダウンさせてしまいました。
 
 ## Vim
 
-僕は今でも VSCode を使っています。完全に Vim に移行するのはまだまだ難しいです:
+僕は今でも VS Code を使っています。完全に Vim に移行するのはまだまだ難しいです:
 
 1. Vim の習得難易度が高い
 2. Vim は Shell 上で動作するので、PDF、ウェブページ、App など、リアルタイムプレビューのコンテンツをどう操作すればいいのか？
 
-マウスを捨てるのはまだ現実的ではないですが、確かに自分のコーディングスピードを上げたいとは思っています。たぶん VSCode の Vim プラグインが助けてくれるかな？
+マウスを捨てるのはまだ現実的ではないですが、確かに自分のコーディングスピードを上げたいとは思っています。たぶん VS Code の Vim プラグインが助けてくれるかな？
 
 でもこれって本物の Vim とどれくらい違うんでしょうか？Vim プラグインを使う前に Vim を学ぶ必要があるんでしょうか？
 
