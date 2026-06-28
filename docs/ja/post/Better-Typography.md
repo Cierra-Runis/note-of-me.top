@@ -9,7 +9,7 @@ id: KNJISM
 
 僕は、自分が書いたものが丁寧に設計されたものであり、他人に見られたときに心地よく感じてもらえるようにしたいと思っているので、関連する知識を調べたり学んだりしている。
 
-そこで、以下のソースからいくつかのルールを抜粋し、補足する：
+そこで、以下のソースからいくつかの規則を抜粋し、補足する：
 
 - [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
 - [Requirements for Chinese Text Layout - 中文排版需求](https://www.w3.org/International/clreq)

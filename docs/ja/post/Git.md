@@ -41,7 +41,7 @@ This makes the authentication logic reusable across multiple routes
 and reduces duplication of code.
 ```
 
-タイトルの大文字小文字に関する主なルールは以下の通り：
+タイトルの大文字小文字に関する主な規則は以下の通り：
 
 - 最初の文字を大文字に：タイトルの最初と最後の単語は品詞に関わらず大文字にする
 - 実詞を大文字に：名詞、代名詞、動詞、形容詞、副詞などはすべて大文字にする
