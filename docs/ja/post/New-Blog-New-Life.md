@@ -24,6 +24,6 @@ id: QGHCIF
 
 より軽量なフレームワークに切り替えたいと思い、一度は [Docusaurus](https://docusaurus.io) を考えたが、インターフェースが少し醜い…… いろいろ回ってみて、最終的に [VitePress](https://vitepress.dev) を選択した。インターフェースは非常にシンプルで、ビルド速度も非常に速く、更新停滞も気にせず、多言語サポートも良好だ。
 
-元のブログの MIDI アプリケーションも別のプロジェクトに移動され、別のサイト [https://app.note-of-me.top](https://app.note-of-me.top) でアクセスできるようになり、このサイトはブログコンテンツに専念することになる。
+元のブログの MIDI Application も別のプロジェクトに移動され、別のサイト [https://app.note-of-me.top](https://app.note-of-me.top) でアクセスできるようになり、このサイトはブログコンテンツに専念することになる。
 
 とにかく、そんな感じです。

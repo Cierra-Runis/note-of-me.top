@@ -9,7 +9,7 @@ id: TPUGYY
 
 ## iCloud と Obsidian
 
-具体的には、Apple が Windows 向けに [クラウド同期ツール](https://www.microsoft.com/store/productId/9PKTQ5699M62) をリリースしていて、インストールしてログインすれば、パソコンで iPad のファイル管理アプリと同期された iCloud ドライブの項目が見られるようになる。iPad の Obsidian アプリで iCloud にボールトを作成すると、iCloud ドライブに Obsidian フォルダが現れ、アプリの設定やファイルの作成・編集・削除がすぐに同期される。もちろん、iCloud がたまに調子悪くてファイルを宙ぶらりんにしちゃうこともなくはない 😡。
+具体的には、Apple が Windows 向けに [クラウド同期ツール](https://www.microsoft.com/store/productId/9PKTQ5699M62) をリリースしていて、インストールしてログインすれば、パソコンで iPad のファイル管理 App と同期された iCloud ドライブの項目が見られるようになる。iPad の Obsidian App で iCloud にボールトを作成すると、iCloud ドライブに Obsidian フォルダが現れ、App の設定やファイルの作成・編集・削除がすぐに同期される。もちろん、iCloud がたまに調子悪くてファイルを宙ぶらりんにしちゃうこともなくはない 😡。
 
 個人的には、iCloud に毎月 <ruby>CNY 6<rt>約 JPY 120</rt></ruby> を払うのはすごく価値があると思う。安くて使いやすいなら価値がある ―― だからこの同期スペースを無駄にはできない。僕は元々パソコンに溜め込んでいた写真や音楽、ファイルを全部アップロードして、開発ツールをたくさん入れて重くなったパソコンの負担を軽減した。
 

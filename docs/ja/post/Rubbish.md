@@ -17,7 +17,7 @@ id: HZKMCH
 |      [GitHub Copilot]       |                        AI コード生成                         |       [GitHub]       |     世界最大のコードホスティングプラットフォーム     |
 |            [Vue]            |                    Web 開発フレームワーク                    |        [Vite]        |                     ビルドツール                     |
 |      [Android Studio]       |                         Android 開発                         |       [XCode]        |             Apple エコシステム向けの IDE             |
-|       [DevEco Studio]       |                     HarmonyOS アプリ IDE                     |       [Unity]        |                    ゲームエンジン                    |
+|       [DevEco Studio]       |                      HarmonyOS App IDE                       |       [Unity]        |                    ゲームエンジン                    |
 |         [団結引擎]          |                         Unity 中国版                         |         [Qt]         |     C++ クロスプラットフォーム開発フレームワーク     |
 |         [Electron]          |     Web ベースのクロスプラットフォーム開発フレームワーク     |       [Tauri]        | Web ベースのクロスプラットフォーム開発フレームワーク |
 |           [React]           |                Web 開発 JavaScript ライブラリ                |       [Cocos]        |                  国産ゲームエンジン                  |
@@ -27,8 +27,8 @@ id: HZKMCH
 |          [Angular]          |                React、Vue と並ぶ第三の選択肢                 |     [Bitbucket]      |          コードホスティングプラットフォーム          |
 |        [微信小程序]         |                    WeChat ミニプログラム                     |      [Chromium]      |            オープンソースブラウザエンジン            |
 | [Firefox Developer Edition] |                   Firefox ブラウザ開発者版                   |       [NervJS]       |      JD.com の React 風 Web 開発フレームワーク       |
-|           [Taro]            |    React/Vue/Nerv などをサポートしたミニプログラム開発用     |      [Reqable]       |            Postman 風 API デバッグアプリ             |
-|           [Gitee]           | ユーモラスな国産 GitHub 風コードホスティングプラットフォーム |      [Flutter]       | Dart クロスプラットフォームアプリ開発フレームワーク  |
+|           [Taro]            |    React/Vue/Nerv などをサポートしたミニプログラム開発用     |      [Reqable]       |             Postman 風 API デバッグ App              |
+|           [Gitee]           | ユーモラスな国産 GitHub 風コードホスティングプラットフォーム |      [Flutter]       |  Dart クロスプラットフォーム App 開発フレームワーク  |
 |            [npm]            |          Node パッケージマネージャー、依存関係管理           |      [Firebase]      |      Google のワンストップバックエンドサービス       |
 |          [Gradle]           |             Java/Kotlin/Android 向けビルドツール             |      [CODEPEN]       |        Web フロントエンドコード設計共有サイト        |
 |          [eclipse]          |                もうあまり使われなくなった IDE                |                      |                                                      |

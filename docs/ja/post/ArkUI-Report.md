@@ -9,11 +9,11 @@ id: LVYMSF
 
 ## ArkTS 言語
 
-> [ArkTS](https://developer.huawei.com/consumer/cn/arkts) は鴻蒙エコシステムのアプリケーション開発言語です。
+> [ArkTS](https://developer.huawei.com/consumer/cn/arkts) は鴻蒙エコシステムの Application 開発言語です。
 >
 > [TypeScript](https://www.typescriptlang.org) の基本的な構文スタイルを保ちながら、さらに仕様を通じて静的チェックと解析を強化し、プログラム実行前の開発段階でより多くのエラーを検出し、コードの堅牢性を向上させ、より良い実行パフォーマンスを実現します。
 >
-> 同時に、宣言的 UI パラダイム、状態管理サポートなどの機能を提供し、開発者がより簡潔で自然な方法で高性能アプリケーションを開発できるようにします。
+> 同時に、宣言的 UI パラダイム、状態管理サポートなどの機能を提供し、開発者がより簡潔で自然な方法で高性能 Application を開発できるようにします。
 
 公式サイトではこう言っているが、僕はただ「うえぇ...」としか言えない。おそらく HUAWEI には独自の言語を作る能力がないのだろう、結局 TypeScript を Swift や Kotlin と継ぎ接ぎした継ぎ接ぎモンスターにしてしまった。僕が嫌いな書き方、例えば無名関数の `.bind(this)` や、テンプレート文字列でバッククォート `` const str = `Show: ${another} value` `` を使う時も `this` を付けなければならない、これは絶対に言語実装の制限によるものだろう。
 

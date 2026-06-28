@@ -13,9 +13,9 @@ id: DZXTHU
 
 そう、大学の授業では [jQuery](https://jquery.com) を使って HTML 要素を操作することを教えられたけど、なんでまだこれ死んでないの？めっちゃ疲れるじゃん？古代の遺物じゃん？
 
-それに、React が操作するのは [DOM](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Introduction) ノードで、`<Link>` Component を通じて、「ページ遷移」時に実際にページを遷移することなく、新しく取得した情報に基づいて現在のページを更新できる。直感的に言えば、ブラウザの左上に読み込み中のぐるぐるアイコンが表示されなくなり、シングルページアプリケーションを可能にしているんだ。
+それに、React が操作するのは [DOM](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Introduction) ノードで、`<Link>` Component を通じて、「ページ遷移」時に実際にページを遷移することなく、新しく取得した情報に基づいて現在のページを更新できる。直感的に言えば、ブラウザの左上に読み込み中のぐるぐるアイコンが表示されなくなり、Single Page Application を可能にしているんだ。
 
-[シングルページアプリケーション](https://developer.mozilla.org/ja/docs/Glossary/SPA) って何かも説明する必要あるかな（？）
+[Single Page Application](https://developer.mozilla.org/ja/docs/Glossary/SPA) って何かも説明する必要あるかな（？）
 
 ## すごくいいルーティング
 

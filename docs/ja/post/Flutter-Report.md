@@ -7,7 +7,7 @@ id: QWZRNF
 
 ## Flutter の紹介
 
-[Flutter](https://flutter.dev) は Google が提供しオープンソース化したモバイルアプリケーション開発フレームワークで、クロスプラットフォーム、高忠実度、高パフォーマンスを特徴としている。開発者は Dart 言語でアプリを開発でき、一つのコードベースで iOS と Android の両プラットフォームで同時に動作させることができる。Flutter は豊富な Component とインターフェースを提供しており、開発者は素早く Flutter に Native 拡張を追加できる。
+[Flutter](https://flutter.dev) は Google が提供しオープンソース化したモバイル Application 開発フレームワークで、クロスプラットフォーム、高忠実度、高パフォーマンスを特徴としている。開発者は Dart 言語で App を開発でき、一つのコードベースで iOS と Android の両プラットフォームで同時に動作させることができる。Flutter は豊富な Component とインターフェースを提供しており、開発者は素早く Flutter に Native 拡張を追加できる。
 
 ここによく使う資料を記録しておく：
 
@@ -98,7 +98,7 @@ private static final Map ABI_VERSION = [
 
 ## Vivo 系スマホで Flutter プログラムをデバッグできない
 
-Vivo シリーズのスマホが Origin3 にアップグレードした後、Flutter アプリのデバッグが起動ページで止まり、エラーも一切表示されないことがわかった。詳細は [Github Issue](https://github.com/flutter/flutter/issues/117019) を参照。[こちらのリンク](https://blog.csdn.net/qq910689331/article/details/128790897) から簡略化した。
+Vivo シリーズのスマホが Origin3 にアップグレードした後、Flutter App のデバッグが起動ページで止まり、エラーも一切表示されないことがわかった。詳細は [Github Issue](https://github.com/flutter/flutter/issues/117019) を参照。[こちらのリンク](https://blog.csdn.net/qq910689331/article/details/128790897) から簡略化した。
 
 答えは Vivo がバグってログまで隠してしまったため、僕たちは `IMEI 1` コードを Vivo 公式に提供して認証を受ける必要がある
 
