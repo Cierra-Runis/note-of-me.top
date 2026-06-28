@@ -7,7 +7,7 @@ id: TELMXD
 
 ## Swift 言語
 
-[Swift](https://developer.apple.com/swift) は [Apple](https://www.apple.com) が開発したプログラミング言語である —— [某社](https://www.huawei.com) の [ArkTS 言語](https://developer.huawei.com/consumer/cn/arkts) のように [TypeScript](https://www.typescriptlang.org) の皮を被っただけのものとは違う —— 使用範囲も非常に狭く、自社製品の開発にしか使われていない。
+[Swift](https://developer.apple.com/swift) は [Apple](https://www.apple.com) が開発した Programming 言語である —— [某社](https://www.huawei.com) の [ArkTS 言語](https://developer.huawei.com/consumer/cn/arkts) のように [TypeScript](https://www.typescriptlang.org) の皮を被っただけのものとは違う —— 使用範囲も非常に狭く、自社製品の開発にしか使われていない。
 
 Swift と [Kotlin](https://kotlinlang.org) は非常に似ており、かなり奇妙な構文をいくつか革新している。例えば:
 

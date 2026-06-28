@@ -32,7 +32,7 @@ id: FDPJMN
 |                                  |             [KALPA]             |       iPad       |
 |                                  |            [Lanota]             |       iPad       |
 |                                  |           [MUSE DASH]           |       iPad       |
-|                                  |            [maimai]             |  　 アーケード   |
+|                                  |            [maimai]             |    アーケード    |
 |                                  |           [Malody V]            |       iPad       |
 |                                  |            [Milthm]             |       iPad       |
 |                                  |            [Orzmic]             |       iPad       |
@@ -49,7 +49,7 @@ id: FDPJMN
 |                                  |             [osu!]              |  Windows、iPad   |
 |                                  |           [osu!droid]           |     Android      |
 |                                  |           [polytone]            |       iPad       |
-|                                  |            [舞立方]             |   　アーケード   |
+|                                  |            [舞立方]             |    アーケード    |
 | Interactive Fiction/Visual Novel |     [Minecraft Story Mode]      |     Windows      |
 |                                  | [コルヌ・コピア 不思議の住む街] |     Windows      |
 |                                  |          [完美的一天]           |     Windows      |
@@ -105,7 +105,7 @@ id: FDPJMN
 
 ## テクノロジー
 
-## プログラミング
+## Programming
 
 ![Most Used Languages](https://github-readme-stats-seven-xi-24.vercel.app/api/top-langs/?username=Cierra-Runis&show_icons=true&title_color=ad80ff&icon_color=ff8000&text_color=9f9f9f&bg_color=22272E00&layout=compact&langs_count=10&border_radius=16&size_weight=1&count_weight=0&hide=cmake,c%2B%2B&exclude_repo=github-readme-stats,LiteLoaderQQNT,qweather_icons)
 

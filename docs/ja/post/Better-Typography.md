@@ -37,7 +37,7 @@ id: KNJISM
 
 Xcode も同様で、c は小文字だが、VSCode では C が大文字である。
 
-もちろん、プログラミングには `camelCase` のような命名規則があるが、その場合 GitHub は何に対応するのか？`github` なのか、それとも `gitHub` なのか？
+もちろん、Programming には `camelCase` のような命名規則があるが、その場合 GitHub は何に対応するのか？`github` なのか、それとも `gitHub` なのか？
 
 興味のある読者は [camelCase 英語版 Wikipedia](https://en.m.wikipedia.org/wiki/Camel_case) の Programming and coding の節を参照されたい。
 
