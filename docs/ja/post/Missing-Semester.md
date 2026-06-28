@@ -43,7 +43,7 @@ Bash は Unix システムのデフォルトの Shell で、そのスクリプ�
 
 正規表現は文字列をマッチングするためのパターンで、検索エンジン、テキストエディタ、IDE など、多くの場所で使われています。
 
-Java を学び始めたばかりの頃、Minecraft のコマンドを模倣する Java プログラムを書いたのですが、まだ文字列の切り取りを使っていました：
+Java を学び始めたばかりの頃、Minecraft のコマンドを模倣する Java Program を書いたのですが、まだ文字列の切り取りを使っていました：
 
 ```Java
 // コマンドをマッチング
@@ -68,7 +68,7 @@ public void match(String input) {
 }
 ```
 
-正規表現を使えば、このプログラムはもっと簡潔になるかもしれません —— もちろん、こういったコマンドラインプログラム用のパッケージはちゃんとあります。例えば [Picocli](https://github.com/remkop/picocli)、[JCommander](https://github.com/cbeust/jcommander)、Kotlin 専用の [Clikt](https://ajalt.github.io/clikt) などです。
+正規表現を使えば、この Program はもっと簡潔になるかもしれません —— もちろん、こういったコマンドライン Program 用のパッケージはちゃんとあります。例えば [Picocli](https://github.com/remkop/picocli)、[JCommander](https://github.com/cbeust/jcommander)、Kotlin 専用の [Clikt](https://ajalt.github.io/clikt) などです。
 
 その後、VSCode も正規表現をサポートしていることに気づき、Python のクローラーを書くときも正規表現を使って欲しい内容を抽出しました。今では [Mercurius](https://github.com/Cierra-Runis/mercurius) も正規表現を使って日記の内容を検索できます。正規表現は本当に強力だと言わざるを得ません。
 

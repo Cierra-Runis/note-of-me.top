@@ -96,7 +96,7 @@ private static final Map ABI_VERSION = [
 
 **_注意：Flutter のバージョンを更新した場合は、この `flutter.groovy` ファイルを再度修正する必要がある_**
 
-## Vivo 系スマホで Flutter プログラムをデバッグできない
+## Vivo 系スマホで Flutter Program をデバッグできない
 
 Vivo シリーズのスマホが Origin3 にアップグレードした後、Flutter App のデバッグが起動ページで止まり、エラーも一切表示されないことがわかった。詳細は [Github Issue](https://github.com/flutter/flutter/issues/117019) を参照。[こちらのリンク](https://blog.csdn.net/qq910689331/article/details/128790897) から簡略化した。
 

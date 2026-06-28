@@ -25,9 +25,9 @@ id: HZKMCH
 |          [七牛云]           |    クラウドストレージ、クラウドコンピューティングサービス    |      [Codeberg]      |          コードホスティングプラットフォーム          |
 |      [Stack Overflow]       |                    開発質問サポートサイト                    |      [Node.js]       |             JavaScript バックエンド技術              |
 |          [Angular]          |                React、Vue と並ぶ第三の選択肢                 |     [Bitbucket]      |          コードホスティングプラットフォーム          |
-|        [微信小程序]         |                    WeChat ミニプログラム                     |      [Chromium]      |            オープンソースブラウザエンジン            |
+|        [微信小程序]         |                     WeChat ミニ Program                      |      [Chromium]      |            オープンソースブラウザエンジン            |
 | [Firefox Developer Edition] |                   Firefox ブラウザ開発者版                   |       [NervJS]       |      JD.com の React 風 Web 開発フレームワーク       |
-|           [Taro]            |    React/Vue/Nerv などをサポートしたミニプログラム開発用     |      [Reqable]       |             Postman 風 API デバッグ App              |
+|           [Taro]            |     React/Vue/Nerv などをサポートしたミニ Program 開発用     |      [Reqable]       |             Postman 風 API デバッグ App              |
 |           [Gitee]           | ユーモラスな国産 GitHub 風コードホスティングプラットフォーム |      [Flutter]       |  Dart クロスプラットフォーム App 開発フレームワーク  |
 |            [npm]            |          Node パッケージマネージャー、依存関係管理           |      [Firebase]      |      Google のワンストップバックエンドサービス       |
 |          [Gradle]           |             Java/Kotlin/Android 向けビルドツール             |      [CODEPEN]       |        Web フロントエンドコード設計共有サイト        |

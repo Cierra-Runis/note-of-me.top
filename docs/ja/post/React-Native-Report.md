@@ -13,17 +13,17 @@ id: HTOYGW
 
 ## 言語がダメ
 
-まず、React Native は JavaScript または TypeScript 言語でプログラムを書くが、前者の JavaScript は僕が最も不快に感じる言語だ —— PHP もかなりゴミだけど —— 変数の型は散々たるもので、動的型付けは Python にもあるが、Python は僕が小さなものを書くために使うだけで、それでプログラム開発をしろと言われても…… 書いたことがないわけではないが、WordCloud は Python で書いたが、体験は非常に悪かった。それに加えて、`==` と `===` の区別があるのが非常に嫌いだ。暗黙の型変換は悪い文明だ。
+まず、React Native は JavaScript または TypeScript 言語で Program を書くが、前者の JavaScript は僕が最も不快に感じる言語だ —— PHP もかなりゴミだけど —— 変数の型は散々たるもので、動的型付けは Python にもあるが、Python は僕が小さなものを書くために使うだけで、それで Program 開発をしろと言われても…… 書いたことがないわけではないが、WordCloud は Python で書いたが、体験は非常に悪かった。それに加えて、`==` と `===` の区別があるのが非常に嫌いだ。暗黙の型変換は悪い文明だ。
 
 後者の TypeScript については率直に言うと、僕には理解できない！
 
-Python で型チェックを追加する方法は、変数の後ろにコロンを付けて型を書くだけで、重要なのは、すべての変数に型を付けなくてもプログラムは動くということだ。つまり、lint で警告を出すだけのようなものだが、TypeScript は型を書くなら全部書かなければならず、型も直感的ではない。以前 React を学んでいたときに TypeScript に移行しようとしてもできなかった。その後、React にはあまり興味が持てなくなった。
+Python で型チェックを追加する方法は、変数の後ろにコロンを付けて型を書くだけで、重要なのは、すべての変数に型を付けなくても Program は動くということだ。つまり、lint で警告を出すだけのようなものだが、TypeScript は型を書くなら全部書かなければならず、型も直感的ではない。以前 React を学んでいたときに TypeScript に移行しようとしてもできなかった。その後、React にはあまり興味が持てなくなった。
 
 次に Flutter が使用する言語 Dart について話そう。これは僕が最も気に入って使っている言語だ。
 
 ![Most Used Languages](https://github-readme-stats-seven-xi-24.vercel.app/api/top-langs/?username=Cierra-Runis&show_icons=true&title_color=ad80ff&icon_color=ff8000&text_color=9f9f9f&bg_color=22272E00&layout=compact&langs_count=10&border_radius=16&size_weight=1&count_weight=0&hide=cmake,c%2B%2B&exclude_repo=github-readme-stats,LiteLoaderQQNT,qweather_icons)
 
-まず、Java に非常に似ていて、僕はかつて一定期間 Java プログラムを書いていたので、すぐに使いこなせた。そして Java と比べて、null 安全チェックがあり、つまり変数の型の後ろに疑問符を付けたときだけ `null` を代入できる。
+まず、Java に非常に似ていて、僕はかつて一定期間 Java Program を書いていたので、すぐに使いこなせた。そして Java と比べて、null 安全チェックがあり、つまり変数の型の後ろに疑問符を付けたときだけ `null` を代入できる。
 
 それに対して、Java にはそのような要件がないため、ヌルポインタエラーを投げやすい。その構文は Java よりも簡潔で、`new` キーワードはもはや必須ではない。動的型付けもあるので、動的型付けの利点も Dart にはある。
 

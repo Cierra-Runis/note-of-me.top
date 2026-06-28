@@ -11,7 +11,7 @@ id: LVYMSF
 
 > [ArkTS](https://developer.huawei.com/consumer/cn/arkts) は鴻蒙エコシステムの Application 開発言語です。
 >
-> [TypeScript](https://www.typescriptlang.org) の基本的な構文スタイルを保ちながら、さらに仕様を通じて静的チェックと解析を強化し、プログラム実行前の開発段階でより多くのエラーを検出し、コードの堅牢性を向上させ、より良い実行パフォーマンスを実現します。
+> [TypeScript](https://www.typescriptlang.org) の基本的な構文スタイルを保ちながら、さらに仕様を通じて静的チェックと解析を強化し、Program 実行前の開発段階でより多くのエラーを検出し、コードの堅牢性を向上させ、より良い実行パフォーマンスを実現します。
 >
 > 同時に、宣言的 UI パラダイム、状態管理サポートなどの機能を提供し、開発者がより簡潔で自然な方法で高性能 Application を開発できるようにします。
 
