@@ -27,7 +27,7 @@ id: YRJEQM
 
 これはやはり批判せざるを得ない。基礎 Component が少なすぎて、レイアウトを書くのが非常に面倒だ。
 
-そこで Component ライブラリを探して、[React Native Paper](https://reactnativepaper.com) というライブラリを見つけた。[Material Design 3](https://m3.material.io) のデザインを採用しているが、Flutter の `Scaffold` のようなものはない。まあ何とか使えるレベルだ。
+そこで Component ライブラリを探して、[React Native Paper](https://reactnativepaper.com) というライブラリを見つけた。[Material Design 3](https://m3.material.io) の設計を採用しているが、Flutter の `Scaffold` のようなものはない。まあ何とか使えるレベルだ。
 
 ### Component の修正
 

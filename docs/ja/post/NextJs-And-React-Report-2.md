@@ -15,7 +15,7 @@ id: PTXJTS
 
 今回 [Vercel](https://vercel.com) に移行したのは、単純に Next.js へのサポートが素晴らしいからだ —— なぜなら、Vercel は Next.js を作っている人たちが作ったものだからね。
 
-GitHub Pages と比べて遊びの幅が格段に広く、元の [Hexo フレームワーク](https://hexo.io)や [Butterfly テーマ](https://butterfly.js.org)に縛られることもなく、どこでも自分でデザインできる。
+GitHub Pages と比べて遊びの幅が格段に広く、元の [Hexo フレームワーク](https://hexo.io)や [Butterfly テーマ](https://butterfly.js.org)に縛られることもなく、どこでも自分で設計できる。
 
 Vercel は [Analytics](https://vercel.com/docs/analytics) と [Speed Insight](https://vercel.com/docs/speed-insights) 機能も提供しており、Web ページの状態を確認できて、すぐに使える非常に便利なものだ。
 
@@ -43,13 +43,13 @@ Vercel は [Analytics](https://vercel.com/docs/analytics) と [Speed Insight](ht
 
 少し話が逸れてしまったけど、UI の話に戻そう。
 
-僕は色のデザインが苦手だ。というか、使いたい色で美しいカラーパレットを見つけるのが非常に難しい：
+僕は色の設計が苦手だ。というか、使いたい色で美しいカラーパレットを見つけるのが非常に難しい：
 
 例えば虹に現れる七色について言えば、赤は Error、オレンジは Warning、緑は Success、青は Primary、紫は Secondary に使われる。しかし、オレンジを Primary にしたいと思った瞬間、美しく直感的なカラーパレットを設計するのが一気に難しくなる。
 
 背景色については、[One Dark Pro](https://binaryify.github.io/OneDark-Pro) の色を直接真似した。これは本当に美しいと思う。
 
-もう一点、僕はもう長い間ライトモードを使っていないので、デザインしたライトモード下の配色に対して、極度に不適応を感じている……
+もう一点、僕はもう長い間ライトモードを使っていないので、設計したライトモード下の配色に対して、極度に不適応を感じている……
 
 実はブログはダークモードだけサポートしたかったんだけど、~~自分に挑戦して、逆境から逆転~~ これも学習だと思うことにした —— 実際には light と dark の二つのモードに拘るべきではなく、マルチテーマの方がいいんじゃないか？
 
