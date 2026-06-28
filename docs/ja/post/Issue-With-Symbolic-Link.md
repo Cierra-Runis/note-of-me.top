@@ -9,13 +9,13 @@ id: GHDYWL
 
 以前の [クラウド同期及び Obsidian 関連](./Cloud-Drive-Sync-And-Obsidian-Related) の記事で触れたことだが：
 
-> あれこれ試した結果、やはりマイクロソフトの OneDrive に戻ってきた。cmd で次のコマンドを使用する：
+> あれこれ試して、やっぱり Microsoft の OneDrive に落ち着いた。cmd で次のコマンドを実行：
 >
 > ```Bash
 > mklink /d "D:\OneDrive\Songs" "D:\osu\Songs"`
 > ```
 >
-> リンクを作成することで、僕が個人的に設定した OneDrive フォルダ `D:\OneDrive`（デフォルトの場所は忘れてしまった）に `Songs` フォルダが現れる。中を見てみると、なんと `D:\osu\Songs` の中身が表示される。これで Windows 側は成功だ。
+> リンクを作成して、`D:\OneDrive` という僕が個人的に設定した OneDrive フォルダ（デフォルトがどこだったか忘れた）に `Songs` フォルダを出現させる。中を見たら、なんと `D:\osu\Songs` の中身じゃないか。これで Windows 側は成功。
 
 ここで使用したコマンドはシンボリックリンクを作成するもので、実際のドキュメントは後者の `D:\osu\Songs` に存在し、前者の `D:\OneDrive\Songs` は後者を指すシンボリックリンクとなる。注意点として、前者に元々 `Songs` フォルダが存在してはならず、存在する場合はシンボリックリンクを作成できない。
 

@@ -5,17 +5,17 @@ id: DZXTHU
 
 # Next.js と React 使用報告
 
-使用報告シリーズの新しい穴を掘ったぞ。今日話すのは [Next.js](https://nextjs.org/docs) 14 だ。なぜ 14 なのかって?僕が 14 から学んだからだよ、文句言うなよ。
+使用報告シリーズの新しい穴を掘ったぞ。今日話すのは [Next.js](https://nextjs.org/docs) 14 だ。なぜ 14 なのかって？僕が 14 から学んだからだよ、文句言うなよ。
 
 まず紹介しようか、最新の Next.js 公式サイトでは自分自身を「The React Framework for the Web」と称している。以前は「本番環境向け」という肩書きがついていた記憶があるけど、とにかく、これはフレームワークで、開発のあらゆる面を親切に考えてくれているんだ。
 
 そうだ、もしかしたら [React](https://react.dev/learn) についても紹介する必要があるかもしれない。React は自分自身を「JavaScript library」と紹介している。僕から見ると、それは従来の命令型 JavaScript 操作を、より簡潔な宣言型 Component に変えて、Component の再利用性を向上させているんだ。
 
-そう、大学の授業では [jQuery](https://jquery.com) を使って HTML 要素を操作することを教えられたけど、なんでまだこれ死んでないの?めっちゃ疲れるじゃん?古代の遺物じゃん?
+そう、大学の授業では [jQuery](https://jquery.com) を使って HTML 要素を操作することを教えられたけど、なんでまだこれ死んでないの？めっちゃ疲れるじゃん？古代の遺物じゃん？
 
 それに、React が操作するのは [DOM](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Introduction) ノードで、`<Link>` Component を通じて、「ページ遷移」時に実際にページを遷移することなく、新しく取得した情報に基づいて現在のページを更新できる。直感的に言えば、ブラウザの左上に読み込み中のぐるぐるアイコンが表示されなくなり、シングルページアプリケーションを可能にしているんだ。
 
-[シングルページアプリケーション](https://developer.mozilla.org/ja/docs/Glossary/SPA) って何かも説明する必要あるかな(?)
+[シングルページアプリケーション](https://developer.mozilla.org/ja/docs/Glossary/SPA) って何かも説明する必要あるかな（？）
 
 ## すごくいいルーティング
 
@@ -25,7 +25,7 @@ Next.js の大きなメリットは、ファイルシステムベースのルー
 
 ## Component 設計
 
-Next.js は React のフレームワークで、React 向けに開発されたすべての UI ライブラリが Next.js で使える(某 React Native とは違って(指差し.jpg))。
+Next.js は React のフレームワークで、React 向けに開発されたすべての UI ライブラリが Next.js で使える（某 React Native とは違って（指差し.jpg））。
 
 以前、謝さんと大会に参加した時は [MUI](https://mui.com) 傘下の [Joy UI](https://mui.com/joy-ui/getting-started) を使っていたけど、React のエコシステムはあまりにも広大で、Joy UI に限定されない。自分は [NextUI](https://nextui.org/docs/components/avatar) と [Ant Design](https://ant.design/components/overview-cn) に乗り換えた。前者は Next.js を開発している Vercel 社とは何の関係もないけど、UI がすごく似ているし、後者はアントグループが開発している。
 
@@ -55,7 +55,7 @@ React 自体が [状態管理](https://react.dev/learn/passing-data-deeply-with-
 
 具体的な深堀りはやっぱりプロジェクトを書くことに頼らないとね。原理は分からなくてもいいけど、使い方が分からないってのはダメでしょ —— まあ面接で聞かれるかもしれないけどね。
 
-Flutter にコミュニティの状態管理ソリューションがあるように、React にも他の状態管理ソリューションがある —— [Redux](https://redux.js.org)(実際 Flutter コミュニティにも [同名パッケージ](https://pub.dev/packages/redux) がある)けど、僕は使えない。
+Flutter にコミュニティの状態管理ソリューションがあるように、React にも他の状態管理ソリューションがある —— [Redux](https://redux.js.org)（実際 Flutter コミュニティにも [同名パッケージ](https://pub.dev/packages/redux) がある）けど、僕は使えない。
 
 それに謝さんによるとこれは複雑すぎるらしく、[zustand](https://github.com/pmndrs/zustand) を勧めてくれた。その時が来たら色々学んでみるつもりだ。
 
