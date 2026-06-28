@@ -63,7 +63,7 @@ id: PFVARR
 
 ### Wi-Fi 世代
 
-下表は [ウィキペディア](https://zh.wikipedia.org/wiki/Wi-Fi#%E4%B8%96%E4%BB%A3) から引用：
+下表は [Wikipedia](https://zh.wikipedia.org/wiki/Wi-Fi#%E4%B8%96%E4%BB%A3) から引用：
 
 | Wi-Fi 世代 | IEEE 規格  |    年    |   最大速度    | 周波数帯 GHz |
 | :--------: | :--------: | :------: | :-----------: | :----------: |
@@ -80,7 +80,7 @@ id: PFVARR
 
 [^4]: Wi-Fi アライアンスは 2024 年に Wi-Fi 7 デバイスの認証を開始したが、2025 年 1 月時点で Wi-Fi 7 はまだ正式に承認されていない
 
-[^5]: 中国語版ウィキペディアの値は古くなっており、英語版ウィキペディアを基準とする
+[^5]: 中国語版 Wikipedia の値は古くなっており、英語版 Wikipedia を基準とする
 
 [802.11n]: https://zh.wikipedia.org/wiki/IEEE_802.11n
 [802.11ac]: https://zh.wikipedia.org/wiki/IEEE_802.11ac
@@ -107,7 +107,7 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 - ほとんどのデバイスは MIMO 2×2、つまり 300 MB/s と 720 MB/s に対応
 - 変調方式については [この動画](https://www.bilibili.com/video/av113683137041105) を参照
 
-実は [Wi-Fi 6 英語版ウィキペディア](https://en.wikipedia.org/wiki/Wi-Fi_6#Rate_set) には単一空間ストリーム最大速度の表が提供されており、中国語版ウィキペディアよりも簡潔だ。
+実は [Wi-Fi 6 英語版 Wikipedia](https://en.wikipedia.org/wiki/Wi-Fi_6#Rate_set) には単一空間ストリーム最大速度の表が提供されており、中国語版 Wikipedia よりも簡潔だ。
 
 ### デュアルバンド統合と同時デュアルバンド
 
@@ -183,7 +183,7 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 | 拯救者 R7000P 2021 |         🌕192.168.2.75/24         |  IPv4 LAN プライベート IP   |
 | 拯救者 R7000P 2021 | 🌝fe80::98b4:7a27:b5c0:d12f%18/64 | IPv6 リンクローカルアドレス |
 
-- ここでなぜ %en1 で下が %9 なのかわからないが、[ウィキペディア](https://zh.wikipedia.org/wiki/IPv6#cite_ref-rfc4007_7-0) と [RFC 4007](https://datatracker.ietf.org/doc/html/rfc4007#section-11.2) によると、異なる OS で異なる命名規則がある。
+- ここでなぜ %en1 で下が %9 なのかわからないが、[Wikipedia](https://zh.wikipedia.org/wiki/IPv6#cite_ref-rfc4007_7-0) と [RFC 4007](https://datatracker.ietf.org/doc/html/rfc4007#section-11.2) によると、異なる OS で異なる命名規則がある。
 
 僕自身、Mac mini と拯救者 R7000P 2021 に Clash Verge 仮想ネットワークカードを起動および停止した状態で、`ping` コマンドを使用して以下の結果を得た：
 
