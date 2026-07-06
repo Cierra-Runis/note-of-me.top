@@ -74,13 +74,13 @@ Xcode 也是，c 是小写的，而 VS Code，C 是大写的。
 比如接下来的这句话：
 
 ```text
-我喜欢吃apple，不喜欢吃peach和orange。
+我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 
 加入空格：
 
 ```text
-我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
+我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 
 这里在每个单词左右两边都加了空格。
@@ -121,11 +121,11 @@ Xcode 也是，c 是小写的，而 VS Code，C 是大写的。
 
 ## 引号
 
-- [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
+- [直角引号「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
-大家好 ，我们是 `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`，今天来点大家想看的东西啊。
+大家好，我们是 `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`，今天来点大家想看的东西啊。
 
 ## 「或」
 

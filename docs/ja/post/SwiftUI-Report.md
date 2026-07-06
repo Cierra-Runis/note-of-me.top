@@ -9,7 +9,7 @@ id: TELMXD
 
 [Swift](https://developer.apple.com/swift) は [Apple](https://www.apple.com) が開発した Programming 言語である —— [某社](https://www.huawei.com) の [ArkTS 言語](https://developer.huawei.com/consumer/cn/arkts) のように [TypeScript](https://www.typescriptlang.org) の皮を被っただけのものとは違う —— 使用範囲も非常に狭く、自社製品の開発にしか使われていない。
 
-Swift と [Kotlin](https://kotlinlang.org) は非常に似ており、かなり奇妙な構文をいくつか革新している。例えば:
+Swift と [Kotlin](https://kotlinlang.org) は非常に似ており、かなり奇妙な構文をいくつか革新している。例えば：
 
 ```Dart
 // Dart
@@ -19,7 +19,7 @@ callFunction(parma1, (value) {
 });
 ```
 
-このように最後のパラメータが関数の場合、次のように書ける:
+このように最後のパラメータが関数の場合、次のように書ける：
 
 ```Swift
 // Swift
@@ -31,14 +31,14 @@ callFunction(parma1) { value in
 
 コードが見やすくなったかというと確かに見やすくはなったが、コードフォーマット時にこの見やすい形式に自動フォーマットしてくれないし、この形式で書こうとしてもコード補完がこの形式で補完してくれない。結局時間の無駄になってしまう。
 
-僕は Swift があまり好きではない。その理由は以下の通りだ:
+僕は Swift があまり好きではない。その理由は以下の通りだ：
 
 1. Swift 言語を使うには Xcode を使わなければならない
 2. Xcode にはコードフォーマッターが標準搭載されておらず、自分でプラグインを探す必要がある
 3. フォーマットスタイルが統一されていない
 4. ホットリロードがない（Dart は Flutter に依存せずにホットリロードができる）
 
-Swift 関連のプロジェクトを探していた時、Swift をホットリロード可能にする [InjectIII](https://github.com/johnno1962/InjectionIII) プロジェクトを見つけた。なぜ Apple は追加しないのだろうか?
+Swift 関連のプロジェクトを探していた時、Swift をホットリロード可能にする [InjectIII](https://github.com/johnno1962/InjectionIII) プロジェクトを見つけた。なぜ Apple は追加しないのだろうか？
 
 > [!TIP] 2024-07-05 12:50:35 訂正
 >
@@ -68,7 +68,7 @@ Xcode も Android Studio と同じようにプロジェクトビューがある�
 
 Flutter のような [Component Gallery](https://flutter.github.io/samples/web/material_3_demo) があって展示してくれればいいのに、でもそれがない。
 
-称賛すべき点は `Text` Component だ。Markdown を直接書いて URL リンクに変換できる:
+称賛すべき点は `Text` Component だ。Markdown を直接書いて URL リンクに変換できる：
 
 ```Swift
 Text("[byrdsaron@gmail.com](mailto:byrdsaron@gmail.com)")
