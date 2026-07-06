@@ -7,9 +7,9 @@ id: WKQYMU
 
 ## はじめに
 
-このウェブサイトを構築する際、僕は [Prettier](https://prettier.io) と [ESLint](https://eslint.org) の併用について混乱していた。関連資料を調べた後、プロジェクトの README.md に次のように記録した:
+このウェブサイトを構築する際、僕は [Prettier](https://prettier.io) と [ESLint](https://eslint.org) の併用について混乱していた。関連資料を調べた後、プロジェクトの README.md に次のように記録した：
 
-### Prettier の機能は ESLint と競合しているか?
+### Prettier の機能は ESLint と競合しているか？
 
 コード品質を向上させるためのツールを設定する過程で、僕はインポート、プロパティ、Tailwind CSS のクラス名のソートを処理するために、Prettier と ESLint のどちらを使うべきか迷っていた。
 

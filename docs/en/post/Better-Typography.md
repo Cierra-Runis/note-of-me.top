@@ -71,23 +71,29 @@ In most cases, adding spaces between half-width and full-width characters gives 
 
 Take this sentence for example:
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃apple，不喜欢吃peach和orange。
 ```
+<!-- autocorrect-enable -->
 
 Adding spaces:
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
 ```
+<!-- autocorrect-enable -->
 
 Here, spaces are added on both sides of each word.
 
 However, in reality, after apple and orange, there's a full-width punctuation mark, and this punctuation mark can visually be seen as a half-width symbol plus a space, so we can remove the trailing space.
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
+<!-- autocorrect-enable -->
 
 But for punctuation marks like "——" and "……" that occupy the full width, they do look a bit cramped now, so it's recommended to add spaces.
 
@@ -119,7 +125,7 @@ However, in code, slashes typically represent division and need spaces on both s
 
 ## Quotation Marks
 
-- [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
+- [直角引号「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 

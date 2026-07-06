@@ -170,7 +170,7 @@ Wi-Fi 6 と Wi-Fi 7 を例にすると、その最大速度の計算は以下の
 
 [マルチデバイス連携とカスタマイズ](./Multi-Device-Collaboration-And-Customize#ファイル転送) でも言及したが、IP の変化は不快なものだ。固定 IP はこの問題を解決できるが、一つはルーターへの管理権限が必要で、二つ目はルーターが IP を固定できる機能を持っている必要があり、さらに別の LAN に変わると、また再設定しなければならない。しかし、ローカルドメインにはこれらの問題がない。
 
-ローカルドメインはどうやって取得するのか？ macOS と Windows はともに `hostname` コマンドを使えばよく、結果はそれぞれ `Mac-mini.local` と `Cierra_Runis` だ。
+ローカルドメインはどうやって取得するのか？macOS と Windows はともに `hostname` コマンドを使えばよく、結果はそれぞれ `Mac-mini.local` と `Cierra_Runis` だ。
 
 もちろん、ここで [予約 IP アドレス](https://zh.wikipedia.org/zh-cn/%E4%BF%9D%E7%95%99IP%E5%9C%B0%E5%9D%80) と [IPv6 アドレス割り当て状況](http://comeround.cn/article/ipv6-address.html) のリンクを提供しておくので、自分で確認してほしい。[セキュリティ上の理由](http://hello.fe80.cn/pages/ipv6/i6.html) から、予約 IP アドレス以外のアドレスを公開しないでください —— IPv6 の割り当ては厳密に管理されているため、デバイスの位置を調べることができる。僕自身が調べると県レベルまで正確だ。
 

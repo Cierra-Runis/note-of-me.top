@@ -73,23 +73,29 @@ Xcode 也是，c 是小写的，而 VS Code，C 是大写的。
 
 比如接下来的这句话：
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃apple，不喜欢吃peach和orange。
 ```
+<!-- autocorrect-enable -->
 
 加入空格：
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
 ```
+<!-- autocorrect-enable -->
 
 这里在每个单词左右两边都加了空格。
 
 但这里实际上 apple 和 orange 后面接续的是一个全角的标点符号，且这个标点符号视觉上可以看作一个半角符号和一个空格，所以我们可以把后面的空格删去。
 
+<!-- autocorrect-disable -->
 ```text
 我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
+<!-- autocorrect-enable -->
 
 但像“——”“……”这种会占满整个宽度的标点符号，现在看来它们确实有点挤，建议加上空格。
 
@@ -121,11 +127,11 @@ Xcode 也是，c 是小写的，而 VS Code，C 是大写的。
 
 ## 引号
 
-- [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
+- [直角引号「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
-大家好 ，我们是 `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`，今天来点大家想看的东西啊。
+大家好，我们是 `“` `”` `‘` `’` `"` `'` `「` `」` `『` `』`，今天来点大家想看的东西啊。
 
 ## 「或」
 

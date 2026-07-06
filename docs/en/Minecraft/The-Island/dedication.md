@@ -4,7 +4,7 @@ order: 4
 
 # Dedication
 
-To Michelle and Henry，
+To Michelle and Henry,
 
 who keep me from being
 
