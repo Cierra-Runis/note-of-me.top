@@ -72,13 +72,13 @@ In most cases, adding spaces between half-width and full-width characters gives 
 Take this sentence for example:
 
 ```text
-我喜欢吃apple，不喜欢吃peach和orange。
+我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 
 Adding spaces:
 
 ```text
-我喜欢吃 apple ，不喜欢吃 peach 和 orange 。
+我喜欢吃 apple，不喜欢吃 peach 和 orange。
 ```
 
 Here, spaces are added on both sides of each word.
@@ -119,7 +119,7 @@ However, in code, slashes typically represent division and need spaces on both s
 
 ## Quotation Marks
 
-- [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
+- [直角引号「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 

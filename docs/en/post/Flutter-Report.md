@@ -7,7 +7,7 @@ id: QWZRNF
 
 ## Flutter 介绍
 
-[Flutter](https://flutter.dev) 是 Google 推出并开源的移动应用开发框架，主打跨平台、高保真、高性能。开发者可以通过 Dart 语言开发 App,一套代码同时运行在 iOS 和 Android 平台。Flutter 提供了丰富的组件、接口，开发者可以很快地为 Flutter 添加 Native 扩展。
+[Flutter](https://flutter.dev) 是 Google 推出并开源的移动应用开发框架，主打跨平台、高保真、高性能。开发者可以通过 Dart 语言开发 App，一套代码同时运行在 iOS 和 Android 平台。Flutter 提供了丰富的组件、接口，开发者可以很快地为 Flutter 添加 Native 扩展。
 
 在此记录些常用资料：
 

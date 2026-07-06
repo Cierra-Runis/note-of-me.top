@@ -74,13 +74,13 @@ Xcode も同様で、c は小文字だが、VS Code では C が大文字であ�
 例えば、次の文：
 
 ```text
-僕が好きなのはapple、嫌いのはpeachとorange。
+僕が好きなのは apple、嫌いのは peach と orange。
 ```
 
 スペースを追加：
 
 ```text
-僕が好きなのは apple 、嫌いのは peach と orange 。
+僕が好きなのは apple、嫌いのは peach と orange。
 ```
 
 ここでは各単語の左右両側にスペースを追加した。
@@ -121,7 +121,7 @@ Xcode も同様で、c は小文字だが、VS Code では C が大文字であ�
 
 ## 引用符
 
-- [直角引号 「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
+- [直角引号「」『』 源自哪里？](https://www.zhihu.com/question/19867627)
 - [请正确使用直角引号与西文引号](https://zhuanlan.zhihu.com/p/20151625)
 - [ASCII and Unicode quotation marks](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
 
