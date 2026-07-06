@@ -15,10 +15,10 @@ jobs:
 
       - name: Install AutoCorrect
         run: |
-          curl -sSL -o autocorrect.tar.gz \
+          curl -sSL -o /tmp/autocorrect.tar.gz \
             https://github.com/huacnlee/autocorrect/releases/download/v2.14.0/autocorrect-linux-amd64.tar.gz
-          tar -xzf autocorrect.tar.gz
-          sudo mv autocorrect /usr/local/bin/
+          tar -xzf /tmp/autocorrect.tar.gz
+          sudo mv /tmp/autocorrect /usr/local/bin/
 
       - name: AutoCorrect Fix
         run: autocorrect --fix .
