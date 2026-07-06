@@ -1,20 +1,32 @@
+name: AutoCorrect Fix
+
 on:
-  push: 
-    branches:
-      - main
+  push:
+    branches: [main]
 
 jobs:
-  auto_correct:
-    name: AutoCorrect
+  autocorrect:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v7
-      - name: AutoCorrect
-        uses: huacnlee/autocorrect-action@v2
-      - name: Report ReviewDog
-        if: failure()
-        uses: huacnlee/autocorrect-action@v2
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install AutoCorrect
+        run: |
+          curl -sSL -o autocorrect.tar.gz \
+            https://github.com/huacnlee/autocorrect/releases/download/v2.14.0/autocorrect-linux-amd64.tar.gz
+          tar -xzf autocorrect.tar.gz
+          sudo mv autocorrect /usr/local/bin/
+
+      - name: AutoCorrect Fix
+        run: autocorrect --fix .
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
         with:
-          reviewdog: true
+          commit-message: "style: autocorrect fix"
+          title: "style: AutoCorrect 自动修复"
+          branch: autocorrect/fix
+          delete-branch: true
