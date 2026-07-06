@@ -24,9 +24,9 @@ jobs:
         run: autocorrect --fix .
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "style: autocorrect fix"
-          title: "style: AutoCorrect 自动修复"
+          title: "style: AutoCorrect fix"
           branch: autocorrect/fix
           delete-branch: true
