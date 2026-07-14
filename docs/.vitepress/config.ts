@@ -7,8 +7,8 @@ import { withSidebar } from 'vitepress-sidebar';
 /// https://vp.yuy1n.io
 /// Enhance code blocks features for VitePress.
 import {
-  groupIconMdPlugin,
-  groupIconVitePlugin,
+    groupIconMdPlugin,
+    groupIconVitePlugin,
 } from 'vitepress-plugin-group-icons';
 
 // https://vitepress.dev/reference/site-config
@@ -163,5 +163,8 @@ export default withSidebar({
     followSymlinks: true,
     collapsed: true,
     collapseFromLevel: 2,
+    manualSortFileNameByPriority: [
+      "index.md",
+    ]
   },
 ]);

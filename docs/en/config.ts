@@ -89,5 +89,8 @@ export default withSidebar({
     followSymlinks: true,
     collapsed: true,
     collapseFromLevel: 2,
+    manualSortFileNameByPriority: [
+      "index.md",
+    ]
   },
 ]);
