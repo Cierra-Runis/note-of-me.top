@@ -5,7 +5,7 @@ id: AEBGAK
 
 # Nuxt and Vue Usage Report
 
-The usage report series has reached [Nuxt](https://nuxt.com) and [Vue](https://nuxt.com) at last! Let me talk a little about my experience and how it compares with [Next.js and React](./NextJs-And-React-Report.md).
+The usage report series has reached [Nuxt](https://nuxt.com) and [Vue.js](https://vuejs.org) at last! Let me talk a little about my experience and how it compares with [Next.js and React](./NextJs-And-React-Report.md).
 
 ## Vue
 

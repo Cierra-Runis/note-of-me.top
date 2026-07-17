@@ -5,7 +5,7 @@ id: AEBGAK
 
 # Nuxt 和 Vue 使用报告
 
-使用报告系列来到 [Nuxt](https://nuxt.com) 和 [Vue](https://nuxt.com) 啦！稍微谈谈使用感受和与 [Next.js 和 React](./NextJs-And-React-Report.md) 的对比。
+使用报告系列来到 [Nuxt](https://nuxt.com) 和 [Vue.js](https://vuejs.org) 啦！稍微谈谈使用感受和与 [Next.js 和 React](./NextJs-And-React-Report.md) 的对比。
 
 ## Vue
 

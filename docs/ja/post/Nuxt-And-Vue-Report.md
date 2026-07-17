@@ -5,7 +5,7 @@ id: AEBGAK
 
 # Nuxt と Vue 使用報告
 
-使用報告シリーズ、ついに [Nuxt](https://nuxt.com) と [Vue](https://nuxt.com) に到達したぞ。ちょっと使い心地と [Next.js と React](./NextJs-And-React-Report.md) との比較について話してみる。
+使用報告シリーズ、ついに [Nuxt](https://nuxt.com) と [Vue.js](https://vuejs.org) に到達したぞ。ちょっと使い心地と [Next.js と React](./NextJs-And-React-Report.md) との比較について話してみる。
 
 ## Vue
 
