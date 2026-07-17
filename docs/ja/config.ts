@@ -8,7 +8,7 @@ export default withSidebar({
 
   themeConfig: {
     nav: [
-      { text: 'ポスト', link: '/ja/post/NuxtJs-And-Vue-Report' },
+      { text: 'ポスト', link: '/ja/post/Nuxt-And-Vue-Report' },
       { text: '仕様', link: '/ja/spec/' },
       { text: '友だち', link: '/ja/friend' },
       { text: 'Minecraft', link: '/ja/Minecraft' },

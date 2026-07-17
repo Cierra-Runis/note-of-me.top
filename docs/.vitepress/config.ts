@@ -82,7 +82,7 @@ export default withSidebar({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '文章', link: '/post/NuxtJs-And-Vue-Report' },
+      { text: '文章', link: '/post/Nuxt-And-Vue-Report' },
       { text: '规范', link: '/spec' },
       { text: '友链', link: '/friend' },
       { text: 'Minecraft', link: '/Minecraft' },
