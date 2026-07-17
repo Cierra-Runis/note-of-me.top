@@ -3,9 +3,9 @@ date: '2026-05-31T17:34:56+09:00'
 id: AEBGAK
 ---
 
-# Nuxt.js and Vue Usage Report
+# Nuxt and Vue Usage Report
 
-The usage report series has reached [Nuxt.js](https://nuxt.com) and [Vue](https://nuxt.com) at last! Let me talk a little about my experience and how it compares with [Next.js and React](./NextJs-And-React-Report.md).
+The usage report series has reached [Nuxt](https://nuxt.com) and [Vue](https://nuxt.com) at last! Let me talk a little about my experience and how it compares with [Next.js and React](./NextJs-And-React-Report.md).
 
 ## Vue
 
@@ -23,13 +23,13 @@ Now for the complaints.
 
 First, component props are usually defined in `defineProps` inside `<script>`. IDEs can provide hints, but if you are just reading the source, you still have to find the `defineProps` section before you know what props the component actually accepts. This gets especially annoying when the component code is long, because you keep scrolling back and forth.
 
-Second, Vue itself still requires importing components, although many projects use auto-import solutions such as Nuxt.js or various component auto-registration plugins. That does let you write component names directly in templates without manual `import`s, but the tradeoff is that component names are often tightly tied to file names and directory structure. Renaming a component usually means renaming the file as well, and name conflicts often have to be solved by changing file names or directory layout. By comparison, React leans more toward explicit imports and exports, so component names are less tightly coupled to file names and tend to be more flexible during refactoring.
+Second, Vue itself still requires importing components, although many projects use auto-import solutions such as Nuxt or various component auto-registration plugins. That does let you write component names directly in templates without manual `import`s, but the tradeoff is that component names are often tightly tied to file names and directory structure. Renaming a component usually means renaming the file as well, and name conflicts often have to be solved by changing file names or directory layout. By comparison, React leans more toward explicit imports and exports, so component names are less tightly coupled to file names and tend to be more flexible during refactoring.
 
-## Nuxt.js
+## Nuxt
 
 What a great framework. I like it a lot. It is very similar to Next.js, so I will not repeat all the usual praise.
 
-But I do want to talk more about its module system. Nuxt.js has a very powerful module system, with many official and third-party modules that make it easy to integrate features such as authentication, internationalization, PWA support, and more. Next.js does not really have an ecosystem like that.
+But I do want to talk more about its module system. Nuxt has a very powerful module system, with many official and third-party modules that make it easy to integrate features such as authentication, internationalization, PWA support, and more. Next.js does not really have an ecosystem like that.
 
 As for its [Nuxt Content](https://content.nuxt.com/) module, that is the part that really impressed me. In Next.js, you still need to combine something like [Contentlayer](https://contentlayer.dev) from a third party to achieve similar functionality. To be clear, the official framework does support SSG, but it does not provide a dedicated content management system for handling Markdown files and similar content resources.
 
@@ -39,4 +39,4 @@ The blog on [note-of-me.top](https://note-of-me.top) currently uses VitePress, b
 
 Not bad at all. Far better than I expected.
 
-Congratulations, then, to Nuxt.js for becoming my favorite frontend framework, or at least tied for first place with Next.js!
+Congratulations, then, to Nuxt for becoming my favorite frontend framework, or at least tied for first place with Next.js!
