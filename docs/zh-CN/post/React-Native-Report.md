@@ -21,7 +21,7 @@ Python 里加入类型检查的方法是在变量后面冒号然后一个类型�
 
 再来聊聊 Flutter 使用的语言 Dart，这是我用的最喜欢的一门语言。
 
-![Most Used Languages](https://github-readme-stats-seven-xi-24.vercel.app/api/top-langs/?username=Cierra-Runis&show_icons=true&title_color=ad80ff&icon_color=ff8000&text_color=9f9f9f&bg_color=22272E00&layout=compact&langs_count=10&border_radius=16&size_weight=1&count_weight=0&hide=cmake,c%2B%2B&exclude_repo=github-readme-stats,LiteLoaderQQNT,qweather_icons)
+![Most Used Languages](https://github-stats-extended-cierra-runis.vercel.app/api/top-langs/?username=Cierra-Runis&show_icons=true&title_color=ad80ff&icon_color=ff8000&text_color=9f9f9f&bg_color=22272E00&layout=compact&langs_count=10&border_radius=16&size_weight=1&count_weight=0&hide=cmake,c%2B%2B&exclude_repo=github-readme-stats,LiteLoaderQQNT,qweather_icons)
 
 首先，他非常像 Java，而我曾经写过一段时间的 Java 程序，所以很快就上手了。而且相比 Java，它有空安全检查，也就是一个变量只有在其类型后面接上个问号时才能赋值为 `null`。
 
