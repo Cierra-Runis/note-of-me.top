@@ -11,7 +11,8 @@
     "vitepress": "2.0.0-alpha.17",
     "vitepress-plugin-group-icons": "^1.7.5",
     "vitepress-sidebar": "^1.36.1",
-    "vue": "^3.5.38"
+    "vue": "^3.5.38",
+    "wrangler": "^4.131.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
