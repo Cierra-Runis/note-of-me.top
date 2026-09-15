@@ -78,7 +78,12 @@ kbd {
   line-height: 1;
 }
 
-:root:lang(ja){
-  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "M PLUS 2", 'Source Han Sans', sans-serif,
+[lang]:where(:lang(ja)) {
+  --vp-font-family-base: 'Inter Core', 'M PLUS 2', 'Noto Sans CJK JP', -apple-system, BlinkMacSystemFont, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+[lang]:where(:lang(zh)) {
+  --vp-font-family-base: 'Inter Core', 'PingFang SC', 'MiSans', 'Noto Sans CJK SC', -apple-system, BlinkMacSystemFont, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }

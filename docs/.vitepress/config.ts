@@ -1,5 +1,4 @@
 import markdownTypstMath from '@lowmst/markdown-it-typst-math';
-import markdownFootnote from 'markdown-it-footnote';
 /// https://github.com/jooy2/vitepress-sidebar
 /// VitePress auto sidebar generator plugin. Easy to use and supports advanced customization.
 import { withSidebar } from 'vitepress-sidebar';
@@ -25,7 +24,6 @@ export default withSidebar({
   lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
-  metaChunk: true,
   rewrites: {
     'zh-CN/:rest*': ':rest*',
   },
@@ -59,10 +57,11 @@ export default withSidebar({
       md.use(markdownTypstMath).use(groupIconMdPlugin, {
         titleBar: { includeSnippet: true },
       });
-      md.use(markdownFootnote);
     },
-
-    codeCopyButtonTitle: '复制',
+    codeCopyButton: {
+      tooltipText: '复制',
+      copiedText: '已复制',
+    },
   },
   router: { prefetchLinks: true },
   locales: {
