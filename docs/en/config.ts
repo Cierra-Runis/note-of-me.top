@@ -55,7 +55,7 @@ export default withSidebar({
   },
 }, [
   {
-    basePath: '/en/', /// https://vitepress-sidebar.cdget.com/guide/options#basepath
+    basePath: '/en/post/', /// https://vitepress-sidebar.cdget.com/guide/options#basepath
     resolvePath: '/en/post', /// https://vitepress-sidebar.cdget.com/guide/options#resolvepath
     collapsed: true, /// https://vitepress-sidebar.cdget.com/zhHans/guide/options#collapsed
     useTitleFromFileHeading: true, /// https://vitepress-sidebar.cdget.com/guide/options#usetitlefromfileheading
@@ -66,7 +66,7 @@ export default withSidebar({
     followSymlinks: true, /// https://vitepress-sidebar.cdget.com/guide/options#followsymlinks
   },
   {
-    basePath: '/en/',
+    basePath: '/en/spec/',
     resolvePath: '/en/spec',
     useTitleFromFileHeading: true,
     includeRootIndexFile: true,
@@ -77,7 +77,7 @@ export default withSidebar({
     followSymlinks: true,
   },
   {
-    basePath: '/en/',
+    basePath: '/en/Minecraft/',
     resolvePath: '/en/Minecraft',
     useTitleFromFileHeading: true,
     includeRootIndexFile: true,
