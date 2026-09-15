@@ -4,13 +4,13 @@
     "@lowmst/markdown-it-typst-math": "^1.1.0",
     "@nolebase/ui": "^2.18.2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
-    "@vueuse/core": "^14.3.0",
-    "@vueuse/shared": "^14.3.0",
+    "@vueuse/core": "^14.4.0",
+    "@vueuse/shared": "^14.4.0",
     "vitepress": "2.0.0-alpha.20",
-    "vitepress-plugin-group-icons": "^1.7.5",
-    "vitepress-sidebar": "^1.36.1",
+    "vitepress-plugin-group-icons": "^1.7.6",
+    "vitepress-sidebar": "^1.40.0",
     "vue": "^3.5.42",
-    "wrangler": "^4.131.0"
+    "wrangler": "^4.131.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
