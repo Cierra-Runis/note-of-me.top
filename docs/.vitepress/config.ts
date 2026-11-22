@@ -83,7 +83,7 @@ export default withSidebar({
     nav: [
       { text: '文章', link: '/post/Nuxt-And-Vue-Report' },
       { text: '规范', link: '/spec' },
-      { text: '友链', link: '/friend' },
+      { text: '书籍', link: '/books' },
       { text: 'Minecraft', link: '/Minecraft' },
       { text: '应用', link: 'https://app.note-of-me.top' },
     ],
@@ -147,6 +147,17 @@ export default withSidebar({
     documentRootPath: '/docs/zh-CN',
     sortMenusByFrontmatterOrder: true,
     scanStartPath: '/spec',
+    followSymlinks: true,
+  },
+  {
+    basePath: '/books/',
+    resolvePath: '/books',
+    useTitleFromFileHeading: true,
+    includeRootIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    documentRootPath: '/docs/zh-CN',
+    sortMenusByFrontmatterOrder: true,
+    scanStartPath: '/books',
     followSymlinks: true,
   },
   {
