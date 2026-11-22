@@ -69,4 +69,4 @@ aside: false
 | マインクラフト　よそ者ぼくとはずれ者のきみ ^[Minecraft Novels No.17 [Minecraft: The Outsider](https://minecraft.wiki/w/Minecraft:_The_Outsider)] |  C8097   |     外国文学小説     | 978-4-8019-4559-3 |
 | マインクラフト　はるかなる光の柱 ^[Minecraft Novels No.18 [Minecraft: The Tournament](https://minecraft.wiki/w/Minecraft:_The_Tournament)]       |  C8097   |     外国文学小説     | 978-4-8019-4871-6 |
 
-[C-CODE]: <https://ja.wikipedia.org/wiki/日本図書コード#Cコード>
+[C-CODE]: <https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%9B%B3%E6%9B%B8%E3%82%B3%E3%83%BC%E3%83%89#C%E3%82%B3%E3%83%BC%E3%83%89>
