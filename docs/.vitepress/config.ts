@@ -88,6 +88,42 @@ export default withSidebar({
       { text: '应用', link: 'https://app.note-of-me.top' },
     ],
 
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索',
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '清除查询',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '没有找到相关结果',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                  closeText: '关闭',
+                },
+              },
+            },
+          },
+          ja: {
+            translations: {
+              button: { buttonText: '検索', buttonAriaLabel: '検索' },
+              modal: {
+                noResultsText: '結果が見つかりません',
+                footer: { selectText: '選択', navigateText: '移動', closeText: '閉じる' },
+              },
+            },
+          },
+        },
+      },
+    },
+
     socialLinks: [
       {
         icon: 'github', /// https://simpleicons.org
