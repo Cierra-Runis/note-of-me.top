@@ -23,7 +23,17 @@ jobs:
       - name: AutoCorrect Fix
         run: autocorrect --fix .
 
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "style: autocorrect fix"
