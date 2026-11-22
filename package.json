@@ -17,5 +17,6 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@12.21.0"
 }
