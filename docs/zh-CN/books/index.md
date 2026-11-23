@@ -37,36 +37,52 @@ aside: false
 | 概率论沉思录                               | 人民邮电出版社                                                              | [美] E. T. Jaynes                           |  数学  | 978-7-115-64336-0 |
 | 从一到无穷大：科学中的事实和臆测           | 科学出版社                                                                  | [美] Gamow，G.                              | 物理学 | 978-7-03-010759-6 |
 
-| 書名                                                                                                                                             | [C-CODE] |         内容         |      ISBN-13      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | :------: | :------------------: | :---------------: |
-| [現代暗号技術入門](https://bookplus.nikkei.com/atcl/catalog/22/06/08/00221)                                                                      |  C0004   |       情報科学       | 978-4-296-08019-9 |
-| [きみの人生はきみのもの　子どもが知っておきたい「権利」の話](https://www.nhk-book.co.jp/detail/000000819302023.html)                             |  C8032   |         法律         | 978-4-14-081930-2 |
-| [ZERRO [ゼロ] 増補新装版](https://book-design.jp/works/660)                                                                                      |  C0070   |       芸術総記       | 978-4-909718-13-6 |
-| [欧文書体　基礎知識と使い方](https://book-design.jp/works/693)                                                                                   |  C0070   |       芸術総記       | 978-4-909718-14-3 |
-| [ピアノ・ソロ　MIMI Selection](https://www.shinko-music.co.jp/item/pid004519x)                                                                   |  C0073   |      音楽・舞踊      | 978-4-401-04519-8 |
-| [ようこそ竜宮事務所へ](https://pie.co.jp/book/i/6146)                                                                                            |  C0979   |      漫画・劇画      | 978-4-7562-6146-5 |
-| [ああ資本主義の惡の華はいつまで咲き誇るのか。1](https://to-ti.in/product/ahshiho)                                                                |  C0979   |      漫画・劇画      | 978-4-8458-7145-2 |
-| [甘くて辛くて酸っぱい 2](https://magazineworld.jp/books/paper/3371)                                                                              |  C0079   |      漫画・劇画      | 978-4-8387-3371-2 |
-| [ちいかわ　四字熟語　なんか使いたくなっちゃうやつ](https://www.kodansha.co.jp/comic/products/0000373904)                                         |  C9979   |      漫画・劇画      | 978-4-06-530748-9 |
-| [天国大魔境 1](https://www.kodansha.co.jp/comic/products/0000311498)                                                                             |  C9979   |      漫画・劇画      | 978-4-06-511976-1 |
-| 教えて劉先生！2 カ国語声優の日常                                                                                                                 |  ?????   |      漫画・劇画      |       ?????       |
-| [あかいろステップ #01](https://kuromugi-bler.booth.pm/items/2173348)                                                                             |    -     |      漫画・劇画      |         -         |
-| [あかいろステップ #02](https://kuromugi-bler.booth.pm/items/3694284)                                                                             |    -     |      漫画・劇画      |         -         |
-| [あかいろステップ #03](https://kuromugi-bler.booth.pm/items/8182438)                                                                             |    -     |      漫画・劇画      |         -         |
-| [漢検　準 2 級　漢字学習ステップ　改訂三版](https://store.kanken.or.jp/products/978-4-89096-402-4)                                               |  C0081   |        日本語        | 978-4-89096-402-4 |
-| [漢検　2 級　過去問題集](https://store.kanken.or.jp/products/978-4-89096-488-8)                                                                  |  C0081   |        日本語        | 978-4-89096-488-8 |
-| [これでなっとく！漢検　準 2 級　クイックスタディ](https://store.kanken.or.jp/products/978-4-89096-499-4)                                         |  C0081   |        日本語        | 978-4-89096-499-4 |
-| [ちいかわ　ことわざ 100](https://www.kodansha.co.jp/book/products/0000376400)                                                                    |  C8781   |        日本語        | 978-4-06-531748-8 |
-| [初級日本語文法と教え方のポイント](https://www.3anet.co.jp/np/books/4679)                                                                        |  ?????   |        日本語        | 978-4-88319-336-3 |
-| [ぼくらの七日間戦争](https://www.kadokawa.co.jp/product/200806000347)                                                                            |  C8293   | 日本文学、小説・物語 | 978-4-04-631003-3 |
-| [日本国紀](https://www.gentosha.co.jp/book/detail/9784344033856)                                                                                 |  C0095   |       日本歴史       | 978-4-344-03385-6 |
-| [異体字の世界　最新版　旧字・俗字・略字の漢字百科](https://www.kawade.co.jp/np/isbn/9784309412443)                                               |  C0195   |       日本文字       | 978-4-309-41244-3 |
-| [漢和辞典的に申しますと。](https://books.bunshun.jp/ud/book/num/9784167908201)                                                                   |  C0195   |       日本文字       | 978-4-16-630510-0 |
-| マインクラフト　はじまりの島 ^[Minecraft Novels No.1 [Minecraft: The Island](https://minecraft.wiki/w/Minecraft:_The_Island)]                    |  C8097   |     外国文学小説     | 978-4-8019-1534-3 |
-| マインクラフト　つながりの山 ^[Minecraft Novels No.7 [Minecraft: The Mountain](https://minecraft.wiki/w/Minecraft:_The_Mountain)]                |  C8097   |     外国文学小説     | 978-4-8019-2926-5 |
-| マインクラフト　ゾンビ使いあらわる！^[Minecraft Novels No.14 [Minecraft: Zombies!](https://minecraft.wiki/w/Minecraft:_Zombies!)]                |  C8097   |     外国文学小説     | 978-4-8019-4749-8 |
-| マインクラフト　さいはての村 ^[Minecraft Novels No.16 [Minecraft: The Village](https://minecraft.wiki/w/Minecraft:_The_Village)]                 |  C8097   |     外国文学小説     | 978-4-8019-4281-3 |
-| マインクラフト　よそ者ぼくとはずれ者のきみ ^[Minecraft Novels No.17 [Minecraft: The Outsider](https://minecraft.wiki/w/Minecraft:_The_Outsider)] |  C8097   |     外国文学小説     | 978-4-8019-4559-3 |
-| マインクラフト　はるかなる光の柱 ^[Minecraft Novels No.18 [Minecraft: The Tournament](https://minecraft.wiki/w/Minecraft:_The_Tournament)]       |  C8097   |     外国文学小説     | 978-4-8019-4871-6 |
+| 書名                                                       |                                     公式                                      | [C-CODE] |   内容   |      ISBN-13      |
+| ---------------------------------------------------------- | :---------------------------------------------------------------------------: | :------: | :------: | :---------------: |
+| 現代暗号技術入門                                           |      [日経 BP](https://bookplus.nikkei.com/atcl/catalog/22/06/08/00221)       |  C0004   | 情報科学 | 978-4-296-08019-9 |
+| きみの人生はきみのもの　子どもが知っておきたい「権利」の話 |        [NHK 出版](https://nhk-book.co.jp/detail/000000819302023.html)         |  C8032   |   法律   | 978-4-14-081930-2 |
+| ZERRO [ゼロ] 増補新装版                                    |               [Book & Design](https://book-design.jp/works/660)               |  C0070   |   芸術   | 978-4-909718-13-6 |
+| 欧文書体　基礎知識と使い方                                 |               [Book & Design](https://book-design.jp/works/693)               |  C0070   |   芸術   | 978-4-909718-14-3 |
+| ピアノ・ソロ　MIMI Selection                               |        [SHINKO MUSIC](https://www.shinko-music.co.jp/item/pid004519x)         |  C0073   |   音楽   | 978-4-401-04519-8 |
+| ようこそ竜宮事務所へ                                       |              [PIE International](https://pie.co.jp/book/i/6146)               |  C0979   |   漫画   | 978-4-7562-6146-5 |
+| ああ資本主義の惡の華はいつまで咲き誇るのか。1              |                 [LEED](https://www.leed.co.jp/9784845871452)                  |  C0979   |   漫画   | 978-4-8458-7145-2 |
+| 甘くて辛くて酸っぱい 2                                     |          [マガジンハウス](https://magazineworld.jp/books/paper/3371)          |  C0079   |   漫画   | 978-4-8387-3371-2 |
+| ちいかわ　四字熟語　なんか使いたくなっちゃうやつ           |        [講談社](https://www.kodansha.co.jp/comic/products/0000373904)         |  C9979   |   漫画   | 978-4-06-530748-9 |
+| 天国大魔境 1                                               |        [講談社](https://www.kodansha.co.jp/comic/products/0000311498)         |  C9979   |   漫画   | 978-4-06-511976-1 |
+| 星間ブリッジ 1                                             |               [小学館](https://shogakukan.co.jp/books/09127377)               |  C9979   |   漫画   | 978-4-09-127377-2 |
+| 星間ブリッジ 2                                             |               [小学館](https://shogakukan.co.jp/books/09127539)               |  C9979   |   漫画   | 978-4-09-127539-4 |
+| 星間ブリッジ 3                                             |               [小学館](https://shogakukan.co.jp/books/09128067)               |  C9979   |   漫画   | 978-4-09-128067-1 |
+| 星間ブリッジ 4                                             |               [小学館](https://shogakukan.co.jp/books/09128306)               |  C9979   |   漫画   | 978-4-09-128306-1 |
+| 教えて劉先生！2 カ国語声優の日常                           |                                     ?????                                     |  ?????   |   漫画   |       ?????       |
+| あかいろステップ #01                                       |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/2173348)            |    -     |   漫画   |         -         |
+| あかいろステップ #02                                       |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/3694284)            |    -     |   漫画   |         -         |
+| あかいろステップ #03                                       |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/8182438)            |    -     |   漫画   |         -         |
+| 漢検　準 2 級　漢字学習ステップ　改訂三版                  | [日本漢字能力検定協会](https://store.kanken.or.jp/products/978-4-89096-402-4) |  C0081   |  日本語  | 978-4-89096-402-4 |
+| 漢検　2 級　過去問題集                                     | [日本漢字能力検定協会](https://store.kanken.or.jp/products/978-4-89096-488-8) |  C0081   |  日本語  | 978-4-89096-488-8 |
+| これでなっとく！漢検　準 2 級　クイックスタディ            | [日本漢字能力検定協会](https://store.kanken.or.jp/products/978-4-89096-499-4) |  C0081   |  日本語  | 978-4-89096-499-4 |
+| ちいかわ　ことわざ 100                                     |         [講談社](https://www.kodansha.co.jp/book/products/0000376400)         |  C8781   |  日本語  | 978-4-06-531748-8 |
+| 初級日本語文法と教え方のポイント                           |          [スリーエーネットワーク](https://3anet.co.jp/np/books/4679)          |  ?????   |  日本語  | 978-4-88319-336-3 |
+| ぼくらの七日間戦争                                         |            [KADOKAWA](https://kadokawa.co.jp/product/200806000347)            |  C8293   | 日本小説 | 978-4-04-631003-3 |
+| ミモザの告白                                               |               [講談社](https://shogakukan.co.jp/books/09453018)               |  C0193   | 日本小説 | 978-4-09-453018-6 |
+| ミモザの告白 2                                             |               [講談社](https://shogakukan.co.jp/books/09453047)               |  C0193   | 日本小説 | 978-4-09-453047-6 |
+| ミモザの告白 3                                             |               [講談社](https://shogakukan.co.jp/books/09453104)               |  C0193   | 日本小説 | 978-4-09-453104-6 |
+| ミモザの告白 4                                             |               [講談社](https://shogakukan.co.jp/books/09453139)               |  C0193   | 日本小説 | 978-4-09-453139-8 |
+| ~~ミモザの告白 5~~                                         |               [講談社](https://shogakukan.co.jp/books/09453192)               |  C0193   | 日本小説 | 978-4-09-453192-3 |
+| 日本国紀                                                   |          [幻冬舎](https://gentosha.co.jp/book/detail/9784344033856)           |  C0095   | 日本歴史 | 978-4-344-03385-6 |
+| 異体字の世界　最新版　旧字・俗字・略字の漢字百科           |          [河出文庫](https://www.kawade.co.jp/np/isbn/9784309412443)           |  C0195   | 日本文字 | 978-4-309-41244-3 |
+| 漢和辞典的に申しますと。                                   |        [文春文庫](https://books.bunshun.jp/ud/book/num/9784167908201)         |  C0195   | 日本文字 | 978-4-16-630510-0 |
+| マインクラフト　はじまりの島 [^The-Island]                 |             [竹書房](https://takeshobo.co.jp/book/b10074517.html)             |  C8097   | 外国小説 | 978-4-8019-1534-3 |
+| マインクラフト　つながりの山 [^The-Mountain]               |             [竹書房](https://takeshobo.co.jp/book/b10074531.html)             |  C8097   | 外国小説 | 978-4-8019-2926-5 |
+| マインクラフト　ゾンビ使いあらわる！[^Zombies]             |             [竹書房](https://takeshobo.co.jp/book/b10146222.html)             |  C8097   | 外国小説 | 978-4-8019-4749-8 |
+| マインクラフト　さいはての村 [^The-Village]                |             [竹書房](https://takeshobo.co.jp/book/b10089503.html)             |  C8097   | 外国小説 | 978-4-8019-4281-3 |
+| マインクラフト　よそ者ぼくとはずれ者のきみ [^The-Outsider] |             [竹書房](https://takeshobo.co.jp/book/b10134242.html)             |  C8097   | 外国小説 | 978-4-8019-4559-3 |
+| マインクラフト　はるかなる光の柱 [^The-Tournament]         |             [竹書房](https://takeshobo.co.jp/book/b10155102.html)             |  C8097   | 外国小説 | 978-4-8019-4871-6 |
 
 [C-CODE]: <https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%9B%B3%E6%9B%B8%E3%82%B3%E3%83%BC%E3%83%89#C%E3%82%B3%E3%83%BC%E3%83%89>
+
+[^The-Island]: [Minecraft Novels No.01](https://minecraft.wiki/w/Minecraft:_The_Island)
+[^The-Mountain]: [Minecraft Novels No.07](https://minecraft.wiki/w/Minecraft:_The_Mountain)
+[^Zombies]: [Minecraft Novels No.14](https://minecraft.wiki/w/Minecraft:_Zombies!)
+[^The-Village]: [Minecraft Novels No.16](https://minecraft.wiki/w/Minecraft:_The_Village)
+[^The-Outsider]: [Minecraft Novels No.17](https://minecraft.wiki/w/Minecraft:_The_Outsider)
+[^The-Tournament]: [Minecraft Novels No.18](https://minecraft.wiki/w/Minecraft:_The_Tournament)
