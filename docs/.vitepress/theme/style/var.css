@@ -68,6 +68,29 @@ kbd {
   white-space: nowrap;
 }
 
+/* 单元格左上角标：| 内容 {data-corner=字} | */
+.vp-doc td[data-corner] {
+  position: relative;
+}
+
+.vp-doc td[data-corner]::after {
+  --corner-font-size: 0.8rem;
+  content: attr(data-corner);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--corner-font-size);
+  font-weight: bold;
+  line-height: 1;
+  color: var(--vp-c-bg);
+  background-color: var(--vp-c-brand-1);
+}
+
 .vp-doc .vp-kbd-group {
   vertical-align: middle;
   line-height: 1;
