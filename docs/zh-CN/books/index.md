@@ -126,6 +126,7 @@ aside: false
 | マインクラフト　はじまりの島 [^The-Island]                 |             [竹書房](https://takeshobo.co.jp/book/b10074517.html)             |  C8097   | 外国小説 | 978-4-8019-1534-3 |
 | マインクラフト　つながりの山 [^The-Mountain]               |             [竹書房](https://takeshobo.co.jp/book/b10074531.html)             |  C8097   | 外国小説 | 978-4-8019-2926-5 |
 | マインクラフト　ゾンビ使いあらわる！[^Zombies]             |             [竹書房](https://takeshobo.co.jp/book/b10146222.html)             |  C8097   | 外国小説 | 978-4-8019-4749-8 |
+| マインクラフト　ゾンビ使いふたたび！[^Zombies-Return]      |             [竹書房](https://takeshobo.co.jp/book/b10167981.html)             |  C8097   | 外国小説 | 978-4-8019-4995-9 |
 | マインクラフト　さいはての村 [^The-Village]                |             [竹書房](https://takeshobo.co.jp/book/b10089503.html)             |  C8097   | 外国小説 | 978-4-8019-4281-3 |
 | マインクラフト　よそ者ぼくとはずれ者のきみ [^The-Outsider] |             [竹書房](https://takeshobo.co.jp/book/b10134242.html)             |  C8097   | 外国小説 | 978-4-8019-4559-3 |
 | マインクラフト　はるかなる光の柱 [^The-Tournament]         |             [竹書房](https://takeshobo.co.jp/book/b10155102.html)             |  C8097   | 外国小説 | 978-4-8019-4871-6 |
@@ -134,7 +135,8 @@ aside: false
 
 [^The-Island]: [Minecraft Novels No.01](https://minecraft.wiki/w/Minecraft:_The_Island)
 [^The-Mountain]: [Minecraft Novels No.07](https://minecraft.wiki/w/Minecraft:_The_Mountain)
-[^Zombies]: [Minecraft Novels No.14](https://minecraft.wiki/w/Minecraft:_Zombies!)
+[^Zombies]: [Minecraft Novels No.12](https://minecraft.wiki/w/Minecraft:_Zombies!)
+[^Zombies-Return]: [Minecraft Novels No.15](https://minecraft.wiki/w/Minecraft:_Zombies_Return!)
 [^The-Village]: [Minecraft Novels No.16](https://minecraft.wiki/w/Minecraft:_The_Village)
 [^The-Outsider]: [Minecraft Novels No.17](https://minecraft.wiki/w/Minecraft:_The_Outsider)
 [^The-Tournament]: [Minecraft Novels No.18](https://minecraft.wiki/w/Minecraft:_The_Tournament)
