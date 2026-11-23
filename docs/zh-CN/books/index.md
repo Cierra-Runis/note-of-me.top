@@ -64,7 +64,7 @@ aside: false
 [978-7-115-53797-3]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-115-53797-3
 [978-7-115-64336-0]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-115-64336-0
 
-| 書名                                                       |                                     公式                                      | [C-CODE] |   内容   |      ISBN-13      |
+| 書名                                                       |             [公式](https://isbn.jpo.or.jp/index.php/fix__ref_pub)             | [C-CODE] |   内容   |      ISBN-13      |
 | ---------------------------------------------------------- | :---------------------------------------------------------------------------: | :------: | :------: | :---------------: |
 | 現代暗号技術入門                                           |      [日経 BP](https://bookplus.nikkei.com/atcl/catalog/22/06/08/00221)       |  C0004   | 情報科学 | 978-4-296-08019-9 |
 | きみの人生はきみのもの　子どもが知っておきたい「権利」の話 |        [NHK 出版](https://nhk-book.co.jp/detail/000000819302023.html)         |  C8032   |   法律   | 978-4-14-081930-2 |
@@ -120,9 +120,9 @@ aside: false
 | ミモザの告白 4                                             |               [小学館](https://shogakukan.co.jp/books/09453139)               |  C0193   | 日本小説 | 978-4-09-453139-8 |
 | ~~ミモザの告白 5~~                                         |               [小学館](https://shogakukan.co.jp/books/09453192)               |  C0193   | 日本小説 | 978-4-09-453192-3 |
 | 日本国紀                                                   |          [幻冬舎](https://gentosha.co.jp/book/detail/9784344033856)           |  C0095   | 日本歴史 | 978-4-344-03385-6 |
-| 命ある限り                                                 |                                 太陽への道社                                  |  C0795   | 日本歴史 | 978-4-434-19662-1 |
-| 異体字の世界　最新版　旧字・俗字・略字の漢字百科           |          [河出文庫](https://www.kawade.co.jp/np/isbn/9784309412443)           |  C0195   | 日本文字 | 978-4-309-41244-3 |
-| 漢和辞典的に申しますと。                                   |        [文春文庫](https://books.bunshun.jp/ud/book/num/9784167908201)         |  C0195   | 日本文字 | 978-4-16-630510-0 |
+| 命ある限り                                                 |                                    星雲社                                     |  C0795   | 日本歴史 | 978-4-434-19662-1 |
+| 異体字の世界　最新版　旧字・俗字・略字の漢字百科           |        [河出書房新社](https://www.kawade.co.jp/np/isbn/9784309412443)         |  C0195   | 日本文字 | 978-4-309-41244-3 |
+| 漢和辞典的に申しますと。                                   |        [文藝春秋](https://books.bunshun.jp/ud/book/num/9784167908201)         |  C0195   | 日本文字 | 978-4-16-630510-0 |
 | マインクラフト　はじまりの島 [^The-Island]                 |             [竹書房](https://takeshobo.co.jp/book/b10074517.html)             |  C8097   | 外国小説 | 978-4-8019-1534-3 |
 | マインクラフト　つながりの山 [^The-Mountain]               |             [竹書房](https://takeshobo.co.jp/book/b10074531.html)             |  C8097   | 外国小説 | 978-4-8019-2926-5 |
 | マインクラフト　ゾンビ使いあらわる！[^Zombies]             |             [竹書房](https://takeshobo.co.jp/book/b10146222.html)             |  C8097   | 外国小説 | 978-4-8019-4749-8 |
@@ -130,6 +130,8 @@ aside: false
 | マインクラフト　さいはての村 [^The-Village]                |             [竹書房](https://takeshobo.co.jp/book/b10089503.html)             |  C8097   | 外国小説 | 978-4-8019-4281-3 |
 | マインクラフト　よそ者ぼくとはずれ者のきみ [^The-Outsider] |             [竹書房](https://takeshobo.co.jp/book/b10134242.html)             |  C8097   | 外国小説 | 978-4-8019-4559-3 |
 | マインクラフト　はるかなる光の柱 [^The-Tournament]         |             [竹書房](https://takeshobo.co.jp/book/b10155102.html)             |  C8097   | 外国小説 | 978-4-8019-4871-6 |
+
+{lang=ja}
 
 [C-CODE]: <https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%9B%B3%E6%9B%B8%E3%82%B3%E3%83%BC%E3%83%89#C%E3%82%B3%E3%83%BC%E3%83%89>
 
