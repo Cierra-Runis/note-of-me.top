@@ -11,7 +11,7 @@ aside: false
 | labuladong 的算法小抄                      | [labuladong 的算法笔记](https://labuladong.online)                          | [labuladong](https://github.com/labuladong) | 计算机 | [978-7-121-39933-6] |
 | 我的世界：Minecraft 模组开发指南           | [GitHub 仓库](https://github.com/ustc-zzzz/minecraft-mod-programming-guide) | [ustc-zzzz](https://github.com/ustc-zzzz)   | 计算机 | [978-7-121-35851-7] |
 | 复刻字体设计：字体设计的历史学方法手册     | 同济大学出版社                                                              | 陈渚、[希] Gerry Leonidas                   |  设计  | [978-7-5765-1365-3] |
-| 拜厄钢琴基本教程                           | 人民音乐出版社                                                              | 人民音乐出版社编辑部                        |  音乐  |  978-7-103-02184-2  |
+| 拜厄钢琴基本教程                           | 人民音乐出版社                                                              | 人民音乐出版社编辑部                        |  音乐  | [978-7-103-02184-2] |
 | 平屋小品 1                                 | 九州出版社                                                                  | [日] 真造圭伍                               |  漫画  | [978-7-5225-1660-8] |
 | 平屋小品 2 {data-corner=断}                | 九州出版社                                                                  | [日] 真造圭伍                               |  漫画  | [978-7-5225-1661-5] |
 | 一个钢镚儿 1                               | 世界知识出版社                                                              | 巫哲                                        |  校园  | [978-7-5012-5805-5] |
@@ -32,20 +32,20 @@ aside: false
 | 高等数学基础                               | 高等教育出版社                                                              | 苏德矿、余继光                              |  数学  | [978-7-04-043101-8] |
 | 线性代数解题密码                           | 北京大学出版社                                                              | 王凯冬                                      |  数学  | [978-7-301-34252-7] |
 | 积分的方法与技巧                           | 中国科学技术大学出版社                                                      | 金玉明、顾新身、毛瑞庭                      |  数学  | [978-7-312-04051-1] |
-| 数学物理方法                               | 中国科学技术大学出版社                                                      | 严镇军                                      |  数学  |  978-7-312-01033-0  |
+| 数学物理方法                               | 中国科学技术大学出版社                                                      | 严镇军                                      |  数学  | [978-7-312-01033-0] |
 | 数学之美　第三版                           | 人民邮电出版社                                                              | 吴军                                        |  数学  | [978-7-115-53797-3] |
 | 概率论沉思录                               | 人民邮电出版社                                                              | [美] E. T. Jaynes                           |  数学  | [978-7-115-64336-0] |
-| 从一到无穷大：科学中的事实和臆测           | 科学出版社                                                                  | [美] George Gamow                           | 物理学 |  978-7-03-010759-6  |
+| 从一到无穷大：科学中的事实和臆测           | 科学出版社                                                                  | [美] George Gamow                           | 物理学 | [978-7-03-010759-6] |
 
 [978-7-115-51422-6]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-115-51422-6
 [978-7-121-18118-4]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-121-18118-4
 [978-7-121-39933-6]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-121-39933-6
 [978-7-121-35851-7]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-121-35851-7
 [978-7-5765-1365-3]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5765-1365-3
+[978-7-103-02184-2]: https://pdc.capub.cn/search.html#/quick?type=cip,&search=200036372
 [978-7-5225-1660-8]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5225-1660-8
 [978-7-5225-1661-5]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5225-1661-5
 [978-7-5012-5805-5]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5012-5805-5
-<!-- TODO: Check URL Below -->
 [978-7-5402-5424-7]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5402-5424-7
 [978-7-5402-6152-8]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5402-6152-8
 [978-7-5492-4293-1]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5492-4293-1
@@ -61,8 +61,10 @@ aside: false
 [978-7-04-043101-8]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-04-043101-8
 [978-7-301-34252-7]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-301-34252-7
 [978-7-312-04051-1]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-312-04051-1
+[978-7-312-01033-0]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=7-312-01033-4
 [978-7-115-53797-3]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-115-53797-3
 [978-7-115-64336-0]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-115-64336-0
+[978-7-03-010759-6]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=7-03-010759-4
 
 | 書名                                                               |             [公式](https://isbn.jpo.or.jp/index.php/fix__ref_pub)             | [C-CODE] |   内容   |      ISBN-13      |
 | ------------------------------------------------------------------ | :---------------------------------------------------------------------------: | :------: | :------: | :---------------: |
