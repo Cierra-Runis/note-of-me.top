@@ -18,7 +18,7 @@ aside: false
 | 一个钢镚儿 2                               | 北京燕山出版社                                                              | 巫哲                                        |  校园  | [978-7-5402-5424-7] |
 | 一个钢镚儿 3 {data-corner=完}              | 北京燕山出版社                                                              | 巫哲                                        |  校园  | [978-7-5402-6152-8] |
 | 青春奇妙物语 4 {data-corner=补}            | 长江出版社                                                                  | 两色风景                                    |  校园  | [978-7-5492-4293-1] |
-| 时生                                       | 南海出版公司                                                                | [日] 东野圭吾                               |  小说  |  978-7-5442-????-?  |
+| 时生                                       | 南海出版公司                                                                | [日] 东野圭吾                               |  小说  | [978-7-5442-7772-3] |
 | 湖畔　レイクサイド                         | 化学工业出版社                                                              | [日] 东野圭吾                               |  小说  | [978-7-122-25015-5] |
 | 天堂收音机                                 | 江苏凤凰文艺出版社                                                          | [日] 伊藤正幸                               |  小说  | [978-7-5594-1626-1] |
 | 天气之子                                   | 百花洲文艺出版社                                                            | [日] 新海诚                                 |  小说  | [978-7-5500-3356-6] |
@@ -49,6 +49,7 @@ aside: false
 [978-7-5402-5424-7]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5402-5424-7
 [978-7-5402-6152-8]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5402-6152-8
 [978-7-5492-4293-1]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5492-4293-1
+[978-7-5442-7772-3]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5442-7772-3
 [978-7-122-25015-5]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-122-25015-5
 [978-7-5594-1626-1]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5594-1626-1
 [978-7-5500-3356-6]: https://pdc.capub.cn/search.html#/quick?type=isbn,&search=978-7-5500-3356-6
@@ -106,7 +107,7 @@ aside: false
 | 少女終末旅行 4                                                     |              [新潮社](https://www.shinchosha.co.jp/book/771929)               |  C9979   |   漫画   | 978-4-10-771929-4 |
 | 少女終末旅行 5                                                     |              [新潮社](https://www.shinchosha.co.jp/book/772009)               |  C9979   |   漫画   | 978-4-10-772009-2 |
 | 少女終末旅行 6 {data-corner=完}                                    |              [新潮社](https://www.shinchosha.co.jp/book/772060)               |  C9979   |   漫画   | 978-4-10-772060-3 |
-| 教えて劉先生！2 カ国語声優の日常                                   |                                     ?????                                     |  ?????   |   漫画   |       ?????       |
+| 教えて劉老師 ★ 2 カ国語声優の日常                                  |       [時差 1 時間](https://ecs.toranoana.jp/tora/ec/item/040030799617)       |    -     |   漫画   |         -         |
 | あかいろステップ #01                                               |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/2173348)            |    -     |   漫画   |         -         |
 | あかいろステップ #02                                               |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/3694284)            |    -     |   漫画   |         -         |
 | あかいろステップ #03 {data-corner=完}                              |           [黒豆麦茶](https://kuromugi-bler.booth.pm/items/8182438)            |    -     |   漫画   |         -         |
