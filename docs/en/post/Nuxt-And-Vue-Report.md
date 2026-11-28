@@ -9,19 +9,19 @@ The usage report series has reached [Nuxt](https://nuxt.com) and [Vue.js](https:
 
 ## Vue
 
-Vue separates the code into `<template>` and `<script>`, unlike React's JSX/TSX approach, where everything is written directly inside JavaScript/TypeScript files. To support this style, Vue created the separate `.vue` file format.
+Vue separates the code into `<template>{:vue}` and `<script>{:vue}`, unlike React's JSX/TSX approach, where everything is written directly inside JavaScript/TypeScript files. To support this style, Vue created the separate `.vue` file format.
 
-Let me start with the advantages of `<template>`. When using component libraries such as [Nuxt UI](https://ui.nuxt.com), the slot syntax like `<template header>` is extremely convenient for layout work. By contrast, React usually needs CSS to achieve similar layouts, and CSS is something I still struggle to understand.
+Let me start with the advantages of `<template>{:vue}`. When using component libraries such as [Nuxt UI](https://ui.nuxt.com), the slot syntax like `<template header>{:vue}` is extremely convenient for layout work. By contrast, React usually needs CSS to achieve similar layouts, and CSS is something I still struggle to understand.
 
 I also want to complain a bit about the developer tools in Edge and Chrome. When debugging CSS issues, they are honestly quite poor. If a certain element's style does not apply, they only grey it out, but never tell you why. I have heard Firefox's devtools are better, though I have not used them myself.
 
-The `<script>` part is pretty similar to React. It is JavaScript/TypeScript code, and state management works in much the same way. Many modern frontend frameworks are moving toward functional components and Hooks, and Vue is no exception. Still, combining things can lead to problems such as repeated renders or infinite loops. In two projects from the same company that I recently worked on, saving with <KbdGroup><kbd>Ctrl</kbd> + <kbd>S</kbd></KbdGroup> caused hot reloaded pages to lose state and become unable to send HTTP requests to the backend. My rough guess is that some state was kept inside a component, and hot reload reset that component's state, which in turn caused the whole page state to disappear.
+The `<script>{:vue}` part is pretty similar to React. It is JavaScript/TypeScript code, and state management works in much the same way. Many modern frontend frameworks are moving toward functional components and Hooks, and Vue is no exception. Still, combining things can lead to problems such as repeated renders or infinite loops. In two projects from the same company that I recently worked on, saving with <KbdGroup><kbd>Ctrl</kbd> + <kbd>S</kbd></KbdGroup> caused hot reloaded pages to lose state and become unable to send HTTP requests to the backend. My rough guess is that some state was kept inside a component, and hot reload reset that component's state, which in turn caused the whole page state to disappear.
 
-There is also the `<style>` section, but I do not think that is a good approach. I still believe styles should stay as close to components as possible, which is why I prefer something like Tailwind CSS, where styles are written directly in `<template>`.
+There is also the `<style>{:vue}` section, but I do not think that is a good approach. I still believe styles should stay as close to components as possible, which is why I prefer something like Tailwind CSS, where styles are written directly in `<template>{:vue}`.
 
 Now for the complaints.
 
-First, component props are usually defined in `defineProps` inside `<script>`. IDEs can provide hints, but if you are just reading the source, you still have to find the `defineProps` section before you know what props the component actually accepts. This gets especially annoying when the component code is long, because you keep scrolling back and forth.
+First, component props are usually defined in `defineProps` inside `<script>{:vue}`. IDEs can provide hints, but if you are just reading the source, you still have to find the `defineProps` section before you know what props the component actually accepts. This gets especially annoying when the component code is long, because you keep scrolling back and forth.
 
 Second, Vue itself still requires importing components, although many projects use auto-import solutions such as Nuxt or various component auto-registration plugins. That does let you write component names directly in templates without manual `import`s, but the tradeoff is that component names are often tightly tied to file names and directory structure. Renaming a component usually means renaming the file as well, and name conflicts often have to be solved by changing file names or directory layout. By comparison, React leans more toward explicit imports and exports, so component names are less tightly coupled to file names and tend to be more flexible during refactoring.
 

@@ -30,7 +30,7 @@ id: QWZRNF
 
 在 `lib/index.dart` 内 `export` 所有子文件夹下的 `index.dart` 文件，其 `export` 该文件夹下非自身的所有 `*.dart` 文件。
 
-在所有 `*.dart` 文件，包括 `main.dart`，内尽绝大可能 `import 'package:<项目名>/index.dart';` 即可简化导入。
+在所有 `*.dart` 文件，包括 `main.dart`，内尽绝大可能 `import 'package:<项目名>/index.dart';{:dart}` 即可简化导入。
 
 同时当要引入外部包时，只要在 `lib/index.dart` 文件内导入即可，当然，有时会出现不同包之间的类名冲突，此时在需要使用到该包的地方单独 `import` 即可，或者使用 `hide` 或 `show` 语法限制，具体例子如下：
 

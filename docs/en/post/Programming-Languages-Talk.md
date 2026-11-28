@@ -30,7 +30,7 @@ char s2[5] = {'H', 'e', 'l', 'l', 'o'};      // 定义长度为 5 的字符串�
 s = ['H', 'e', 'l', 'l', 'o']                # 定义长度为 5 的字符串
 ```
 
-如果我们访问第六个元素 `s[5]`，Python 会抛出一个 `IndexError` 异常，告诉我们索引超出了范围。而在 C 语言中，访问 `s[5]` 我们能知道字符串该结束了，而访问 `s2[5]` 直接就是 [未定义行为](https://en.wikipedia.org/wiki/Undefined_behavior) 了，很可能出现安全漏洞和崩溃。
+如果我们访问第六个元素 `s[5]{:py}`，Python 会抛出一个 `IndexError` 异常，告诉我们索引超出了范围。而在 C 语言中，访问 `s[5]{:c}` 我们能知道字符串该结束了，而访问 `s2[5]{:c}` 直接就是 [未定义行为](https://en.wikipedia.org/wiki/Undefined_behavior) 了，很可能出现安全漏洞和崩溃。
 
 YouTube 视频 [The worst programming language of all time](https://www.youtube.com/watch?v=7fGB-hjc2Gc) 喷了两个小时的 C++，我要笑死了。
 

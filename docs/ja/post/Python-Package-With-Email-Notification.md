@@ -17,8 +17,8 @@ Apple のショッピング詳細メールを参考にした：
 
 ところが、修正していく過程で各プラットフォームでの表示結果がバラバラであることが分かった。その中で：
 
-- QQ メール Web 版が最もサポートが良く、`<table>`、`<tbody>`、`<tr>`、`<td>` などのタグを使わず、普通の `<div>` と CSS の `display: flex` プロパティでレイアウトできる。他のメールクライアントは無理。また、`raw.githubusercontent.com` ドメイン下の画像ではなく、`github.com` ドメイン下の画像が使える。これも他のメールクライアントでは無理。唯一の欠点はダークモードがないこと
-- iPad 版 Gmail は `<table>`、`<tr>`、`<td>` などのタグでしかレイアウトできず、`<tbody>` タグを使うと Gmail がその中身を取り出してしまい、レイアウトが崩れる。また、カスタムフォントにも非対応
+- QQ メール Web 版が最もサポートが良く、`<table>{:html}`、`<tbody>{:html}`、`<tr>{:html}`、`<td>{:html}` などのタグを使わず、普通の `<div>{:html}` と CSS の `display: flex` プロパティでレイアウトできる。他のメールクライアントは無理。また、`raw.githubusercontent.com` ドメイン下の画像ではなく、`github.com` ドメイン下の画像が使える。これも他のメールクライアントでは無理。唯一の欠点はダークモードがないこと
+- iPad 版 Gmail は `<table>{:html}`、`<tr>{:html}`、`<td>{:html}` などのタグでしかレイアウトできず、`<tbody>{:html}` タグを使うと Gmail がその中身を取り出してしまい、レイアウトが崩れる。また、カスタムフォントにも非対応
 - Web 版 Gmail も同様で、さらに背景が強制的に白色表示され、ダークモードを有効にしても変わらない
 - iPad 標準の `メール` App も同様。さらに `設定 > メール > プライバシー保護` の `"メール"のアクティビティを保護` がオフになっておらず、下の `すべてのリモートコンテンツをブロック` もオフになっていない場合、デフォルトで画像が表示されない
 - QQ モバイル版の `QQ メール通知` 内のメールはカスタムフォントに非対応。`QQ サイドバー設定 > 一般 > モード選択` で `体験モード` を選択すると、背景が強制的に白色表示される。逆に `普通モード` を選択すると、夜間モードで背景が黒色表示される
@@ -34,6 +34,6 @@ Apple のショッピング詳細メールを参考にした：
 
 結論から言うと、国内のリソースが少なすぎた。とりあえずパッケージ [listener_email](https://github.com/Cierra-Runis/listener_email) をアップロードして使うことにした。
 
-でも、一般的にパッケージって `import listener_email` してから `listener_email.sent_email()` で関数を使うものだと思うんだけど、`from listener_email import sent_email, ListenerEmail` してから `sent_email()` で関数を使うのとは違うのかな……
+でも、一般的にパッケージって `import listener_email{:py}` してから `listener_email.sent_email(){:py}` で関数を使うものだと思うんだけど、`from listener_email import sent_email, ListenerEmail{:py}` してから `sent_email(){:py}` で関数を使うのとは違うのかな……
 
 よく分からない。とりあえずこれで手を打った ——

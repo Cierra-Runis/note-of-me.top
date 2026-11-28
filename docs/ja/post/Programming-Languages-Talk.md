@@ -30,7 +30,7 @@ Python で `list` を使って文字列をシミュレートする例と比較�
 s = ['H', 'e', 'l', 'l', 'o']                # 定義長度為 5 的字符串
 ```
 
-もし 6 番目の要素 `s[5]` にアクセスしようとすると、Python は `IndexError` 例外を投げて、インデックスが範囲外であることを教えてくれます。一方、C 言語では、`s[5]` にアクセスすると文字列が終わったことがわかりますが、`s2[5]` にアクセスすると完全に [未定義動作](https://en.wikipedia.org/wiki/Undefined_behavior) になり、セキュリティホールやクラッシュが発生する可能性が高いです。
+もし 6 番目の要素 `s[5]{:py}` にアクセスしようとすると、Python は `IndexError` 例外を投げて、インデックスが範囲外であることを教えてくれます。一方、C 言語では、`s[5]{:c}` にアクセスすると文字列が終わったことがわかりますが、`s2[5]{:c}` にアクセスすると完全に [未定義動作](https://en.wikipedia.org/wiki/Undefined_behavior) になり、セキュリティホールやクラッシュが発生する可能性が高いです。
 
 YouTube の動画 [The worst programming language of all time](https://www.youtube.com/watch?v=7fGB-hjc2Gc) は 2 時間も C++ を批判していて、笑い死にそうでした。
 

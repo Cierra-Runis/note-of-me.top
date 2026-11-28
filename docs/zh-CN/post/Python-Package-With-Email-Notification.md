@@ -17,8 +17,8 @@ id: WKYXGD
 
 可是在修改过程中发现各个平台显示出的结果都不一样，其中：
 
-- QQ 邮箱网页版支持最好，能不使用 `<table>`、`<tbody>`、`<tr>`、`<td>` 等标签，而是普通的 `<div>` 和 CSS 里的 `display: flex` 属性进行布局，其他的邮箱都不可以；能使用 `github.com` 域名下的图片，而不是非要使用 `raw.githubusercontent.com` 域名下的图片，其他的邮箱都不可以；唯一的缺点是没有暗色模式
-- iPad 版 Gmail 只能使用 `<table>`、`<tr>`、`<td>` 等标签进行布局，使用 `<tbody>` 标签 Gmail 会把里面的东西掏出来，从而破坏布局，且不支持自定义字体
+- QQ 邮箱网页版支持最好，能不使用 `<table>{:html}`、`<tbody>{:html}`、`<tr>{:html}`、`<td>{:html}` 等标签，而是普通的 `<div>{:html}` 和 CSS 里的 `display: flex` 属性进行布局，其他的邮箱都不可以；能使用 `github.com` 域名下的图片，而不是非要使用 `raw.githubusercontent.com` 域名下的图片，其他的邮箱都不可以；唯一的缺点是没有暗色模式
+- iPad 版 Gmail 只能使用 `<table>{:html}`、`<tr>{:html}`、`<td>{:html}` 等标签进行布局，使用 `<tbody>{:html}` 标签 Gmail 会把里面的东西掏出来，从而破坏布局，且不支持自定义字体
 - 网页版 Gmail 同上，但背景强制显示为白色，即便开启了暗色模式
 - iPad 自带 `邮件` 同上，同时在 `系统设置 > 邮件 > 隐私保护` 里的 `保护“邮件”活动` 若未关闭，且下方 `阻止所有远程内容` 未关闭，则默认不能查看图片
 - QQ 手机版 `QQ 邮箱提醒` 里的邮件不支持自定义字体，且若在 `QQ 侧拉栏设置 > 通用 > 模式选择` 里选择 `体验模式` ，则背景强制显示为白色，反之选择 `普通模式` 则背景在夜间模式下能显示为黑色
@@ -34,6 +34,6 @@ id: WKYXGD
 
 答案是国内资源太少，姑且把包 [listener_email](https://github.com/Cierra-Runis/listener_email) 上传使用了。
 
-但我想着一般包都是 `import listener_email` 然后 `listener_email.sent_email()` 来使用函数，而不是 `from listener_email import sent_email, ListenerEmail` 然后 `sent_email()` 来使用函数……
+但我想着一般包都是 `import listener_email{:py}` 然后 `listener_email.sent_email(){:py}` 来使用函数，而不是 `from listener_email import sent_email, ListenerEmail{:py}` 然后 `sent_email(){:py}` 来使用函数……
 
 不懂，暂且懒了 ——
