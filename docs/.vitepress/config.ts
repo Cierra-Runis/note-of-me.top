@@ -10,6 +10,8 @@ import {
     groupIconVitePlugin,
 } from 'vitepress-plugin-group-icons';
 
+import { inlineHighlightPlugin } from './inline-highlight';
+
 // https://vitepress.dev/reference/site-config
 export default withSidebar({
   title: 'ノート of 我',
@@ -54,9 +56,11 @@ export default withSidebar({
   },
   markdown: {
     config: (md) => {
-      md.use(markdownTypstMath).use(groupIconMdPlugin, {
-        titleBar: { includeSnippet: true },
-      });
+      md.use(markdownTypstMath)
+        .use(groupIconMdPlugin, {
+          titleBar: { includeSnippet: true },
+        })
+        .use(inlineHighlightPlugin);
     },
     codeCopyButton: {
       tooltipText: '复制',
