@@ -78,9 +78,3 @@ Test each link with curl to see whether `www` and any trailing `/` can be droppe
 - Position: order rows roughly by C-CODE category and put each new book next to similar ones. Keep a series in volume order.
 - **Don't widen any column.** Before inserting, compute the display width of each cell (full-width characters count as 2). If a cell would be wider than the widest existing cell in that column, shorten it first: drop filler words from the title, or use the publisher's short or brand name. Tell the user when you do this.
 - prettier may delete an empty placeholder row the user left in the table, so don't use one to locate where to insert.
-
-## 5. Format and check
-
-- Run `pnpm dlx prettier --write docs/zh-CN/books/index.md` (`npx` isn't available in this project).
-- Check `git diff`. Ideally the diff has only added lines and `git diff | grep -c '^-[^-]'` prints 0. Any removed lines mean a column got wider, so go back to step 4.
-- Don't commit. Wait for the user to confirm.
